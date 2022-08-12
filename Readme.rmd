@@ -1,0 +1,44 @@
+---
+title: "PostgreSQL"
+subtitle: "Readme.rmd"
+author: "Sergio Pedro R Oliveira"
+date: "`r Sys.Date()`"
+output:
+  md_document:
+    number_sections: true
+    variant: markdown_github
+  odt_document:
+    number_sections: true
+  word_document:
+    toc: TRUE
+    number_sections: true
+  github_document: default
+  html_document:
+    number_sections: true
+    df_print: paged
+  pdf_document:
+    number_sections: true
+    toc: TRUE
+---
+
+\newpage
+
+# Objetivo
+
+Estudo dirigido de **PostgreSQL**.
+
+# Referência
+
+Vídeo aulas "O curso completo de Banco de Dados e SQL, sem mistérios" \- Udemy.
+
+\newpage
+
+# Observações
+
+\newpage
+
+# Andamento dos Estudos
+
+## Assunto em andamento
+
+Atualmente estou estudando Módulo 30 - AULA 119.\
