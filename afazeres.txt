@@ -1,0 +1,17 @@
+ESCRITO EM 13/08/22
+---
+PARA 14/08/22
+---
+Subir github:
+	- Readme AULA 117
+		- Instalação PostgreSQL
+			- Programas
+			- Conectando pgAdmin4 ao Servidor
+			- Acessando psql
+Estudar:
+	- Modulo 30 - AULA 117 e AULA 119
+afazeres:
+	- Escrever AULA 119
+		- Primeiros passos pgAdmin4
+		- Criando banco de dados
+	- Testar script 00
