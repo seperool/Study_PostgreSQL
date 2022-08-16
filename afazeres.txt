@@ -3,9 +3,12 @@ ESCRITO EM 16/08/22
 PARA 17/08/22
 ---
 Subir github:
-	- Readme AULA 
+	- Readme AULA 120 - datastyle
+		- Função datestyle
+		- Mudar configuração de datestyle
+	- Script - Comandos_basicos_PostgreSQL
 Estudar:
-	- Modulo 30 - AULA 120 - datastyle
+	- Modulo 30 - AULA 121
 afazeres:
-	- Escrever AULA 120 - datastyle
+	- Escrever 
 	- Testar script 00
