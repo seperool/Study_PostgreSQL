@@ -1,13 +1,11 @@
-ESCRITO EM 15/08/22
+ESCRITO EM 16/08/22
 ---
-PARA 16/08/22
+PARA 17/08/22
 ---
 Subir github:
-
+	- Readme AULA 
 Estudar:
-	- Modulo 30 - AULA 117 e AULA 119
+	- Modulo 30 - AULA 120 - datastyle
 afazeres:
-	- Escrever AULA 119
-		- Primeiros passos pgAdmin4
-		- Criando banco de dados
+	- Escrever AULA 120 - datastyle
 	- Testar script 00
