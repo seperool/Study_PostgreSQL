@@ -4,21 +4,21 @@ subtitle: "Readme.rmd"
 author: "Sergio Pedro R Oliveira"
 date: "`r Sys.Date()`"
 output:
+  md_document:
+    number_sections: true
+    variant: markdown_github
+  odt_document:
+    number_sections: true
+  word_document:
+    toc: TRUE
+    number_sections: true
+  github_document: default
   pdf_document:
     number_sections: true
     toc: TRUE
   html_document:
     number_sections: true
     df_print: paged
-  md_document:
-    number_sections: true
-    variant: markdown_github
-  github_document: default
-  odt_document:
-    number_sections: true
-  word_document:
-    toc: TRUE
-    number_sections: true
 ---
 
 \newpage
@@ -33,7 +33,7 @@ Vídeo aulas "O curso completo de Banco de Dados e SQL, sem mistérios" \- Udemy
 
 \newpage
 
-# Módulo 30 \- Instalação do **PostgreSQL**, conectando servidor ao **pgAdmin 4** e acessando **psql**
+# Aula 117 \- Instalação do **PostgreSQL**, conectando servidor ao **pgAdmin 4** e acessando **psql**
 
 ## Instação do **PostgreSQL**
 
@@ -75,7 +75,7 @@ O psql é um front-end baseado em terminal para o PostgreSQL.\
     - Maintenance database: postgres\
     - Username: postgres\
     - Password: [repetir a senha cadastrada anteriormente no psql]\
-  - Ao clicar em "Salvar" o novo servidor estará conectado.\
+  - Ao clicar em "**Salvar**" o novo servidor estará conectado.\
 
 ## Acessando **PostgreSQL** pelo terminal - psql
 
@@ -89,6 +89,66 @@ sudo \-u postgres psql\
 **ALTER USER** postgres **PASSWORD** '*novo_password*'\
 
 - Este comando é útil para conectar o servidor a insterface *pgAdmin4*, pois necessita criar uma senhar para o usuário *postgres*.\
+
+\newpage
+
+# Aula 119 - Primeiros passos **pgAdmin4**
+
+## Acessando um banco de dados
+
+- Para acessar um dos bancos de dados, basta abrir o programa **pgAdmin 4**.\
+
+- Inserir a senha de proteção do programa.\
+
+- Clickar dentro aba lateral "**Browser**" na opção **Servers** para se conectar ao servidor.\
+
+- Inserir a senha do **servidor**.\
+
+- Assim, será mostrado o nome do servidor, expandindo ele, será mostrado os bancos de dados que nele estão contidos.\
+
+- Entre os bancos de dados disponiveis o "*postgre*" é o bando de dados reservado do sistema.\
+  - o *postgre* é o nome do root do sistema **PostgreSQL**.\
+
+## Criando um novo banco de dados
+
+- Na aba lateral "**Browser**", nas opções **Servers** > **localhost** > **Databases**.\
+
+- Para criar um novo banco de dados:\
+  - Clickar na opção **Databases** com o botão direito.\
+  - Seguir as opções: **Create** > **Database**.\
+  - Preencher as opções na aba "**General**":\
+    - **Database**: [Nome do banco de dados]\
+    - **Owner**: [Responsavel pelo banco de dados]\
+    - **Comment**: [Comentario/resumo sobre o banco de dados, um texto]\
+    - **Save** para criar o banco de dados.\
+    
+- O novo banco de dados e suas pastas estara disponivel na aba lateral **Browser**, dentro de **Databases**.\
+
+## Conectando num banco de dados
+
+- Para se conectar a um banco de dados, basta clickar nele na aba lateral "**Browser**".\
+- Para verificar em qual banco de dados esta conectado:\
+  - Dentro da aba superior **Dashboard** > na parte inferior da janela, nas opções:\
+    - **User** informa o usuário logado, no momento.\
+    - **Application** informa o banco de dados que esta conectado, no momento.\
+
+## Abrindo aba para escrever consulta SQL (**Query Tool**)
+
+- **Query Tool** é a aba na qual se escreve as instruções SQL.\
+
+- Na aba superior, na opção **TOOLS** > **Query Tool**, abre a aba para escrever as instruções **SQL**.\
+
+\newpage
+
+# Aula 119 - Datastyle
+
+## Padrão de data de sistema
+
+- O padrão de data do sistema é:\
+'AAAA/MM/DD'\
+Padrão inglês.\
+
+## Configurando um outro padrão de data
 
 \newpage
 

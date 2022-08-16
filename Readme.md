@@ -7,7 +7,7 @@ Estudo dirigido de **PostgreSQL**.
 Vídeo aulas “O curso completo de Banco de Dados e SQL, sem mistérios” -
 Udemy.
 
-# 3 Módulo 30 - Instalação do **PostgreSQL**, conectando servidor ao **pgAdmin 4** e acessando **psql**
+# 3 Aula 117 - Instalação do **PostgreSQL**, conectando servidor ao **pgAdmin 4** e acessando **psql**
 
 ## 3.1 Instação do **PostgreSQL**
 
@@ -66,7 +66,7 @@ Udemy.
         -   Username: postgres  
         -   Password: \[repetir a senha cadastrada anteriormente no
             psql\]  
-    -   Ao clicar em “Salvar” o novo servidor estará conectado.  
+    -   Ao clicar em “**Salvar**” o novo servidor estará conectado.  
 
 ## 3.3 Acessando **PostgreSQL** pelo terminal - psql
 
@@ -85,10 +85,79 @@ Udemy.
     *pgAdmin4*, pois necessita criar uma senhar para o usuário
     *postgres*.  
 
-# 4 Observações
+# 4 Aula 119 - Primeiros passos **pgAdmin4**
 
-# 5 Andamento dos Estudos
+## 4.1 Acessando um banco de dados
 
-## 5.1 Assunto em andamento
+-   Para acessar um dos bancos de dados, basta abrir o programa
+    **pgAdmin 4**.  
+
+-   Inserir a senha de proteção do programa.  
+
+-   Clickar dentro aba lateral “**Browser**” na opção **Servers** para
+    se conectar ao servidor.  
+
+-   Inserir a senha do **servidor**.  
+
+-   Assim, será mostrado o nome do servidor, expandindo ele, será
+    mostrado os bancos de dados que nele estão contidos.  
+
+-   Entre os bancos de dados disponiveis o “*postgre*” é o bando de
+    dados reservado do sistema.  
+
+    -   o *postgre* é o nome do root do sistema **PostgreSQL**.  
+
+## 4.2 Criando um novo banco de dados
+
+-   Na aba lateral “**Browser**”, nas opções **Servers** \>
+    **localhost** \> **Databases**.  
+
+-   Para criar um novo banco de dados:  
+
+    -   Clickar na opção **Databases** com o botão direito.  
+    -   Seguir as opções: **Create** \> **Database**.  
+    -   Preencher as opções na aba “**General**”:  
+        -   **Database**: \[Nome do banco de dados\]  
+        -   **Owner**: \[Responsavel pelo banco de dados\]  
+        -   **Comment**: \[Comentario/resumo sobre o banco de dados, um
+            texto\]  
+        -   **Save** para criar o banco de dados.  
+
+-   O novo banco de dados e suas pastas estara disponivel na aba lateral
+    **Browser**, dentro de **Databases**.  
+
+## 4.3 Conectando num banco de dados
+
+-   Para se conectar a um banco de dados, basta clickar nele na aba
+    lateral “**Browser**”.  
+-   Para verificar em qual banco de dados esta conectado:  
+    -   Dentro da aba superior **Dashboard** \> na parte inferior da
+        janela, nas opções:  
+        -   **User** informa o usuário logado, no momento.  
+        -   **Application** informa o banco de dados que esta conectado,
+            no momento.  
+
+## 4.4 Abrindo aba para escrever consulta SQL (**Query Tool**)
+
+-   **Query Tool** é a aba na qual se escreve as instruções SQL.  
+
+-   Na aba superior, na opção **TOOLS** \> **Query Tool**, abre a aba
+    para escrever as instruções **SQL**.  
+
+# 5 Aula 119 - Datastyle
+
+## 5.1 Padrão de data de sistema
+
+-   O padrão de data do sistema é:  
+    ‘AAAA/MM/DD’  
+    Padrão inglês.  
+
+## 5.2 Configurando um outro padrão de data
+
+# 6 Observações
+
+# 7 Andamento dos Estudos
+
+## 7.1 Assunto em andamento
 
 Atualmente estou estudando Módulo 30 - AULA 119.  
