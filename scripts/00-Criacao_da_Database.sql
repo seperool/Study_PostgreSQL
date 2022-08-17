@@ -1,3 +1,5 @@
+/* DATABASE - Teste e data_science */
+
 -- CRIANDO TABELA departamentos
 create table departamentos (
     departamento varchar(100),
