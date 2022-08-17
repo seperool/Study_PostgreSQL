@@ -1,14 +1,11 @@
-ESCRITO EM 16/08/22
+ESCRITO EM 17/08/22
 ---
-PARA 17/08/22
+PARA 18/08/22
 ---
 Subir github:
-	- Readme AULA 120 - datastyle
-		- Função datestyle
-		- Mudar configuração de datestyle
-	- Script - Comandos_basicos_PostgreSQL
+	- Readme AULA
 Estudar:
-	- Modulo 30 - AULA 121
+	- Modulo 30 - AULA 122
 afazeres:
-	- Escrever 
-	- Testar script 00
+	- Escrever AULA 121 - Criando o banco de dados do projeto
+		- Abrir arquivo ".sql" no pgAdmin4
