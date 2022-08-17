@@ -7,18 +7,18 @@ output:
   md_document:
     number_sections: true
     variant: markdown_github
-  odt_document:
-    number_sections: true
   word_document:
     toc: TRUE
     number_sections: true
+  html_document:
+    number_sections: true
+    df_print: paged
   github_document: default
   pdf_document:
     number_sections: true
     toc: TRUE
-  html_document:
+  odt_document:
     number_sections: true
-    df_print: paged
 ---
 
 \newpage
@@ -140,15 +140,56 @@ sudo \-u postgres psql\
 
 \newpage
 
-# Aula 119 - Datastyle
+# Aula 120 - datestyle
 
 ## Padrão de data de sistema
 
 - O padrão de data do sistema é:\
-'AAAA/MM/DD'\
-Padrão inglês.\
+'DD/MM/YYYY', **DMY**.\
+
+## Função datestyle
+
+- É uma função que mostrar o padrão de data (**DATE**) em que o sistema esta configurado.\
+
+- Sintaxe:\
+**SHOW** *DATESTYLE*;\
 
 ## Configurando um outro padrão de data
+
+- No ubuntu:\
+  - Na pasta:\
+  /etc/postgresql/14/main/ \
+  - No arquivo "/postgresql.conf", onde ficam guardadas as configurações do PostgreSQL.\
+  - Basta abrir com editor de texto (Sublime text, Notepad++, ... ) e procurar por "datestyle".\
+  - Para alterar o padrão basta mudar a arrumação das letras e salvar o arquivo.\
+  - Dado que **dmy** é:
+    - **d** é day\
+    - **m** é month\
+    - **y** é year\
+  - Lembrar de salvar comentado em baixo a configuração original antes salvar uma alteração.\
+  - Reiniciar o servidor (computador), para implementar as mudanças.\
+
+- No windows:\
+  - Na pasta:\
+  C:/Arquivos de Programas/PostgreSQL/14[*Numero da versão do PostgreSQL*]/data/ \
+  - No arquivo "/postgresql.conf", onde ficam guardadas as configurações do PostgreSQL.\
+  - Basta abrir com editor de texto (Sublime text, Notepad++, ... ) e procurar por "datestyle".\
+  - Para alterar o padrão basta mudar a arrumação das letras e salvar o arquivo.\
+  - Dado que **dmy** é:
+    - **d** é day\
+    - **m** é month\
+    - **y** é year\
+  - Lembrar de salvar comentado em baixo a configuração original antes salvar uma alteração.\
+  - Reiniciar o servidor, para implementar as mudanças.\
+    - Para reiniciar o servidor, no "executar", digitar "serviços" e clickar na opção de programa "SERVIÇOS".\
+    - Dentro de "SERVIÇOS", o programa vai mostrar todos os serviços do **WINDOWS**, procurar pelo "PostgreSQL".\
+    - Selecionar o "PostgreSQL" e clickar em "reiniciar o serviço".\
+    - Voltar no **pgAdmin 4** dar "refresh" na tabela, ou servers.\
+    - Caso a conexão não esteja estabelecida, basta clickar em "**Query Tool**" para restabeler nova conexão.\
+
+\newpage
+
+# Aula 121 - 
 
 \newpage
 
@@ -160,4 +201,4 @@ Padrão inglês.\
 
 ## Assunto em andamento
 
-Atualmente estou estudando Módulo 30 - AULA 119.\
+Atualmente estou estudando Módulo 30 - AULA 121.\

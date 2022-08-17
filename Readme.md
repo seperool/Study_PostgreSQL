@@ -144,20 +144,74 @@ Udemy.
 -   Na aba superior, na opção **TOOLS** \> **Query Tool**, abre a aba
     para escrever as instruções **SQL**.  
 
-# 5 Aula 119 - Datastyle
+# 5 Aula 120 - datestyle
 
 ## 5.1 Padrão de data de sistema
 
 -   O padrão de data do sistema é:  
-    ‘AAAA/MM/DD’  
-    Padrão inglês.  
+    ‘DD/MM/YYYY’, **DMY**.  
 
-## 5.2 Configurando um outro padrão de data
+## 5.2 Função datestyle
 
-# 6 Observações
+-   É uma função que mostrar o padrão de data (**DATE**) em que o
+    sistema esta configurado.  
 
-# 7 Andamento dos Estudos
+-   Sintaxe:  
+    **SHOW** *DATESTYLE*;  
 
-## 7.1 Assunto em andamento
+## 5.3 Configurando um outro padrão de data
 
-Atualmente estou estudando Módulo 30 - AULA 119.  
+-   No ubuntu:  
+    -   Na pasta:  
+        /etc/postgresql/14/main/  
+    -   No arquivo “/postgresql.conf”, onde ficam guardadas as
+        configurações do PostgreSQL.  
+    -   Basta abrir com editor de texto (Sublime text, Notepad++, … ) e
+        procurar por “datestyle”.  
+    -   Para alterar o padrão basta mudar a arrumação das letras e
+        salvar o arquivo.  
+    -   Dado que **dmy** é:
+        -   **d** é day  
+        -   **m** é month  
+        -   **y** é year  
+    -   Lembrar de salvar comentado em baixo a configuração original
+        antes salvar uma alteração.  
+    -   Reiniciar o servidor (computador), para implementar as
+        mudanças.  
+-   No windows:  
+    -   Na pasta:  
+        C:/Arquivos de Programas/PostgreSQL/14\[*Numero da versão do
+        PostgreSQL*\]/data/  
+    -   No arquivo “/postgresql.conf”, onde ficam guardadas as
+        configurações do PostgreSQL.  
+    -   Basta abrir com editor de texto (Sublime text, Notepad++, … ) e
+        procurar por “datestyle”.  
+    -   Para alterar o padrão basta mudar a arrumação das letras e
+        salvar o arquivo.  
+    -   Dado que **dmy** é:
+        -   **d** é day  
+        -   **m** é month  
+        -   **y** é year  
+    -   Lembrar de salvar comentado em baixo a configuração original
+        antes salvar uma alteração.  
+    -   Reiniciar o servidor, para implementar as mudanças.  
+        -   Para reiniciar o servidor, no “executar”, digitar “serviços”
+            e clickar na opção de programa “SERVIÇOS”.  
+        -   Dentro de “SERVIÇOS”, o programa vai mostrar todos os
+            serviços do **WINDOWS**, procurar pelo “PostgreSQL”.  
+        -   Selecionar o “PostgreSQL” e clickar em “reiniciar o
+            serviço”.  
+        -   Voltar no **pgAdmin 4** dar “refresh” na tabela, ou
+            servers.  
+        -   Caso a conexão não esteja estabelecida, basta clickar em
+            “**Query Tool**” para restabeler nova conexão.  
+
+# 6 Aula 121 -
+
+# 7 Observações
+
+# 8 Andamento dos Estudos
+
+## 8.1 Assunto em andamento
+
+Atualmente estou estudando Módulo 30 - AULA 121.  
