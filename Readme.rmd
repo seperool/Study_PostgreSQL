@@ -7,18 +7,18 @@ output:
   md_document:
     number_sections: true
     variant: markdown_github
-  word_document:
-    toc: TRUE
-    number_sections: true
   html_document:
     number_sections: true
     df_print: paged
+  word_document:
+    toc: TRUE
+    number_sections: true
   github_document: default
+  odt_document:
+    number_sections: true
   pdf_document:
     number_sections: true
     toc: TRUE
-  odt_document:
-    number_sections: true
 ---
 
 \newpage
@@ -189,11 +189,99 @@ sudo \-u postgres psql\
 
 \newpage
 
-# Aula 121 - 
+# Aula 121 - Abrir arquivo ".sql" no **pgAdmin4**
+
+- Ao iniciar o programa **pgAdmin4**, abrir a aba **Query Tools** de programação **SQL**.\
+- Com a aba "**Query Tools**" aberta, clickar na opção "**Open File**", navegar pelas pastas e selecionar o arquivo com extensão ".sql" para abrir.\
+- O arquivo será aberto na aba "**Query Tools**".\
+
+\newpage
+
+# Aula 122 - Introdução a funções de agregação
+
+## Teoria
+
+- O que são funções de agregação?\
+  - Funções de agregação são funções SQL que permitem executar uma operação aritmética nos valores de uma coluna em todos os registros de uma tabela.\
+  - Uma função de agregação executa um cálculo em um conjunto de valores e retorna um único valor.\
+  - As funções de agregação frequentemente são usadas com a cláusula **GROUP BY** da instrução **SELECT**.\
+
+## Funções de agregação
+
+- **AVG**()\
+  - Calcula a média aritmética sobre o conjunto de linhas fornecido.\
+  - Retorna a média aritmética dos valores dos registros.\
+  - Sintaxe:\
+  **SELECT**\
+  *setor*,\
+  **AVG**(*salario*) **AS** "MEDIA DE SALARIO"\
+  **FROM** *tabela*\
+  **GROUP BY** *setor*;\
+  
+- **COUNT**()\
+  - Essa função retorna o número de itens encontrados em um grupo.\
+  - Com exceção da função **COUNT**(\*), as funções de agregação ignoram valores nulos.\
+  - Sintaxe:\
+  **SELECT**\
+  *setor*,\
+  **COUNT**(*nome*) **AS** "NUMERO FUNCIONARIOS"\
+  **FROM** *tabela*\
+  **GROUP BY** *setor*;\
+  ou\
+  **SELECT**\
+  **COUNT**(\*) **AS** "NUMERO DE REGISTROS"\
+  **FROM** *tabela*;\
+
+- **MIN**()\
+  - Retorna o valor Mínimo de um conjunto de valores.\
+  - Sintaxe:\
+  **SELECT**\
+  *setor*,\
+  **MIN**(*salario*) **AS** "MENOR SALARIO DO SETOR"\
+  **FROM** *tabela*\
+  **GROUP BY** *setor*;\
+  
+- **MAX**()\
+  - Retorna o Valor máximo de um conjunto de valores.\
+  - Sintaxe:\
+  **SELECT**\
+  *setor*,\
+  **MAX**(*salario*) **AS** "MAIOR SALARIO DO SETOR"\
+  **FROM** *tabela*\
+  **GROUP BY** *setor*;\
+
+- **SUM**()\
+  - Total (Soma) de um conjunto de valores.\
+  - Sintaxe:\
+  **SELECT**\
+  *setor*,\
+  **SUM**(*salario*) **AS** "TOTAL DE SALARIOS DO SETOR"\
+  **FROM** *tabela*\
+  **GROUP BY** *setor*;\
+
+## *Alias*
+
+- Um *alias* de coluna permite atribuir um nome temporário a uma coluna ou expressão na lista de projeção de uma instrução **SELECT**.\
+- O *alias* da coluna existe temporariamente durante a execução da consulta.\
+- É principalmente importante colocar *alias* em colunas que levam formulas, para facilitar o entendimento de quem vai ler a consulta.\
+- Sintaxe:\
+**SELECT**\
+**AVG**(*coluna1*) **AS** "*ALIAS*"\
+...\
 
 \newpage
 
 # Observações
+
+## Exportação de dados
+
+- Uma das maneiras mais facil de exportar dados é atraves da extensão ".csv".\
+- O **PostgreSQL** ofecere opções para facilmente exportar dados em ".csv".\
+- Passo a passo:\
+  - Basta fazer a consulta que deseja exportar, pela aba "**Query Tools**".\
+  - Lembrando de colocar *alias* nas colunas/campos que levam funções, para melhor entendimento de quem for fazer a leitura do arquivo exportado.\
+  - Na janela em que aparece o resultado da consulta, tem a aba "Data Output" (na qual, por default, já é a aba em que aparecem os resultados das consultas), tem o ícone "*Save results to file*".\
+  - Ao clickar no ícone "*Save results to file*", é oferecido a opção de salvar a consulta como ".csv".\
 
 \newpage
 

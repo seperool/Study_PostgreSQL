@@ -206,12 +206,21 @@ Udemy.
         -   Caso a conexão não esteja estabelecida, basta clickar em
             “**Query Tool**” para restabeler nova conexão.  
 
-# 6 Aula 121 -
+# 6 Aula 121 - Abrir arquivo “.sql” no **pgAdmin4**
 
-# 7 Observações
+-   Ao iniciar o programa **pgAdmin4**, abrir a aba **Query Tools** de
+    programação **SQL**.  
+-   Com a aba “**Query Tools**” aberta, clickar na opção “**Open
+    File**”, navegar pelas pastas e selecionar o arquivo com extensão
+    “.sql” para abrir.  
+-   O arquivo será aberto na aba “**Query Tools**”.  
 
-# 8 Andamento dos Estudos
+# 7 Aula 122 -
 
-## 8.1 Assunto em andamento
+# 8 Observações
+
+# 9 Andamento dos Estudos
+
+## 9.1 Assunto em andamento
 
 Atualmente estou estudando Módulo 30 - AULA 121.  
