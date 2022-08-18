@@ -1,17 +1,15 @@
-ESCRITO EM 17/08/22
+ESCRITO EM 18/08/22
 ---
-PARA 18/08/22
+PARA 19/08/22
 ---
 Subir github:
-	- Readme AULA 121 - Criando o banco de dados do projeto
-		- Abrir arquivo ".sql" no pgAdmin4
 	- Readme AULA 122 - Introdução a funções de agregação
-		- exportação de consultas formato ".csv"
-Estudar:
-	- Modulo 30 - AULA 122 - Introdução a funções de agregação
-afazeres:
-	- Escrever AULA 122- Introdução a funções de agregação
 		- O que é funções de agregação?
 		- Funções de agregação
+		- Alias
+Estudar:
+	- Modulo 30 - AULA 123
+afazeres:
+	- Escrever AULA 123
 	- Testar, modificar e comentar
 		- script 01
