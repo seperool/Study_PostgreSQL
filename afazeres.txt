@@ -7,9 +7,15 @@ Subir github:
 		- O que é funções de agregação?
 		- Funções de agregação
 		- Alias
+		- GROUP BY
+	- script 01_01
 Estudar:
 	- Modulo 30 - AULA 123
 afazeres:
 	- Escrever AULA 123
+		- limite de linhas
+		- soma total
+		- media
+		- ORDER BY
 	- Testar, modificar e comentar
-		- script 01
+		- script 01_02
