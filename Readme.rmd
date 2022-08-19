@@ -10,15 +10,15 @@ output:
   html_document:
     number_sections: true
     df_print: paged
-  word_document:
-    toc: TRUE
-    number_sections: true
-  github_document: default
   odt_document:
     number_sections: true
+  github_document: default
   pdf_document:
     number_sections: true
     toc: TRUE
+  word_document:
+    toc: TRUE
+    number_sections: true
 ---
 
 \newpage
@@ -205,6 +205,7 @@ sudo \-u postgres psql\
   - Funções de agregação são funções SQL que permitem executar uma operação aritmética nos valores de uma coluna em todos os registros de uma tabela.\
   - Uma função de agregação executa um cálculo em um conjunto de valores e retorna um único valor.\
   - As funções de agregação frequentemente são usadas com a cláusula **GROUP BY** da instrução **SELECT**.\
+  - As funções de agregação agregam, somam e resumem registros, o que é apreciado em *data science*.\
 
 ## Funções de agregação
 
@@ -271,6 +272,45 @@ sudo \-u postgres psql\
 
 \newpage
 
+## **GROUP BY**
+
+- A cláusula **GROUP BY** divide as linhas retornadas da instrução **SELECT** em grupos.\
+
+- Para cada grupo, você pode aplicar uma função agregada, por exemplo, **SUM**() para calcular a soma dos itens ou **COUNT**() para obter o número de itens nos grupos.\
+
+- A cláusula de instrução divide as linhas pelos valores das colunas especificadas na cláusula **GROUP BY** e calcula um valor para cada grupo.\
+
+- O **PostgreSQL** avalia a cláusula **GROUP BY** após as cláusulas **FROM** e **WHERE** e antes das cláusulas **HAVING SELECT**, **DISTINCT**, **ORDER BY** e **LIMIT**.
+
+![](./Imagens/PostgreSQL-GROUP-BY-1.png){height=10cm}\
+
+- Sintaxe:\
+**SELECT** *Country*, *Region*, **SUM**(*sales*) **AS** "Total Sales"\
+**FROM** *Sales*\
+**GROUP BY** *Country*, *Region*;\
+
+\newpage
+
+# Aula 123 - Estatisticas básicas
+
+## Limite de linhas mostradas numa consulta
+
+- O comando **LIMIT** determina a quantidade máxima de linhas/registros que serão mostrados de uma determinada consulta.\
+
+- O comando vem acompanhado do número de linhas da visualização da consulta.\
+
+- Sintaxe:\
+**SELECT** \* **FROM** *tabela*\
+**LIMIT** 10;\
+
+## **ORDER BY**
+
+## Média
+
+## Soma total
+
+\newpage
+
 # Observações
 
 ## Exportação de dados
@@ -283,10 +323,17 @@ sudo \-u postgres psql\
   - Na janela em que aparece o resultado da consulta, tem a aba "Data Output" (na qual, por default, já é a aba em que aparecem os resultados das consultas), tem o ícone "*Save results to file*".\
   - Ao clickar no ícone "*Save results to file*", é oferecido a opção de salvar a consulta como ".csv".\
 
+## Breve explicação de Business Intelligence e Data Science
+
+- Business Intelligence (BI):\
+  - Esta preocupado com entender o que aconteceu no passado.\
+- Data Science:\
+  - Através dos dados, tentar prever tendências futuras.\
+
 \newpage
 
 # Andamento dos Estudos
 
 ## Assunto em andamento
 
-Atualmente estou estudando Módulo 30 - AULA 121.\
+Atualmente estou estudando Módulo 30 - AULA 123.\

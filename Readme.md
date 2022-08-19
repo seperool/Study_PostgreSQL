@@ -215,12 +215,162 @@ Udemy.
     “.sql” para abrir.  
 -   O arquivo será aberto na aba “**Query Tools**”.  
 
-# 7 Aula 122 -
+# 7 Aula 122 - Introdução a funções de agregação
 
-# 8 Observações
+## 7.1 Teoria
 
-# 9 Andamento dos Estudos
+-   O que são funções de agregação?  
+    -   Funções de agregação são funções SQL que permitem executar uma
+        operação aritmética nos valores de uma coluna em todos os
+        registros de uma tabela.  
+    -   Uma função de agregação executa um cálculo em um conjunto de
+        valores e retorna um único valor.  
+    -   As funções de agregação frequentemente são usadas com a cláusula
+        **GROUP BY** da instrução **SELECT**.  
+    -   As funções de agregação agregam, somam e resumem registros, o
+        que é apreciado em *data science*.  
 
-## 9.1 Assunto em andamento
+## 7.2 Funções de agregação
 
-Atualmente estou estudando Módulo 30 - AULA 121.  
+-   **AVG**()  
+    -   Calcula a média aritmética sobre o conjunto de linhas
+        fornecido.  
+    -   Retorna a média aritmética dos valores dos registros.  
+    -   Sintaxe:  
+        **SELECT**  
+        *setor*,  
+        **AVG**(*salario*) **AS** “MEDIA DE SALARIO”  
+        **FROM** *tabela*  
+        **GROUP BY** *setor*;  
+-   **COUNT**()  
+    -   Essa função retorna o número de itens encontrados em um grupo.  
+    -   Com exceção da função **COUNT**(\*), as funções de agregação
+        ignoram valores nulos.  
+    -   Sintaxe:  
+        **SELECT**  
+        *setor*,  
+        **COUNT**(*nome*) **AS** “NUMERO FUNCIONARIOS”  
+        **FROM** *tabela*  
+        **GROUP BY** *setor*;  
+        ou  
+        **SELECT**  
+        **COUNT**(\*) **AS** “NUMERO DE REGISTROS”  
+        **FROM** *tabela*;  
+-   **MIN**()  
+    -   Retorna o valor Mínimo de um conjunto de valores.  
+    -   Sintaxe:  
+        **SELECT**  
+        *setor*,  
+        **MIN**(*salario*) **AS** “MENOR SALARIO DO SETOR”  
+        **FROM** *tabela*  
+        **GROUP BY** *setor*;  
+-   **MAX**()  
+    -   Retorna o Valor máximo de um conjunto de valores.  
+    -   Sintaxe:  
+        **SELECT**  
+        *setor*,  
+        **MAX**(*salario*) **AS** “MAIOR SALARIO DO SETOR”  
+        **FROM** *tabela*  
+        **GROUP BY** *setor*;  
+-   **SUM**()  
+    -   Total (Soma) de um conjunto de valores.  
+    -   Sintaxe:  
+        **SELECT**  
+        *setor*,  
+        **SUM**(*salario*) **AS** “TOTAL DE SALARIOS DO SETOR”  
+        **FROM** *tabela*  
+        **GROUP BY** *setor*;  
+
+## 7.3 *Alias*
+
+-   Um *alias* de coluna permite atribuir um nome temporário a uma
+    coluna ou expressão na lista de projeção de uma instrução
+    **SELECT**.  
+-   O *alias* da coluna existe temporariamente durante a execução da
+    consulta.  
+-   É principalmente importante colocar *alias* em colunas que levam
+    formulas, para facilitar o entendimento de quem vai ler a
+    consulta.  
+-   Sintaxe:  
+    **SELECT**  
+    **AVG**(*coluna1*) **AS** “*ALIAS*”  
+    …  
+
+## 7.4 **GROUP BY**
+
+-   A cláusula **GROUP BY** divide as linhas retornadas da instrução
+    **SELECT** em grupos.  
+
+-   Para cada grupo, você pode aplicar uma função agregada, por exemplo,
+    **SUM**() para calcular a soma dos itens ou **COUNT**() para obter o
+    número de itens nos grupos.  
+
+-   A cláusula de instrução divide as linhas pelos valores das colunas
+    especificadas na cláusula **GROUP BY** e calcula um valor para cada
+    grupo.  
+
+-   O **PostgreSQL** avalia a cláusula **GROUP BY** após as cláusulas
+    **FROM** e **WHERE** e antes das cláusulas **HAVING SELECT**,
+    **DISTINCT**, **ORDER BY** e **LIMIT**.
+
+<img src="./Imagens/PostgreSQL-GROUP-BY-1.png" style="height:10cm" />  
+
+-   Sintaxe:  
+    **SELECT** *Country*, *Region*, **SUM**(*sales*) **AS** “Total
+    Sales”  
+    **FROM** *Sales*  
+    **GROUP BY** *Country*, *Region*;  
+
+# 8 Aula 123 - Estatisticas básicas
+
+## 8.1 Limite de linhas mostradas numa consulta
+
+-   O comando **LIMIT** determina a quantidade máxima de
+    linhas/registros que serão mostrados de uma determinada consulta.  
+
+-   O comando vem acompanhado do número de linhas da visualização da
+    consulta.  
+
+-   Sintaxe:  
+    **SELECT** \* **FROM** *tabela*  
+    **LIMIT** 10;  
+
+## 8.2 **ORDER BY**
+
+## 8.3 Média
+
+## 8.4 Soma total
+
+# 9 Observações
+
+## 9.1 Exportação de dados
+
+-   Uma das maneiras mais facil de exportar dados é atraves da extensão
+    “.csv”.  
+-   O **PostgreSQL** ofecere opções para facilmente exportar dados em
+    “.csv”.  
+-   Passo a passo:  
+    -   Basta fazer a consulta que deseja exportar, pela aba “**Query
+        Tools**”.  
+    -   Lembrando de colocar *alias* nas colunas/campos que levam
+        funções, para melhor entendimento de quem for fazer a leitura do
+        arquivo exportado.  
+    -   Na janela em que aparece o resultado da consulta, tem a aba
+        “Data Output” (na qual, por default, já é a aba em que aparecem
+        os resultados das consultas), tem o ícone “*Save results to
+        file*”.  
+    -   Ao clickar no ícone “*Save results to file*”, é oferecido a
+        opção de salvar a consulta como “.csv”.  
+
+## 9.2 Breve explicação de Business Intelligence e Data Science
+
+-   Business Intelligence (BI):  
+    -   Esta preocupado com entender o que aconteceu no passado.  
+-   Data Science:  
+    -   Através dos dados, tentar prever tendências futuras.  
+
+# 10 Andamento dos Estudos
+
+## 10.1 Assunto em andamento
+
+Atualmente estou estudando Módulo 30 - AULA 123.  
