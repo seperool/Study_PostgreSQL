@@ -1,6 +1,6 @@
-ESCRITO EM 19/08/22
+ESCRITO EM 20/08/22
 ---
-PARA 20/08/22
+PARA 21/08/22
 ---
 Subir github:
 	- Readme AULA
@@ -12,5 +12,3 @@ afazeres:
 		- soma total
 		- media
 		- ORDER BY
-	- Testar, modificar e comentar
-		- script 01_02
