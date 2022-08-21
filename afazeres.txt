@@ -1,6 +1,6 @@
-ESCRITO EM 20/08/22
+ESCRITO EM 21/08/22
 ---
-PARA 21/08/22
+PARA 22/08/22
 ---
 Subir github:
 	- Readme AULA
@@ -8,7 +8,6 @@ Estudar:
 	- Modulo 30 - AULA 123
 afazeres:
 	- Escrever AULA 123
-		- limite de linhas
 		- soma total
 		- media
 		- ORDER BY
