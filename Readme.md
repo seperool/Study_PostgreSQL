@@ -337,9 +337,72 @@ Udemy.
 
 ## 8.2 **ORDER BY**
 
-## 8.3 Média
+-   A palavra-chave **ORDER BY** é usada para classificar o conjunto de
+    resultados em ordem crescente ou decrescente.  
 
-## 8.4 Soma total
+-   A ordem na qual as linhas são retornadas em um conjunto de
+    resultados não é garantida, a menos que uma cláusula **ORDER BY**
+    seja especificada.  
+
+-   **ORDER BY** organiza os resultados de acordo com uma ou mais
+    colunas da tabela, podendo definir a ordem do resultados como
+    crescente ou decrescente.  
+
+    -   **ASC**  
+        Classifica os registros em ordem crescente.  
+    -   **DESC**  
+        Classifica os registros em ordem decrescente.  
+
+-   A palavra-chave **ORDER BY** classifica os registros em ordem
+    crescente por padrão. Para classificar os registros em ordem
+    decrescente, use a palavra-chave **DESC**.  
+
+-   Várias colunas de classificação podem ser especificadas. Os nomes de
+    coluna devem ser exclusivos. A sequência das colunas de
+    classificação na cláusula **ORDER BY** define a organização do
+    conjunto de resultados classificado. Ou seja, o conjunto de
+    resultados é classificado pela primeira coluna e então essa lista
+    ordenada é classificada pela segunda coluna e assim por diante.  
+
+-   É possivel ao invés de especificar o nome do campo/coluna no **ORDER
+    BY**, substituir pela posição em que a coluna aparece na clausula
+    **SELECT**. Porem não é entendida por outros bancos de dados e
+    usuários com tanta facilidade quanto com a especificação do nome de
+    coluna real. Além disso, as alterações na lista de seleção, como a
+    alteração da ordem das colunas ou a adição de novas colunas,
+    exigirão a modificação da cláusula **ORDER BY** para evitar
+    resultados inesperados.  
+
+-   Sintaxe com exemplo:  
+    **SELECT** \* **FROM** *Customers*  
+    **ORDER BY** *Country* **ASC**, *CustomerName* **DESC**;  
+
+## 8.3 Média - **AVG**
+
+-   A função **AVG**() retorna a média dos valores em um grupo.  
+
+-   Ignora valores nulos.  
+
+-   Sintaxe:  
+    **SELECT**  
+    **AVG**(*preco*) **AS** “PRECO_MEDIO”  
+    **FROM** *produto*;  
+
+## 8.4 Soma total - **SUM**
+
+-   A função **SUM**() retorna a soma de todos os valores ou somente os
+    valores **DISTINCT** na expressão.  
+
+-   **SUM**() pode ser usado exclusivamente com colunas numéricas.  
+
+-   Valores nulos são ignorados.  
+
+-   Sintaxe:  
+    **SELECT**  
+    *nome*,  
+    **SUM**(*valor*) **AS** “TOTAL_RECEBIDO”  
+    **FROM** *produto*  
+    **GROUP BY** *id*;  
 
 # 9 Observações
 
