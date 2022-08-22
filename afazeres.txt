@@ -1,13 +1,11 @@
-ESCRITO EM 21/08/22
+ESCRITO EM 22/08/22
 ---
-PARA 22/08/22
+PARA 23/08/22
 ---
 Subir github:
-	- Readme AULA
+	- Readme AULA 
+		
 Estudar:
-	- Modulo 30 - AULA 123
+	- Modulo 30 - AULA 124
 afazeres:
-	- Escrever AULA 123
-		- soma total
-		- media
-		- ORDER BY
+	- Escrever AULA 124
