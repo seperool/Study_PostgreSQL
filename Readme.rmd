@@ -7,18 +7,18 @@ output:
   pdf_document:
     number_sections: true
     toc: TRUE
-  odt_document:
-    number_sections: true
   word_document:
     toc: TRUE
     number_sections: true
-  github_document: default
   html_document:
     number_sections: true
     df_print: paged
+  github_document: default
   md_document:
     number_sections: true
     variant: markdown_github
+  odt_document:
+    number_sections: true
 ---
 
 \newpage
@@ -291,9 +291,9 @@ sudo \-u postgres psql\
 
 \newpage
 
-# Aula 123 - Estatisticas básicas
+# Aula 123 - Estatística básica média e soma
 
-## Limite de linhas mostradas numa consulta
+## Limite de linhas mostradas numa consulta - LIMIT
 
 - O comando **LIMIT** determina a quantidade máxima de linhas/registros que serão mostrados de uma determinada consulta.\
 
@@ -355,6 +355,19 @@ sudo \-u postgres psql\
 
 \newpage
 
+# Aula 124 - Estatística básica médias
+
+## Preparação dos dados para aplicação de estatística básica
+## Média
+## Mediana
+## Moda
+## Amplitude
+## Variancia
+## Desvio padrão
+## Coeficiente de variancia
+
+\newpage
+
 # Observações
 
 ## Exportação de dados
@@ -380,4 +393,4 @@ sudo \-u postgres psql\
 
 ## Assunto em andamento
 
-Atualmente estou estudando Módulo 30 - AULA 123.\
+Atualmente estou estudando Módulo 30 - AULA 124.\

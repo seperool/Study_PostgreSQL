@@ -321,9 +321,9 @@ Udemy.
     **FROM** *Sales*  
     **GROUP BY** *Country*, *Region*;  
 
-# 8 Aula 123 - Estatisticas básicas
+# 8 Aula 123 - Estatística básica média e soma
 
-## 8.1 Limite de linhas mostradas numa consulta
+## 8.1 Limite de linhas mostradas numa consulta - LIMIT
 
 -   O comando **LIMIT** determina a quantidade máxima de
     linhas/registros que serão mostrados de uma determinada consulta.  
@@ -404,9 +404,27 @@ Udemy.
     **FROM** *produto*  
     **GROUP BY** *id*;  
 
-# 9 Observações
+# 9 Aula 124 - Estatística básica médias
 
-## 9.1 Exportação de dados
+## 9.1 Preparação dos dados para aplicação de estatística básica
+
+## 9.2 Média
+
+## 9.3 Mediana
+
+## 9.4 Moda
+
+## 9.5 Amplitude
+
+## 9.6 Variancia
+
+## 9.7 Desvio padrão
+
+## 9.8 Coeficiente de variancia
+
+# 10 Observações
+
+## 10.1 Exportação de dados
 
 -   Uma das maneiras mais facil de exportar dados é atraves da extensão
     “.csv”.  
@@ -425,15 +443,15 @@ Udemy.
     -   Ao clickar no ícone “*Save results to file*”, é oferecido a
         opção de salvar a consulta como “.csv”.  
 
-## 9.2 Breve explicação de Business Intelligence e Data Science
+## 10.2 Breve explicação de Business Intelligence e Data Science
 
 -   Business Intelligence (BI):  
     -   Esta preocupado com entender o que aconteceu no passado.  
 -   Data Science:  
     -   Através dos dados, tentar prever tendências futuras.  
 
-# 10 Andamento dos Estudos
+# 11 Andamento dos Estudos
 
-## 10.1 Assunto em andamento
+## 11.1 Assunto em andamento
 
-Atualmente estou estudando Módulo 30 - AULA 123.  
+Atualmente estou estudando Módulo 30 - AULA 124.  
