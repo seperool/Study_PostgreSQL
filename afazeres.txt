@@ -1,11 +1,19 @@
-ESCRITO EM 22/08/22
+ESCRITO EM 23/08/22
 ---
-PARA 23/08/22
+PARA 24/08/22
 ---
 Subir github:
-	- Readme AULA 
+	- Readme AULA 124 - esqueleto do capitulo
 		
 Estudar:
-	- Modulo 30 - AULA 124
+	- Modulo 30 - AULA 124 - estatística básica médias
 afazeres:
-	- Escrever AULA 124
+	- Escrever AULA 124 - estatística básica médias
+		- Preparação dos dados
+		- média
+		- mediana
+		- moda
+		- amplitude
+		- variancia
+		- desvio padrão
+		- coeficiente de variancia
