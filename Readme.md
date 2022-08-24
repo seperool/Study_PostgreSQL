@@ -408,6 +408,56 @@ Udemy.
 
 ## 9.1 Preparação dos dados para aplicação de estatística básica
 
+### 9.1.1 Teoria
+
+-   Definição de Estatística:  
+    A Estatística de uma maneira geral compreende aos métodos
+    científicos para COLETA, ORGANIZAÇÃO, RESUMO, APRESENTAÇÃO e ANÁLISE
+    de Dados de Observação (Estudos ou Experimentos), obtidos em
+    qualquer área de conhecimento. A finalidade é a de obter conclusões
+    válidas para tomada de decisões.  
+    -   Estatística Descritiva  
+        Parte responsável basicamente pela COLETA e SÍNTESE (Descrição)
+        dos Dados em questão.  
+        Disponibiliza de técnicas para o alcance desses objetivos. Tais
+        Dados podem ser provenientes de uma AMOSTRA ou POPULAÇÃO.  
+    -   Estatística Inferencial  
+        É utilizada para tomada de decisões a respeito de uma população,
+        em geral fazendo uso de dados de amostrais.  
+        Essas decisões são tomadas sob condições de INCERTEZA, por isso
+        faz-se necessário o uso da TEORIA DA PROBABILIDADE.  
+-   População e Amostras  
+    -   População  
+        É o conjunto de todos os itens, objetos ou pessoas sob
+        consideração, os quais possuem pelo menos uma característica
+        (Variável) em comum. Os elementos pertencentes à uma População
+        são denominados “Unidades Amostrais”.  
+    -   Amostras  
+        É qualquer subconjunto (não vazio) da População. É extraída
+        conforme regras pré-estabelecidas, com a finalidade de obter
+        “Estimativa” de alguma Característica da População.  
+-   Tipos de variáveis  
+    <img src="./Imagens/tipos_de_variaveis_estatistica.png"
+    style="height:5cm" />  
+    -   *Qualitativo nominal*  
+        Não possuem uma ordem natural de ocorrência.  
+    -   *Qualitativo ordinal*  
+        Possuem uma ordem natural de ocorrência.  
+    -   *Quantitativo descreta*  
+        Só podem assumir valores inteiros, pertencentes a um conjunto
+        finito ou enumerável.  
+    -   *Quantitativo continua*  
+        Podem assumir qualquer valor em um determinado intervalo da reta
+        dos números reais.  
+
+### 9.1.2 Preparação dos dados (sumariazar dados coletados)
+
+-   Frequência (conceito)  
+    É a quantidade de vezes que um valor é observado dentro de um
+    conjunto de dado.  
+
+-   Distribuição em frequências  
+
 ## 9.2 Média
 
 ## 9.3 Mediana
