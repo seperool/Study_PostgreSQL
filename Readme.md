@@ -426,6 +426,21 @@ Udemy.
         em geral fazendo uso de dados de amostrais.  
         Essas decisões são tomadas sob condições de INCERTEZA, por isso
         faz-se necessário o uso da TEORIA DA PROBABILIDADE.  
+-   O fluxograma da estatística descritiva pode ser espresso da seguinte
+    forma:  
+    ![](./Imagens/fluxograma_estatistica_descritiva.png)  
+-   A representação tabular (Tabelas de Distribuição de Frequências)
+    deve conter:  
+    -   Cabeçalho  
+        Deve conter o suficiente para que as seguintes perguntas sejam
+        respondidas “**o que?**” (Relativo ao fato), “**onde?**”
+        (Relativo ao lugar) e “**quando?**” (Correspondente à época).  
+    -   Corpo  
+        É o lugar da Tabela onde os dados serão registrados. Apresenta
+        colunas e sub colunas.  
+    -   Rodapé  
+        Local destinado à outras informações pertinentes, por exemplo a
+        Fonte dos Dados.  
 -   População e Amostras  
     -   População  
         É o conjunto de todos os itens, objetos ou pessoas sob
@@ -435,7 +450,8 @@ Udemy.
     -   Amostras  
         É qualquer subconjunto (não vazio) da População. É extraída
         conforme regras pré-estabelecidas, com a finalidade de obter
-        “Estimativa” de alguma Característica da População.  
+        “estimativa” de alguma Característica da População.  
+
 -   Tipos de variáveis  
     <img src="./Imagens/tipos_de_variaveis_estatistica.png"
     style="height:5cm" />  

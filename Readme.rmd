@@ -7,18 +7,18 @@ output:
   md_document:
     number_sections: true
     variant: markdown_github
-  pdf_document:
+  odt_document:
     number_sections: true
-    toc: TRUE
   html_document:
     number_sections: true
     df_print: paged
   github_document: default
-  odt_document:
-    number_sections: true
   word_document:
     toc: TRUE
     number_sections: true
+  pdf_document:
+    number_sections: true
+    toc: TRUE
 ---
 
 \newpage
@@ -373,6 +373,16 @@ dados de amostrais.\
   Essas decisões são tomadas sob condições de INCERTEZA, por isso faz-se necessário o uso da
 TEORIA DA PROBABILIDADE.\
 
+- O fluxograma da estatística descritiva pode ser espresso da seguinte forma:\
+![](./Imagens/fluxograma_estatistica_descritiva.png){}\
+- A representação tabular (Tabelas de Distribuição de Frequências) deve conter:\
+  - Cabeçalho\
+  Deve conter o suficiente para que as seguintes perguntas sejam respondidas "**o que?**" (Relativo ao fato), "**onde?**" (Relativo ao lugar) e "**quando?**" (Correspondente à época).\
+  - Corpo\
+  É o lugar da Tabela onde os dados serão registrados. Apresenta colunas e sub colunas.\
+  - Rodapé\
+  Local destinado à outras informações pertinentes, por exemplo a Fonte dos Dados.\
+
 - População e Amostras\
   - População\
   É o conjunto de todos os itens, objetos ou pessoas sob consideração, os quais possuem pelo
@@ -380,7 +390,9 @@ menos uma característica (Variável) em comum. Os elementos pertencentes à uma
 denominados "Unidades Amostrais".\
   - Amostras\
   É qualquer subconjunto (não vazio) da População. É extraída conforme regras pré-estabelecidas,
-com a finalidade de obter "Estimativa" de alguma Característica da População.\
+com a finalidade de obter "estimativa" de alguma Característica da População.\
+
+\newpage
 
 - Tipos de variáveis\
 ![](./Imagens/tipos_de_variaveis_estatistica.png){height=5cm}\
@@ -400,6 +412,7 @@ com a finalidade de obter "Estimativa" de alguma Característica da População.
 É a quantidade de vezes que um valor é observado dentro de um conjunto de dado.\
 
 - Distribuição em frequências\
+
 
 
 \newpage
