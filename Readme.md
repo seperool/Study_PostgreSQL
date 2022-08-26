@@ -474,6 +474,9 @@ Udemy.
 
 -   Distribuição em frequências  
 
+    -   A distribuição tabular é denominada: “Tabela de Distribuição de
+        Frequências”.  
+
 ## 9.2 Média
 
 ## 9.3 Mediana

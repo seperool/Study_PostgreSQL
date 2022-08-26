@@ -4,21 +4,21 @@ subtitle: "Readme.rmd"
 author: "Sergio Pedro R Oliveira"
 date: "`r Sys.Date()`"
 output:
-  md_document:
-    number_sections: true
-    variant: markdown_github
-  odt_document:
-    number_sections: true
-  html_document:
-    number_sections: true
-    df_print: paged
-  github_document: default
-  word_document:
-    toc: TRUE
-    number_sections: true
   pdf_document:
     number_sections: true
     toc: TRUE
+  word_document:
+    toc: TRUE
+    number_sections: true
+  odt_document:
+    number_sections: true
+  github_document: default
+  html_document:
+    number_sections: true
+    df_print: paged
+  md_document:
+    number_sections: true
+    variant: markdown_github
 ---
 
 \newpage
@@ -412,6 +412,7 @@ com a finalidade de obter "estimativa" de alguma Característica da População.
 É a quantidade de vezes que um valor é observado dentro de um conjunto de dado.\
 
 - Distribuição em frequências\
+  - A distribuição tabular é denominada: "Tabela de Distribuição de Frequências".\
 
 
 
