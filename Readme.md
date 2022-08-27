@@ -476,6 +476,43 @@ Udemy.
 
     -   A distribuição tabular é denominada: “Tabela de Distribuição de
         Frequências”.  
+    -   Podemos separar em 3 modelos de distribuição tabular:  
+        -   Variável Quantitativa Discreta.  
+        -   Variável Quantitativa Contínua.  
+        -   Variáveis Qualitativas.  
+
+#### 9.1.2.1 Variável Quantitativa Discreta
+
+-   Passos da preparação dos dados:  
+    -   1º Passo - **DADOS BRUTOS**: Obter os dados da maneira que foram
+        coletados.  
+    -   2º Passo - **ROL**: Organizar os DADOS BRUTOS em uma determinada
+        ordem (crescente ou decrescente).  
+    -   3º Passo - **CONSTRUÇÃO TABELA**: Na primeira coluna são
+        colocados os valores da variável, e nas demais as respectivas
+        frequências.  
+    -   Frequência absoluta simples (Nº de vezes que cada valor da
+        variável se repete).  
+-   Principais campos da **distribuição tabular de variaveis
+    quantitativas discreta**:  
+
+<!-- -->
+
+    ##   Simbolo                                                           Descricao
+    ## 1       n                                Número total de elementos da amostra
+    ## 2      xi                   Número de valores distintos que a variavel assume
+    ## 3      fi Frequência Relativa Simples ou Proporção do i-ésimo valor observado
+    ## 4     fi%             Frequência Relativa Simples Percentual. fi% = fi . 100%
+    ## 5      Fi  Frequência Absoluta Simples: frequência do i-ésimo valor observado
+    ## 6      Fa   Frequência Absoluta Acumulada do i-ésimo valor observado distinto
+
+<img src="./Imagens/Distribuicao_tabular_quantitativo_discreta.png"
+style="height:5cm" />  
+Obs.: As setas simbolizam ordem crescente ou decrescente.  
+
+#### 9.1.2.2 Variável Quantitativa Contínua
+
+#### 9.1.2.3 Variáveis Qualitativas
 
 ## 9.2 Média
 

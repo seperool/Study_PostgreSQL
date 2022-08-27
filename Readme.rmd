@@ -7,18 +7,18 @@ output:
   pdf_document:
     number_sections: true
     toc: TRUE
+  md_document:
+    number_sections: true
+    variant: markdown_github
   word_document:
     toc: TRUE
-    number_sections: true
-  odt_document:
     number_sections: true
   github_document: default
   html_document:
     number_sections: true
     df_print: paged
-  md_document:
+  odt_document:
     number_sections: true
-    variant: markdown_github
 ---
 
 \newpage
@@ -413,8 +413,45 @@ com a finalidade de obter "estimativa" de alguma Característica da População.
 
 - Distribuição em frequências\
   - A distribuição tabular é denominada: "Tabela de Distribuição de Frequências".\
+  - Podemos separar em 3 modelos de distribuição tabular:\
+    - Variável Quantitativa Discreta.\
+    - Variável Quantitativa Contínua.\
+    - Variáveis Qualitativas.\
+
+\newpage
+
+#### Variável Quantitativa Discreta
+
+- Passos da preparação dos dados:\
+  - 1º Passo \- **DADOS BRUTOS**: Obter os dados da maneira que foram coletados.\
+  - 2º Passo \- **ROL**: Organizar os DADOS BRUTOS em uma determinada ordem (crescente ou decrescente).\
+  - 3º Passo \- **CONSTRUÇÃO TABELA**: Na primeira coluna são colocados os valores da variável, e nas demais as respectivas frequências.\
+  - Frequência absoluta simples (Nº de vezes que cada valor da variável se repete).\
+
+- Principais campos da **distribuição tabular de variaveis quantitativas discreta**:\
+```{r echo=FALSE}
+
+Simbolo <- c('n','xi','fi','fi%','Fi','Fa')
+Descricao <- c('Número total de elementos da amostra',
+               'Número de valores distintos que a variavel assume',
+               'Frequência Relativa Simples ou Proporção do i-ésimo valor observado',
+               'Frequência Relativa Simples Percentual. fi% = fi . 100%',
+               'Frequência Absoluta Simples: frequência do i-ésimo valor observado',
+               'Frequência Absoluta Acumulada do i-ésimo valor observado distinto')
+TABLE_Quant_Disc <- data.frame(Simbolo,Descricao)
+TABLE_Quant_Disc
+```
+![](./Imagens/Distribuicao_tabular_quantitativo_discreta.png){height=5cm}\
+Obs.: As setas simbolizam ordem crescente ou decrescente.\
+
+\newpage
+
+#### Variável Quantitativa Contínua
 
 
+\newpage
+
+#### Variáveis Qualitativas
 
 \newpage
 
