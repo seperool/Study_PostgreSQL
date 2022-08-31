@@ -10,15 +10,15 @@ output:
   md_document:
     number_sections: true
     variant: markdown_github
+  odt_document:
+    number_sections: true
+  github_document: default
   word_document:
     toc: TRUE
     number_sections: true
-  github_document: default
   html_document:
     number_sections: true
     df_print: paged
-  odt_document:
-    number_sections: true
 ---
 
 \newpage
@@ -448,6 +448,59 @@ Obs.: As setas simbolizam ordem crescente ou decrescente.\
 
 #### Variável Quantitativa Contínua
 
+- Teoria:\
+  - A construção da representação tabular é realizada de maneira análoga ao caso das variáveis discretas.\
+  - As frequências são agrupadas em classes, denominadas de "Classes de Frequência".\
+  - Denominada "Distribuição de Frequências em Classes" ou "Distribuição em Frequências Agrupadas".\
+  ![](./Imagens/Distr_de_freq_em_classes.png){}\
+
+- Convencionar o tipo de intervalo para as classes de frequência:\
+![](./Imagens/Intervalo_classes-dist_freq_quant_continua.png){height=5cm}\
+![](./Imagens/Distribuicao_freq_quant_conti-premissas.png){height=5cm}\
+\newpage
+
+Passos para contruir a **Tabela Distribuição de Frequências Contínua**:\
+
+1. Como estabelecer o **número de classes** ($k$):\
+  - Normalmente varia de 5 a 20 classes.\
+  - Critério fórmula de Sturges:\
+  $$k \cong 1 + 3,3 \cdot \log (n)$$
+  - Critério da Raiz quadrada:\
+  $$k \cong \sqrt{n}$$
+  Onde $n$ é o número de elementos amostrais.\
+
+2. Como calcular a **Amplitude Total** ($AT_{x}$):\
+  - Diferença entre o maior e o menor valor observado.\
+  - Intervalo de variação dos valores observados.\
+  - Aproximar valor calculado para múltiplo do nº classes ($k$).\
+  - Garantir inclusão dos valores mínimo e máximo.\
+  - Cálculo:\
+  $$AT_{x} = Máx(X_{i}) - Mín(X_{i})$$
+  Onde,\
+  $AT_{x}$ é a Amplitude Total.\
+  $Máx(X_{i})$ é o *valor máximo das amostras*.\
+  $Min(X_{i})$ é o *valor mínimo das amostras*.\
+  - Exemplo:\
+  Se $k = 5$,\
+  $AT_{x} = 28$\
+  Logo, arredondando $AT_{x} = 30$, para aproximar o valor $AT_{x}$ de um múltiplo de $k$.\
+
+3. Como cálcular a **Amplitude das classes da frequência** ($h$):\
+  - As classes terão amplitudes iguais.\
+  - Cálculo:\
+  $$ h = h_{i} = \frac{AT_{x}}{k}$$\
+  Onde, $k$ é o **número de classes** e $AT_{x}$ é a **Amplitude Total**.\
+
+4. Como determinar o ponto médio das classes, representatividade da classe ($p_{i}$):\
+$$p_{i} = \frac{(LS_{i} - LI_{i})}{2} $$
+Onde,\
+$LS_{i}$ é o limite superior da classe.\
+$LI_{i}$ é o limite inferior da classe.\
+
+5. Passos da preparação dos dados:\
+  - 1º Passo \- **DADOS BRUTOS**: Obter os dados da maneira que foram coletados.\
+  - 2º Passo \- **ROL**: Organizar os DADOS BRUTOS em uma determinada ordem (crescente ou decrescente).\
+  - 3º Passo \- **CONSTRUÇÃO TABELA**: Na primeira coluna são colocados as classes, e nas demais as respectivas frequências.\
 
 \newpage
 

@@ -512,6 +512,75 @@ Obs.: As setas simbolizam ordem crescente ou decrescente.
 
 #### 9.1.2.2 Variável Quantitativa Contínua
 
+-   Teoria:  
+    -   A construção da representação tabular é realizada de maneira
+        análoga ao caso das variáveis discretas.  
+    -   As frequências são agrupadas em classes, denominadas de “Classes
+        de Frequência”.  
+    -   Denominada “Distribuição de Frequências em Classes” ou
+        “Distribuição em Frequências Agrupadas”.  
+        ![](./Imagens/Distr_de_freq_em_classes.png)  
+-   Convencionar o tipo de intervalo para as classes de frequência:  
+    <img src="./Imagens/Intervalo_classes-dist_freq_quant_continua.png"
+    style="height:5cm" />  
+    <img src="./Imagens/Distribuicao_freq_quant_conti-premissas.png"
+    style="height:5cm" />  
+
+Passos para contruir a **Tabela Distribuição de Frequências
+Contínua**:  
+
+1.  Como estabelecer o **número de classes** (*k*):  
+
+-   Normalmente varia de 5 a 20 classes.  
+-   Critério fórmula de Sturges:  
+    *k* ≅ 1 + 3, 3 ⋅ log (*n*)
+-   Critério da Raiz quadrada:  
+    $$k \cong \sqrt{n}$$
+    Onde *n* é o número de elementos amostrais.  
+
+1.  Como calcular a **Amplitude Total** (*A**T*<sub>*x*</sub>):  
+
+-   Diferença entre o maior e o menor valor observado.  
+-   Intervalo de variação dos valores observados.  
+-   Aproximar valor calculado para múltiplo do nº classes (*k*).  
+-   Garantir inclusão dos valores mínimo e máximo.  
+-   Cálculo:  
+    *A**T*<sub>*x*</sub> = *M**á**x*(*X*<sub>*i*</sub>) − *M**í**n*(*X*<sub>*i*</sub>)
+    Onde,  
+    *A**T*<sub>*x*</sub> é a Amplitude Total.  
+    *M**á**x*(*X*<sub>*i*</sub>) é o *valor máximo das amostras*.  
+    *M**i**n*(*X*<sub>*i*</sub>) é o *valor mínimo das amostras*.  
+-   Exemplo:  
+    Se *k* = 5,  
+    *A**T*<sub>*x*</sub> = 28  
+    Logo, arredondando *A**T*<sub>*x*</sub> = 30, para aproximar o valor
+    *A**T*<sub>*x*</sub> de um múltiplo de *k*.  
+
+1.  Como cálcular a **Amplitude das classes da frequência** (*h*):  
+
+-   As classes terão amplitudes iguais.  
+-   Cálculo:  
+    $$ h = h\_{i} = \frac{AT\_{x}}{k}$$
+      
+    Onde, *k* é o **número de classes** e *A**T*<sub>*x*</sub> é a
+    **Amplitude Total**.  
+
+1.  Como determinar o ponto médio das classes, representatividade da
+    classe (*p*<sub>*i*</sub>):  
+    $$p\_{i} = \frac{(LS\_{i} - LI\_{i})}{2} $$
+    Onde,  
+    *L**S*<sub>*i*</sub> é o limite superior da classe.  
+    *L**I*<sub>*i*</sub> é o limite inferior da classe.  
+
+2.  Passos da preparação dos dados:  
+
+-   1º Passo - **DADOS BRUTOS**: Obter os dados da maneira que foram
+    coletados.  
+-   2º Passo - **ROL**: Organizar os DADOS BRUTOS em uma determinada
+    ordem (crescente ou decrescente).  
+-   3º Passo - **CONSTRUÇÃO TABELA**: Na primeira coluna são colocados
+    as classes, e nas demais as respectivas frequências.  
+
 #### 9.1.2.3 Variáveis Qualitativas
 
 ## 9.2 Média
