@@ -580,6 +580,19 @@ Contínua**:
     ordem (crescente ou decrescente).  
 -   3º Passo - **CONSTRUÇÃO TABELA**: Na primeira coluna são colocados
     as classes, e nas demais as respectivas frequências.  
+-   Exemplo:  
+    <img src="./Imagens/tabela_de_dist_freq_quant_conti.png"
+    style="height:5cm" />  
+    *X*<sub>*i*</sub> são as classes.  
+    *F*<sub>*i*</sub> é a Frequência Absoluta Simples.  
+    *f*<sub>*i*</sub> é a Frequência Relativa Simples.  
+    *f*<sub>*i*</sub>% é a Fequência Relativa Simples Percentual.  
+    *F*<sub>*a*</sub> é a Frequência Absoluta Acumulada.  
+    *f*<sub>*a*</sub> é a Fequência Absoluta Acumulada Simples.  
+    *f*<sub>*a*</sub>% é a Fequência Absoluta Acumulada Simples
+    Percentual.  
+    *p*<sub>*i*</sub> é a Representatividade da classe (ponto médio das
+    classes).  
 
 #### 9.1.2.3 Variáveis Qualitativas
 

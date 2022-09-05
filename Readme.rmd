@@ -4,21 +4,21 @@ subtitle: "Readme.rmd"
 author: "Sergio Pedro R Oliveira"
 date: "`r Sys.Date()`"
 output:
-  pdf_document:
-    number_sections: true
-    toc: TRUE
-  md_document:
-    number_sections: true
-    variant: markdown_github
-  odt_document:
-    number_sections: true
-  github_document: default
-  word_document:
-    toc: TRUE
-    number_sections: true
   html_document:
     number_sections: true
     df_print: paged
+  word_document:
+    toc: TRUE
+    number_sections: true
+  md_document:
+    number_sections: true
+    variant: markdown_github
+  github_document: default
+  pdf_document:
+    number_sections: true
+    toc: TRUE
+  odt_document:
+    number_sections: true
 ---
 
 \newpage
@@ -501,6 +501,16 @@ $LI_{i}$ é o limite inferior da classe.\
   - 1º Passo \- **DADOS BRUTOS**: Obter os dados da maneira que foram coletados.\
   - 2º Passo \- **ROL**: Organizar os DADOS BRUTOS em uma determinada ordem (crescente ou decrescente).\
   - 3º Passo \- **CONSTRUÇÃO TABELA**: Na primeira coluna são colocados as classes, e nas demais as respectivas frequências.\
+  - Exemplo:\
+  ![](./Imagens/tabela_de_dist_freq_quant_conti.png){height=5cm}\
+  $X_{i}$ são as classes.\
+  $F_{i}$ é a Frequência Absoluta Simples.\
+  $f_{i}$ é a Frequência Relativa Simples.\
+  $f_{i} \%$ é a Fequência Relativa Simples Percentual.\
+  $F_{a}$ é a Frequência Absoluta Acumulada.\
+  $f_{a}$ é a Fequência Absoluta Acumulada Simples.\
+  $f_{a} \%$ é a Fequência Absoluta Acumulada Simples Percentual.\
+  $p_{i}$ é a Representatividade da classe (ponto médio das classes).\
 
 \newpage
 
