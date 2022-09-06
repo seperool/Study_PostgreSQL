@@ -4,21 +4,21 @@ subtitle: "Readme.rmd"
 author: "Sergio Pedro R Oliveira"
 date: "`r Sys.Date()`"
 output:
+  md_document:
+    number_sections: true
+    variant: markdown_github
   html_document:
     number_sections: true
     df_print: paged
   word_document:
     toc: TRUE
     number_sections: true
-  md_document:
-    number_sections: true
-    variant: markdown_github
   github_document: default
+  odt_document:
+    number_sections: true
   pdf_document:
     number_sections: true
     toc: TRUE
-  odt_document:
-    number_sections: true
 ---
 
 \newpage
@@ -429,18 +429,13 @@ com a finalidade de obter "estimativa" de alguma Característica da População.
   - Frequência absoluta simples (Nº de vezes que cada valor da variável se repete).\
 
 - Principais campos da **distribuição tabular de variaveis quantitativas discreta**:\
-```{r echo=FALSE}
+  - $n$ é o número total de elementos da amostra.\
+  - $x_{i}$ é o número de valores distintos que a variavel assume.\
+  - $F_{i}$ é a Frequência Absoluta Simples.\
+  - $f_{i}$ é a Frequência Relativa Simples.\
+  - $f_{i} \%$ é a Frequência Relativa Simples Percentual. $f_{i}\% = f_{i} \cdot 100\%$.\
+  - $F_{a}$ é a Frequência Absoluta Acumulada.\
 
-Simbolo <- c('n','xi','fi','fi%','Fi','Fa')
-Descricao <- c('Número total de elementos da amostra',
-               'Número de valores distintos que a variavel assume',
-               'Frequência Relativa Simples ou Proporção do i-ésimo valor observado',
-               'Frequência Relativa Simples Percentual. fi% = fi . 100%',
-               'Frequência Absoluta Simples: frequência do i-ésimo valor observado',
-               'Frequência Absoluta Acumulada do i-ésimo valor observado distinto')
-TABLE_Quant_Disc <- data.frame(Simbolo,Descricao)
-TABLE_Quant_Disc
-```
 ![](./Imagens/Distribuicao_tabular_quantitativo_discreta.png){height=5cm}\
 Obs.: As setas simbolizam ordem crescente ou decrescente.\
 
@@ -515,6 +510,19 @@ $LI_{i}$ é o limite inferior da classe.\
 \newpage
 
 #### Variáveis Qualitativas
+
+- Passos da preparação dos dados:\
+  - Análogo ao procedimento para dados discretos.\
+  - 1º Passo \- **DADOS BRUTOS**: Obter os dados da maneira que foram coletados.\
+  - 2º Passo \- **ROL**: Nesse caso é feita organização dos DADOS BRUTOS em ordem (Crescente ou Decrescente) de importância.\
+  - 3º Passo \- **CONSTRUÇÃO TABELA** (Com duas ou mais colunas).\
+
+- Distribuição de Frequencia:\
+  - $x_{i}$ é o número de valores distintos que a variavel assume.\
+  - $F_{i}$ é a Frequência Absoluta Simples.\
+  - $f_{i}$ é a Frequência Relativa Simples.\
+  - $f_{i} \%$ é a Fequência Relativa Simples Percentual.\
+  - Inserir comentário sobre os dados.\
 
 \newpage
 

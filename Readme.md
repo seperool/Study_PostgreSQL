@@ -495,16 +495,14 @@ Udemy.
         variável se repete).  
 -   Principais campos da **distribuição tabular de variaveis
     quantitativas discreta**:  
-
-<!-- -->
-
-    ##   Simbolo                                                           Descricao
-    ## 1       n                                Número total de elementos da amostra
-    ## 2      xi                   Número de valores distintos que a variavel assume
-    ## 3      fi Frequência Relativa Simples ou Proporção do i-ésimo valor observado
-    ## 4     fi%             Frequência Relativa Simples Percentual. fi% = fi . 100%
-    ## 5      Fi  Frequência Absoluta Simples: frequência do i-ésimo valor observado
-    ## 6      Fa   Frequência Absoluta Acumulada do i-ésimo valor observado distinto
+    -   *n* é o número total de elementos da amostra.  
+    -   *x*<sub>*i*</sub> é o número de valores distintos que a variavel
+        assume.  
+    -   *F*<sub>*i*</sub> é a Frequência Absoluta Simples.  
+    -   *f*<sub>*i*</sub> é a Frequência Relativa Simples.  
+    -   *f*<sub>*i*</sub>% é a Frequência Relativa Simples Percentual.
+        *f*<sub>*i*</sub>% = *f*<sub>*i*</sub> ⋅ 100%.  
+    -   *F*<sub>*a*</sub> é a Frequência Absoluta Acumulada.  
 
 <img src="./Imagens/Distribuicao_tabular_quantitativo_discreta.png"
 style="height:5cm" />  
@@ -595,6 +593,21 @@ Contínua**:
     classes).  
 
 #### 9.1.2.3 Variáveis Qualitativas
+
+-   Passos da preparação dos dados:  
+    -   Análogo ao procedimento para dados discretos.  
+    -   1º Passo - **DADOS BRUTOS**: Obter os dados da maneira que foram
+        coletados.  
+    -   2º Passo - **ROL**: Nesse caso é feita organização dos DADOS
+        BRUTOS em ordem (Crescente ou Decrescente) de importância.  
+    -   3º Passo - **CONSTRUÇÃO TABELA** (Com duas ou mais colunas).  
+-   Distribuição de Frequencia:  
+    -   *x*<sub>*i*</sub> é o número de valores distintos que a variavel
+        assume.  
+    -   *F*<sub>*i*</sub> é a Frequência Absoluta Simples.  
+    -   *f*<sub>*i*</sub> é a Frequência Relativa Simples.  
+    -   *f*<sub>*i*</sub>% é a Fequência Relativa Simples Percentual.  
+    -   Inserir comentário sobre os dados.  
 
 ## 9.2 Média
 
