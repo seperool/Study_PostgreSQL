@@ -1,15 +1,13 @@
-ESCRITO EM 06/08/22
+ESCRITO EM 07/08/22
 ---
-PARA 07/09/22
+PARA 08/09/22
 ---
 Subir github:
-	- Readme AULA 124 - estatística básica médias
-				
+	- Readme AULA 124 - estatística básica médias			
 Estudar:
 	- Modulo 30 - AULA 124 - estatística básica médias
 afazeres:
 	- Escrever AULA 124 - estatística básica médias
-		- média
 		- mediana
 		- moda
 		- amplitude
