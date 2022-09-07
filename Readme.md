@@ -609,7 +609,22 @@ Contínua**:
     -   *f*<sub>*i*</sub>% é a Fequência Relativa Simples Percentual.  
     -   Inserir comentário sobre os dados.  
 
-## 9.2 Média
+## 9.2 Média aritmética
+
+-   **Média Aritmética Simples** ($\overline{x}$): Valor médio dos dados
+    da distribuição.  
+-   Dados Não-Agrupados (não tabelados):  
+    -   É a soma de todos os elementos, dividido pelo número total de
+        elementos.  
+    -   Cálculo:  
+        $$\overline{x} = \frac{Soma}{n\_{Total}}$$
+-   Dados Agrupados (tabelados):  
+    -   É o *Ponto Médio das Classes* (*p*<sub>*i*</sub>), multiplicado
+        por suas respectivas *Frequência Absoluta Simples*
+        (*F*<sub>*i*</sub>), somadas. Dividido pelo *Número Total de
+        Elementos da Amostra* (*n*).  
+    -   Cálculo:  
+        $$\overline{x} = \frac{\sum\_{i=1}^{n} p\_{i} \cdot F\_{i}}{n\_{Total}}$$
 
 ## 9.3 Mediana
 
