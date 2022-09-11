@@ -1,6 +1,6 @@
-ESCRITO EM 10/08/22
+ESCRITO EM 11/08/22
 ---
-PARA 11/09/22
+PARA 12/09/22
 ---
 Subir github:
 	- Readme AULA 124 - estatística básica médias			
@@ -9,7 +9,6 @@ Estudar:
 afazeres:
 	- Escrever AULA 124 - estatística básica médias
 		- mediana
-		- moda
 		- amplitude
 		- variancia
 		- desvio padrão
