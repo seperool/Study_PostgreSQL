@@ -611,24 +611,78 @@ Contínua**:
 
 ## 9.2 Média aritmética
 
--   **Média Aritmética Simples** ($\overline{x}$): Valor médio dos dados
-    da distribuição.  
--   Dados Não-Agrupados (não tabelados):  
+-   **Média Aritmética** ($\overline{x}$): Valor médio dos dados da
+    distribuição.  
+-   **Média Aritmética Simples**, dados Não-Agrupados (não tabelados):  
     -   É a soma de todos os elementos, dividido pelo número total de
         elementos.  
     -   Cálculo:  
         $$\overline{x} = \frac{Soma}{n\_{Total}}$$
--   Dados Agrupados (tabelados):  
-    -   É o *Ponto Médio das Classes* (*p*<sub>*i*</sub>), multiplicado
-        por suas respectivas *Frequência Absoluta Simples*
-        (*F*<sub>*i*</sub>), somadas. Dividido pelo *Número Total de
-        Elementos da Amostra* (*n*).  
-    -   Cálculo:  
-        $$\overline{x} = \frac{\sum\_{i=1}^{n} p\_{i} \cdot F\_{i}}{n\_{Total}}$$
+-   **Média Aritmética Ponderada**, dados Agrupados (tabelados):  
+-   É o *Ponto Médio das Classes* (*p*<sub>*i*</sub>), multiplicado por
+    suas respectivas *Frequência Absoluta Simples* (*F*<sub>*i*</sub>),
+    somadas. Dividido pelo *Número Total de Elementos da Amostra*
+    (*n*).  
+-   Cálculo:  
+    $$\overline{x} = \frac{\sum\_{i=1}^{n} p\_{i} \cdot F\_{i}}{n\_{Total}}$$
+    ou,  
+    $$\overline{x} = \frac{(p\_{1} \cdot F\_{1}) + (p\_{2} \cdot F\_{2})+(p\_{3} \cdot F\_{3}) + ...}{n\_{Total}}$$
 
 ## 9.3 Mediana
 
 ## 9.4 Moda
+
+-   Moda ou *M**o*(*x*): Valor com maior frequência de ocorrência em uma
+    distribuição.  
+
+-   Podem haver mais de um valor distinto com maior frequência, podendo
+    assim ter mais de um valor na moda.  
+
+-   Moda com frequência Continua:  
+
+    1.  **Moda Bruta**:  
+
+    -   Achar a classe com maior frequência, esse será o *Intervalo
+        Modal*.  
+    -   Cálcular o *Ponto Médio* (Representatividade da classe) do
+        *Intervalo Modal*:  
+        $$PM = \frac{LS + LI}{2}$$
+        LS = Limite superior da classe.  
+        LI = Limite inferior da classe.  
+    -   O *Ponto Médio* do *Intervalo Modal* será a **Moda Bruta**.  
+
+    1.  **Moda King** ou **Moda do Rei**:  
+
+    -   Determinar o intervalo (classe) com maior frequência, esse será
+        o *Intervalo Modal*.  
+    -   Cálculo da Moda de King (*M*<sub>*K**i**n**g*</sub>):  
+        $$M\_{King} = LI + (\frac{F\_{post}}{F\_{post}+F\_{ant}} \cdot h)$$
+        *L**I* é o limite inferior da classe do *Intervalo Modal*.  
+        *F*<sub>*p**o**s**t*</sub> é a frequência da classe posterior ao
+        *Intervalo Modal*.  
+        *F*<sub>*a**n**t*</sub> é a frequência da classe anterior ao
+        *Intervalo Modal*.  
+        *h* é a amplitude do intervalo da classe.  
+        *h* = *L**S* − *L**I*
+
+    1.  **Moda de Czuber**:  
+
+    -   Determinar o intervalo (classe) com maior frequência, esse será
+        o *Intervalo Modal*.  
+    -   Cálculo da **Moda de Czuber**
+        (*M*<sub>*C**z**u**b**e**r*</sub>):  
+        $$M\_{Czuber} = LI + (\frac{\Delta\_{ant}}{\Delta\_{ant}+\Delta\_{post}} \cdot h)$$
+        *L**I* é o limite inferior da classe do *Intervalo Modal*.  
+        *Δ*<sub>*a**n**t*</sub> é a variação (diferença) da frequência
+        da classe anterior (ao *Intervalo Modal*) com o *Intervalo
+        Modal* (classe com maior frequência).  
+        *Δ*<sub>*a**n**t*</sub> = \|*F*<sub>*i*</sub>−*F*<sub>*i* − 1</sub>\|
+        *Δ*<sub>*p**o**s**t*</sub> é a variação (diferença) da
+        frequência da classe posterior (ao *Intervalo Modal*) com o
+        *Intervalo Modal* (classe com maior frequência).  
+        *Δ*<sub>*a**n**t*</sub> = \|*F*<sub>*i*</sub>−*F*<sub>*i* + 1</sub>\|
+        *h* é a amplitude do intervalo da classe.  
+        *h* = *L**S* − *L**I*
 
 ## 9.5 Amplitude
 

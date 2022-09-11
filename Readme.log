@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.8.11)  7 SEP 2022 16:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.8.11)  11 SEP 2022 16:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1601,82 +1601,107 @@ Underfull \hbox (badness 10000) in paragraph at lines 1178--1181
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1181--1182
+Underfull \hbox (badness 10000) in paragraph at lines 1181--1183
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1186--1189
+Underfull \hbox (badness 10000) in paragraph at lines 1187--1190
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1189--1190
+Underfull \hbox (badness 10000) in paragraph at lines 1190--1191
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1193--1194
+Underfull \hbox (badness 10000) in paragraph at lines 1194--1196
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1198--1203
+Underfull \hbox (badness 10000) in paragraph at lines 1196--1200
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1203--1204
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1201
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1201--1203
 
  []
 
 [24]
-Underfull \hbox (badness 10000) in paragraph at lines 1237--1240
+Underfull \hbox (badness 10000) in paragraph at lines 1216--1219
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1240--1243
+Underfull \hbox (badness 10000) in paragraph at lines 1219--1222
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1243--1244
+Underfull \hbox (badness 10000) in paragraph at lines 1222--1223
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1248--1251
+Underfull \hbox (badness 10000) in paragraph at lines 1228--1229
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1251--1255
+Underfull \hbox (badness 10000) in paragraph at lines 1234--1237
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1255--1260
+Underfull \hbox (badness 10000) in paragraph at lines 1237--1239
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1260--1262
+Underfull \hbox (badness 10000) in paragraph at lines 1239--1242
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1272--1273
+Underfull \hbox (badness 10000) in paragraph at lines 1242--1244
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1277--1278
+Underfull \hbox (badness 10000) in paragraph at lines 1251--1252
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1280--1281
+Underfull \hbox (badness 10000) in paragraph at lines 1257--1260
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1260--1261
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1261--1268
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1276--1277
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1282--1285
 
  []
 
@@ -1685,23 +1710,93 @@ Underfull \hbox (badness 10000) in paragraph at lines 1285--1286
 
  []
 
-[25]
-Underfull \hbox (badness 10000) in paragraph at lines 1297--1298
+
+Underfull \hbox (badness 10000) in paragraph at lines 1286--1291
 
  []
 
-[26] (./Readme.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 1291--1295
+
+ []
+
+[25]
+Underfull \hbox (badness 10000) in paragraph at lines 1295--1297
+
+ []
+
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 1324--1327
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1327--1330
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1330--1331
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1335--1338
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1338--1342
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1342--1347
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1347--1349
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1359--1360
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1364--1365
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1367--1368
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1372--1373
+
+ []
+
+[27]
+Underfull \hbox (badness 10000) in paragraph at lines 1384--1385
+
+ []
+
+[28] (./Readme.aux) ) 
 Here is how much of TeX's memory you used:
- 13531 strings out of 480204
- 215434 string characters out of 5895010
+ 13536 strings out of 480204
+ 215466 string characters out of 5895010
  547634 words of memory out of 5000000
  30994 multiletter control sequences out of 15000+600000
  529766 words of font info for 139 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  74i,7n,77p,1070b,537s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share
-/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
--mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texm
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/s
+hare/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
+-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texm
 f/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}
 </usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type
 1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbxi10.pfb></us
@@ -1710,11 +1805,12 @@ blic/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi7.pfb></usr/shar
 e/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm
 /lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/
 fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.p
-fb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb>
-Output written on Readme.pdf (26 pages, 658289 bytes).
+fb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/t
+ype1/public/lm/lmsy7.pfb>
+Output written on Readme.pdf (28 pages, 668682 bytes).
 PDF statistics:
- 505 PDF objects out of 1000 (max. 8388607)
- 430 compressed objects within 5 object streams
- 127 named destinations out of 1000 (max. 500000)
+ 521 PDF objects out of 1000 (max. 8388607)
+ 442 compressed objects within 5 object streams
+ 132 named destinations out of 1000 (max. 500000)
  33137 words of extra memory for PDF output out of 35830 (max. 10000000)
 

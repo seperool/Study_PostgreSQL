@@ -7,9 +7,8 @@ output:
   md_document:
     number_sections: true
     variant: markdown_github
-  pdf_document:
+  odt_document:
     number_sections: true
-    toc: TRUE
   html_document:
     number_sections: true
     df_print: paged
@@ -17,8 +16,9 @@ output:
   word_document:
     toc: TRUE
     number_sections: true
-  odt_document:
+  pdf_document:
     number_sections: true
+    toc: TRUE
 ---
 
 \newpage
@@ -527,18 +527,56 @@ $LI_{i}$ é o limite inferior da classe.\
 \newpage
 
 ## Média aritmética
-- **Média Aritmética Simples** ($\overline{x}$): Valor médio dos dados da distribuição.\
-- Dados Não-Agrupados (não tabelados):\
+- **Média Aritmética** ($\overline{x}$): Valor médio dos dados da distribuição.\
+- **Média Aritmética Simples**, dados Não-Agrupados (não tabelados):\
   - É a soma de todos os elementos, dividido pelo número total de elementos.\
   - Cálculo:\
   $$\overline{x} = \frac{Soma}{n_{Total}}$$
-- Dados Agrupados (tabelados):\
+-  **Média Aritmética Ponderada**, dados Agrupados (tabelados):\
   - É o *Ponto Médio das Classes* ($p_{i}$), multiplicado por suas respectivas *Frequência Absoluta Simples* ($F_{i}$), somadas. Dividido pelo *Número Total de Elementos da Amostra* ($n$).\
   - Cálculo:\
   $$\overline{x} = \frac{\sum_{i=1}^{n} p_{i} \cdot F_{i}}{n_{Total}}$$
+  ou,\
+  $$\overline{x} = \frac{(p_{1} \cdot F_{1}) + (p_{2} \cdot F_{2})+(p_{3} \cdot F_{3}) + ...}{n_{Total}}$$
 
 ## Mediana
+
+\newpage
+
 ## Moda
+
+- Moda ou $Mo(x)$: Valor com maior frequência de ocorrência em uma distribuição.\
+- Podem haver mais de um valor distinto com maior frequência, podendo assim ter mais de um valor na moda.\
+
+- Moda com frequência Continua:\
+  1. **Moda Bruta**:\
+    - Achar a classe com maior frequência, esse será o *Intervalo Modal*.\
+    - Cálcular o *Ponto Médio* (Representatividade da classe) do *Intervalo Modal*:\
+    $$PM = \frac{LS + LI}{2}$$
+    LS = Limite superior da classe.\
+    LI = Limite inferior da classe.\
+    - O *Ponto Médio* do *Intervalo Modal* será a **Moda Bruta**.\
+  2. **Moda King** ou **Moda do Rei**:\
+    - Determinar o intervalo (classe) com maior frequência, esse será o *Intervalo Modal*.\
+    - Cálculo da Moda de King ($M_{King}$):\
+    $$M_{King} = LI + (\frac{F_{post}}{F_{post}+F_{ant}} \cdot h)$$
+    $LI$ é o limite inferior da classe do *Intervalo Modal*.\
+    $F_{post}$ é a frequência da classe posterior ao *Intervalo Modal*.\
+    $F_{ant}$ é a frequência da classe anterior ao *Intervalo Modal*.\
+    $h$ é a amplitude do intervalo da classe.\
+    $$h = LS - LI$$
+  3. **Moda de Czuber**:\
+    - Determinar o intervalo (classe) com maior frequência, esse será o *Intervalo Modal*.\
+    - Cálculo da **Moda de Czuber** ($M_{Czuber}$):\
+    $$M_{Czuber} = LI + (\frac{\Delta_{ant}}{\Delta_{ant}+\Delta_{post}} \cdot h)$$
+    $LI$ é o limite inferior da classe do *Intervalo Modal*.\
+    $\Delta_{ant}$ é a variação (diferença) da frequência da classe anterior (ao *Intervalo Modal*) com o *Intervalo Modal* (classe com maior frequência).\
+    $$\Delta_{ant} = |F_{i} - F_{i-1}|$$
+    $\Delta_{post}$ é a variação (diferença) da frequência da classe posterior (ao *Intervalo Modal*) com o *Intervalo Modal* (classe com maior frequência).\
+    $$\Delta_{ant} = |F_{i} - F_{i+1}|$$
+    $h$ é a amplitude do intervalo da classe.\
+    $$h = LS - LI$$
+
 ## Amplitude
 ## Variancia
 ## Desvio padrão
