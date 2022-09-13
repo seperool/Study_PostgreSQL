@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.8.11)  11 SEP 2022 16:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.8.11)  13 SEP 2022 18:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1037,7 +1037,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 654--658
 
  []
 
-<./Imagens/PostgreSQL-GROUP-BY-1.png, id=172, 179.67125pt x 582.175pt>
+<./Imagens/PostgreSQL-GROUP-BY-1.png, id=174, 179.67125pt x 582.175pt>
 File: ./Imagens/PostgreSQL-GROUP-BY-1.png Graphic file (type png)
 <use ./Imagens/PostgreSQL-GROUP-BY-1.png>
 Package pdftex.def Info: ./Imagens/PostgreSQL-GROUP-BY-1.png  used on input lin
@@ -1163,7 +1163,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 823--828
 
  []
 
-<./Imagens/fluxograma_estatistica_descritiva.png, id=193, 636.3775pt x 120.45pt
+<./Imagens/fluxograma_estatistica_descritiva.png, id=195, 636.3775pt x 120.45pt
 >
 File: ./Imagens/fluxograma_estatistica_descritiva.png Graphic file (type png)
 <use ./Imagens/fluxograma_estatistica_descritiva.png>
@@ -1211,7 +1211,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 866--870
  []
 
 [16 <./Imagens/fluxograma_estatistica_descritiva.png>]
-<./Imagens/tipos_de_variaveis_estatistica.png, id=204, 770.88pt x 399.4925pt>
+<./Imagens/tipos_de_variaveis_estatistica.png, id=206, 770.88pt x 399.4925pt>
 File: ./Imagens/tipos_de_variaveis_estatistica.png Graphic file (type png)
 <use ./Imagens/tipos_de_variaveis_estatistica.png>
 Package pdftex.def Info: ./Imagens/tipos_de_variaveis_estatistica.png  used on 
@@ -1337,7 +1337,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 979--980
 
  []
 
-<./Imagens/Distribuicao_tabular_quantitativo_discreta.png, id=216, 527.9725pt x
+<./Imagens/Distribuicao_tabular_quantitativo_discreta.png, id=218, 527.9725pt x
  335.2525pt>
 File: ./Imagens/Distribuicao_tabular_quantitativo_discreta.png Graphic file (ty
 pe png)
@@ -1635,7 +1635,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1201--1203
 
  []
 
-[24]
+
 Underfull \hbox (badness 10000) in paragraph at lines 1216--1219
 
  []
@@ -1646,171 +1646,228 @@ Underfull \hbox (badness 10000) in paragraph at lines 1219--1222
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1222--1223
+Underfull \hbox (badness 10000) in paragraph at lines 1222--1224
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1228--1229
+Underfull \hbox (badness 10000) in paragraph at lines 1224--1227
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1234--1237
+Underfull \hbox (badness 10000) in paragraph at lines 1235--1237
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1237--1239
+Underfull \hbox (badness 10000) in paragraph at lines 1243--1246
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1239--1242
+Underfull \hbox (badness 10000) in paragraph at lines 1246--1247
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1242--1244
+Underfull \hbox (badness 10000) in paragraph at lines 1255--1257
+
+ []
+
+[24]
+Underfull \hbox (badness 10000) in paragraph at lines 1259--1261
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1251--1252
+Underfull \hbox (badness 10000) in paragraph at lines 1268--1269
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1257--1260
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1260--1261
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1261--1268
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1276--1277
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1282--1285
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1285--1286
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1286--1291
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1291--1295
+Underfull \hbox (badness 10000) in paragraph at lines 1269--1279
 
  []
 
 [25]
-Underfull \hbox (badness 10000) in paragraph at lines 1295--1297
+Underfull \hbox (badness 10000) in paragraph at lines 1289--1292
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1292--1295
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1295--1296
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1301--1302
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1307--1310
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1310--1312
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1312--1315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1315--1317
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1324--1325
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1330--1333
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1333--1334
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1334--1341
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1349--1350
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1355--1358
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1358--1359
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1359--1364
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1364--1368
 
  []
 
 [26]
-Underfull \hbox (badness 10000) in paragraph at lines 1324--1327
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1327--1330
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1330--1331
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1335--1338
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1338--1342
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1342--1347
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1347--1349
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1359--1360
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1364--1365
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1367--1368
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1372--1373
+Underfull \hbox (badness 10000) in paragraph at lines 1368--1370
 
  []
 
 [27]
-Underfull \hbox (badness 10000) in paragraph at lines 1384--1385
+Underfull \hbox (badness 10000) in paragraph at lines 1397--1400
 
  []
 
-[28] (./Readme.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 1400--1403
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1403--1404
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1408--1411
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1411--1415
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1415--1420
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1420--1422
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1432--1433
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1437--1438
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1440--1441
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1445--1446
+
+ []
+
+[28]
+Underfull \hbox (badness 10000) in paragraph at lines 1457--1458
+
+ []
+
+[29] (./Readme.aux) ) 
 Here is how much of TeX's memory you used:
- 13536 strings out of 480204
- 215466 string characters out of 5895010
- 547634 words of memory out of 5000000
- 30994 multiletter control sequences out of 15000+600000
- 529766 words of font info for 139 fonts, out of 8000000 for 9000
+ 13558 strings out of 480204
+ 215739 string characters out of 5895010
+ 547772 words of memory out of 5000000
+ 30996 multiletter control sequences out of 15000+600000
+ 530380 words of font info for 145 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  74i,7n,77p,1070b,537s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/s
 hare/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
--mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texm
+-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texm
 f/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}
 </usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type
 1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbxi10.pfb></us
 r/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/pu
-blic/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi7.pfb></usr/shar
-e/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm
-/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/
-fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.p
-fb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/t
-ype1/public/lm/lmsy7.pfb>
-Output written on Readme.pdf (28 pages, 668682 bytes).
+blic/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/sha
+re/texmf/fonts/type1/public/lm/lmmi5.pfb></usr/share/texmf/fonts/type1/public/l
+m/lmmi7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf
+/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.
+pfb></usr/share/texmf/fonts/type1/public/lm/lmr5.pfb></usr/share/texmf/fonts/ty
+pe1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr
+/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/pub
+lic/lm/lmsy7.pfb>
+Output written on Readme.pdf (29 pages, 701826 bytes).
 PDF statistics:
- 521 PDF objects out of 1000 (max. 8388607)
- 442 compressed objects within 5 object streams
- 132 named destinations out of 1000 (max. 500000)
+ 552 PDF objects out of 1000 (max. 8388607)
+ 465 compressed objects within 5 object streams
+ 140 named destinations out of 1000 (max. 500000)
  33137 words of extra memory for PDF output out of 35830 (max. 10000000)
 

@@ -628,7 +628,52 @@ Contínua**:
     ou,  
     $$\overline{x} = \frac{(p\_{1} \cdot F\_{1}) + (p\_{2} \cdot F\_{2})+(p\_{3} \cdot F\_{3}) + ...}{n\_{Total}}$$
 
-## 9.3 Mediana
+## 9.3 Mediana (*m**d*(*x*))
+
+### 9.3.1 Mediana discreta
+
+-   Com dados em ROL, é o valor que divide o conjunto de dados em duas
+    partes iguais.  
+-   No caso de número de elementos impar, a mediana (*m**d*(*x*)) é o
+    elemento central.  
+-   No caso de número de elementos par, a mediana (*m**d*(*x*)) é a
+    média aritmética simples dos valores centrais:  
+    $$md(x) = \frac{x\_{\frac{n}{2}} + x\_{\frac{n+1}{2}}}{2}$$
+    onde,  
+    *x* é a posição do elemento.  
+    *n* é o número total de elementos.  
+
+### 9.3.2 Mediana continua
+
+-   Mediana (*m**d*) em distribuição de frenquência em variável contínua
+    (dados agrupados em classes).  
+
+1.  Fazer a coluna da **Frequência Absoluta Acumulada**, que é o
+    somatório das frequências ao logo das classes.  
+2.  Definindo o intervalo da mediana.  
+
+-   Obter o número total de elementos *n* (somatório das frenquências de
+    classes),
+    *n* = ∑*f**i*
+-   Determinar a posição do elemento do meio do somatório das
+    frequencias:  
+    $$x = \frac{\sum fi}{2}$$
+-   A classe que contém essa posição *x* na **Frequência Absoluta
+    Acumulada** é a classe do *intervalo da mediana*.  
+
+1.  Cálculo da Mediana:  
+    $$md = Li + (\frac{\frac{\sum fi}{2}-Fa\_{anterior}}{f\_{intervalo}} \cdot h)$$
+    onde,  
+    *L**i* é o limite inferior do *intervalo da mediana*.  
+    ∑*f**i* é o somatório das frequências (**frequência total**
+    (*n*)).  
+    *F**a*<sub>*a**n**t**e**r**i**o**r*</sub> é a **Frequência Absoluta
+    Acumulada** da classe anterior (linha anterior ao *intervalo da
+    mediana*).  
+    *f*<sub>*i**n**t**e**r**v**a**l**o*</sub> é a **Frequência Absoluta
+    Simples** do *intervalo da mediana*.  
+    *h* é a Amplitudade da classe do *intervalo da mediana*.  
+    *h* = *L**s* − *L**i*
 
 ## 9.4 Moda
 
@@ -640,7 +685,7 @@ Contínua**:
 
 -   Moda com frequência Continua:  
 
-    1.  **Moda Bruta**:  
+    1.  **Moda Bruta** (*M*<sub>*B**r**u**t**a*</sub>):  
 
     -   Achar a classe com maior frequência, esse será o *Intervalo
         Modal*.  
@@ -649,9 +694,10 @@ Contínua**:
         $$PM = \frac{LS + LI}{2}$$
         LS = Limite superior da classe.  
         LI = Limite inferior da classe.  
-    -   O *Ponto Médio* do *Intervalo Modal* será a **Moda Bruta**.  
+    -   O *Ponto Médio* do *Intervalo Modal* será a **Moda
+        Bruta**(*M*<sub>*B**r**u**t**a*</sub>).  
 
-    1.  **Moda King** ou **Moda do Rei**:  
+    1.  **Moda King** ou **Moda do Rei** (*M*<sub>*K**i**n**g*</sub>):  
 
     -   Determinar o intervalo (classe) com maior frequência, esse será
         o *Intervalo Modal*.  
@@ -665,7 +711,7 @@ Contínua**:
         *h* é a amplitude do intervalo da classe.  
         *h* = *L**S* − *L**I*
 
-    1.  **Moda de Czuber**:  
+    1.  **Moda de Czuber** (*M*<sub>*C**z**u**b**e**r*</sub>):  
 
     -   Determinar o intervalo (classe) com maior frequência, esse será
         o *Intervalo Modal*.  
