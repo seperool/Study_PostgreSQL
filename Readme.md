@@ -646,34 +646,33 @@ Contínua**:
 ### 9.3.2 Mediana continua
 
 -   Mediana (*m**d*) em distribuição de frenquência em variável contínua
-    (dados agrupados em classes).  
+    (dados agrupados em classes):  
+    1.  Fazer a coluna da **Frequência Absoluta Acumulada**, que é o
+        somatório das frequências ao logo das classes.  
+    2.  Definindo o intervalo da mediana.  
 
-1.  Fazer a coluna da **Frequência Absoluta Acumulada**, que é o
-    somatório das frequências ao logo das classes.  
-2.  Definindo o intervalo da mediana.  
+    -   Obter o número total de elementos *n* (somatório das
+        frenquências de classes),
+        *n* = ∑*f**i*
+    -   Determinar a posição do elemento do meio do somatório das
+        frequencias:  
+        $$x = \frac{\sum fi}{2}$$
+    -   A classe que contém essa posição *x* na **Frequência Absoluta
+        Acumulada** é a classe do *intervalo da mediana*.  
 
--   Obter o número total de elementos *n* (somatório das frenquências de
-    classes),
-    *n* = ∑*f**i*
--   Determinar a posição do elemento do meio do somatório das
-    frequencias:  
-    $$x = \frac{\sum fi}{2}$$
--   A classe que contém essa posição *x* na **Frequência Absoluta
-    Acumulada** é a classe do *intervalo da mediana*.  
-
-1.  Cálculo da Mediana:  
-    $$md = Li + (\frac{\frac{\sum fi}{2}-Fa\_{anterior}}{f\_{intervalo}} \cdot h)$$
-    onde,  
-    *L**i* é o limite inferior do *intervalo da mediana*.  
-    ∑*f**i* é o somatório das frequências (**frequência total**
-    (*n*)).  
-    *F**a*<sub>*a**n**t**e**r**i**o**r*</sub> é a **Frequência Absoluta
-    Acumulada** da classe anterior (linha anterior ao *intervalo da
-    mediana*).  
-    *f*<sub>*i**n**t**e**r**v**a**l**o*</sub> é a **Frequência Absoluta
-    Simples** do *intervalo da mediana*.  
-    *h* é a Amplitudade da classe do *intervalo da mediana*.  
-    *h* = *L**s* − *L**i*
+    1.  Cálculo da Mediana:  
+        $$md = Li + (\frac{\frac{\sum fi}{2}-Fa\_{anterior}}{f\_{intervalo}} \cdot h)$$
+        onde,  
+        *L**i* é o limite inferior do *intervalo da mediana*.  
+        ∑*f**i* é o somatório das frequências (**frequência total**
+        (*n*)).  
+        *F**a*<sub>*a**n**t**e**r**i**o**r*</sub> é a **Frequência
+        Absoluta Acumulada** da classe anterior (linha anterior ao
+        *intervalo da mediana*).  
+        *f*<sub>*i**n**t**e**r**v**a**l**o*</sub> é a **Frequência
+        Absoluta Simples** do *intervalo da mediana*.  
+        *h* é a Amplitudade da classe do *intervalo da mediana*.  
+        *h* = *L**s* − *L**i*
 
 ## 9.4 Moda
 
@@ -730,13 +729,15 @@ Contínua**:
         *h* é a amplitude do intervalo da classe.  
         *h* = *L**S* − *L**I*
 
-## 9.5 Amplitude
+## 9.5 Separatrizes
 
-## 9.6 Variancia
+## 9.6 Amplitude
 
-## 9.7 Desvio padrão
+## 9.7 Variancia
 
-## 9.8 Coeficiente de variancia
+## 9.8 Desvio padrão
+
+## 9.9 Coeficiente de variancia
 
 # 10 Observações
 
