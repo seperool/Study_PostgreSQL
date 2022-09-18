@@ -609,7 +609,18 @@ Contínua**:
     -   *f*<sub>*i*</sub>% é a Fequência Relativa Simples Percentual.  
     -   Inserir comentário sobre os dados.  
 
-## 9.2 Média aritmética
+## 9.2 Medidas de posição
+
+-   Localizar a *maior concentração de valores* de uma distribuição.  
+-   *Sintetizar o comportamento* do conjunto do qual ele é originário.  
+-   Possibitar a *comparação* entre séries de dados.  
+-   As principais medidas de posição são:  
+    -   Média (aritmética e ponderada)  
+    -   Mediana  
+    -   Moda  
+    -   Separatrizes  
+
+### 9.2.1 Média aritmética
 
 -   **Média Aritmética** ($\overline{x}$): Valor médio dos dados da
     distribuição.  
@@ -628,9 +639,9 @@ Contínua**:
     ou,  
     $$\overline{x} = \frac{(p\_{1} \cdot F\_{1}) + (p\_{2} \cdot F\_{2})+(p\_{3} \cdot F\_{3}) + ...}{n\_{Total}}$$
 
-## 9.3 Mediana (*m**d*(*x*))
+### 9.2.2 Mediana (*m**d*(*x*))
 
-### 9.3.1 Mediana discreta
+#### 9.2.2.1 Mediana discreta
 
 -   Com dados em ROL, é o valor que divide o conjunto de dados em duas
     partes iguais.  
@@ -643,7 +654,7 @@ Contínua**:
     *x* é a posição do elemento.  
     *n* é o número total de elementos.  
 
-### 9.3.2 Mediana continua
+#### 9.2.2.2 Mediana continua
 
 -   Mediana (*m**d*) em distribuição de frenquência em variável contínua
     (dados agrupados em classes):  
@@ -674,7 +685,7 @@ Contínua**:
         *h* é a Amplitudade da classe do *intervalo da mediana*.  
         *h* = *L**s* − *L**i*
 
-## 9.4 Moda
+### 9.2.3 Moda
 
 -   Moda ou *M**o*(*x*): Valor com maior frequência de ocorrência em uma
     distribuição.  
@@ -729,15 +740,17 @@ Contínua**:
         *h* é a amplitude do intervalo da classe.  
         *h* = *L**S* − *L**I*
 
-## 9.5 Separatrizes
+### 9.2.4 Separatrizes
 
-## 9.6 Amplitude
+## 9.3 Medidas de dispersão
 
-## 9.7 Variancia
+### 9.3.1 Amplitude
 
-## 9.8 Desvio padrão
+### 9.3.2 Variância
 
-## 9.9 Coeficiente de variancia
+### 9.3.3 Desvio padrão
+
+### 9.3.4 Coeficiente de variância
 
 # 10 Observações
 

@@ -4,20 +4,20 @@ subtitle: "Readme.rmd"
 author: "Sergio Pedro R Oliveira"
 date: "`r Sys.Date()`"
 output:
+  pdf_document:
+    number_sections: true
+    toc: TRUE
+  html_document:
+    number_sections: true
+    df_print: paged
+  odt_document:
+    number_sections: true
+  github_document: default
   md_document:
     number_sections: true
     variant: markdown_github
   word_document:
     toc: TRUE
-    number_sections: true
-  html_document:
-    number_sections: true
-    df_print: paged
-  github_document: default
-  pdf_document:
-    number_sections: true
-    toc: TRUE
-  odt_document:
     number_sections: true
 ---
 
@@ -526,7 +526,18 @@ $LI_{i}$ é o limite inferior da classe.\
 
 \newpage
 
-## Média aritmética
+## Medidas de posição
+
+- Localizar a *maior concentração de valores* de uma distribuição.\
+- *Sintetizar o comportamento* do conjunto do qual ele é originário.\
+- Possibitar a *comparação* entre séries de dados.\
+- As principais medidas de posição são:\
+  - Média (aritmética e ponderada)\
+  - Mediana\
+  - Moda\
+  - Separatrizes\
+  
+### Média aritmética
 - **Média Aritmética** ($\overline{x}$): Valor médio dos dados da distribuição.\
 - **Média Aritmética Simples**, dados Não-Agrupados (não tabelados):\
   - É a soma de todos os elementos, dividido pelo número total de elementos.\
@@ -541,9 +552,9 @@ $LI_{i}$ é o limite inferior da classe.\
 
 \newpage
 
-## Mediana ($md(x)$)
+### Mediana ($md(x)$)
 
-### Mediana discreta
+#### Mediana discreta
 - Com dados em ROL, é o valor que divide o conjunto de dados em duas partes iguais.\
 - No caso de número de elementos impar, a mediana ($md(x)$) é o elemento central.\
 - No caso de número de elementos par, a mediana ($md(x)$) é a média aritmética simples dos valores centrais:\
@@ -552,7 +563,7 @@ onde,\
 $x$ é a posição do elemento.\
 $n$ é o número total de elementos.\
 
-### Mediana continua
+#### Mediana continua
 - Mediana ($md$) em distribuição de frenquência em variável contínua (dados agrupados em classes):\
   1. Fazer a coluna da **Frequência Absoluta Acumulada**, que é o somatório das frequências ao logo das classes.\
   2. Definindo o intervalo da mediana.\
@@ -573,7 +584,7 @@ $n$ é o número total de elementos.\
 
 \newpage
 
-## Moda
+### Moda
 
 - Moda ou $Mo(x)$: Valor com maior frequência de ocorrência em uma distribuição.\
 - Podem haver mais de um valor distinto com maior frequência, podendo assim ter mais de um valor na moda.\
@@ -609,11 +620,12 @@ $n$ é o número total de elementos.\
 
 \newpage
 
-## Separatrizes
-## Amplitude
-## Variancia
-## Desvio padrão
-## Coeficiente de variancia
+### Separatrizes
+## Medidas de dispersão
+### Amplitude
+### Variância
+### Desvio padrão
+### Coeficiente de variância
 
 \newpage
 
