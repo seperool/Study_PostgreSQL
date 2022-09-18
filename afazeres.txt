@@ -1,14 +1,16 @@
-ESCRITO EM 17/09/22
+ESCRITO EM 18/09/22
 ---
-PARA 18/09/22
+PARA 19/09/22
 ---
 Subir github:
-	- Readme AULA 124 - estatística básica médias			
+	- Readme AULA 124 - estatística básica médias
+		- Revisar medidas de posição		
 Estudar:
 	- Modulo 30 - AULA 124 - estatística básica médias
 afazeres:
 	- Escrever AULA 124 - estatística básica médias
 		- separatrizes
+		- medidas de dispersão
 		- amplitude
 		- variancia
 		- desvio padrão
