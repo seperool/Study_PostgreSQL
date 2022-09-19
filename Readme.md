@@ -614,34 +614,35 @@ Contínua**:
 -   Localizar a *maior concentração de valores* de uma distribuição.  
 -   *Sintetizar o comportamento* do conjunto do qual ele é originário.  
 -   Possibitar a *comparação* entre séries de dados.  
--   As principais medidas de posição são:  
-    -   Média (aritmética e ponderada)  
-    -   Mediana  
-    -   Moda  
-    -   Separatrizes  
+-   As principais **medidas de posição** são:  
+    -   **Média Aritmética** (Simples e Ponderada)  
+    -   **Mediana**  
+    -   **Moda**  
+    -   **Separatrizes**  
 
-### 9.2.1 Média aritmética
+### 9.2.1 Média Aritmética (Simples e Ponderada)
 
--   **Média Aritmética** ($\overline{x}$): Valor médio dos dados da
-    distribuição.  
 -   **Média Aritmética Simples**, dados Não-Agrupados (não tabelados):  
+    -   **Média Aritmética** ($\overline{x}$) é o valor médio dos dados
+        da distribuição.  
     -   É a soma de todos os elementos, dividido pelo número total de
         elementos.  
     -   Cálculo:  
         $$\overline{x} = \frac{Soma}{n\_{Total}}$$
 -   **Média Aritmética Ponderada**, dados Agrupados (tabelados):  
--   É o *Ponto Médio das Classes* (*p*<sub>*i*</sub>), multiplicado por
-    suas respectivas *Frequência Absoluta Simples* (*F*<sub>*i*</sub>),
-    somadas. Dividido pelo *Número Total de Elementos da Amostra*
-    (*n*).  
--   Cálculo:  
-    $$\overline{x} = \frac{\sum\_{i=1}^{n} p\_{i} \cdot F\_{i}}{n\_{Total}}$$
-    ou,  
-    $$\overline{x} = \frac{(p\_{1} \cdot F\_{1}) + (p\_{2} \cdot F\_{2})+(p\_{3} \cdot F\_{3}) + ...}{n\_{Total}}$$
+    -   Atribui-se um peso a cada valor da série.  
+    -   É o *Ponto Médio das Classes* (*p*<sub>*i*</sub>), multiplicado
+        por suas respectivas *Frequência Absoluta Simples*
+        (*F*<sub>*i*</sub>), somadas. Dividido pelo *Número Total de
+        Elementos da Amostra* (*n*).  
+    -   Cálculo:  
+        $$\overline{x} = \frac{\sum\_{i=1}^{n} p\_{i} \cdot F\_{i}}{n\_{Total}}$$
+        ou,  
+        $$\overline{x} = \frac{(p\_{1} \cdot F\_{1}) + (p\_{2} \cdot F\_{2})+(p\_{3} \cdot F\_{3}) + ...}{n\_{Total}}$$
 
 ### 9.2.2 Mediana (*m**d*(*x*))
 
-#### 9.2.2.1 Mediana discreta
+#### 9.2.2.1 Mediana Discreta
 
 -   Com dados em ROL, é o valor que divide o conjunto de dados em duas
     partes iguais.  
@@ -654,7 +655,7 @@ Contínua**:
     *x* é a posição do elemento.  
     *n* é o número total de elementos.  
 
-#### 9.2.2.2 Mediana continua
+#### 9.2.2.2 Mediana Contínua
 
 -   Mediana (*m**d*) em distribuição de frenquência em variável contínua
     (dados agrupados em classes):  
