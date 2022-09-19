@@ -1,10 +1,9 @@
-ESCRITO EM 18/09/22
+ESCRITO EM 19/09/22
 ---
-PARA 19/09/22
+PARA 20/09/22
 ---
 Subir github:
-	- Readme AULA 124 - estatística básica médias
-		- Revisar medidas de posição		
+	- Readme AULA 124 - estatística básica médias		
 Estudar:
 	- Modulo 30 - AULA 124 - estatística básica médias
 afazeres:
