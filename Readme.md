@@ -661,7 +661,7 @@ Contínua**:
     (dados agrupados em classes):  
     1.  Fazer a coluna da **Frequência Absoluta Acumulada**, que é o
         somatório das frequências ao logo das classes.  
-    2.  Definindo o intervalo da mediana.  
+    2.  Definindo o **Intervalo da Mediana**.  
 
     -   Obter o número total de elementos *n* (somatório das
         frenquências de classes),
@@ -742,6 +742,48 @@ Contínua**:
         *h* = *L**S* − *L**I*
 
 ### 9.2.4 Separatrizes
+
+-   **Separatrizes** são valores da distribuição que a dividem em partes
+    quaisquer.  
+-   A **mediana**, apesar de ser uma medida de tendência central, é
+    também uma **separatriz** de ordem 1/2, ou seja, divide a
+    distribuição em duas partes iguais.  
+-   As **separatrizes** mais comumente usadas são:  
+    -   **Quartis**  
+        Dividem a distribuição em quatro partes iguais, de ordem 1/4.  
+    -   **Decis**  
+        Dividem a distribuição em 10 partes iguais, de ordem 1/10.  
+    -   **Centis**  
+        Dividem a distribuição em 100 partes iguais, de ordem 1/100.  
+-   Fórmula das Separatrizes:  
+
+1.  Achar o **Intervalo da separatriz**  
+
+-   É a classe em que se encontra a separatriz procurada.  
+-   Fazer a coluna de **Frequencia Absoluta Acumulada**
+    (*F*<sub>*a*</sub>).  
+-   É o somatório das frequencias (total das frequencias), multiplicado
+    pela fração da separatriz procurada (*k*). O resultado é a posição
+    da frequencia na coluna **Frequencia Absoluta Acumulada**
+    (*F*<sub>*a*</sub>).  
+    *P*<sub>*k*</sub> = *k* ⋅ ∑*f*<sub>*i*</sub>
+    A classe na qual a posição pertence é o **Intervalo da
+    separatriz**.  
+
+1.  Cálculo da separatriz:  
+    $$Sp = L\_{i} + (\frac{k \cdot\sum f_i - Fa\_{anterior}}{f\_{Intervalo}} \* h)$$
+    Onde,  
+    *L*<sub>*i*</sub> é o limite inferior do **Intervalo da
+    separatriz**.  
+    *k* é a fração (porcentagem) da separatriz procurada.  
+    ∑*f*<sub>*i*</sub> é o somatório das frequências.  
+    *F**a*<sub>*a**n**t**e**r**i**o**r*</sub> é a **Frequência Absoluta
+    Acumulada** da classe anterior ao **intervalo da separatriz**.  
+    *f*<sub>*I**n**t**e**r**v**a**l**o*</sub> é a **Frequência Absoluta
+    Simples** do **intervalo da separatriz**.  
+    *h* é a **Amplitude** da classe (limite inferior - limite superior
+    da classe).  
+    *h* = *L**i* − *L**s*
 
 ## 9.3 Medidas de dispersão
 

@@ -4,20 +4,20 @@ subtitle: "Readme.rmd"
 author: "Sergio Pedro R Oliveira"
 date: "`r Sys.Date()`"
 output:
-  md_document:
-    number_sections: true
-    variant: markdown_github
-  word_document:
-    toc: TRUE
-    number_sections: true
-  html_document:
-    number_sections: true
-    df_print: paged
-  github_document: default
   pdf_document:
     number_sections: true
     toc: TRUE
+  html_document:
+    number_sections: true
+    df_print: paged
+  md_document:
+    number_sections: true
+    variant: markdown_github
+  github_document: default
   odt_document:
+    number_sections: true
+  word_document:
+    toc: TRUE
     number_sections: true
 ---
 
@@ -567,7 +567,7 @@ $n$ é o número total de elementos.\
 #### Mediana Contínua
 - Mediana ($md$) em distribuição de frenquência em variável contínua (dados agrupados em classes):\
   1. Fazer a coluna da **Frequência Absoluta Acumulada**, que é o somatório das frequências ao logo das classes.\
-  2. Definindo o intervalo da mediana.\
+  2. Definindo o **Intervalo da Mediana**.\
     - Obter o número total de elementos $n$ (somatório das frenquências de classes),
     $$n = \sum fi$$
     - Determinar a posição do elemento do meio do somatório das frequencias:\
@@ -622,7 +622,39 @@ $n$ é o número total de elementos.\
 \newpage
 
 ### Separatrizes
+- **Separatrizes** são valores da distribuição que a dividem em partes quaisquer.\
+- A **mediana**, apesar de ser uma medida de tendência central, é também uma **separatriz** de ordem $1/2$, ou seja, divide a distribuição em duas partes iguais.\
+- As **separatrizes** mais comumente usadas são:\
+  - **Quartis**\
+  Dividem a distribuição em quatro partes iguais, de ordem $1/4$.\
+  - **Decis**\
+  Dividem a distribuição em 10 partes iguais, de ordem $1/10$.\
+  - **Centis**\
+  Dividem a distribuição em 100 partes iguais, de ordem $1/100$.\
+
+- Fórmula das Separatrizes:\
+1. Achar o **Intervalo da separatriz**\
+  - É a classe em que se encontra a separatriz procurada.\
+  - Fazer a coluna de **Frequencia Absoluta Acumulada** ($F_a$).\
+  - É o somatório das frequencias (total das frequencias), multiplicado pela fração da separatriz procurada ($k$). O resultado é a posição da frequencia na coluna **Frequencia Absoluta Acumulada** ($F_a$).\
+  $$P_k = k \cdot \sum f_i$$
+  A classe na qual a posição pertence é o **Intervalo da separatriz**.\
+2. Cálculo da separatriz:\
+$$Sp = L_{i} + (\frac{k \cdot\sum f_i - Fa_{anterior}}{f_{Intervalo}} * h)$$
+Onde,\
+$L_i$ é o limite inferior do **Intervalo da separatriz**.\
+$k$ é a fração (porcentagem) da separatriz procurada.\
+$\sum f_i$ é o somatório das frequências.\
+$Fa_{anterior}$ é a **Frequência Absoluta Acumulada** da classe anterior ao **intervalo da separatriz**.\
+$f_{Intervalo}$ é a **Frequência Absoluta Simples** do **intervalo da separatriz**.\
+$h$ é a **Amplitude** da classe (limite inferior - limite superior da classe).\
+$$h = Li - Ls$$
+
+\newpage
+
 ## Medidas de dispersão
+
+
 ### Amplitude
 ### Variância
 ### Desvio padrão

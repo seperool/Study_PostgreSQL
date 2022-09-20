@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.8.11)  19 SEP 2022 02:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.8.11)  20 SEP 2022 01:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1825,70 +1825,140 @@ Underfull \hbox (badness 10000) in paragraph at lines 1407--1409
 
  []
 
-[27] [28]
-Underfull \hbox (badness 10000) in paragraph at lines 1445--1448
+[27]
+Underfull \hbox (badness 10000) in paragraph at lines 1421--1424
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1448--1451
+Underfull \hbox (badness 10000) in paragraph at lines 1424--1428
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1451--1452
+Underfull \hbox (badness 10000) in paragraph at lines 1428--1429
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1456--1459
+Underfull \hbox (badness 10000) in paragraph at lines 1433--1436
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1459--1463
+Underfull \hbox (badness 10000) in paragraph at lines 1436--1439
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1463--1468
+Underfull \hbox (badness 10000) in paragraph at lines 1439--1441
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1468--1470
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1444
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1480--1481
+Underfull \hbox (badness 10000) in paragraph at lines 1450--1451
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1485--1486
+Underfull \hbox (badness 10000) in paragraph at lines 1456--1458
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1488--1489
+Underfull \hbox (badness 10000) in paragraph at lines 1458--1460
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1493--1494
+Underfull \hbox (badness 10000) in paragraph at lines 1460--1464
 
  []
 
-[29]
-Underfull \hbox (badness 10000) in paragraph at lines 1505--1506
+
+Underfull \hbox (badness 10000) in paragraph at lines 1464--1466
 
  []
 
-[30] (./Readme.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 1473--1474
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1474--1485
+
+ []
+
+[28] [29]
+Underfull \hbox (badness 10000) in paragraph at lines 1517--1520
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1520--1523
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1523--1524
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1528--1531
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1531--1535
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1535--1540
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1540--1542
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1552--1553
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1557--1558
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1560--1561
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1565--1566
+
+ []
+
+[30]
+Underfull \hbox (badness 10000) in paragraph at lines 1577--1578
+
+ []
+
+[31] (./Readme.aux) ) 
 Here is how much of TeX's memory you used:
- 13555 strings out of 480204
- 215888 string characters out of 5895010
+ 13558 strings out of 480204
+ 215909 string characters out of 5895010
  546999 words of memory out of 5000000
  30994 multiletter control sequences out of 15000+600000
  529979 words of font info for 141 fonts, out of 8000000 for 9000
@@ -1908,10 +1978,10 @@ fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr5.pf
 b></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type
 1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr
 /share/texmf/fonts/type1/public/lm/lmsy7.pfb>
-Output written on Readme.pdf (30 pages, 696719 bytes).
+Output written on Readme.pdf (31 pages, 699504 bytes).
 PDF statistics:
- 536 PDF objects out of 1000 (max. 8388607)
- 451 compressed objects within 5 object streams
- 147 named destinations out of 1000 (max. 500000)
+ 543 PDF objects out of 1000 (max. 8388607)
+ 457 compressed objects within 5 object streams
+ 150 named destinations out of 1000 (max. 500000)
  33097 words of extra memory for PDF output out of 35830 (max. 10000000)
 
