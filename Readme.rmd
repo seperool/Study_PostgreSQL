@@ -4,21 +4,21 @@ subtitle: "Readme.rmd"
 author: "Sergio Pedro R Oliveira"
 date: "`r Sys.Date()`"
 output:
-  pdf_document:
-    number_sections: true
-    toc: TRUE
-  html_document:
-    number_sections: true
-    df_print: paged
   md_document:
     number_sections: true
     variant: markdown_github
-  github_document: default
+  html_document:
+    number_sections: true
+    df_print: paged
   odt_document:
     number_sections: true
+  github_document: default
   word_document:
     toc: TRUE
     number_sections: true
+  pdf_document:
+    number_sections: true
+    toc: TRUE
 ---
 
 \newpage
@@ -536,6 +536,11 @@ $LI_{i}$ é o limite inferior da classe.\
   - **Mediana**\
   - **Moda**\
   - **Separatrizes**\
+- Medidas de posição comparação:\
+
+![](./Imagens/medidas_de_posicao_comp.png){}
+
+\newpage
   
 ### Média Aritmética (Simples e Ponderada)
 - **Média Aritmética Simples**, dados Não-Agrupados (não tabelados):\
@@ -647,8 +652,12 @@ $k$ é a fração (porcentagem) da separatriz procurada.\
 $\sum f_i$ é o somatório das frequências.\
 $Fa_{anterior}$ é a **Frequência Absoluta Acumulada** da classe anterior ao **intervalo da separatriz**.\
 $f_{Intervalo}$ é a **Frequência Absoluta Simples** do **intervalo da separatriz**.\
-$h$ é a **Amplitude** da classe (limite inferior - limite superior da classe).\
-$$h = Li - Ls$$
+$h$ é a **Amplitude** da classe (limite superior - limite inferior da classe).\
+$$h = Ls - Li$$
+3. Cálculo de **Amplitude Interquartil** ($AI$):\
+- É a diferença entre 3º quartil e o 1º quartil.\
+$$AI = Q_3 - Q_1$$
+- Para descobrir os valores dos Quartis ($Q_1$ e $Q_3$) basta usar o *cálculo das separatrizes*.\
 
 \newpage
 

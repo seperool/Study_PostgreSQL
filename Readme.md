@@ -619,6 +619,9 @@ Contínua**:
     -   **Mediana**  
     -   **Moda**  
     -   **Separatrizes**  
+-   Medidas de posição comparação:  
+
+![](./Imagens/medidas_de_posicao_comp.png)
 
 ### 9.2.1 Média Aritmética (Simples e Ponderada)
 
@@ -781,9 +784,15 @@ Contínua**:
     Acumulada** da classe anterior ao **intervalo da separatriz**.  
     *f*<sub>*I**n**t**e**r**v**a**l**o*</sub> é a **Frequência Absoluta
     Simples** do **intervalo da separatriz**.  
-    *h* é a **Amplitude** da classe (limite inferior - limite superior
+    *h* é a **Amplitude** da classe (limite superior - limite inferior
     da classe).  
-    *h* = *L**i* − *L**s*
+    *h* = *L**s* − *L**i*
+2.  Cálculo de **Amplitude Interquartil** (*A**I*):  
+
+-   É a diferença entre 3º quartil e o 1º quartil.  
+    *A**I* = *Q*<sub>3</sub> − *Q*<sub>1</sub>
+-   Para descobrir os valores dos Quartis (*Q*<sub>1</sub> e
+    *Q*<sub>3</sub>) basta usar o *cálculo das separatrizes*.  
 
 ## 9.3 Medidas de dispersão
 
