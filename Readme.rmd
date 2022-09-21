@@ -4,21 +4,21 @@ subtitle: "Readme.rmd"
 author: "Sergio Pedro R Oliveira"
 date: "`r Sys.Date()`"
 output:
-  md_document:
-    number_sections: true
-    variant: markdown_github
-  html_document:
-    number_sections: true
-    df_print: paged
-  odt_document:
-    number_sections: true
-  github_document: default
-  word_document:
-    toc: TRUE
-    number_sections: true
   pdf_document:
     number_sections: true
     toc: TRUE
+  odt_document:
+    number_sections: true
+  html_document:
+    number_sections: true
+    df_print: paged
+  github_document: default
+  md_document:
+    number_sections: true
+    variant: markdown_github
+  word_document:
+    toc: TRUE
+    number_sections: true
 ---
 
 \newpage
@@ -663,6 +663,12 @@ $$AI = Q_3 - Q_1$$
 
 ## Medidas de dispersão
 
+- Medem o grau de **variabilidade** (dispersão) dos valores observados em torno da **Média Aritmética**.\
+- Caracterizam a **representatividade da média** e o nivel de **homogeneidade** ou **heterogeneidade** dentro de cada grupo analizado.\
+
+![](./Imagens/medidas_de_dispersao.png){height=5cm}
+
+\newpage
 
 ### Amplitude
 ### Variância

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.8.11)  20 SEP 2022 02:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.8.11)  21 SEP 2022 05:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1921,73 +1921,89 @@ Underfull \hbox (badness 10000) in paragraph at lines 1502--1504
 
  []
 
-[29] [30]
-Underfull \hbox (badness 10000) in paragraph at lines 1535--1538
+[29]
+Underfull \hbox (badness 10000) in paragraph at lines 1514--1517
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1538--1541
+Underfull \hbox (badness 10000) in paragraph at lines 1517--1520
+
+ []
+
+<./Imagens/medidas_de_dispersao.png, id=307, 439.6425pt x 213.79875pt>
+File: ./Imagens/medidas_de_dispersao.png Graphic file (type png)
+<use ./Imagens/medidas_de_dispersao.png>
+Package pdftex.def Info: ./Imagens/medidas_de_dispersao.png  used on input line
+ 1522.
+(pdftex.def)             Requested size: 292.5397pt x 142.26245pt.
+[30 <./Imagens/medidas_de_dispersao.png>] [31]
+Underfull \hbox (badness 10000) in paragraph at lines 1550--1553
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1541--1542
+Underfull \hbox (badness 10000) in paragraph at lines 1553--1556
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1546--1549
+Underfull \hbox (badness 10000) in paragraph at lines 1556--1557
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1549--1553
+Underfull \hbox (badness 10000) in paragraph at lines 1561--1564
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1553--1558
+Underfull \hbox (badness 10000) in paragraph at lines 1564--1568
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1558--1560
+Underfull \hbox (badness 10000) in paragraph at lines 1568--1573
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1570--1571
+Underfull \hbox (badness 10000) in paragraph at lines 1573--1575
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1575--1576
+Underfull \hbox (badness 10000) in paragraph at lines 1585--1586
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1578--1579
+Underfull \hbox (badness 10000) in paragraph at lines 1590--1591
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1583--1584
+Underfull \hbox (badness 10000) in paragraph at lines 1593--1594
 
  []
 
-[31]
-Underfull \hbox (badness 10000) in paragraph at lines 1595--1596
+
+Underfull \hbox (badness 10000) in paragraph at lines 1598--1599
 
  []
 
-[32] (./Readme.aux) ) 
+[32]
+Underfull \hbox (badness 10000) in paragraph at lines 1610--1611
+
+ []
+
+[33] (./Readme.aux) ) 
 Here is how much of TeX's memory you used:
- 13567 strings out of 480204
- 216203 string characters out of 5895010
+ 13579 strings out of 480204
+ 216515 string characters out of 5895010
  546999 words of memory out of 5000000
- 31000 multiletter control sequences out of 15000+600000
- 529979 words of font info for 141 fonts, out of 8000000 for 9000
+ 31006 multiletter control sequences out of 15000+600000
+ 530156 words of font info for 143 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  74i,7n,77p,1070b,537s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/s
@@ -2004,10 +2020,10 @@ fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr5.pf
 b></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type
 1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr
 /share/texmf/fonts/type1/public/lm/lmsy7.pfb>
-Output written on Readme.pdf (32 pages, 801976 bytes).
+Output written on Readme.pdf (33 pages, 823312 bytes).
 PDF statistics:
- 551 PDF objects out of 1000 (max. 8388607)
- 462 compressed objects within 5 object streams
- 152 named destinations out of 1000 (max. 500000)
- 33102 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 557 PDF objects out of 1000 (max. 8388607)
+ 465 compressed objects within 5 object streams
+ 153 named destinations out of 1000 (max. 500000)
+ 33107 words of extra memory for PDF output out of 35830 (max. 10000000)
 

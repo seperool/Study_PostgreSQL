@@ -796,6 +796,14 @@ Contínua**:
 
 ## 9.3 Medidas de dispersão
 
+-   Medem o grau de **variabilidade** (dispersão) dos valores observados
+    em torno da **Média Aritmética**.  
+-   Caracterizam a **representatividade da média** e o nivel de
+    **homogeneidade** ou **heterogeneidade** dentro de cada grupo
+    analizado.  
+
+<img src="./Imagens/medidas_de_dispersao.png" style="height:5cm" />
+
 ### 9.3.1 Amplitude
 
 ### 9.3.2 Variância
