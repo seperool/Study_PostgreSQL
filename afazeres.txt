@@ -9,6 +9,8 @@ Estudar:
 	- Modulo 30 - AULA 124 - estatística básica médias
 afazeres:
 	- Escrever AULA 124 - estatística básica médias
-		- variancia
+		- variancia 
+			- desvio médio
+			- equações (e legenda da variaveis)
 		- desvio padrão
 		- coeficiente de variancia
