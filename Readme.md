@@ -804,7 +804,18 @@ Contínua**:
 
 <img src="./Imagens/medidas_de_dispersao.png" style="height:5cm" />
 
-### 9.3.1 Amplitude
+### 9.3.1 Amplitude Total (*A*<sub>*T*</sub>)
+
+-   Diferença entre o maior e o menor dos valores da série.  
+-   Não considera a dispersão dos valores internos, apenas os
+    extremos.  
+-   Utilização limitada enquanto medida de dispersão, oferece pouca
+    informação.  
+-   Cálculo:  
+    *A*<sub>*T*</sub> = *X*<sub>*M**á**x*</sub> − *X*<sub>*M**í**n*</sub>
+    Onde,  
+    *X*<sub>*M**á**x*</sub> é o valor máximo da série.  
+    *X*<sub>*M**í**n*</sub> é o valor mínimo da série.  
 
 ### 9.3.2 Variância
 

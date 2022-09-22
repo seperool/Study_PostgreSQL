@@ -7,17 +7,17 @@ output:
   pdf_document:
     number_sections: true
     toc: TRUE
-  odt_document:
-    number_sections: true
   html_document:
     number_sections: true
     df_print: paged
-  github_document: default
   md_document:
     number_sections: true
     variant: markdown_github
+  github_document: default
   word_document:
     toc: TRUE
+    number_sections: true
+  odt_document:
     number_sections: true
 ---
 
@@ -670,7 +670,17 @@ $$AI = Q_3 - Q_1$$
 
 \newpage
 
-### Amplitude
+### Amplitude Total ($A_T$)
+
+- Diferença entre o maior e o menor dos valores da série.\
+- Não considera a dispersão dos valores internos, apenas os extremos.\
+- Utilização limitada enquanto medida de dispersão, oferece pouca informação.\
+- Cálculo:\
+$$A_T = X_{Máx} - X_{Mín}$$
+Onde,\
+$X_{Máx}$ é o valor máximo da série.\
+$X_{Mín}$ é o valor mínimo da série.\
+
 ### Variância
 ### Desvio padrão
 ### Coeficiente de variância
