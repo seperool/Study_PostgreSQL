@@ -817,11 +817,57 @@ Contínua**:
     *X*<sub>*M**á**x*</sub> é o valor máximo da série.  
     *X*<sub>*M**í**n*</sub> é o valor mínimo da série.  
 
-### 9.3.2 Variância
+### 9.3.2 Desvio
 
-### 9.3.3 Desvio padrão
+#### 9.3.2.1 Desvio Absoluto (*D*)
 
-### 9.3.4 Coeficiente de variância
+-   Os **Desvios Absolutos** (*D*) são a diferença absoluta entre um
+    valor observado e a média aritmética:  
+    *D* = \|(*x*<sub>*i*</sub>−*x̄*)\|
+    Onde,  
+    *x*<sub>*i*</sub> é o **valor de cada elemento**.  
+    *x̄* é a **Média Aritmética**.  
+-   Os **Desvios Absolutos** (*D*) são um conjunto de elementos como
+    resposta final.  
+
+#### 9.3.2.2 Desvio Absoluto Médio (*d**m*)
+
+-   É a **Média** dos **Desvios**:  
+    $$dm(x) = \frac{\sum\_{i=1}^{n} \|x_i - \bar{x}\|}{n}$$
+    Onde,  
+    *x*<sub>*i*</sub> é o **valor de cada elemento**.  
+    *x̄* é a **Média Aritmética**.  
+    *n* é o **número total de elementos** (frequencia total).  
+
+### 9.3.3 Variância (*S*<sup>2</sup>)
+
+-   Leva em consideração os valores extremos e também os valores
+    intermediários.  
+-   Relaciona os desvios em torno da média (destancias dos valores ate a
+    média).  
+-   Média Aritmética dos quadrados dos desvios.  
+-   Cálculo dados não agrupados:  
+    -   População  
+        $$S^2 = \sum\_{i=1}^{N} \frac{(x_i - \bar{x})^2}{N}$$
+    -   Amostra  
+        $$S^2 = \sum\_{i=1}^{n} \frac{(x_i - \bar{x})^2}{n - 1}$$
+        onde,  
+        *x*<sub>*i*</sub> é o valor de **cada elemento da série**.  
+        *x̄* é o **valor da média**.  
+        *N* é o **número total da população**.  
+        *n* é o **número de elementos da Amostra**.  
+        *n* − 1 é por ser uma estimativa no caso da Amostra, trabalhando
+        assim com um grau a menos de liberdade.  
+-   Cálculo dados agrupados:  
+    -   População  
+        $$S^2 = \frac{\sum x^2_i - n_i}{N} - (\frac{\sum x_i - n_i}{N})^2$$
+    -   Amostra  
+        $$S^2 = \frac{\sum x^2_i - n_i}{n - 1} - (\frac{\sum x_i - n_i}{n - 1})^2$$
+        onde,  
+
+### 9.3.4 Desvio padrão (*S*)
+
+### 9.3.5 Coeficiente de variância
 
 # 10 Observações
 

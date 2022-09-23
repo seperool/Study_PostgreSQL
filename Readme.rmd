@@ -7,17 +7,17 @@ output:
   pdf_document:
     number_sections: true
     toc: TRUE
-  html_document:
-    number_sections: true
-    df_print: paged
   md_document:
     number_sections: true
     variant: markdown_github
+  odt_document:
+    number_sections: true
   github_document: default
+  html_document:
+    number_sections: true
+    df_print: paged
   word_document:
     toc: TRUE
-    number_sections: true
-  odt_document:
     number_sections: true
 ---
 
@@ -681,8 +681,52 @@ Onde,\
 $X_{Máx}$ é o valor máximo da série.\
 $X_{Mín}$ é o valor mínimo da série.\
 
-### Variância
-### Desvio padrão
+\newpage
+
+### Desvio
+
+#### Desvio Absoluto ($D$)
+- Os **Desvios Absolutos** ($D$) são a diferença absoluta entre um valor observado e a média aritmética:\
+$$D = |(x_i - \bar{x})|$$
+Onde,\
+$x_i$ é o **valor de cada elemento**.\
+$\bar{x}$ é a **Média Aritmética**.\
+- Os **Desvios Absolutos** ($D$) são um conjunto de elementos como resposta final.\
+
+#### Desvio Absoluto Médio ($dm$)
+- É a **Média** dos **Desvios**:\
+$$dm(x) = \frac{\sum_{i=1}^{n} |x_i - \bar{x}|}{n}$$
+Onde,\
+$x_i$ é o **valor de cada elemento**.\
+$\bar{x}$ é a **Média Aritmética**.\
+$n$ é o **número total de elementos** (frequencia total).\
+
+\newpage
+
+### Variância ($S^2$)
+- Leva em consideração os valores extremos e também os valores intermediários.\
+- Relaciona os desvios em torno da média (destancias dos valores ate a média).\
+- Média Aritmética dos quadrados dos desvios.\
+- Cálculo dados não agrupados:\
+  - População\
+  $$S^2 = \sum_{i=1}^{N} \frac{(x_i - \bar{x})^2}{N}$$
+  - Amostra\
+  $$S^2 = \sum_{i=1}^{n} \frac{(x_i - \bar{x})^2}{n - 1}$$
+  onde,\
+  $x_{i}$ é o valor de **cada elemento da série**.\
+  $\bar{x}$ é o **valor da média**.\
+  $N$ é o **número total da população**.\
+  $n$ é o **número de elementos da Amostra**.\
+  $n -1$ é por ser uma estimativa no caso da Amostra, trabalhando assim com um grau a menos de liberdade.\
+- Cálculo dados agrupados:\
+  - População\
+  $$S^2 = \frac{\sum x^2_i - n_i}{N} - (\frac{\sum x_i - n_i}{N})^2$$
+  - Amostra\
+  $$S^2 = \frac{\sum x^2_i - n_i}{n - 1} - (\frac{\sum x_i - n_i}{n - 1})^2$$
+  onde,\
+
+### Desvio padrão ($S$)
+
 ### Coeficiente de variância
 
 \newpage
