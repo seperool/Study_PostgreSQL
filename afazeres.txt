@@ -1,6 +1,6 @@
-ESCRITO EM 23/09/22
+ESCRITO EM 24/09/22
 ---
-PARA 24/09/22
+PARA 25/09/22
 ---
 Subir github:
 	- Readme AULA 124 - estatística básica médias
@@ -9,9 +9,8 @@ Estudar:
 	- Modulo 30 - AULA 124 - estatística básica médias
 afazeres:
 	- Escrever AULA 124 - estatística básica médias
-		- desvio
-			- dados agrupados
-		- variancia
+		- variância
 			- equações (e legenda da variaveis)
+			- revisar
 		- desvio padrão
 		- coeficiente de variancia
