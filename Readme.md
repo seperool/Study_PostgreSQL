@@ -821,23 +821,58 @@ Contínua**:
 
 #### 9.3.2.1 Desvio Absoluto (*D*)
 
--   Os **Desvios Absolutos** (*D*) são a diferença absoluta entre um
-    valor observado e a média aritmética:  
-    *D* = \|(*x*<sub>*i*</sub>−*x̄*)\|
-    Onde,  
-    *x*<sub>*i*</sub> é o **valor de cada elemento**.  
-    *x̄* é a **Média Aritmética**.  
--   Os **Desvios Absolutos** (*D*) são um conjunto de elementos como
-    resposta final.  
+-   Para dados não agrupados:  
+    -   Os **Desvios Absolutos** (*D*) são a diferença absoluta entre um
+        valor observado e a média aritmética:  
+        *D* = \|*x*<sub>*i*</sub>−*X̄*\|
+        Onde,  
+        *x*<sub>*i*</sub> é o **valor de cada elemento**.  
+        *x̄* é a **Média Aritmética**.  
+    -   Os **Desvios Absolutos** (*D*) são um conjunto de elementos como
+        resposta final.  
+-   Para dados agrupados, sem intervalo de classe:  
+    -   Cálculo:  
+        *d*<sub>*i*</sub> = \|*x*<sub>*i*</sub>−*X̄*\|
+        Onde,  
+        *x*<sub>*i*</sub> é o valor da variável discreta  
+        *X̄* é a **Média Aritmética**.  
+-   Para dados agrupados, com intervalo de classe:  
+    -   Cálculo:  
+        *d*<sub>*i*</sub> = \|*p*<sub>*i*</sub>−*x̄*\|
+        Onde,  
+        *p*<sub>*i*</sub> é a **Representatividade da classe** (ponto
+        médio da classe)  
+        *x̄* é a **Média Aritmética** cálculada para *dados agrupados
+        continuos*:  
+        $$\bar{x} = \frac{\sum\_{i=1}^{N} p_i \cdot f_i}{\sum f_i}$$
 
 #### 9.3.2.2 Desvio Absoluto Médio (*d**m*)
 
--   É a **Média** dos **Desvios**:  
-    $$dm(x) = \frac{\sum\_{i=1}^{n} \|x_i - \bar{x}\|}{n}$$
-    Onde,  
-    *x*<sub>*i*</sub> é o **valor de cada elemento**.  
-    *x̄* é a **Média Aritmética**.  
-    *n* é o **número total de elementos** (frequencia total).  
+-   É a **Média** dos **Desvios**.  
+-   Para dados não agrupados:  
+    -   Cálculo:  
+        $$dm(x) = \frac{\sum\_{i=1}^{n} \|x_i - \bar{x}\|}{n}$$
+        Onde,  
+        *x*<sub>*i*</sub> é o **valor de cada elemento**  
+        *x̄* é a **Média Aritmética**  
+        *n* é o **número total de elementos** (frequencia total).  
+-   Para dados agrupados, sem intervalo de classe:  
+    -   Cálculo:  
+        $$D_M = \frac{\sum \|d_i\| \cdot f_i}{n}$$
+        Onde,  
+        *d*<sub>*i*</sub> é o **Desvio Absoluto** para dados agrupados,
+        sem intervalo de classe  
+        *f*<sub>*i*</sub> é a **Frequência** de cada variável discreta  
+        *n* é o número total de elementos (ou somatório das
+        frequências).  
+-   Para dados agrupados, com intervalo de classe:  
+    -   Cálculo:  
+        $$D_M = \frac{\sum \|d_i\| \cdot f_i}{\sum f_i}$$
+        Onde,  
+        *d*<sub>*i*</sub> é o **Desvio Absoluto** para dados agrupados,
+        com intervalo de classe  
+        *f*<sub>*i*</sub> é a **frequência** de cada intervalo de
+        classe.  
 
 ### 9.3.3 Variância (*S*<sup>2</sup>)
 

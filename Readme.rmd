@@ -4,21 +4,21 @@ subtitle: "Readme.rmd"
 author: "Sergio Pedro R Oliveira"
 date: "`r Sys.Date()`"
 output:
-  pdf_document:
-    number_sections: true
-    toc: TRUE
   md_document:
     number_sections: true
     variant: markdown_github
-  odt_document:
-    number_sections: true
-  github_document: default
-  html_document:
-    number_sections: true
-    df_print: paged
   word_document:
     toc: TRUE
     number_sections: true
+  pdf_document:
+    number_sections: true
+    toc: TRUE
+  github_document: default
+  odt_document:
+    number_sections: true
+  html_document:
+    number_sections: true
+    df_print: paged
 ---
 
 \newpage
@@ -668,8 +668,6 @@ $$AI = Q_3 - Q_1$$
 
 ![](./Imagens/medidas_de_dispersao.png){height=5cm}
 
-\newpage
-
 ### Amplitude Total ($A_T$)
 
 - Diferença entre o maior e o menor dos valores da série.\
@@ -686,20 +684,51 @@ $X_{Mín}$ é o valor mínimo da série.\
 ### Desvio
 
 #### Desvio Absoluto ($D$)
-- Os **Desvios Absolutos** ($D$) são a diferença absoluta entre um valor observado e a média aritmética:\
-$$D = |(x_i - \bar{x})|$$
-Onde,\
-$x_i$ é o **valor de cada elemento**.\
-$\bar{x}$ é a **Média Aritmética**.\
-- Os **Desvios Absolutos** ($D$) são um conjunto de elementos como resposta final.\
+- Para dados não agrupados:\
+  - Os **Desvios Absolutos** ($D$) são a diferença absoluta entre um valor observado e a média aritmética:\
+  $$D = |x_i - \bar{X}|$$
+  Onde,\
+  $x_i$ é o **valor de cada elemento**.\
+  $\bar{x}$ é a **Média Aritmética**.\
+  - Os **Desvios Absolutos** ($D$) são um conjunto de elementos como resposta final.\
+- Para dados agrupados, sem intervalo de classe:\
+  - Cálculo:\
+  $$d_i = |x_i - \bar{X}|$$
+  Onde,\
+  $x_i$ é o valor da variável discreta\
+  $\bar{X}$ é a **Média Aritmética**.\
+- Para dados agrupados, com intervalo de classe:\
+  - Cálculo:\
+  $$d_i = |p_i - \bar{x}|$$
+  Onde,\
+  $p_i$ é a **Representatividade da classe** (ponto médio da classe)\
+  $\bar{x}$ é a **Média Aritmética** cálculada para *dados agrupados continuos*:\
+  $$\bar{x} = \frac{\sum_{i=1}^{N} p_i \cdot f_i}{\sum f_i}$$
+  
+\newpage
 
 #### Desvio Absoluto Médio ($dm$)
-- É a **Média** dos **Desvios**:\
-$$dm(x) = \frac{\sum_{i=1}^{n} |x_i - \bar{x}|}{n}$$
-Onde,\
-$x_i$ é o **valor de cada elemento**.\
-$\bar{x}$ é a **Média Aritmética**.\
-$n$ é o **número total de elementos** (frequencia total).\
+- É a **Média** dos **Desvios**.\
+- Para dados não agrupados:\
+  - Cálculo:\
+  $$dm(x) = \frac{\sum_{i=1}^{n} |x_i - \bar{x}|}{n}$$
+  Onde,\
+  $x_i$ é o **valor de cada elemento**\
+  $\bar{x}$ é a **Média Aritmética**\
+  $n$ é o **número total de elementos** (frequencia total).\
+- Para dados agrupados, sem intervalo de classe:\
+  - Cálculo:\
+  $$D_M = \frac{\sum |d_i| \cdot f_i}{n}$$
+  Onde,\
+  $d_i$ é o **Desvio Absoluto** para dados agrupados, sem intervalo de classe\
+  $f_i$ é a **Frequência** de cada variável discreta\
+  $n$ é o número total de elementos (ou somatório das frequências).\
+- Para dados agrupados, com intervalo de classe:\
+  - Cálculo:\
+  $$D_M = \frac{\sum |d_i| \cdot f_i}{\sum f_i}$$
+  Onde,\
+  $d_i$ é o **Desvio Absoluto** para dados agrupados, com intervalo de classe\
+  $f_i$ é a **frequência** de cada intervalo de classe.\
 
 \newpage
 
