@@ -1,6 +1,6 @@
-ESCRITO EM 24/09/22
+ESCRITO EM 25/09/22
 ---
-PARA 25/09/22
+PARA 26/09/22
 ---
 Subir github:
 	- Readme AULA 124 - estatística básica médias
