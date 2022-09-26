@@ -654,8 +654,8 @@ Contínua**:
 -   No caso de número de elementos par, a mediana (*m**d*(*x*)) é a
     média aritmética simples dos valores centrais:  
     $$md(x) = \frac{x\_{\frac{n}{2}} + x\_{\frac{n+1}{2}}}{2}$$
-    onde,  
-    *x* é a posição do elemento.  
+    Onde,  
+    *x* é a posição do elemento;  
     *n* é o número total de elementos.  
 
 #### 9.2.2.2 Mediana Contínua
@@ -668,24 +668,24 @@ Contínua**:
 
     -   Obter o número total de elementos *n* (somatório das
         frenquências de classes),
-        *n* = ∑*f**i*
+        *n* = ∑*f*<sub>*i*</sub>
     -   Determinar a posição do elemento do meio do somatório das
         frequencias:  
-        $$x = \frac{\sum fi}{2}$$
+        $$x = \frac{\sum f_i}{2}$$
     -   A classe que contém essa posição *x* na **Frequência Absoluta
         Acumulada** é a classe do *intervalo da mediana*.  
 
     1.  Cálculo da Mediana:  
         $$md = Li + (\frac{\frac{\sum fi}{2}-Fa\_{anterior}}{f\_{intervalo}} \cdot h)$$
-        onde,  
-        *L**i* é o limite inferior do *intervalo da mediana*.  
+        Onde,  
+        *L**i* é o limite inferior do *intervalo da mediana*;  
         ∑*f**i* é o somatório das frequências (**frequência total**
-        (*n*)).  
+        (*n*));  
         *F**a*<sub>*a**n**t**e**r**i**o**r*</sub> é a **Frequência
         Absoluta Acumulada** da classe anterior (linha anterior ao
-        *intervalo da mediana*).  
+        *intervalo da mediana*);  
         *f*<sub>*i**n**t**e**r**v**a**l**o*</sub> é a **Frequência
-        Absoluta Simples** do *intervalo da mediana*.  
+        Absoluta Simples** do *intervalo da mediana*;  
         *h* é a Amplitudade da classe do *intervalo da mediana*.  
         *h* = *L**s* − *L**i*
 
@@ -706,7 +706,8 @@ Contínua**:
     -   Cálcular o *Ponto Médio* (Representatividade da classe) do
         *Intervalo Modal*:  
         $$PM = \frac{LS + LI}{2}$$
-        LS = Limite superior da classe.  
+        Onde,  
+        LS = Limite superior da classe;  
         LI = Limite inferior da classe.  
     -   O *Ponto Médio* do *Intervalo Modal* será a **Moda
         Bruta**(*M*<sub>*B**r**u**t**a*</sub>).  
@@ -717,12 +718,13 @@ Contínua**:
         o *Intervalo Modal*.  
     -   Cálculo da Moda de King (*M*<sub>*K**i**n**g*</sub>):  
         $$M\_{King} = LI + (\frac{F\_{post}}{F\_{post}+F\_{ant}} \cdot h)$$
-        *L**I* é o limite inferior da classe do *Intervalo Modal*.  
+        Onde,  
+        *L**I* é o limite inferior da classe do *Intervalo Modal*;  
         *F*<sub>*p**o**s**t*</sub> é a frequência da classe posterior ao
-        *Intervalo Modal*.  
+        *Intervalo Modal*;  
         *F*<sub>*a**n**t*</sub> é a frequência da classe anterior ao
-        *Intervalo Modal*.  
-        *h* é a amplitude do intervalo da classe.  
+        *Intervalo Modal*;  
+        *h* é a amplitude do intervalo da classe  
         *h* = *L**S* − *L**I*
 
     1.  **Moda de Czuber** (*M*<sub>*C**z**u**b**e**r*</sub>):  
@@ -732,16 +734,17 @@ Contínua**:
     -   Cálculo da **Moda de Czuber**
         (*M*<sub>*C**z**u**b**e**r*</sub>):  
         $$M\_{Czuber} = LI + (\frac{\Delta\_{ant}}{\Delta\_{ant}+\Delta\_{post}} \cdot h)$$
-        *L**I* é o limite inferior da classe do *Intervalo Modal*.  
+        Onde,  
+        *L**I* é o limite inferior da classe do *Intervalo Modal*;  
         *Δ*<sub>*a**n**t*</sub> é a variação (diferença) da frequência
         da classe anterior (ao *Intervalo Modal*) com o *Intervalo
-        Modal* (classe com maior frequência).  
+        Modal* (classe com maior frequência)  
         *Δ*<sub>*a**n**t*</sub> = \|*F*<sub>*i*</sub>−*F*<sub>*i* − 1</sub>\|
         *Δ*<sub>*p**o**s**t*</sub> é a variação (diferença) da
         frequência da classe posterior (ao *Intervalo Modal*) com o
-        *Intervalo Modal* (classe com maior frequência).  
+        *Intervalo Modal* (classe com maior frequência)  
         *Δ*<sub>*a**n**t*</sub> = \|*F*<sub>*i*</sub>−*F*<sub>*i* + 1</sub>\|
-        *h* é a amplitude do intervalo da classe.  
+        *h* é a amplitude do intervalo da classe  
         *h* = *L**S* − *L**I*
 
 ### 9.2.4 Separatrizes
@@ -777,13 +780,13 @@ Contínua**:
     $$Sp = L\_{i} + (\frac{k \cdot\sum f_i - Fa\_{anterior}}{f\_{Intervalo}} \* h)$$
     Onde,  
     *L*<sub>*i*</sub> é o limite inferior do **Intervalo da
-    separatriz**.  
-    *k* é a fração (porcentagem) da separatriz procurada.  
-    ∑*f*<sub>*i*</sub> é o somatório das frequências.  
+    separatriz**;  
+    *k* é a fração (porcentagem) da separatriz procurada;  
+    ∑*f*<sub>*i*</sub> é o somatório das frequências;  
     *F**a*<sub>*a**n**t**e**r**i**o**r*</sub> é a **Frequência Absoluta
-    Acumulada** da classe anterior ao **intervalo da separatriz**.  
+    Acumulada** da classe anterior ao **intervalo da separatriz**;  
     *f*<sub>*I**n**t**e**r**v**a**l**o*</sub> é a **Frequência Absoluta
-    Simples** do **intervalo da separatriz**.  
+    Simples** do **intervalo da separatriz**;  
     *h* é a **Amplitude** da classe (limite superior - limite inferior
     da classe).  
     *h* = *L**s* − *L**i*
@@ -814,7 +817,7 @@ Contínua**:
 -   Cálculo:  
     *A*<sub>*T*</sub> = *X*<sub>*M**á**x*</sub> − *X*<sub>*M**í**n*</sub>
     Onde,  
-    *X*<sub>*M**á**x*</sub> é o valor máximo da série.  
+    *X*<sub>*M**á**x*</sub> é o valor máximo da série;  
     *X*<sub>*M**í**n*</sub> é o valor mínimo da série.  
 
 ### 9.3.2 Desvio
@@ -826,7 +829,7 @@ Contínua**:
         valor observado e a média aritmética:  
         *D* = \|*x*<sub>*i*</sub>−*X̄*\|
         Onde,  
-        *x*<sub>*i*</sub> é o **valor de cada elemento**.  
+        *x*<sub>*i*</sub> é o **valor de cada elemento**;  
         *x̄* é a **Média Aritmética**.  
     -   Os **Desvios Absolutos** (*D*) são um conjunto de elementos como
         resposta final.  
@@ -834,14 +837,14 @@ Contínua**:
     -   Cálculo:  
         *d*<sub>*i*</sub> = \|*x*<sub>*i*</sub>−*X̄*\|
         Onde,  
-        *x*<sub>*i*</sub> é o valor da variável discreta  
+        *x*<sub>*i*</sub> é o valor da variável discreta;  
         *X̄* é a **Média Aritmética**.  
 -   Para dados agrupados, com intervalo de classe:  
     -   Cálculo:  
         *d*<sub>*i*</sub> = \|*p*<sub>*i*</sub>−*x̄*\|
         Onde,  
         *p*<sub>*i*</sub> é a **Representatividade da classe** (ponto
-        médio da classe)  
+        médio da classe);  
         *x̄* é a **Média Aritmética** cálculada para *dados agrupados
         continuos*:  
         $$\bar{x} = \frac{\sum\_{i=1}^{N} p_i \cdot f_i}{\sum f_i}$$
@@ -853,16 +856,17 @@ Contínua**:
     -   Cálculo:  
         $$dm(x) = \frac{\sum\_{i=1}^{n} \|x_i - \bar{x}\|}{n}$$
         Onde,  
-        *x*<sub>*i*</sub> é o **valor de cada elemento**  
-        *x̄* é a **Média Aritmética**  
+        *x*<sub>*i*</sub> é o **valor de cada elemento**;  
+        *x̄* é a **Média Aritmética**;  
         *n* é o **número total de elementos** (frequencia total).  
 -   Para dados agrupados, sem intervalo de classe:  
     -   Cálculo:  
         $$D_M = \frac{\sum \|d_i\| \cdot f_i}{n}$$
         Onde,  
         *d*<sub>*i*</sub> é o **Desvio Absoluto** para dados agrupados,
-        sem intervalo de classe  
-        *f*<sub>*i*</sub> é a **Frequência** de cada variável discreta  
+        sem intervalo de classe;  
+        *f*<sub>*i*</sub> é a **Frequência** de cada variável
+        discreta;  
         *n* é o número total de elementos (ou somatório das
         frequências).  
 -   Para dados agrupados, com intervalo de classe:  
@@ -870,37 +874,74 @@ Contínua**:
         $$D_M = \frac{\sum \|d_i\| \cdot f_i}{\sum f_i}$$
         Onde,  
         *d*<sub>*i*</sub> é o **Desvio Absoluto** para dados agrupados,
-        com intervalo de classe  
+        com intervalo de classe;  
         *f*<sub>*i*</sub> é a **frequência** de cada intervalo de
         classe.  
 
-### 9.3.3 Variância (*S*<sup>2</sup>)
+### 9.3.3 Variância (*σ*<sup>2</sup> ou *S*<sup>2</sup>)
 
 -   Leva em consideração os valores extremos e também os valores
     intermediários.  
 -   Relaciona os desvios em torno da média (destancias dos valores ate a
     média).  
 -   Média Aritmética dos quadrados dos desvios.  
--   Cálculo dados não agrupados:  
+-   O símbolo para **Variância Populacional** é o sigma ao quadrado
+    (*σ*<sup>2</sup>), já o símbolo para **Variância Amostral** é o “S”
+    maiusculo ao quadrado (*S*<sup>2</sup>).  
+-   Cálculo para dados não agrupados:  
     -   População  
-        $$S^2 = \sum\_{i=1}^{N} \frac{(x_i - \bar{x})^2}{N}$$
+        $$\sigma^2 = \sum\_{i=1}^{N} \frac{(x_i - \bar{x})^2}{N}$$
+        Onde,  
+        *x*<sub>*i*</sub> é o valor de **cada elemento da série**;  
+        *x̄* é o valor da **Média Aritmética Simples**;  
+        *N* é o **número total da população**.  
     -   Amostra  
         $$S^2 = \sum\_{i=1}^{n} \frac{(x_i - \bar{x})^2}{n - 1}$$
-        onde,  
-        *x*<sub>*i*</sub> é o valor de **cada elemento da série**.  
-        *x̄* é o **valor da média**.  
-        *N* é o **número total da população**.  
-        *n* é o **número de elementos da Amostra**.  
-        *n* − 1 é por ser uma estimativa no caso da Amostra, trabalhando
+        Onde,  
+        *x*<sub>*i*</sub> é o valor de **cada elemento da série**;  
+        *x̄* é o valor da **Média Aritmética Simples**;  
+        *n* é o **número de elementos da Amostra**;  
+        (*n*−1) é por ser uma estimativa no caso da Amostra, trabalhando
         assim com um grau a menos de liberdade.  
 -   Cálculo dados agrupados:  
-    -   População  
-        $$S^2 = \frac{\sum x^2_i - n_i}{N} - (\frac{\sum x_i - n_i}{N})^2$$
-    -   Amostra  
-        $$S^2 = \frac{\sum x^2_i - n_i}{n - 1} - (\frac{\sum x_i - n_i}{n - 1})^2$$
-        onde,  
+    -   Para dados agrupados, sem intervalo de classe (**Variáveis
+        Discretas**):  
+        -   População  
+            $$\sigma^2 = \frac{\sum (x_i - \bar{X})^2 \cdot f_i}{\sum f_i}$$
+            Onde,  
+            *x*<sub>*i*</sub> é o valor de **cada elemento da série**;  
+            *X̄* é o valor da **Média Aritmética Ponderada**;  
+            *f*<sub>*i*</sub> é a **Frequência** da variável;  
+            ∑*f*<sub>*i*</sub> é o somatório das **Frequências**.  
+        -   Amostra  
+            $$S^2 = \frac{\sum (x_i - \bar{X})^2 \cdot f_i}{n - 1}$$
+            Onde,  
+            *x*<sub>*i*</sub> é o valor de **cada elemento da série**;  
+            *X̄* é o valor da **Média Aritmética Ponderada**;  
+            *f*<sub>*i*</sub> é a **Frequência** da variável;  
+            *n* − 1 ou ∑*f*<sub>*i*</sub> − 1 é o somatório das
+            **Frequências** da Amostra menos 1.  
+    -   Para dados agrupados, com intervalo de classe (**Variáveis
+        Contínuas**):  
+        -   População  
+            $$\sigma^2 = \frac{\sum (p_i - \bar{X})^2 \cdot f_i}{\sum f_i}$$
+            Onde,  
+            *p*<sub>*i*</sub> é a **Representatividade das Classe**
+            (**Ponto Médio das Classes**);  
+            *X̄* é o valor da **Média Aritmética Ponderada**;  
+            *f*<sub>*i*</sub> é a **Frequência** da variável;  
+            ∑*f*<sub>*i*</sub> é o somatório das **Frequências**.  
+        -   Amostra  
+            $$S^2 = \frac{\sum (p_i - \bar{X})^2 \cdot f_i}{n - 1}$$
+            Onde,  
+            *p*<sub>*i*</sub> é a **Representatividade das Classe**
+            (**Ponto Médio das Classes**);  
+            *X̄* é o valor da **Média Aritmética Ponderada**;  
+            *f*<sub>*i*</sub> é a **Frequência** da variável;  
+            *n* − 1 ou ∑*f*<sub>*i*</sub> − 1 é o somatório das
+            **Frequências** da Amostra menos 1.  
 
-### 9.3.4 Desvio padrão (*S*)
+### 9.3.4 Desvio padrão (*σ* ou *S*)
 
 ### 9.3.5 Coeficiente de variância
 
