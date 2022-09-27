@@ -4,9 +4,8 @@ PARA 28/09/22
 ---
 Subir github:
 	- Readme AULA 124 - estatística básica médias
-	
+		- coeficiente de variação
 Estudar:
 	- Modulo 30 - AULA 124 - estatística básica médias
 afazeres:
 	- Escrever AULA 124 - estatística básica médias
-		- coeficiente de variancia
