@@ -941,9 +941,37 @@ Contínua**:
             *n* − 1 ou ∑*f*<sub>*i*</sub> − 1 é o somatório das
             **Frequências** da Amostra menos 1.  
 
-### 9.3.4 Desvio padrão (*σ* ou *S*)
+### 9.3.4 Desvio-padrão (*σ* ou *S*)
 
-### 9.3.5 Coeficiente de variância
+#### 9.3.4.1 Variância x Desvio-padrão
+
+-   **Variância**:  
+    -   Número em unidade “quadrada”.  
+    -   Maior dificuldade de compreensão e menor utilidade na
+        estatística descritiva.  
+    -   Extremamente relevante na inferência estatística e em
+        combinações de amostras.  
+-   **Desvio-padrão**:  
+    -   Mais usado na comparação de diferenças entre conjuntos de
+        dados.  
+    -   Determina a dispersão dos valores em relação a **Média**.  
+    -   Volta-se com os dados para a unidade original.  
+
+#### 9.3.4.2 Desvio-padrão (Populacional e Amostral)
+
+-   Determina a dispersão dos valores em relação a **Média**.  
+-   População  
+    $$\sigma = \sqrt{\sigma^2}$$
+    Onde,  
+    *σ*<sup>2</sup> é a **Variância Populacional**;  
+    *σ* é o **Desvio-padrão Populacional**.  
+-   Amostra  
+    $$S = \sqrt{S^2}$$
+    Onde,  
+    *S*<sup>2</sup> é a **Variância Amostral**;  
+    *S* é o **Desvio-padrão Amostral**.  
+
+### 9.3.5 Coeficiente de Variação (*C**V*)
 
 # 10 Observações
 

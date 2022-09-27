@@ -4,12 +4,11 @@ subtitle: "Readme.rmd"
 author: "Sergio Pedro R Oliveira"
 date: "`r Sys.Date()`"
 output:
-  md_document:
-    number_sections: true
-    variant: markdown_github
   html_document:
     number_sections: true
     df_print: paged
+  odt_document:
+    number_sections: true
   word_document:
     toc: TRUE
     number_sections: true
@@ -17,8 +16,9 @@ output:
   pdf_document:
     number_sections: true
     toc: TRUE
-  odt_document:
+  md_document:
     number_sections: true
+    variant: markdown_github
 ---
 
 \newpage
@@ -788,9 +788,34 @@ $X_{Mín}$ é o valor mínimo da série.\
 
 \newpage
 
-### Desvio padrão ($\sigma$ ou $S$)
+### Desvio-padrão ($\sigma$ ou $S$)
 
-### Coeficiente de variância
+#### Variância x Desvio-padrão
+- **Variância**:\
+  - Número em unidade "quadrada".\
+  - Maior dificuldade de compreensão e menor utilidade na estatística descritiva.\
+  - Extremamente relevante na inferência estatística e em combinações de amostras.\
+- **Desvio-padrão**:\
+  - Mais usado na comparação de diferenças entre conjuntos de dados.\
+  - Determina a dispersão dos valores em relação a **Média**.\
+  - Volta-se com os dados para a unidade original.\
+
+#### Desvio-padrão (Populacional e Amostral)
+- Determina a dispersão dos valores em relação a **Média**.\
+- População\
+$$\sigma = \sqrt{\sigma^2}$$
+Onde,\
+$\sigma^2$ é a **Variância Populacional**;\
+$\sigma$ é o **Desvio-padrão Populacional**.\
+- Amostra\
+$$S = \sqrt{S^2}$$
+Onde,\
+$S^2$ é a **Variância Amostral**;\
+$S$ é o **Desvio-padrão Amostral**.\
+
+\newpage
+
+### Coeficiente de Variação ($CV$)
 
 \newpage
 
