@@ -321,7 +321,7 @@ Udemy.
     **FROM** *Sales*  
     **GROUP BY** *Country*, *Region*;  
 
-# 8 Aula 123 - Estatística básica média e soma
+# 8 Aula 123 - Estatística Básica (LIMIT, ORDER BY e funções Média e Soma)
 
 ## 8.1 Limite de linhas mostradas numa consulta - LIMIT
 
@@ -377,9 +377,11 @@ Udemy.
     **SELECT** \* **FROM** *Customers*  
     **ORDER BY** *Country* **ASC**, *CustomerName* **DESC**;  
 
-## 8.3 Média - **AVG**
+## 8.3 Funções de Agregação
 
--   A função **AVG**() retorna a média dos valores em um grupo.  
+### 8.3.1 Média - **AVG**
+
+-   A função **AVG**(), retorna a média dos valores em um grupo.  
 
 -   Ignora valores nulos.  
 
@@ -388,10 +390,10 @@ Udemy.
     **AVG**(*preco*) **AS** “PRECO_MEDIO”  
     **FROM** *produto*;  
 
-## 8.4 Soma total - **SUM**
+### 8.3.2 Soma - **SUM**
 
--   A função **SUM**() retorna a soma de todos os valores ou somente os
-    valores **DISTINCT** na expressão.  
+-   A função **SUM**(), retorna a soma de todos os valores, ou somente
+    os valores **DISTINCT** na expressão.  
 
 -   **SUM**() pode ser usado exclusivamente com colunas numéricas.  
 
@@ -404,7 +406,7 @@ Udemy.
     **FROM** *produto*  
     **GROUP BY** *id*;  
 
-# 9 Aula 124 - Estatística básica médias
+# 9 Aula 124 - Estatística Básica (Teoria medidas de posição e dispersão)
 
 ## 9.1 Preparação dos dados para aplicação de estatística básica
 
@@ -451,7 +453,6 @@ Udemy.
         É qualquer subconjunto (não vazio) da População. É extraída
         conforme regras pré-estabelecidas, com a finalidade de obter
         “estimativa” de alguma Característica da População.  
-
 -   Tipos de variáveis  
     <img src="./Imagens/tipos_de_variaveis_estatistica.png"
     style="height:5cm" />  
@@ -996,9 +997,11 @@ Contínua**:
     *S* é o **Desvio-padrão Amostral**;  
     *x̄* é a **Média Amostral**.  
 
-# 10 Observações
+# 10 Aula 125 -
 
-## 10.1 Exportação de dados
+# 11 Observações
+
+## 11.1 Exportação de dados
 
 -   Uma das maneiras mais facil de exportar dados é atraves da extensão
     “.csv”.  
@@ -1017,15 +1020,15 @@ Contínua**:
     -   Ao clickar no ícone “*Save results to file*”, é oferecido a
         opção de salvar a consulta como “.csv”.  
 
-## 10.2 Breve explicação de Business Intelligence e Data Science
+## 11.2 Breve explicação de Business Intelligence e Data Science
 
 -   Business Intelligence (BI):  
     -   Esta preocupado com entender o que aconteceu no passado.  
 -   Data Science:  
     -   Através dos dados, tentar prever tendências futuras.  
 
-# 11 Andamento dos Estudos
+# 12 Andamento dos Estudos
 
-## 11.1 Assunto em andamento
+## 12.1 Assunto em andamento
 
-Atualmente estou estudando Módulo 30 - AULA 124.  
+Atualmente estou estudando Módulo 30 - AULA 125.  
