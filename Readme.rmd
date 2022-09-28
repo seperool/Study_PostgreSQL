@@ -7,18 +7,18 @@ output:
   html_document:
     number_sections: true
     df_print: paged
-  odt_document:
-    number_sections: true
-  word_document:
-    toc: TRUE
-    number_sections: true
-  github_document: default
-  pdf_document:
-    number_sections: true
-    toc: TRUE
   md_document:
     number_sections: true
     variant: markdown_github
+  odt_document:
+    number_sections: true
+  github_document: default
+  word_document:
+    toc: TRUE
+    number_sections: true
+  pdf_document:
+    number_sections: true
+    toc: TRUE
 ---
 
 \newpage
@@ -816,6 +816,26 @@ $S$ é o **Desvio-padrão Amostral**.\
 \newpage
 
 ### Coeficiente de Variação ($CV$)
+#### Teoria
+- Medida relativa de dispersão.\
+- Útil para comparação em termos relativos do grau de concentração.\
+- O **Coeficiente de Variação** ($CV$) é expresso em porcentagens.\
+- Diz-se que uma distribuição:\
+  - $CV \leq 15\%$  tem **Baixa Dispersão**.\
+  - $15\% < CV < 30\%$  tem **Média Dispersão**.\
+  - $CV \geq 30\%$  tem **Alta Dispersão**.\
+  
+#### Cálculo do Coeficiente de Variação
+- População:\
+$$CV = \frac{\sigma}{\bar{X}} \times 100$$
+Onde,\
+$\sigma$ é o **Desvio-padrão Populacional**;\
+$\bar{X}$ é a **Média Populacional**.\
+- Amostra:\
+$$CV = \frac{S}{\bar{x}} \times 100$$
+Onde,\
+$S$ é o **Desvio-padrão Amostral**;\
+$\bar{x}$ é a **Média Amostral**.\
 
 \newpage
 

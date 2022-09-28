@@ -973,6 +973,29 @@ Contínua**:
 
 ### 9.3.5 Coeficiente de Variação (*C**V*)
 
+#### 9.3.5.1 Teoria
+
+-   Medida relativa de dispersão.  
+-   Útil para comparação em termos relativos do grau de concentração.  
+-   O **Coeficiente de Variação** (*C**V*) é expresso em porcentagens.  
+-   Diz-se que uma distribuição:  
+    -   *C**V* ≤ 15% tem **Baixa Dispersão**.  
+    -   15% \< *C**V* \< 30% tem **Média Dispersão**.  
+    -   *C**V* ≥ 30% tem **Alta Dispersão**.  
+
+#### 9.3.5.2 Cálculo do Coeficiente de Variação
+
+-   População:  
+    $$CV = \frac{\sigma}{\bar{X}} \times 100$$
+    Onde,  
+    *σ* é o **Desvio-padrão Populacional**;  
+    *X̄* é a **Média Populacional**.  
+-   Amostra:  
+    $$CV = \frac{S}{\bar{x}} \times 100$$
+    Onde,  
+    *S* é o **Desvio-padrão Amostral**;  
+    *x̄* é a **Média Amostral**.  
+
 # 10 Observações
 
 ## 10.1 Exportação de dados
