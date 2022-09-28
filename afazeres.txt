@@ -5,6 +5,9 @@ PARA 29/09/22
 Subir github:
 	
 Estudar:
-	- Modulo 30 - AULA 124 - estatística básica médias
+	- Modulo 30 - AULA 125
 afazeres:
-	
+	- AULA 125	
+		- assistir
+		- escrever
+		- programar
