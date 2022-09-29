@@ -4,21 +4,21 @@ subtitle: "Readme.rmd"
 author: "Sergio Pedro R Oliveira"
 date: "`r Sys.Date()`"
 output:
-  md_document:
-    number_sections: true
-    variant: markdown_github
-  html_document:
-    number_sections: true
-    df_print: paged
-  word_document:
-    toc: TRUE
-    number_sections: true
-  github_document: default
-  odt_document:
-    number_sections: true
   pdf_document:
     number_sections: true
     toc: TRUE
+  html_document:
+    number_sections: true
+    df_print: paged
+  odt_document:
+    number_sections: true
+  github_document: default
+  md_document:
+    number_sections: true
+    variant: markdown_github
+  word_document:
+    toc: TRUE
+    number_sections: true
 ---
 
 \newpage
@@ -291,7 +291,7 @@ sudo \-u postgres psql\
 
 \newpage
 
-# Aula 123 \- Estatística Básica (LIMIT, ORDER BY e funções Média e Soma)
+# Aula 123 \- Estatística Básica (LIMIT, ORDER BY e funções de Agregação Média e Soma)
 
 ## Limite de linhas mostradas numa consulta \- LIMIT
 
@@ -838,9 +838,21 @@ $\bar{x}$ é a **Média Amostral**.\
 
 \newpage
 
-# Aula 125 - 
+# Aula 125 - Análise Estatística
 
+- Para fazer uma Análise Estatística eficiente de dados, necessitamos:\
+  - Limpar os dados\
+  Remover os *OUTLIER* (valores atipicos, inconsistentes).\
+  - Aplicar Estatística Descritiva aos dados\
+  As medidas de posição (**Média**, **Mediana** e **moda**) e dispersão (**Amplitude Total**, **Desvio**, **Desvio Médio**, **Variância**, **Desvio-padrão** e **Coeficiente de Variação**) são maneiras de descrever os dados.\
+  - Comparar as medidas dos dados\
+  Principalmente medidas de dispersão, me especial **Coeficiente de Variação**, são ótimas para comparar dados.\
+  - Previsão de dados\
+  A principal técnica é de **Regressão**, porém para aplicar, necessita que os dados estejam limpos e com pouca dispersão (quanto menor, melhor).\
 
+\newpage
+
+# Aula 126 - Modelagem de Banco de dados X Modelagem Data Science e BI
 
 \newpage
 

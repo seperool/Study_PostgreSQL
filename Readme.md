@@ -321,7 +321,7 @@ Udemy.
     **FROM** *Sales*  
     **GROUP BY** *Country*, *Region*;  
 
-# 8 Aula 123 - Estatística Básica (LIMIT, ORDER BY e funções Média e Soma)
+# 8 Aula 123 - Estatística Básica (LIMIT, ORDER BY e funções de Agregação Média e Soma)
 
 ## 8.1 Limite de linhas mostradas numa consulta - LIMIT
 
@@ -997,11 +997,30 @@ Contínua**:
     *S* é o **Desvio-padrão Amostral**;  
     *x̄* é a **Média Amostral**.  
 
-# 10 Aula 125 -
+# 10 Aula 125 - Análise Estatística
 
-# 11 Observações
+-   Para fazer uma Análise Estatística eficiente de dados,
+    necessitamos:  
+    -   Limpar os dados  
+        Remover os *OUTLIER* (valores atipicos, inconsistentes).  
+    -   Aplicar Estatística Descritiva aos dados  
+        As medidas de posição (**Média**, **Mediana** e **moda**) e
+        dispersão (**Amplitude Total**, **Desvio**, **Desvio Médio**,
+        **Variância**, **Desvio-padrão** e **Coeficiente de Variação**)
+        são maneiras de descrever os dados.  
+    -   Comparar as medidas dos dados  
+        Principalmente medidas de dispersão, me especial **Coeficiente
+        de Variação**, são ótimas para comparar dados.  
+    -   Previsão de dados  
+        A principal técnica é de **Regressão**, porém para aplicar,
+        necessita que os dados estejam limpos e com pouca dispersão
+        (quanto menor, melhor).  
 
-## 11.1 Exportação de dados
+# 11 Aula 126 - Modelagem de Banco de dados X Modelagem Data Science e BI
+
+# 12 Observações
+
+## 12.1 Exportação de dados
 
 -   Uma das maneiras mais facil de exportar dados é atraves da extensão
     “.csv”.  
@@ -1020,15 +1039,15 @@ Contínua**:
     -   Ao clickar no ícone “*Save results to file*”, é oferecido a
         opção de salvar a consulta como “.csv”.  
 
-## 11.2 Breve explicação de Business Intelligence e Data Science
+## 12.2 Breve explicação de Business Intelligence e Data Science
 
 -   Business Intelligence (BI):  
     -   Esta preocupado com entender o que aconteceu no passado.  
 -   Data Science:  
     -   Através dos dados, tentar prever tendências futuras.  
 
-# 12 Andamento dos Estudos
+# 13 Andamento dos Estudos
 
-## 12.1 Assunto em andamento
+## 13.1 Assunto em andamento
 
 Atualmente estou estudando Módulo 30 - AULA 125.  
