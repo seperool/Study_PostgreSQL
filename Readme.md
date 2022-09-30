@@ -1018,6 +1018,206 @@ Contínua**:
 
 # 11 Aula 126 - Modelagem de Banco de dados X Modelagem Data Science e BI
 
+## 11.1 Modelagem de Banco de dados
+
+-   Evitam reduncancia, consequentemente poupam espaço em disco.  
+-   Consomem muito processamento em função de **JOINS**. Queries
+    lentas.  
+-   Por boas práticas, o banco de dados deve seguir (pelo menos) as três
+    primeiras **Formas Normais**.  
+
+### 11.1.1 Primeira forma normal
+
+-   3 Regras:  
+    1.  Todo campo vetorizado se tornará outra tabela.  
+
+    -   Campo vetorizado é todo campo que apresenta algo como um vetor
+        dentro dele.  
+    -   Varios dados do mesmo tipo (vetor).  
+    -   Exemplo:  
+        *vetor* \[VERDE, AMARELO, LARANJA,…\]  
+
+    1.  Todo campo multivalorado se tornará outra tabela.  
+
+    -   Campo multivalorado é todo campo que apresenta algo como uma
+        lista dentro dele.  
+    -   Diversos dados de tipos diferentes (lista).  
+    -   Exemplo:  
+        *list* (1, VERDE, CASA, …)  
+
+    1.  Toda tabela necessita de pelo menos um campo que identifique
+        todo registro como sendo único (é o que chamamos de “**Chave
+        Primaria**” ou “**Primary Key**”).  
+
+    -   Tipos de **CHAVE PRIMARIA**:  
+        -   NATURAL  
+            -   Pertence ao registro intrinsecamente.  
+            -   Muito útil, porem pouco confiavel. Depende de terceiros
+                para existir, como o governo por exemplo.  
+            -   Exemplo: CPF.  
+        -   ARTIFICIAL  
+            -   É criada pelo/para o banco de dados para identificar o
+                registro.  
+            -   Exemplo: ID.  
+            -   Mais indicado de se trabalhar, pois oferece controle
+                total por parte do administrador do banco de dados e não
+                depende de terceiros para existir.  
+
+### 11.1.2 Segunda forma normal
+
+“Uma relação está na **2º forma normal** se, e somente se, estiver na
+**1º forma normal** e cada atributo não-chave for dependente da chave
+primária inteira, isto é, cada atributo não-chave não poderá ser
+dependente de apenas parte da chave.”  
+
+-   No caso de tabelas com chave primária composta, se um atributo
+    depende apenas de uma parte da chave primária, então esse atributo
+    deve ser colocado em outra tabela.  
+
+-   Uma relação está na **2º forma normal** quando duas condições são
+    satisfeitas:  
+
+    -   A relação estiver na **1º forma normal**.  
+    -   Todos os atributos primos dependerem funcionalmente de toda a
+        **chave primária**.  
+
+-   Conclusões:  
+
+    -   Maior independência de dados.  
+    -   Redundâncias e anomalias: dependências funcionais indiretas.  
+
+### 11.1.3 Terceira forma normal
+
+“Uma relação R está na **3º forma normal** se ela estiver na **2º forma
+normal** e cada atributo não-chave de R não possuir **dependência
+transitiva**, para cada chave candidata de R. Todos os atributos dessa
+tabela devem ser independentes uns dos outros, ao mesmo tempo que devem
+ser dependentes exclusivamente da **chave primária** da tabela.”  
+
+-   Exemplo ilustrativo:  
+    “Uma tabela não está na **Terceira Forma Normal** porque a coluna
+    *Total* é dependente, ou é resultado, da multiplicação das colunas
+    *Preço* e *Quantidade*, ou seja, a coluna *total* tem **dependência
+    transitiva** de colunas que não fazem parte da **chave primária**,
+    ou mesmo candidata da tabela. Para que essa tabela passe à
+    **Terceira forma normal** o campo *Total* deverá ser eliminado, a
+    fim de que nenhuma coluna tenha dependência de qualquer outra que
+    não seja exclusivamente chave”.  
+
+-   Passagem para a **3º forma normal**:  
+
+    -   Para estar na **3º forma normal** precisa estar na **2º forma
+        normal**.  
+    -   Geração de novas tabelas com DF (Dependências Funcionais)
+        diretas.  
+    -   Análise de dependências funcionais entre atributos não-chave.  
+    -   Verificar a dependência exclusiva da **chave primária**.  
+    -   Entidades na **3º forma normal** também não podem conter
+        atributos que sejam resultados de algum cálculo de outro
+        atributo.  
+
+-   Conclusões:  
+
+    -   Maior independência de dados.  
+    -   **3º forma normal** gera representações lógicas finais na
+        maioria das vezes.  
+    -   Redundâncias e anomalias: dependências funcionais.  
+
+## 11.2 Modelagem Data Science
+
+-   Foca em agregações e performance.  
+-   Não se preocupa com espaço em disco.  
+-   Não evitam redundâncias, em função de uma melhor performance.  
+-   Preferencialmente **Modelagem Colunar**, Tabelas com redundâncias
+    que crescem para baixo facilmente (agregam o máximo de informações
+    possivel numa mesma tabela).  
+-   Performa melhor que modelos **BI** (**Modelagem Dimensional**), pois
+    não utiliza tantos **JOIN**s.  
+
+## 11.3 Modelagem Business Intelligence
+
+-   Foca em agregações e performance.  
+-   Não evitam redundâncias, em função de uma melhor performance.  
+-   Tem um desempenho (performace) pior que em **Data Science** pois o
+    **Modelo Dimensional** ainda implica em uso de **JOIN**s, unindo
+    **fato** com **dimensões**, para formar as **QUERY**s (consultas).  
+-   Não se preocupa com espaço em disco.  
+-   Modelagem mínima, **Data Warehouse** (**DW**).  
+-   *Modelagem Dimensional*, ou *Multidimensional* (**STAR SCHEMA** e
+    **SNOWFLAKE SCHEMA**).  
+
+### 11.3.1 Modelagem Dimensional
+
+-   **Modelagem dimensional** (ou **multidimensional**) é uma técnica de
+    projeto lógico normalmente usada para **Data Warehouse** que
+    contrasta com a **modelagem entidade-relacionamento**.  
+-   A construção de um modelo dimensional bem desenhado deve ter como
+    princípio a simplicidade, afinal modelos muito complexos tentem a
+    ser problemáticos a longo prazo, tornando-se “pesados” e de difícil
+    manutenção, então aqui podemos aplicar uma regra básica, “se está
+    muito complexo, está errado”, ou seja, modelagens muito complexas
+    precisam ser reavaliadas e simplificadas.  
+-   A modelagem dimensional é a única técnica viável para bancos de
+    dados que devem responder consultas em um **Data Warehouse**.  
+-   A **modelagem entidade-relacionamento** é muito útil para registro
+    de transações e para fase de administração da construção de um
+    **Data Warehouse**, mas deve ser evitada na entrega do sistema para
+    o usuário final.  
+-   A modelagem multidimensional foi definida sobre dois pilares:  
+    -   Dimensões Conformados  
+        Dimensões conformados diz respeito a entidade que servem de
+        perspectivas de análise em qualquer assunto da organização. Uma
+        dimensão conformada possui atributos conflitantes com um ou mais
+        **data-marts** do **data warehouse**.  
+    -   Fatos com granularidade única  
+        Por grão de fato entende-se a unidade de medida de um indicador
+        de desempenho. Assim, quando fala-se de unidades vendidas,
+        pode-se estar falando em unidades vendidas de uma loja em um mês
+        ou de um dado produto no semestre. Obviamente, esse valores não
+        são operáveis entre si.  
+        A modelagem multidimensional visa construir um data warehouse
+        com dimensões conformados e fatos afins com grãos os mais
+        próximos possíveis.  
+-   Esse tipo de modelagem tem dois modelos *MODELO ESTRELA* (**STAR
+    SCHEMA**) e *MODELO FLOCO DE NEVE* (**SNOWFLAKE SCHEMA**).  
+
+### 11.3.2 STAR SCHEMA
+
+-   Neste foi um modelo o objetivo é:  
+
+    -   Simplificar a visualização dimensional  
+    -   Facilitando a distinção entre as **dimensões** e os **fatos**.  
+    -   Classifica as tabelas de modelo como **Dimensão** ou **Fato**.  
+
+-   Classificação de tabelas:  
+
+    -   **Fatos**:  
+        -   **Fatos** são métricas (algo que pode ser medido ou
+            quantificado), resultantes de um evento do processo de
+            negócio. Ou seja, um acontecimento do negócio, que traz uma
+            métrica (ou medida) associada a ele.
+        -   Uma tabela **Fato** armazena as métricas relacionadas a
+            determinado evento, por exemplo, uma fato de Vendas pode
+            armazenar quantidade de itens vendidos, valor dos itens
+            vendidos, entre outras métricas.  
+    -   **Dimensões**:  
+        -   As **dimensões** representam os contextos para análise de um
+            fato.  
+        -   Proporcionando diferentes perspectivas de análise para o
+            usuário e normalmente interpretadas como os “filtros
+            possíveis” para determinada tabela **fato**.  
+
+-   Modelo Teórico:  
+    <img src="./Imagens/Star_Schema_Teorico.png" style="height:5cm" />  
+
+-   Modelo Prático:  
+    <img src="./Imagens/Star_Schema_Modelo.png" style="height:5cm" />  
+
+-   Exemplo:  
+    <img src="./Imagens/Star_Schema_Exemplo.png" style="height:5cm" />  
+
+### 11.3.3 SNOWFLAKE SCHEMA
+
 # 12 Observações
 
 ## 12.1 Exportação de dados
