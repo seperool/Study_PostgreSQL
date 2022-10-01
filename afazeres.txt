@@ -1,11 +1,10 @@
-ESCRITO EM 30/09/22
+ESCRITO EM 01/10/22
 ---
-PARA 01/10/22
+PARA 02/10/22
 ---
 Subir github:
 	
 Estudar:
-	- Modulo 30 - AULA 126 - modelagem DB X modelagem Data Science e BI
+	- Modulo 30 - AULA 127
 afazeres:
-	- AULA 126 - modelagem DB X modelagem Data Science e BI
-		- Snowflake Schema
+	- AULA 127
