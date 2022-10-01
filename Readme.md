@@ -1218,6 +1218,57 @@ ser dependentes exclusivamente da **chave primária** da tabela.”
 
 ### 11.3.3 SNOWFLAKE SCHEMA
 
+-   O **Snowflake Schema** adiciona complexidade ao modelo, com o
+    objetivo de reduzir a redundância no armazenamento.  
+-   Uma *dimensão* de **Snowflake Schema** (Modelo de Floco de Neve) é
+    um conjunto de tabelas normalizadas para uma única entidade de
+    negócios.  
+-   Este modelo apresenta uma decomposição de uma ou mais **dimensões**
+    que possuem hierarquias.  
+-   Modelo Teórico:  
+    <img src="./Imagens/Snowflake_Schema.png" style="height:5cm" />  
+-   Ou seja, no modelo Floco existem tabelas de dimensões auxiliares que
+    normalizam as tabelas de dimensões principais.  
+-   Exemplo:  
+    A **Adventure Works** classifica *produtos* por *categoria* e
+    *subcategoria*. Os *produtos* são **atribuídos** a *subcategorias* e
+    as *subcategorias*, por sua vez, são atribuídas a *categorias*. No
+    **data warehouse relacional** da **Adventure Works**, a dimensão de
+    produto é normalizada e armazenada em três tabelas relacionadas:
+    **DimProductCategory**, **DimProductSubcategory** e
+    **DimProduct**.  
+    <img src="./Imagens/Snowflake_design_tables.png" style="height:5cm" />  
+-   Processo de Modelagem:  
+    -   Definição dos processos de negócio;  
+    -   Declaração/definição da granularidade;  
+    -   Identificação dos Fatos;  
+    -   Identificação das Dimensões;  
+-   **Glanularidade** vesus **Detalhamento**:  
+    -   A granularidade está diretamente ligada na criação das fatos,
+        impactando e definindo o volume de dados a ser armazenado e
+        processado em cada fato.  
+    -   A granularidade diz respeito ao nível de detalhamento dos dados
+        que vamos armazenar em um determinado fato, onde:  
+        “*Quanto maior a granularidade, menor o nível de detalhamento e
+        quanto menor a granularidade, maior o nível de detalhamento*”.  
+        <img src="./Imagens/Granularidade_x_Detalhamento.png"
+        style="height:5cm" />  
+    -   Exemplo de definição de granularidade:  
+        -   Vendas de uma loja varejista, onde em uma fato com **baixa
+            granularidade** teremos o armazenamento de dados de vendas
+            em nível de cupom fiscal, resultando em um grande número de
+            linhas armazenadas, porém possibilitando a visualização
+            individual de cada venda.  
+        -   Já em um **fato** determinado com **alta granularidade**,
+            poderíamos armazenar os dados de vendas consolidados por
+            dia, assim reduziríamos a quantidade de linhas armazenadas
+            na tabela, mas perderíamos a capacidade de ver
+            detalhadamente cada venda.  
+        -   É possível ainda ter os dois cenários dentro do mesmo
+            modelo, onde a fato seria selecionada de acordo com a
+            necessidade da consulta, permitindo assim tornar o modelo
+            mais eficiente.  
+
 # 12 Observações
 
 ## 12.1 Exportação de dados
@@ -1250,4 +1301,4 @@ ser dependentes exclusivamente da **chave primária** da tabela.”
 
 ## 13.1 Assunto em andamento
 
-Atualmente estou estudando Módulo 30 - AULA 125.  
+Atualmente estou estudando Módulo 30 - AULA 126.  
