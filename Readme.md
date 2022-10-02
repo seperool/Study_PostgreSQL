@@ -1269,9 +1269,13 @@ ser dependentes exclusivamente da **chave primária** da tabela.”
             necessidade da consulta, permitindo assim tornar o modelo
             mais eficiente.  
 
-# 12 Observações
+# 12 Aula 127 Parte 1 - Importação de Arquivos
 
-## 12.1 Exportação de dados
+# 13 Aula 127 Parte 2 - Verificando a **MODA**
+
+# 14 Observações
+
+## 14.1 Exportação de dados
 
 -   Uma das maneiras mais facil de exportar dados é atraves da extensão
     “.csv”.  
@@ -1290,15 +1294,15 @@ ser dependentes exclusivamente da **chave primária** da tabela.”
     -   Ao clickar no ícone “*Save results to file*”, é oferecido a
         opção de salvar a consulta como “.csv”.  
 
-## 12.2 Breve explicação de Business Intelligence e Data Science
+## 14.2 Breve explicação de Business Intelligence e Data Science
 
 -   Business Intelligence (BI):  
     -   Esta preocupado com entender o que aconteceu no passado.  
 -   Data Science:  
     -   Através dos dados, tentar prever tendências futuras.  
 
-# 13 Andamento dos Estudos
+# 15 Andamento dos Estudos
 
-## 13.1 Assunto em andamento
+## 15.1 Assunto em andamento
 
-Atualmente estou estudando Módulo 30 - AULA 126.  
+Atualmente estou estudando Módulo 30 - AULA 127.  

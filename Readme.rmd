@@ -4,18 +4,18 @@ subtitle: "Readme.rmd"
 author: "Sergio Pedro R Oliveira"
 date: "`r Sys.Date()`"
 output:
+  md_document:
+    number_sections: true
+    variant: markdown_github
   pdf_document:
     number_sections: true
     toc: TRUE
   word_document:
     toc: TRUE
     number_sections: true
+  github_document: default
   odt_document:
     number_sections: true
-  github_document: default
-  md_document:
-    number_sections: true
-    variant: markdown_github
   html_document:
     number_sections: true
     df_print: paged
@@ -1009,6 +1009,14 @@ A **Adventure Works** classifica *produtos* por *categoria* e *subcategoria*. Os
 
 \newpage
 
+# Aula 127 Parte 1 - Importação de Arquivos
+
+\newpage
+
+# Aula 127 Parte 2 - Verificando a **MODA**
+
+\newpage
+
 # Observações
 
 ## Exportação de dados
@@ -1034,4 +1042,4 @@ A **Adventure Works** classifica *produtos* por *categoria* e *subcategoria*. Os
 
 ## Assunto em andamento
 
-Atualmente estou estudando Módulo 30 - AULA 126.\
+Atualmente estou estudando Módulo 30 - AULA 127.\
