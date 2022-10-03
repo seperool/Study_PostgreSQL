@@ -43,7 +43,7 @@ CREATE TABLE MAQUINAS(
 );
 
 -- Caminho que contem o arquivo
--- não é um comando, apenas para salvar o str do caminho
+-- NÃO é um comando!!! É apenas para salvar a string do caminho que contém o arquvio
 /home/serigo/DB/PostgreSQL/Import_dados
 
 -- Comandos de importação dos dados do arquivo ".csv"
