@@ -1,6 +1,6 @@
-ESCRITO EM 01/10/22
+ESCRITO EM 03/10/22
 ---
-PARA 03/10/22
+PARA 04/10/22
 ---
 Subir github:
 	
@@ -11,3 +11,4 @@ afazeres:
 		- assistir
 		- escrever
 		- programar
+			- Moda
