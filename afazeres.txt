@@ -1,6 +1,6 @@
-ESCRITO EM 03/10/22
+ESCRITO EM 04/10/22
 ---
-PARA 04/10/22
+PARA 05/10/22
 ---
 Subir github:
 	
@@ -10,5 +10,6 @@ afazeres:
 	- AULA 127 -  Importação de arquivos e verificando a MODA
 		- assistir
 		- escrever
+			- Moda
 		- programar
 			- Moda
