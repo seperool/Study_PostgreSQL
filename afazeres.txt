@@ -3,10 +3,13 @@ ESCRITO EM 05/10/22
 PARA 06/10/22
 ---
 Subir github:
-	
+	- AULA 127 -  Importação de arquivos e verificando a MODA
+		- Readme.*
+			- arredondamento
 Estudar:
 	- Modulo 30 - AULA 127 - Importação de arquivos e verificando a MODA
 afazeres:
 	- AULA 127 -  Importação de arquivos e verificando a MODA
-		- escrever
-			- Moda
+		- Readme.*
+			- média
+			- moda
