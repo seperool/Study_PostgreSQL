@@ -7,18 +7,18 @@ output:
   pdf_document:
     number_sections: true
     toc: TRUE
+  word_document:
+    toc: TRUE
+    number_sections: true
+  odt_document:
+    number_sections: true
+  github_document: default
   md_document:
     number_sections: true
     variant: markdown_github
   html_document:
     number_sections: true
     df_print: paged
-  github_document: default
-  word_document:
-    toc: TRUE
-    number_sections: true
-  odt_document:
-    number_sections: true
 ---
 
 \newpage
@@ -1011,7 +1011,7 @@ A **Adventure Works** classifica *produtos* por *categoria* e *subcategoria*. Os
 
 # Aula 127 Parte 1 - Importação de dados de um arquivo
 
-## Principais tipos de arquivos de importação e exportação de dados
+## Principais Tipos de Arquivos de Importação e Exportação de dados
 - Os tipos mais comuns de arquivos gerados são:\
   - No Caso de Servidores:\
     - ".log"\
@@ -1020,7 +1020,7 @@ A **Adventure Works** classifica *produtos* por *categoria* e *subcategoria*. Os
     - ".csv"\
     - outros arquivos relacionais.\
 
-## Exportar Arquivos
+## Sobre Exportar Arquivos
 - Um aspecto importante ao exportar um arquivo, devemos passar do "modelo relacional" para o "modelo colunar", facilitando assim o trabalho desse arquivo com linguagens de programação (R, Python, ...).\
 - No processo de passar do "modelo relacional" para o "modelo colunar", antes de exportarmos os dados, devemos fazer uma **Query** (consulta) que junte numa única tabela as informações a serem exportadas, podendo adicionar informações de resumo dos dados (como por exemplo, funções de agregação: max, min, avg, ...), e então exportar o resultado desta **Query** (consulta).\
 
@@ -1062,7 +1062,29 @@ A **Adventure Works** classifica *produtos* por *categoria* e *subcategoria*. Os
 
 \newpage
 
-# Aula 127 Parte 2 - Verificando a **MODA**
+# Aula 127 Parte 2 - Estatística com Banco de dados (**MÉDIA**, **MODA** e **ARREDONDAMENTO**)
+
+## Média (**AVG**)
+
+
+## Moda (**COUNT**)
+
+
+## Arredondamento (**ROUND**)
+- Para arredondar um valor basta aplicar a função **ROUND**() na coluna.\
+- Os parametros da função **ROUND** são:\
+  - *COLUNA*\
+  Nome da coluna a qual se quer arredondar.\
+  - *NÚMERO*\
+  Números de casas decimais que se deseja manter.\
+- Sintaxe:\
+**SELECT**\
+*COLUNA_1*,\
+**ROUND**(**AVG**(*COLUNA_2*),2) **AS** *MEDIA*\
+**FROM** *tabela*\
+**GROUP BY** *COLUNA_1*\
+**ORDER BY** 2 **DESC**\
+**LIMIT** 2;\
 
 \newpage
 

@@ -1271,7 +1271,7 @@ ser dependentes exclusivamente da **chave primária** da tabela.”
 
 # 12 Aula 127 Parte 1 - Importação de dados de um arquivo
 
-## 12.1 Principais tipos de arquivos de importação e exportação de dados
+## 12.1 Principais Tipos de Arquivos de Importação e Exportação de dados
 
 -   Os tipos mais comuns de arquivos gerados são:  
     -   No Caso de Servidores:  
@@ -1281,7 +1281,7 @@ ser dependentes exclusivamente da **chave primária** da tabela.”
         -   “.csv”  
         -   outros arquivos relacionais.  
 
-## 12.2 Exportar Arquivos
+## 12.2 Sobre Exportar Arquivos
 
 -   Um aspecto importante ao exportar um arquivo, devemos passar do
     “modelo relacional” para o “modelo colunar”, facilitando assim o
@@ -1344,7 +1344,29 @@ ser dependentes exclusivamente da **chave primária** da tabela.”
     \[Verificando os dados importados\]  
     **SELECT** \* **FROM** *nome_tabela*;  
 
-# 13 Aula 127 Parte 2 - Verificando a **MODA**
+# 13 Aula 127 Parte 2 - Estatística com Banco de dados (**MÉDIA**, **MODA** e **ARREDONDAMENTO**)
+
+## 13.1 Média (**AVG**)
+
+## 13.2 Moda (**COUNT**)
+
+## 13.3 Arredondamento (**ROUND**)
+
+-   Para arredondar um valor basta aplicar a função **ROUND**() na
+    coluna.  
+-   Os parametros da função **ROUND** são:  
+    -   *COLUNA*  
+        Nome da coluna a qual se quer arredondar.  
+    -   *NÚMERO*  
+        Números de casas decimais que se deseja manter.  
+-   Sintaxe:  
+    **SELECT**  
+    *COLUNA_1*,  
+    **ROUND**(**AVG**(*COLUNA_2*),2) **AS** *MEDIA*  
+    **FROM** *tabela*  
+    **GROUP BY** *COLUNA_1*  
+    **ORDER BY** 2 **DESC**  
+    **LIMIT** 2;  
 
 # 14 Observações
 
