@@ -1,13 +1,10 @@
-ESCRITO EM 06/10/22
+ESCRITO EM 07/10/22
 ---
-PARA 07/10/22
+PARA 08/10/22
 ---
 Subir github:
-	- AULA 127 -  Importação de arquivos e verificando a MODA
+
 Estudar:
-	- Modulo 30 - AULA 127 - Importação de arquivos e verificando a MODA
+	- Modulo 30 - AULA 128
 afazeres:
-	- AULA 127 -  Importação de arquivos e verificando a MODA
-		- Readme.*
-			- média
-			- moda
+	- AULA 128
