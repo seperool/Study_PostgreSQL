@@ -1348,7 +1348,48 @@ ser dependentes exclusivamente da **chave primária** da tabela.”
 
 ## 13.1 Média (**AVG**)
 
+-   Para cálcular a **média** nos dados, em um banco de dados, são
+    necessários um conjunto de comandos.  
+-   O principal é a função de agregação **AVG**(), que serve justamente
+    para calcular a média dos valores de uma determinada coluna.  
+-   Porem o comando **AVG** sozinho não seja suficiente para explorar os
+    dados. Em conjunto com filtro (**WHERE**), agrupar os dados (**GROUP
+    BY**) e ordernar os dados (**ORDER BY**) seja uma melhor forma de
+    ter um resumo de informações da média desses dados.  
+-   Sintaxe:  
+    **SELECT**  
+    *Colune_1*,  
+    **ROUND**(**AVG**(*Coluna_2*),2) **AS** MEDIA  
+    **FROM** *tabela*  
+    **WHERE** *Coluna_1* = ‘*valor*’  
+    **GROUP BY** 1  
+    **ORDER BY** 2 **DESC**;  
+
 ## 13.2 Moda (**COUNT**)
+
+-   Para cálcular a **moda** dos dados, em um banco de dados, são
+    necessários um conjunto de comandos.  
+-   Diferente da **média**, a **moda** são os valores de maior
+    frenquencia no conjunto de dados, podendo assim existir mais de uma
+    **moda** (multimodal).  
+-   O que os comandos pegam no caso da **moda**, é a frequencia de
+    repetição dos dados (atraves da função **COUNT**), filtrar
+    (**WHERE**), agrupar (**GROUP BY**) e por fim ordernar os dados
+    (**ORDER BY**) priorizando as maiores frequencias (**DESC**).  
+-   Com o uso do comando **LIMIT**, para limitar a aprofundidade da
+    investigação dos dados. Por exemplo, podemos querer apenas as três
+    principais modas, sendo essas informções suficiente sobre as
+    modas.  
+-   Sintaxe:  
+    **SELECT**  
+    *Coluna1*,  
+    *QTD*,  
+    **COUNT**(\*)  
+    **FROM** *tabela*  
+    **WHERE** *Coluna1* = ‘*valor*’  
+    **GROUP BY** *Coluna1*, *QTD*  
+    **ORDER BY** 3 **DESC**  
+    **LIMIT** 3;  
 
 ## 13.3 Arredondamento (**ROUND**)
 
