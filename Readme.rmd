@@ -7,18 +7,18 @@ output:
   md_document:
     number_sections: true
     variant: markdown_github
-  odt_document:
-    number_sections: true
   pdf_document:
     number_sections: true
     toc: TRUE
-  github_document: default
-  word_document:
-    toc: TRUE
+  odt_document:
     number_sections: true
+  github_document: default
   html_document:
     number_sections: true
     df_print: paged
+  word_document:
+    toc: TRUE
+    number_sections: true
 ---
 
 \newpage
@@ -1062,7 +1062,7 @@ A **Adventure Works** classifica *produtos* por *categoria* e *subcategoria*. Os
 
 \newpage
 
-# Aula 127 Parte 2 - Estatística com Banco de dados (**MÉDIA**, **MODA** e **ARREDONDAMENTO**)
+# Aula 128 e 127 Parte 2 - Estatística com Banco de dados
 
 ## Média (**AVG**)
 
@@ -1117,6 +1117,10 @@ A **Adventure Works** classifica *produtos* por *categoria* e *subcategoria*. Os
 
 \newpage
 
+## Amplitude de um Set de dados
+
+\newpage
+
 # Observações
 
 ## Exportação de dados
@@ -1142,4 +1146,4 @@ A **Adventure Works** classifica *produtos* por *categoria* e *subcategoria*. Os
 
 ## Assunto em andamento
 
-Atualmente estou estudando Módulo 30 - AULA 127.\
+Atualmente estou estudando Módulo 30 - AULA 128.\

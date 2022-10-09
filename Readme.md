@@ -1344,7 +1344,7 @@ ser dependentes exclusivamente da **chave primária** da tabela.”
     \[Verificando os dados importados\]  
     **SELECT** \* **FROM** *nome_tabela*;  
 
-# 13 Aula 127 Parte 2 - Estatística com Banco de dados (**MÉDIA**, **MODA** e **ARREDONDAMENTO**)
+# 13 Aula 128 e 127 Parte 2 - Estatística com Banco de dados
 
 ## 13.1 Média (**AVG**)
 
@@ -1409,6 +1409,8 @@ ser dependentes exclusivamente da **chave primária** da tabela.”
     **ORDER BY** 2 **DESC**  
     **LIMIT** 2;  
 
+## 13.4 Amplitude de um Set de dados
+
 # 14 Observações
 
 ## 14.1 Exportação de dados
@@ -1441,4 +1443,4 @@ ser dependentes exclusivamente da **chave primária** da tabela.”
 
 ## 15.1 Assunto em andamento
 
-Atualmente estou estudando Módulo 30 - AULA 127.  
+Atualmente estou estudando Módulo 30 - AULA 128.  
