@@ -1,10 +1,11 @@
-ESCRITO EM 07/10/22
+ESCRITO EM 09/10/22
 ---
-PARA 08/10/22
+PARA 10/10/22
 ---
 Subir github:
 
 Estudar:
-	- Modulo 30 - AULA 128
+	- Modulo 30 - AULA 128 - Amplitude de um Set de dados
 afazeres:
-	- AULA 128
+	- AULA 128 - Amplitude de um Set de dados
+		- Readme.*
