@@ -1411,6 +1411,32 @@ ser dependentes exclusivamente da **chave primária** da tabela.”
 
 ## 13.4 Amplitude de um Set de dados
 
+-   **Amplitude** é uma medida de dispersão.  
+-   O cálculo da **Amplitude** é a diferença entre o valor máximo e
+    mínimo, por consequência, as funções aplicada ao banco de dados para
+    o cálculo são:  
+    -   **MAX**()  
+        Retorna o valor máximo de determinada coluna.  
+    -   **MIN**()  
+        Retorna o valor mínimo de determinada coluna.  
+-   Para ajudar na sumariazação dos dados, em função do cálculo da
+    amplitude, outros comandos usados são de filtro (**WHERE**),
+    agrupamento dos dados (**GROUP BY**) e ordenamento dos dados
+    (**ORDER BY**).  
+-   Sintaxe:  
+    **SELET**  
+    *Coluna_1*,  
+    **MAX**(*Coluna_2*) **AS** VALOR_MAX,  
+    **MIN**(*Coluna_2*) **AS** VALOR_MIN,  
+    (**MAX**(*Coluna_2*) - **MIN**(*Coluna_2*)) **AS** AMPLITUDE  
+    **FROM** *tabela*  
+    **GROUP BY** 1  
+    **ORDER BY** 4 **DESC**;  
+
+## 13.5 Desvio-padrão
+
+## 13.6 Variância
+
 # 14 Observações
 
 ## 14.1 Exportação de dados
@@ -1443,4 +1469,4 @@ ser dependentes exclusivamente da **chave primária** da tabela.”
 
 ## 15.1 Assunto em andamento
 
-Atualmente estou estudando Módulo 30 - AULA 128.  
+Atualmente estou estudando Módulo 30 - AULA 129.  
