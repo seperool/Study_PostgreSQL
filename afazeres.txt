@@ -3,9 +3,12 @@ ESCRITO EM 10/10/22
 PARA 11/10/22
 ---
 Subir github:
-
+	- AULA 129 - Desvio-padrão e Variância
+		- script
 Estudar:
-	- Modulo 30 - AULA 129
+	- Modulo 30 - AULA 129 - Desvio-padrão e Variância
 afazeres:
-	- AULA 129
+	- AULA 129 - Desvio-padrão e Variância
 		- Readme.*
+			- Desvio-padrão
+			- Variância
