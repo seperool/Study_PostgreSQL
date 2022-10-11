@@ -7,17 +7,17 @@ output:
   md_document:
     number_sections: true
     variant: markdown_github
+  word_document:
+    toc: TRUE
+    number_sections: true
   pdf_document:
     number_sections: true
     toc: TRUE
-  odt_document:
-    number_sections: true
   github_document: default
   html_document:
     number_sections: true
     df_print: paged
-  word_document:
-    toc: TRUE
+  odt_document:
     number_sections: true
 ---
 
@@ -1064,41 +1064,6 @@ A **Adventure Works** classifica *produtos* por *categoria* e *subcategoria*. Os
 
 # Aula 128 e 127 Parte 2 - Estatística com Banco de dados
 
-## Média (**AVG**)
-
-- Para cálcular a **média** nos dados, em um banco de dados, são necessários um conjunto de comandos.\
-- O principal é a função de agregação **AVG**(), que serve justamente para calcular a média dos valores de uma determinada coluna.\
-- Porem o comando **AVG** sozinho não seja suficiente para explorar os dados. Em conjunto com filtro (**WHERE**), agrupar os dados (**GROUP BY**) e ordernar os dados (**ORDER BY**) seja uma melhor forma de ter um resumo de informações da média desses dados.\
-- Sintaxe:\
-**SELECT**\
-*Colune_1*,\
-**ROUND**(**AVG**(*Coluna_2*),2) **AS** MEDIA\
-**FROM** *tabela*\
-**WHERE** *Coluna_1* = '*valor*'\
-**GROUP BY** 1\
-**ORDER BY** 2 **DESC**;\
-
-\newpage
-
-## Moda (**COUNT**)
-
-- Para cálcular a **moda** dos dados, em um banco de dados, são necessários um conjunto de comandos.\
-- Diferente da **média**, a **moda** são os valores de maior frenquencia no conjunto de dados, podendo assim existir mais de uma **moda** (multimodal).\
-- O que os comandos pegam no caso da **moda**, é a frequencia de repetição dos dados (atraves da função **COUNT**), filtrar (**WHERE**), agrupar (**GROUP BY**) e por fim ordernar os dados (**ORDER BY**) priorizando as maiores frequencias (**DESC**).\
-- Com o uso do comando **LIMIT**, para limitar a aprofundidade da investigação dos dados. Por exemplo, podemos querer apenas as três principais modas, sendo essas informções suficiente sobre as modas.\
-- Sintaxe:\
-**SELECT**\
-*Coluna1*,\
-*QTD*,\
-**COUNT**(\*)\
-**FROM** *tabela*\
-**WHERE** *Coluna1* = '*valor*'\
-**GROUP BY** *Coluna1*, *QTD*\
-**ORDER BY** 3 **DESC**\
-**LIMIT** 3;\
-
-\newpage
-
 ## Arredondamento (**ROUND**)
 - Para arredondar um valor basta aplicar a função **ROUND**() na coluna.\
 - Os parametros da função **ROUND** são:\
@@ -1117,7 +1082,49 @@ A **Adventure Works** classifica *produtos* por *categoria* e *subcategoria*. Os
 
 \newpage
 
-## Amplitude de um Set de dados
+## Medidas de posição
+### Média (**AVG**)
+
+- Para cálcular a **média** nos dados, em um banco de dados, são necessários um conjunto de comandos.\
+- O principal é a função de agregação **AVG**(), que serve justamente para calcular a média dos valores de uma determinada coluna.\
+- Porem o comando **AVG** sozinho não seja suficiente para explorar os dados. Em conjunto com filtro (**WHERE**), agrupar os dados (**GROUP BY**) e ordernar os dados (**ORDER BY**) seja uma melhor forma de ter um resumo de informações da média desses dados.\
+- Sintaxe:\
+**SELECT**\
+*Colune_1*,\
+**ROUND**(**AVG**(*Coluna_2*),2) **AS** MEDIA\
+**FROM** *tabela*\
+**WHERE** *Coluna_1* = '*valor*'\
+**GROUP BY** 1\
+**ORDER BY** 2 **DESC**;\
+
+\newpage
+
+### Moda (**COUNT**)
+
+- Para cálcular a **moda** dos dados, em um banco de dados, são necessários um conjunto de comandos.\
+- Diferente da **média**, a **moda** são os valores de maior frenquencia no conjunto de dados, podendo assim existir mais de uma **moda** (multimodal).\
+- O que os comandos pegam no caso da **moda**, é a frequencia de repetição dos dados (atraves da função **COUNT**), filtrar (**WHERE**), agrupar (**GROUP BY**) e por fim ordernar os dados (**ORDER BY**) priorizando as maiores frequencias (**DESC**).\
+- Com o uso do comando **LIMIT**, para limitar a aprofundidade da investigação dos dados. Por exemplo, podemos querer apenas as três principais modas, sendo essas informções suficiente sobre as modas.\
+- Sintaxe:\
+**SELECT**\
+*Coluna1*,\
+*QTD*,\
+**COUNT**(\*)\
+**FROM** *tabela*\
+**WHERE** *Coluna1* = '*valor*'\
+**GROUP BY** *Coluna1*, *QTD*\
+**ORDER BY** 3 **DESC**\
+**LIMIT** 3;\
+
+\newpage
+
+### Mediana
+
+\newpage
+
+## Medidas de dispersão
+
+### Amplitude de um Set de dados
 
 - **Amplitude** é uma medida de dispersão.\
 - O cálculo da **Amplitude** é a diferença entre o valor máximo e mínimo, por consequência, as funções aplicada ao banco de dados para o cálculo são:\
@@ -1138,9 +1145,51 @@ A **Adventure Works** classifica *produtos* por *categoria* e *subcategoria*. Os
 
 \newpage
 
-## Desvio-padrão
+### Variância
 
-## Variância
+- Relaciona os desvios em torno da **média** (destancias dos valores ate a média).\
+
+- No **PostgreSQL** existe uma função que cálcula a *variância* (**VAR_POP**) de um campo/coluna.\
+
+- Para ajudar na sumarização dos dados, os comandos de filtro (**WHERE**), agrupamento dos dados (**GROUP BY**) e ordenamento dos dados (**ORDER BY**) ainda de mostram importantes.\
+
+- Sintaxe:\
+**SELECT**\
+*Coluna_1*,\
+**ROUND**(**AVG**(*QTD*),2) **AS** MEDIA,\
+**MAX**(*QTD*) **AS** MAXIMO,\
+**MIN**(*QTD*) **AS** MINIMO,\
+(**MAX**(*QTD*) - **MIN**(*QTD*)) **AS** AMPLITUDE,\
+**ROUND**(**VAR_POP**(*QTD*),2) **AS** VARIANCIA\
+**FROM** *tabela*\
+**GROUP BY** *Coluna_1*\
+**ORDER BY** 6 **DESC**;\
+
+\newpage
+
+### Desvio-padrão
+
+- Determina a dispersão dos valores em relação a **média**, porem com os dados na unidade original (diferente da variância que é a unidade ao quadrado).\
+
+- No **PostgreSQL** existe uma função que cálcula o *desvio-padrão* (**STDDEV_POP**) de um campo/coluna.\
+
+- Para ajudar na sumarização dos dados, os comandos de filtro (**WHERE**), agrupamento dos dados (**GROUP BY**) e ordenamento dos dados (**ORDER BY**) ainda de mostram importantes.\
+
+- Sintaxe:\
+**SELECT**\
+*Coluna_1*,\
+**ROUND**(**AVG**(*QTD*),2) **AS** MEDIA,\
+**MAX**(*QTD*) **AS** MAXIMO,\
+**MIN**(*QTD*) **AS** MINIMO,\
+(**MAX**(*QTD*) - **MIN**(*QTD*)) **AS** AMPLITUDE,\
+**ROUND**(**STDDEV_POP**(*QTD*),2) **AS** DESV_PAD\
+**FROM** *tabela*\
+**GROUP BY** *Coluna_1*\
+**ORDER BY** 6 **DESC**;\
+
+\newpage
+
+### Coeficiente de variação
 
 \newpage
 
@@ -1169,4 +1218,4 @@ A **Adventure Works** classifica *produtos* por *categoria* e *subcategoria*. Os
 
 ## Assunto em andamento
 
-Atualmente estou estudando Módulo 30 - AULA 129.\
+Atualmente estou estudando Módulo 30 - AULA 130.\

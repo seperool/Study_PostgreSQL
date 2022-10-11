@@ -1346,7 +1346,27 @@ ser dependentes exclusivamente da **chave primária** da tabela.”
 
 # 13 Aula 128 e 127 Parte 2 - Estatística com Banco de dados
 
-## 13.1 Média (**AVG**)
+## 13.1 Arredondamento (**ROUND**)
+
+-   Para arredondar um valor basta aplicar a função **ROUND**() na
+    coluna.  
+-   Os parametros da função **ROUND** são:  
+    -   *COLUNA*  
+        Nome da coluna a qual se quer arredondar.  
+    -   *NÚMERO*  
+        Números de casas decimais que se deseja manter.  
+-   Sintaxe:  
+    **SELECT**  
+    *COLUNA_1*,  
+    **ROUND**(**AVG**(*COLUNA_2*),2) **AS** *MEDIA*  
+    **FROM** *tabela*  
+    **GROUP BY** *COLUNA_1*  
+    **ORDER BY** 2 **DESC**  
+    **LIMIT** 2;  
+
+## 13.2 Medidas de posição
+
+### 13.2.1 Média (**AVG**)
 
 -   Para cálcular a **média** nos dados, em um banco de dados, são
     necessários um conjunto de comandos.  
@@ -1365,7 +1385,7 @@ ser dependentes exclusivamente da **chave primária** da tabela.”
     **GROUP BY** 1  
     **ORDER BY** 2 **DESC**;  
 
-## 13.2 Moda (**COUNT**)
+### 13.2.2 Moda (**COUNT**)
 
 -   Para cálcular a **moda** dos dados, em um banco de dados, são
     necessários um conjunto de comandos.  
@@ -1391,25 +1411,11 @@ ser dependentes exclusivamente da **chave primária** da tabela.”
     **ORDER BY** 3 **DESC**  
     **LIMIT** 3;  
 
-## 13.3 Arredondamento (**ROUND**)
+### 13.2.3 Mediana
 
--   Para arredondar um valor basta aplicar a função **ROUND**() na
-    coluna.  
--   Os parametros da função **ROUND** são:  
-    -   *COLUNA*  
-        Nome da coluna a qual se quer arredondar.  
-    -   *NÚMERO*  
-        Números de casas decimais que se deseja manter.  
--   Sintaxe:  
-    **SELECT**  
-    *COLUNA_1*,  
-    **ROUND**(**AVG**(*COLUNA_2*),2) **AS** *MEDIA*  
-    **FROM** *tabela*  
-    **GROUP BY** *COLUNA_1*  
-    **ORDER BY** 2 **DESC**  
-    **LIMIT** 2;  
+## 13.3 Medidas de dispersão
 
-## 13.4 Amplitude de um Set de dados
+### 13.3.1 Amplitude de um Set de dados
 
 -   **Amplitude** é uma medida de dispersão.  
 -   O cálculo da **Amplitude** é a diferença entre o valor máximo e
@@ -1433,9 +1439,56 @@ ser dependentes exclusivamente da **chave primária** da tabela.”
     **GROUP BY** 1  
     **ORDER BY** 4 **DESC**;  
 
-## 13.5 Desvio-padrão
+### 13.3.2 Variância
 
-## 13.6 Variância
+-   Relaciona os desvios em torno da **média** (destancias dos valores
+    ate a média).  
+
+-   No **PostgreSQL** existe uma função que cálcula a *variância*
+    (**VAR_POP**) de um campo/coluna.  
+
+-   Para ajudar na sumarização dos dados, os comandos de filtro
+    (**WHERE**), agrupamento dos dados (**GROUP BY**) e ordenamento dos
+    dados (**ORDER BY**) ainda de mostram importantes.  
+
+-   Sintaxe:  
+    **SELECT**  
+    *Coluna_1*,  
+    **ROUND**(**AVG**(*QTD*),2) **AS** MEDIA,  
+    **MAX**(*QTD*) **AS** MAXIMO,  
+    **MIN**(*QTD*) **AS** MINIMO,  
+    (**MAX**(*QTD*) - **MIN**(*QTD*)) **AS** AMPLITUDE,  
+    **ROUND**(**VAR_POP**(*QTD*),2) **AS** VARIANCIA  
+    **FROM** *tabela*  
+    **GROUP BY** *Coluna_1*  
+    **ORDER BY** 6 **DESC**;  
+
+### 13.3.3 Desvio-padrão
+
+-   Determina a dispersão dos valores em relação a **média**, porem com
+    os dados na unidade original (diferente da variância que é a unidade
+    ao quadrado).  
+
+-   No **PostgreSQL** existe uma função que cálcula o *desvio-padrão*
+    (**STDDEV_POP**) de um campo/coluna.  
+
+-   Para ajudar na sumarização dos dados, os comandos de filtro
+    (**WHERE**), agrupamento dos dados (**GROUP BY**) e ordenamento dos
+    dados (**ORDER BY**) ainda de mostram importantes.  
+
+-   Sintaxe:  
+    **SELECT**  
+    *Coluna_1*,  
+    **ROUND**(**AVG**(*QTD*),2) **AS** MEDIA,  
+    **MAX**(*QTD*) **AS** MAXIMO,  
+    **MIN**(*QTD*) **AS** MINIMO,  
+    (**MAX**(*QTD*) - **MIN**(*QTD*)) **AS** AMPLITUDE,  
+    **ROUND**(**STDDEV_POP**(*QTD*),2) **AS** DESV_PAD  
+    **FROM** *tabela*  
+    **GROUP BY** *Coluna_1*  
+    **ORDER BY** 6 **DESC**;  
+
+### 13.3.4 Coeficiente de variação
 
 # 14 Observações
 
@@ -1469,4 +1522,4 @@ ser dependentes exclusivamente da **chave primária** da tabela.”
 
 ## 15.1 Assunto em andamento
 
-Atualmente estou estudando Módulo 30 - AULA 129.  
+Atualmente estou estudando Módulo 30 - AULA 130.  
