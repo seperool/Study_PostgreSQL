@@ -1,14 +1,13 @@
-ESCRITO EM 10/10/22
+ESCRITO EM 11/10/22
 ---
-PARA 11/10/22
+PARA 12/10/22
 ---
 Subir github:
-	- AULA 129 - Desvio-padrão e Variância
-		- script
+
 Estudar:
-	- Modulo 30 - AULA 129 - Desvio-padrão e Variância
+	- Modulo 30 - AULA 130 - Mediana
 afazeres:
-	- AULA 129 - Desvio-padrão e Variância
+	- AULA 130 - Mediana
 		- Readme.*
-			- Desvio-padrão
-			- Variância
+		- Assistir
+		- Programar
