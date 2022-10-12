@@ -4,20 +4,20 @@ subtitle: "Readme.rmd"
 author: "Sergio Pedro R Oliveira"
 date: "`r Sys.Date()`"
 output:
-  md_document:
-    number_sections: true
-    variant: markdown_github
-  word_document:
-    toc: TRUE
-    number_sections: true
   pdf_document:
     number_sections: true
     toc: TRUE
-  github_document: default
   html_document:
     number_sections: true
     df_print: paged
+  md_document:
+    number_sections: true
+    variant: markdown_github
+  github_document: default
   odt_document:
+    number_sections: true
+  word_document:
+    toc: TRUE
     number_sections: true
 ---
 
@@ -1149,7 +1149,11 @@ A **Adventure Works** classifica *produtos* por *categoria* e *subcategoria*. Os
 
 - Relaciona os desvios em torno da **média** (destancias dos valores ate a média).\
 
-- No **PostgreSQL** existe uma função que cálcula a *variância* (**VAR_POP**) de um campo/coluna.\
+- No **PostgreSQL** existem funções para cálcular a *variância* de um campo/coluna:\
+  - **VAR_POP**()\
+  Para cálcular a *variância* de uma *população*.\
+  - **VARIANCE**()\
+  Para cálcular a *variância* de uma *amostra*.\
 
 - Para ajudar na sumarização dos dados, os comandos de filtro (**WHERE**), agrupamento dos dados (**GROUP BY**) e ordenamento dos dados (**ORDER BY**) ainda de mostram importantes.\
 
@@ -1171,8 +1175,12 @@ A **Adventure Works** classifica *produtos* por *categoria* e *subcategoria*. Os
 
 - Determina a dispersão dos valores em relação a **média**, porem com os dados na unidade original (diferente da variância que é a unidade ao quadrado).\
 
-- No **PostgreSQL** existe uma função que cálcula o *desvio-padrão* (**STDDEV_POP**) de um campo/coluna.\
-
+- No **PostgreSQL** existem funções para cálcular o *desvio-padrão* de um campo/coluna:\
+  - **STDDEV_POP**()\
+  Para cálcular o *desvio-padrão* de uma *população*.\
+  - **STDDEV**()\
+  Para cálcular o *desvio-padrão* de uma *amostra*.\
+  
 - Para ajudar na sumarização dos dados, os comandos de filtro (**WHERE**), agrupamento dos dados (**GROUP BY**) e ordenamento dos dados (**ORDER BY**) ainda de mostram importantes.\
 
 - Sintaxe:\

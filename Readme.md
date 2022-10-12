@@ -1444,8 +1444,13 @@ ser dependentes exclusivamente da **chave primária** da tabela.”
 -   Relaciona os desvios em torno da **média** (destancias dos valores
     ate a média).  
 
--   No **PostgreSQL** existe uma função que cálcula a *variância*
-    (**VAR_POP**) de um campo/coluna.  
+-   No **PostgreSQL** existem funções para cálcular a *variância* de um
+    campo/coluna:  
+
+    -   **VAR_POP**()  
+        Para cálcular a *variância* de uma *população*.  
+    -   **VARIANCE**()  
+        Para cálcular a *variância* de uma *amostra*.  
 
 -   Para ajudar na sumarização dos dados, os comandos de filtro
     (**WHERE**), agrupamento dos dados (**GROUP BY**) e ordenamento dos
@@ -1469,8 +1474,13 @@ ser dependentes exclusivamente da **chave primária** da tabela.”
     os dados na unidade original (diferente da variância que é a unidade
     ao quadrado).  
 
--   No **PostgreSQL** existe uma função que cálcula o *desvio-padrão*
-    (**STDDEV_POP**) de um campo/coluna.  
+-   No **PostgreSQL** existem funções para cálcular o *desvio-padrão* de
+    um campo/coluna:  
+
+    -   **STDDEV_POP**()  
+        Para cálcular o *desvio-padrão* de uma *população*.  
+    -   **STDDEV**()  
+        Para cálcular o *desvio-padrão* de uma *amostra*.  
 
 -   Para ajudar na sumarização dos dados, os comandos de filtro
     (**WHERE**), agrupamento dos dados (**GROUP BY**) e ordenamento dos
