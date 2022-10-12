@@ -1,6 +1,6 @@
-ESCRITO EM 11/10/22
+ESCRITO EM 12/10/22
 ---
-PARA 12/10/22
+PARA 13/10/22
 ---
 Subir github:
 
@@ -9,5 +9,3 @@ Estudar:
 afazeres:
 	- AULA 130 - Mediana
 		- Readme.*
-		- Assistir
-		- Programar
