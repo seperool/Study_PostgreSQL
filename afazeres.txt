@@ -1,11 +1,10 @@
-ESCRITO EM 13/10/22
+ESCRITO EM 14/10/22
 ---
-PARA 14/10/22
+PARA 15/10/22
 ---
 Subir github:
 
 Estudar:
-	- Modulo 30 - AULA 130 - Mediana
+	- Modulo 30 - AULA 131
 afazeres:
-	- AULA 130 - Mediana
-		- Readme.*
+	- AULA 131
