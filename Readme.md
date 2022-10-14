@@ -1413,6 +1413,37 @@ ser dependentes exclusivamente da **chave primária** da tabela.”
 
 ### 13.2.3 Mediana
 
+-   É o valor que divide o conjunto de dados em duas partes iguais.  
+-   No caso de número de elementos impar, a mediana é o elemento
+    central.  
+-   No caso de número de elementos par, a mediana é a média aritmética
+    simples dos valores centrais.  
+-   Não tem uma função pré-programada para a mediana no **PostgreSQL**,
+    porém basta implementar o código (comentários entre colchetes):  
+    **CREATE OR REPLACE FUNCTION** \_final_median (**NUMERIC**\[\])  
+    **RETURNS NUMERIC AS**  
+    $$ \[BLOCO DE PROGRAMACAO, ALTERA DELIMITADOR ATE ACHAR ELE
+    NOVAMENTE\]  
+    **SELECT** **AVG**(*val*)  
+    **FROM** (  
+    **SELECT** *val*  
+    **FROM** *unnest*($1) *val*  
+    **ORDER BY** 1  
+    **LIMIT** 2 - **MOD**(*array_upper*($1, 1), 2)  
+    **OFFSET CEIL**(*array_upper*($1, 1) / 2.0) - 1  
+    ) *sub*;  
+    $$ \[FIM DO BLOCO\]  
+    **LANGUAGE** ‘sql’ **IMMUTABLE**; \[DEFINE A LINGUAGEM NO BLOCO DE
+    PROGRAMACAO\]  
+    **CREATE AGGREGATE** *median*(**NUMERIC**) (  
+    SFUNC=*array_append*,  
+    STYPE=**NUMERIC**\[\],  
+    FINALFUNC=\_final_median,  
+    INITCOND=‘{}’  
+    );  
+-   Após implementado o código, a função da mediana passa a ser
+    **MEDIAN**().  
+
 ## 13.3 Medidas de dispersão
 
 ### 13.3.1 Amplitude de um Set de dados

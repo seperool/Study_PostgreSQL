@@ -4,21 +4,21 @@ subtitle: "Readme.rmd"
 author: "Sergio Pedro R Oliveira"
 date: "`r Sys.Date()`"
 output:
-  pdf_document:
-    number_sections: true
-    toc: TRUE
-  html_document:
-    number_sections: true
-    df_print: paged
   md_document:
     number_sections: true
     variant: markdown_github
-  github_document: default
   odt_document:
     number_sections: true
+  pdf_document:
+    number_sections: true
+    toc: TRUE
+  github_document: default
   word_document:
     toc: TRUE
     number_sections: true
+  html_document:
+    number_sections: true
+    df_print: paged
 ---
 
 \newpage
@@ -1119,6 +1119,31 @@ A **Adventure Works** classifica *produtos* por *categoria* e *subcategoria*. Os
 \newpage
 
 ### Mediana
+
+- É o valor que divide o conjunto de dados em duas partes iguais.\
+- No caso de número de elementos impar, a mediana é o elemento central.\
+- No caso de número de elementos par, a mediana é a média aritmética simples dos valores centrais.\
+- Não tem uma função pré-programada para a mediana no **PostgreSQL**, porém basta implementar o código (comentários entre colchetes):\
+**CREATE OR REPLACE FUNCTION** _final_median (**NUMERIC**[])\
+**RETURNS NUMERIC AS**\
+\$\$ [BLOCO DE PROGRAMACAO, ALTERA DELIMITADOR ATE ACHAR ELE NOVAMENTE]\
+**SELECT** **AVG**(*val*)\
+**FROM** (\
+**SELECT** *val*\
+**FROM** *unnest*(\$1) *val*\
+**ORDER BY** 1\
+**LIMIT**  2 - **MOD**(*array_upper*(\$1, 1), 2)\
+**OFFSET CEIL**(*array_upper*(\$1, 1) / 2.0) - 1\
+) *sub*;\
+\$\$ [FIM DO BLOCO]\
+**LANGUAGE** 'sql' **IMMUTABLE**; [DEFINE A LINGUAGEM NO BLOCO DE PROGRAMACAO]\
+**CREATE AGGREGATE** *median*(**NUMERIC**) (\
+SFUNC=*array_append*,\
+STYPE=**NUMERIC**[],\
+FINALFUNC=_final_median,\
+INITCOND='{}'\
+);\
+- Após implementado o código, a função da mediana passa a ser **MEDIAN**().\
 
 \newpage
 
