@@ -1,10 +1,16 @@
-ESCRITO EM 14/10/22
+ESCRITO EM 15/10/22
 ---
-PARA 15/10/22
+PARA 16/10/22
 ---
 Subir github:
-
+	- AULA 131 - Coeficiente de variação
+		- script 08
+		- Readme.*
 Estudar:
-	- Modulo 30 - AULA 131
+	- Modulo 30 - AULA 132 - Moda
 afazeres:
-	- AULA 131
+	- AULA 132 - Moda
+		- script
+		- assistir
+		- Readme.*
+		
