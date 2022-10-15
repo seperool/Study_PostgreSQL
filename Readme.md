@@ -1443,6 +1443,9 @@ ser dependentes exclusivamente da **chave primária** da tabela.”
     );  
 -   Após implementado o código, a função da mediana passa a ser
     **MEDIAN**().  
+-   Link da wiki do **PostgreSQL**, da funcionalidade *mediana* e que
+    contém código:  
+    <https://wiki.postgresql.org/wiki/Aggregate_Median>  
 
 ## 13.3 Medidas de dispersão
 
@@ -1533,7 +1536,11 @@ ser dependentes exclusivamente da **chave primária** da tabela.”
 
 # 14 Observações
 
-## 14.1 Exportação de dados
+## 14.1 Wiki para pesquisar funcionalidades do **PostgreSQL**
+
+<https://wiki.postgresql.org/wiki/Main_Page/pt>  
+
+## 14.2 Exportação de dados
 
 -   Uma das maneiras mais facil de exportar dados é atraves da extensão
     “.csv”.  
@@ -1552,7 +1559,7 @@ ser dependentes exclusivamente da **chave primária** da tabela.”
     -   Ao clickar no ícone “*Save results to file*”, é oferecido a
         opção de salvar a consulta como “.csv”.  
 
-## 14.2 Breve explicação de Business Intelligence e Data Science
+## 14.3 Breve explicação de Business Intelligence e Data Science
 
 -   Business Intelligence (BI):  
     -   Esta preocupado com entender o que aconteceu no passado.  
@@ -1563,4 +1570,4 @@ ser dependentes exclusivamente da **chave primária** da tabela.”
 
 ## 15.1 Assunto em andamento
 
-Atualmente estou estudando Módulo 30 - AULA 130.  
+Atualmente estou estudando Módulo 30 - AULA 131.  

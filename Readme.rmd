@@ -4,21 +4,21 @@ subtitle: "Readme.rmd"
 author: "Sergio Pedro R Oliveira"
 date: "`r Sys.Date()`"
 output:
-  md_document:
-    number_sections: true
-    variant: markdown_github
-  odt_document:
-    number_sections: true
-  pdf_document:
-    number_sections: true
-    toc: TRUE
-  github_document: default
   word_document:
     toc: TRUE
+    number_sections: true
+  odt_document:
     number_sections: true
   html_document:
     number_sections: true
     df_print: paged
+  github_document: default
+  md_document:
+    number_sections: true
+    variant: markdown_github
+  pdf_document:
+    number_sections: true
+    toc: TRUE
 ---
 
 \newpage
@@ -1144,6 +1144,8 @@ FINALFUNC=_final_median,\
 INITCOND='{}'\
 );\
 - Após implementado o código, a função da mediana passa a ser **MEDIAN**().\
+- Link da wiki do **PostgreSQL**, da funcionalidade *mediana* e que contém código:\
+<https://wiki.postgresql.org/wiki/Aggregate_Median> \
 
 \newpage
 
@@ -1228,6 +1230,9 @@ INITCOND='{}'\
 
 # Observações
 
+## Wiki para pesquisar funcionalidades do **PostgreSQL**
+<https://wiki.postgresql.org/wiki/Main_Page/pt> \
+
 ## Exportação de dados
 
 - Uma das maneiras mais facil de exportar dados é atraves da extensão ".csv".\
@@ -1251,4 +1256,4 @@ INITCOND='{}'\
 
 ## Assunto em andamento
 
-Atualmente estou estudando Módulo 30 - AULA 130.\
+Atualmente estou estudando Módulo 30 - AULA 131.\
