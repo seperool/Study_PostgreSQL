@@ -1344,7 +1344,7 @@ ser dependentes exclusivamente da **chave primária** da tabela.”
     \[Verificando os dados importados\]  
     **SELECT** \* **FROM** *nome_tabela*;  
 
-# 13 Aula 128 e 127 Parte 2 - Estatística com Banco de dados
+# 13 Aula 127 (Parte 2) a 130 - Estatística com Banco de dados
 
 ## 13.1 Arredondamento (**ROUND**)
 
@@ -1533,6 +1533,30 @@ ser dependentes exclusivamente da **chave primária** da tabela.”
     **ORDER BY** 6 **DESC**;  
 
 ### 13.3.4 Coeficiente de variação
+
+-   O cálculo do *coeficiente de variação*:  
+    $$CV = \frac{\sigma}{\bar{X}} \times 100$$
+    Onde,  
+    *σ* é o **Desvio-padrão Populacional**;  
+    *X̄* é a **Média Populacional**.  
+
+-   Passando o cálculo para funções do **PostgreSQL**:  
+    (**STDDEV_POP**(*Coluna*)/**AVG**(*Coluna*))\*100  
+
+-   Analise do *coeficiente de variação*:  
+
+    -   *C**V* ≤ 15% tem **Baixa Dispersão**.  
+    -   15% \< *C**V* \< 30% tem **Média Dispersão**.  
+    -   *C**V* ≥ 30% tem **Alta Dispersão**.  
+
+-   Sintaxe:  
+    **SELECT**  
+    *Coluna_1*,  
+    **ROUND**(((**STDDEV_POP**(*Coluna_2*)/**AVG**(*Coluna_2*))\*100),2)
+    **AS** “COEF.VAR.”  
+    **FROM** *tabela*  
+    **GROUP BY** 1  
+    **ORDER BY** 2 **DESC**;  
 
 # 14 Observações
 
