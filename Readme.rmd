@@ -7,18 +7,18 @@ output:
   md_document:
     number_sections: true
     variant: markdown_github
-  odt_document:
-    number_sections: true
   word_document:
     toc: TRUE
     number_sections: true
-  github_document: default
   pdf_document:
     number_sections: true
     toc: TRUE
+  github_document: default
   html_document:
     number_sections: true
     df_print: paged
+  odt_document:
+    number_sections: true
 ---
 
 \newpage
@@ -1115,6 +1115,20 @@ A **Adventure Works** classifica *produtos* por *categoria* e *subcategoria*. Os
 **GROUP BY** *Coluna1*, *QTD*\
 **ORDER BY** 3 **DESC**\
 **LIMIT** 3;\
+
+### Moda alternativa
+
+- Outra forma alternativa para achar a *moda* é atraves da expressão:\
+**MODE**() **WITHIN** **GROUP**(**ORDER BY** *Coluna*)\
+- A função **MODE**(), na expressão, não recebe argumento.\
+- O argumento *Coluna* é relativo ao campo, que contém os valores do qual se quer achar a *moda*.\
+- Essa expressão tem por caracteristica (defeito) de achar apenas uma *moda*, não retorna as outras modas, se o campo for multimodal.\
+- Sintaxe:\
+**SELECT**\
+*Coluna_1*,\
+**MODE**() **WITHIN** **GROUP**(**ORDER BY** *Coluna_2*) **AS** "MODA" \
+**FROM** *tabela*\
+**GROUP BY** *Coluna_1*;\
 
 \newpage
 

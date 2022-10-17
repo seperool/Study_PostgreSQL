@@ -1411,7 +1411,25 @@ ser dependentes exclusivamente da **chave primária** da tabela.”
     **ORDER BY** 3 **DESC**  
     **LIMIT** 3;  
 
-### 13.2.3 Mediana
+### 13.2.3 Moda alternativa
+
+-   Outra forma alternativa para achar a *moda* é atraves da
+    expressão:  
+    **MODE**() **WITHIN** **GROUP**(**ORDER BY** *Coluna*)  
+-   A função **MODE**(), na expressão, não recebe argumento.  
+-   O argumento *Coluna* é relativo ao campo, que contém os valores do
+    qual se quer achar a *moda*.  
+-   Essa expressão tem por caracteristica (defeito) de achar apenas uma
+    *moda*, não retorna as outras modas, se o campo for multimodal.  
+-   Sintaxe:  
+    **SELECT**  
+    *Coluna_1*,  
+    **MODE**() **WITHIN** **GROUP**(**ORDER BY** *Coluna_2*) **AS**
+    “MODA”  
+    **FROM** *tabela*  
+    **GROUP BY** *Coluna_1*;  
+
+### 13.2.4 Mediana
 
 -   É o valor que divide o conjunto de dados em duas partes iguais.  
 -   No caso de número de elementos impar, a mediana é o elemento
