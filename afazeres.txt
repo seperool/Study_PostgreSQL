@@ -1,14 +1,15 @@
-ESCRITO EM 16/10/22
+ESCRITO EM 17/10/22
 ---
-PARA 17/10/22
+PARA 18/10/22
 ---
 Subir github:
-	- AULA 132 - Moda
-		- script 09
+	- AULA 132 - Todas medidas estatisticas
 		- script 10
 Estudar:
-	- Modulo 30 - AULA 132 - Moda
+	- Modulo 30 - AULA 133
 afazeres:
-	- AULA 132 - Moda
+	- Aula
 		- Readme.*
+			-Todas medidas estatisticas
+		
 		
