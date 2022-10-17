@@ -5,11 +5,14 @@ PARA 18/10/22
 Subir github:
 	- AULA 132 - Todas medidas estatisticas
 		- script 10
-Estudar:
-	- Modulo 30 - AULA 133
-afazeres:
-	- Aula
 		- Readme.*
 			-Todas medidas estatisticas
+Estudar:
+	- Modulo 30 - AULA 133 - Exportar dados em formato colunar
+afazeres:
+	- Aula 133 -  Exportar dados em formato colunar
+		- Assistir
+		- Readme.*
+		- script 11
 		
 		
