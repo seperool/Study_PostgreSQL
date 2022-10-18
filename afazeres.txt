@@ -1,12 +1,9 @@
-ESCRITO EM 17/10/22
+ESCRITO EM 18/10/22
 ---
-PARA 18/10/22
+PARA 19/10/22
 ---
 Subir github:
-	- AULA 132 - Todas medidas estatisticas
-		- script 10
-		- Readme.*
-			-Todas medidas estatisticas
+
 Estudar:
 	- Modulo 30 - AULA 133 - Exportar dados em formato colunar
 afazeres:
