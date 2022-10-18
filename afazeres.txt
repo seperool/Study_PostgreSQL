@@ -3,13 +3,14 @@ ESCRITO EM 18/10/22
 PARA 19/10/22
 ---
 Subir github:
-
+	- Aula 133 -  Exportar dados em formato colunar
+		- script 11
+		- Readme.*
+			- sem privilégio de superusuário
 Estudar:
 	- Modulo 30 - AULA 133 - Exportar dados em formato colunar
 afazeres:
 	- Aula 133 -  Exportar dados em formato colunar
-		- Assistir
 		- Readme.*
-		- script 11
-		
-		
+			- com privilégio de superusuário
+			- pelo pgAdmin 4 (manualmente)
