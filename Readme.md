@@ -1344,7 +1344,7 @@ ser dependentes exclusivamente da **chave primária** da tabela.”
     \[Verificando os dados importados\]  
     **SELECT** \* **FROM** *nome_tabela*;  
 
-# 13 Aula 127 (Parte 2) a 130 - Estatística com Banco de dados
+# 13 Aula 127 (Parte 2) a 132 - Estatística com Banco de dados
 
 ## 13.1 Arredondamento (**ROUND**)
 
@@ -1467,7 +1467,7 @@ ser dependentes exclusivamente da **chave primária** da tabela.”
 
 ## 13.3 Medidas de dispersão
 
-### 13.3.1 Amplitude de um Set de dados
+### 13.3.1 Amplitude Total
 
 -   **Amplitude** é uma medida de dispersão.  
 -   O cálculo da **Amplitude** é a diferença entre o valor máximo e
@@ -1576,13 +1576,50 @@ ser dependentes exclusivamente da **chave primária** da tabela.”
     **GROUP BY** 1  
     **ORDER BY** 2 **DESC**;  
 
-# 14 Observações
+## 13.4 Resumo com todas medidas estatísticas
 
-## 14.1 Wiki para pesquisar funcionalidades do **PostgreSQL**
+-   A partir das funções e metodos de medidas de posição e dispersão,
+    podemos obter de uma determinada tabela as principais medidas
+    estatísticas.  
+-   Medidas de posição:  
+    -   **Média**  
+    -   **Moda**  
+    -   **Mediana**  
+-   Medidas de dispersão:  
+    -   **Amplitude total**  
+    -   **Variância**  
+    -   **Desvio-padrão**  
+    -   **Coeficiente de variação**  
+-   Sintaxe:  
+    **SELECT**  
+    *Coluna_1*,  
+    **COUNT**(*Coluna_2*) **AS** “QUANTIDADE”,  
+    **ROUND**(**SUM**(*Coluna_2*),2) **AS** “TOTAL”,  
+    **ROUND**(**AVG**(*Coluna_2*),2) **AS** “MEDIA”,  
+    **ROUND**(**MEDIAN**(*Coluna_2*),2) **AS** “MEDIANA”,  
+    **MODE**() **WITHIN GROUP**(**ORDER BY** *Coluna_2*) **AS**
+    “MODA”,  
+    **MAX**(*Coluna_2*) **AS** “MAXIMO”,  
+    **MIN**(*Coluna_2*) **AS** “MINIMO”,  
+    **ROUND**((**MAX**(*Coluna_2*) - **MIN**(*Coluna_2*)),2) **AS**
+    “AMPLITUDE TOTAL”,  
+    **ROUND**(**VAR_POP**(*Coluna_2*),2) **AS** “VARIANCIA POP.”,  
+    **ROUND**(**STDDEV_POP**(*Coluna_2*),2) **AS** “DES_PADRAO POP.”,  
+    **ROUND**(((**STDDEV_POP**(*Coluna_2*)/**AVG**(*Coluna_2*))\*100),2)
+    **AS** “COEF_VAR”  
+    **FROM** *tabela*  
+    **GROUP BY** 1  
+    **ORDER BY** 12 **DESC**;  
+
+# 14 Aula 133 - Exportar dados em formato colunar
+
+# 15 Observações
+
+## 15.1 Wiki para pesquisar funcionalidades do **PostgreSQL**
 
 <https://wiki.postgresql.org/wiki/Main_Page/pt>  
 
-## 14.2 Exportação de dados
+## 15.2 Exportação de dados
 
 -   Uma das maneiras mais facil de exportar dados é atraves da extensão
     “.csv”.  
@@ -1601,15 +1638,15 @@ ser dependentes exclusivamente da **chave primária** da tabela.”
     -   Ao clickar no ícone “*Save results to file*”, é oferecido a
         opção de salvar a consulta como “.csv”.  
 
-## 14.3 Breve explicação de Business Intelligence e Data Science
+## 15.3 Breve explicação de Business Intelligence e Data Science
 
 -   Business Intelligence (BI):  
     -   Esta preocupado com entender o que aconteceu no passado.  
 -   Data Science:  
     -   Através dos dados, tentar prever tendências futuras.  
 
-# 15 Andamento dos Estudos
+# 16 Andamento dos Estudos
 
-## 15.1 Assunto em andamento
+## 16.1 Assunto em andamento
 
-Atualmente estou estudando Módulo 30 - AULA 131.  
+Atualmente estou estudando Módulo 30 - AULA 133.  
