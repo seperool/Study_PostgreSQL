@@ -1613,6 +1613,47 @@ ser dependentes exclusivamente da **chave primária** da tabela.”
 
 # 14 Aula 133 - Exportar dados em formato colunar
 
+## 14.1 Exportando dados com privilégio de superusuário
+
+Comando **COPY**
+
+-   Sintaxe:  
+
+## 14.2 Exportando dados sem privilégio de superusuário
+
+-   Ao contrario do comando **COPY**, o comando **\copy**, você só
+    precisa ter privilégios suficientes em sua máquina local. Não requer
+    privilégios de superusuário do **PostgreSQL**.  
+-   O comando **\copy** em vez de o servidor gravar o arquivo *CSV*, o
+    **psql** grava o arquivo *CSV* e transfere os dados do servidor para
+    o sistema de arquivos local.  
+-   O comando **\copy** é restrito de uso atraves de linha de comando,
+    pelo terminal, no **psql**. Não funciona no **pgAdmin 4**.  
+-   Principais argumentos:  
+    -   **\copy**  
+        É o principal comando que desencadeia o processo de exportação
+        de dados. Copia os dados para um arquivo a ser exportado.  
+    -   **SELECT**  
+        *Projeção* da query (em formato tabela) que vai ser exportada.  
+    -   **TO**  
+        Determina que é uma exportação de dados e não importação de
+        dados (**FROM**).  
+    -   *caminho*  
+        O caminho no sistema onde será gravado o arquivo de exportação,
+        o nome que será dado ao arquivo e a extensão do arquivo.  
+    -   **CSV** \[**HEARDER**\]  
+        Define a extensão do arquivo a ser gravado e se tem, ou não,
+        cabeçalho.  
+-   Sintaxe:  
+    **\copy** (**SELECT** \* **FROM** *tabela*) **TO**  
+    ‘C:/tmp/*nome_arquivo*.csv’  
+    **WITH** **CSV** \[**HEARDER**\];  
+-   O comando **SELECT** pode ser uma *QUERY* mais elaborada.  
+
+## 14.3 Pelo **pgAdmin 4** (manualmente)
+
+\[inserir imagens e explicação\]
+
 # 15 Observações
 
 ## 15.1 Wiki para pesquisar funcionalidades do **PostgreSQL**

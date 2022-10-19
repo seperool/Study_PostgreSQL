@@ -4,21 +4,21 @@ subtitle: "Readme.rmd"
 author: "Sergio Pedro R Oliveira"
 date: "`r Sys.Date()`"
 output:
-  pdf_document:
-    number_sections: true
-    toc: TRUE
-  html_document:
-    number_sections: true
-    df_print: paged
   md_document:
     number_sections: true
     variant: markdown_github
-  github_document: default
+  html_document:
+    number_sections: true
+    df_print: paged
   odt_document:
     number_sections: true
+  github_document: default
   word_document:
     toc: TRUE
     number_sections: true
+  pdf_document:
+    number_sections: true
+    toc: TRUE
 ---
 
 \newpage
@@ -1297,6 +1297,37 @@ $\bar{X}$ é a **Média Populacional**.\
 \newpage
 
 # Aula 133 - Exportar dados em formato colunar
+
+## Exportando dados com privilégio de superusuário
+Comando **COPY**
+
+- Sintaxe:\
+
+
+## Exportando dados sem privilégio de superusuário
+- Ao contrario do comando **COPY**, o comando **\\copy**, você só precisa ter privilégios suficientes em sua máquina local. Não requer privilégios de superusuário do **PostgreSQL**.\
+- O comando **\\copy** em vez de o servidor gravar o arquivo *CSV*, o **psql** grava o arquivo *CSV* e transfere os dados do servidor para o sistema de arquivos local.\
+- O comando **\\copy** é restrito de uso atraves de linha de comando, pelo terminal, no **psql**. Não funciona no **pgAdmin 4**.\
+- Principais argumentos:\
+  - **\\copy**\
+  É o principal comando que desencadeia o processo de exportação de dados. Copia os dados para um arquivo a ser exportado.\
+  - **SELECT**\
+  *Projeção* da query (em formato tabela) que vai ser exportada.\
+  - **TO**\
+  Determina que é uma exportação de dados e não importação de dados (**FROM**).\
+  - *caminho*\
+  O caminho no sistema onde será gravado o arquivo de exportação, o nome que será dado ao arquivo e a extensão do arquivo.\
+  - **CSV** [**HEARDER**]\
+  Define a extensão do arquivo a ser gravado e se tem, ou não, cabeçalho.\
+- Sintaxe:\
+**\\copy** (**SELECT** \* **FROM** *tabela*) **TO**\
+'C:/tmp/*nome_arquivo*.csv'\
+**WITH** **CSV** [**HEARDER**];\
+- O comando **SELECT** pode ser uma *QUERY* mais elaborada.\
+
+## Pelo **pgAdmin 4** (manualmente)
+
+[inserir imagens e explicação]
 
 \newpage
 
