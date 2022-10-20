@@ -1,11 +1,9 @@
-ESCRITO EM 19/10/22
+ESCRITO EM 20/10/22
 ---
-PARA 20/10/22
+PARA 21/10/22
 ---
 Subir github:
-	- Aula 133 -  Exportar dados em formato colunar
-		- Readme.*
-			- pelo pgAdmin 4 (manualmente)
+
 Estudar:
 	- Modulo 30 - AULA 133 - Exportar dados em formato colunar
 afazeres:
