@@ -7,18 +7,18 @@ output:
   md_document:
     number_sections: true
     variant: markdown_github
-  html_document:
-    number_sections: true
-    df_print: paged
-  odt_document:
-    number_sections: true
-  github_document: default
   word_document:
     toc: TRUE
     number_sections: true
   pdf_document:
     number_sections: true
     toc: TRUE
+  github_document: default
+  html_document:
+    number_sections: true
+    df_print: paged
+  odt_document:
+    number_sections: true
 ---
 
 \newpage
@@ -1325,10 +1325,32 @@ Comando **COPY**
 **WITH** **CSV** [**HEARDER**];\
 - O comando **SELECT** pode ser uma *QUERY* mais elaborada.\
 
+\newpage
+
 ## Pelo **pgAdmin 4** (manualmente)
 
-[inserir imagens e explicação]
-
+- O **pgAdmin 4** tem um procedimento proprio para exportar dados.\
+- Passo a passo:\
+  - Clickar com o botão direito sobre a tabela, na qual deseja exportar os dados.
+  - Selecionar a opção "Import/Export Data".\
+  ![](./Imagens/Export_data_1.png){height=10cm}\
+  - Na janela "Import/Export Data", na aba "General", temos as opções:\
+    - **Import** ou **Export**\
+    Para importar ou exportar os dados.\
+    - **Filename**\
+    Para colocar o caminho onde será criado o arquivo e o nome do arquivo mais a extensão.\
+    - **Format**\
+    Para determinar a extensão que será salvo o arquivo.\
+  ![](./Imagens/Export_data_2.png){height=10cm}\
+  - Na janela "Import/Export Data", na aba "Options", temos as opções:\
+    - **HEARDER**\
+    Determinar se o arquivo tem, ou não, cabeçalho.\ 
+    - **DELIMITER**\
+    Definir o tipo de delimitador entre as colunas dos dados.\
+  ![](./Imagens/Export_data_3.png){height=10cm}\
+  - Na janela "Import/Export Data", na aba "Columns", podemos definir quais colunas da tabela serão passadas para o arquivo de exportação, caso necessário escolher.\
+  ![](./Imagens/Export_data_4.png){height=10cm}\
+  
 \newpage
 
 # Observações

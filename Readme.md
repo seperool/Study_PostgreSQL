@@ -1652,7 +1652,33 @@ Comando **COPY**
 
 ## 14.3 Pelo **pgAdmin 4** (manualmente)
 
-\[inserir imagens e explicação\]
+-   O **pgAdmin 4** tem um procedimento proprio para exportar dados.  
+-   Passo a passo:  
+    -   Clickar com o botão direito sobre a tabela, na qual deseja
+        exportar os dados.
+    -   Selecionar a opção “Import/Export Data”.  
+        <img src="./Imagens/Export_data_1.png" style="height:10cm" />  
+    -   Na janela “Import/Export Data”, na aba “General”, temos as
+        opções:  
+        -   **Import** ou **Export**  
+            Para importar ou exportar os dados.  
+        -   **Filename**  
+            Para colocar o caminho onde será criado o arquivo e o nome
+            do arquivo mais a extensão.  
+        -   **Format**  
+            Para determinar a extensão que será salvo o arquivo.  
+            <img src="./Imagens/Export_data_2.png" style="height:10cm" />  
+    -   Na janela “Import/Export Data”, na aba “Options”, temos as
+        opções:  
+        -   **HEARDER**  
+            Determinar se o arquivo tem, ou não, cabeçalho. 
+        -   **DELIMITER**  
+            Definir o tipo de delimitador entre as colunas dos dados.  
+            <img src="./Imagens/Export_data_3.png" style="height:10cm" />  
+    -   Na janela “Import/Export Data”, na aba “Columns”, podemos
+        definir quais colunas da tabela serão passadas para o arquivo de
+        exportação, caso necessário escolher.  
+        <img src="./Imagens/Export_data_4.png" style="height:10cm" />  
 
 # 15 Observações
 
