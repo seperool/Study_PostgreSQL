@@ -1,13 +1,14 @@
-ESCRITO EM 20/10/22
+ESCRITO EM 21/10/22
 ---
-PARA 21/10/22
+PARA 22/10/22
 ---
 Subir github:
 
 Estudar:
-	- Modulo 30 - AULA 133 - Exportar dados em formato colunar
+	- Modulo 30 - AULA 134 - Arquitetura de Ambiente
 afazeres:
-	- Aula 133 -  Exportar dados em formato colunar
+	- Aula 134 - Arquitetura de Ambiente
+		- Assistir
+		- Programar		
 		- Readme.*
-			- com privilégio de superusuário
 			
