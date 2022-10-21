@@ -1613,13 +1613,71 @@ ser dependentes exclusivamente da **chave primária** da tabela.”
 
 # 14 Aula 133 - Exportar dados em formato colunar
 
-## 14.1 Exportando dados com privilégio de superusuário
+## 14.1 Preparar os dados no formato colunar
 
-Comando **COPY**
+-   Antes de exportar os dados, é necessario preparar os dados de
+    interesse - projetar (**SELECT**), selecionar (**WHERE**) e juntar
+    (**JOIN**) - no formato de uma única tabela (formato colunar),
+    através de uma query transformada em tabela.  
+
+-   Para criar uma tabela a partir de uma query, com o comando **CREATE
+    TABLE**, após no nome da nova tabela, o comando **AS** acompanhado
+    da query (**SELECT**) cria essa tabela formada a partir de uma
+    query.  
+
+-   Uma precaução por segurança, é testar a query antes de usar dentro
+    do **CREATE TABLE**.  
+
+-   Lembrar de usar **ALIAS** nas colunas para evitar mesmos nomes em
+    campos de tabelas diferentes.  
 
 -   Sintaxe:  
+    **CREATE TABLE** *nome_nova_tabela* **AS**  
+    **SELECT**  
+    **T2**.NOME **AS** FILME,  
+    **T1**.NOME **AS** GENERO,  
+    **T3**.DATA **AS** DATA,  
+    **T3**.DIAS **AS** DIAS,  
+    **T3**.MIDIA **AS** MIDIA  
+    **FROM** *tabela_1* **T1**  
+    **INNER JOIN** *tabela_2* **T2**  
+    **ON** **T1**.IDGENERO = **T2**.ID_GENERO  
+    **INNER JOIN** *tabela_3* **T3**  
+    **ON** **T3**.ID_FILME = **T2**.IDFILME;  
 
-## 14.2 Exportando dados sem privilégio de superusuário
+## 14.2 Exportando dados com privilégio de superusuário
+
+-   O comando **COPY** é exclusivo para privilégio de superusuário.  
+
+-   O comando **COPY** copia e grava os dados em um arquivo.  
+
+-   Principais argumentos e forma de usar:  
+
+    -   **COPY**  
+        É o principal comando que desencadeia o processo de exportação
+        de dados. Copia os dados para um arquivo a ser exportado.  
+    -   Nome da *tabela*  
+        É o nome da tabela, do banco de dados, a ser exportada.  
+    -   **TO**  
+        Determina que é uma exportação de dados e não uma importação de
+        dados (**FROM**).  
+    -   *caminho*  
+        O caminho no sistema onde será gravado o arquivo de exportação,
+        o nome que será dado ao arquivo e a extensão do arquivo.  
+    -   **DELIMITER**  
+        Define o delimitador entre os campos, no arquivo exportado. O
+        delimitador é especificado entre aspas simples.  
+    -   **CSV** \[**HEARDER**\]  
+        Define a extensão do arquivo a ser gravado e se tem, ou não,
+        cabeçalho.  
+
+-   Sintaxe:  
+    **COPY** *nome_tabela* **TO**  
+    ‘/home/serigo/DB/PostgreSQL/Export_dados/REL_LOCADORA_COPY.csv’ 
+    **DELIMITER** ‘;’  
+    **CSV** **HEADER**;  
+
+## 14.3 Exportando dados sem privilégio de superusuário
 
 -   Ao contrario do comando **COPY**, o comando **\copy**, você só
     precisa ter privilégios suficientes em sua máquina local. Não requer
@@ -1636,7 +1694,7 @@ Comando **COPY**
     -   **SELECT**  
         *Projeção* da query (em formato tabela) que vai ser exportada.  
     -   **TO**  
-        Determina que é uma exportação de dados e não importação de
+        Determina que é uma exportação de dados e não uma importação de
         dados (**FROM**).  
     -   *caminho*  
         O caminho no sistema onde será gravado o arquivo de exportação,
@@ -1650,7 +1708,7 @@ Comando **COPY**
     **WITH** **CSV** \[**HEARDER**\];  
 -   O comando **SELECT** pode ser uma *QUERY* mais elaborada.  
 
-## 14.3 Pelo **pgAdmin 4** (manualmente)
+## 14.4 Pelo **pgAdmin 4** (manualmente)
 
 -   O **pgAdmin 4** tem um procedimento proprio para exportar dados.  
 -   Passo a passo:  
