@@ -1,14 +1,15 @@
-ESCRITO EM 21/10/22
+ESCRITO EM 22/10/22
 ---
-PARA 22/10/22
+PARA 23/10/22
 ---
 Subir github:
 
 Estudar:
-	- Modulo 30 - AULA 134 - Arquitetura de Ambiente
+	- Modulo 30 - AULA 135 - Entendendo a estrutura e organização
 afazeres:
 	- Aula 134 - Arquitetura de Ambiente
-		- Assistir
-		- Programar		
 		- Readme.*
-			
+			- SEQUENCE (terminar e revisar)
+	- AULA 135 - Entendendo a estrutura e organização
+		- Readme.*
+		- Programar script
