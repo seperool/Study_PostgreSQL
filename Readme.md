@@ -1738,13 +1738,79 @@ ser dependentes exclusivamente da **chave primária** da tabela.”
         exportação, caso necessário escolher.  
         <img src="./Imagens/Export_data_4.png" style="height:10cm" />  
 
-# 15 Observações
+# 15 Aulas 134 e 135 - Sincronizar tabelas com relatórios
 
-## 15.1 Wiki para pesquisar funcionalidades do **PostgreSQL**
+## 15.1 Arquitetura do Ambiente
+
+-   Problema na exportação de dados do banco de dados para um arquivo:  
+    -   Ao passar diversas tabelas para uma só, em formato colunar (para
+        exportação), esta nova tabela não é atualizada automaticamente
+        quando o banco de dados (as tabelas originais) é atualizado. Por
+        consequência, o arquivo exportado também não é atualizado
+        automaticamente.  
+    -   E apesar de não ter ficado claro anteriormente, a criação de um
+        **VIEW** não soluciona o problema, pois toda vez que é acionada
+        ela faz uma consulta (**query**), consumindo muito recurso
+        computacional. Quanto maior o banco de dados, menos vale a pena
+        o uso de **VIEW**, para esse tipo de situação. Apesar de a
+        **VIEW** é atualizada automaticamente, pois é uma consulta salva
+        (**query**) e não uma tabela proprimente dita.  
+-   Solução para o problema de sincronismo entre os dados da nova tabela
+    coluna e as tabelas de origem do banco de dados:  
+    -   Determinar campos **flag**, ou seja, um campo único que de para
+        comparar se ele esta nas tabelas originais e na nova tabela
+        colunar da mesma maneira. Caso não esteja, atualiza a nova
+        tabela colunar.  
+    -   A **flag** pode ser um *id*.  
+    -   Evitar campos **flag** utilizando data e hora, pois dependendo
+        da velocidade de inserção de novos dados nas tabelas, pode
+        confundir o sistema. Podem haver vários registros com mesma data
+        e hora, fazendo com que o sistema pegue apenas um registro que
+        simboliza aquela determina data e hora. 
+    -   Outra técnica útil é o uso de **SEQUENCE**:
+        -   Criar sequencia númerada, automática, aos *id*’s, que
+            facilita o controle.  
+        -   A continuidade da sequencia de números podem ser
+            compartilhados por diferentes tabelas, com o uso de
+            **SEQUENCE**, sendo assim fácil comparar diversos campos
+            **flag** (*id*’s) das tabelas originais, do banco de dados,
+            com a **flag** da nova tabela colunar. Apenas se todas as
+            tabelas originais, do banco de dados, compartilhar a
+            continuidade da sequência dos *id*’s.  
+        -   Não é obrigatório o uso dessa técnica, porem pode ser
+            bastante útil e facilitar a programação de **TRIGGERS** para
+            a comparação de *id*’s entre as tabelas originais e a nova
+            tabela colunar.  
+        -   **SEQUENCE** é diferente do **IDENTITY** (do **SQL
+            Server**).  
+
+## 15.2 **SEQUENCE**
+
+### 15.2.1 Teoria
+
+-   Cria uma sequência de números, uma tabela com uma coluna com números
+    em sequência que pode ser chamada através dos comandos **nextval**,
+    **currval** e **setval**.  
+
+-   Sintaxe:  
+
+### 15.2.2 Diferença entre **SEQUENCE** e **IDENTITY** (do SQL Server)
+
+-   A propriedade **Identity**, no **SQL Server**, é uma propriedade de
+    coluna, o que significa que está vinculada à tabela, enquanto a
+    **SEQUENCE** é um objeto de banco de dados definido pelo usuário e
+    não está vinculada a nenhuma tabela específica, o que significa que
+    seu valor pode ser compartilhado por várias tabelas.  
+
+## 15.3 Verificando e comparando registros das tabelas originais e nova tabela colunar
+
+# 16 Observações
+
+## 16.1 Wiki para pesquisar funcionalidades do **PostgreSQL**
 
 <https://wiki.postgresql.org/wiki/Main_Page/pt>  
 
-## 15.2 Exportação de dados
+## 16.2 Exportação de dados
 
 -   Uma das maneiras mais facil de exportar dados é atraves da extensão
     “.csv”.  
@@ -1763,15 +1829,15 @@ ser dependentes exclusivamente da **chave primária** da tabela.”
     -   Ao clickar no ícone “*Save results to file*”, é oferecido a
         opção de salvar a consulta como “.csv”.  
 
-## 15.3 Breve explicação de Business Intelligence e Data Science
+## 16.3 Breve explicação de Business Intelligence e Data Science
 
 -   Business Intelligence (BI):  
     -   Esta preocupado com entender o que aconteceu no passado.  
 -   Data Science:  
     -   Através dos dados, tentar prever tendências futuras.  
 
-# 16 Andamento dos Estudos
+# 17 Andamento dos Estudos
 
-## 16.1 Assunto em andamento
+## 17.1 Assunto em andamento
 
-Atualmente estou estudando Módulo 30 - AULA 133.  
+Atualmente estou estudando Módulo 30 - AULA 135.  
