@@ -1784,25 +1784,113 @@ ser dependentes exclusivamente da **chave primária** da tabela.”
         -   **SEQUENCE** é diferente do **IDENTITY** (do **SQL
             Server**).  
 
-## 15.2 **SEQUENCE**
+## 15.2 Comando **SEQUENCE**
 
 ### 15.2.1 Teoria
 
--   Cria uma sequência de números, uma tabela com uma coluna com números
-    em sequência que pode ser chamada através dos comandos **nextval**,
-    **currval** e **setval**.  
+-   Cria gerador de sequência de números, uma tabela com uma coluna com
+    números em sequência que pode ser chamada através dos comandos
+    **nextval**, **currval** e **setval**.  
+-   Objetos de **SEQUENCE** são tabelas especiais de linha única criadas
+    com **CREATE SEQUENCE**.  
+-   Objetos de **SEQUENCE** são comumente usados para gerar
+    identificadores exclusivos para linhas de uma tabela.  
 
+### 15.2.2 **CREATE SEQUENCE**
+
+-   **CREATE SEQUENCE** cria um novo gerador de números de sequência.  
+-   Criar e inicializar uma nova tabela especial de linha única (um
+    objeto no banco de dados), com um nome definido pelo programador na
+    criação.  
+-   O gerador será de propriedade do usuário que emite o comando.  
+-   Se for fornecido um nome de esquema, a sequência será criada no
+    esquema especificado. Caso contrário, ele será criado no esquema
+    atual.  
+-   O comando opicional **START**, permite que a sequência comece a
+    partir de qualquer lugar (um valor especificado).  
 -   Sintaxe:  
+    **CREATE** **SEQUENCE** *nome_da_sequence* \[**START**
+    *valor_inicial*\];  
 
-### 15.2.2 Diferença entre **SEQUENCE** e **IDENTITY** (do SQL Server)
+### 15.2.3 **DROP SEQUENCE**
 
--   A propriedade **Identity**, no **SQL Server**, é uma propriedade de
-    coluna, o que significa que está vinculada à tabela, enquanto a
-    **SEQUENCE** é um objeto de banco de dados definido pelo usuário e
+-   Deleta uma **SEQUENCE** existente.  
+-   Sintaxe:  
+    **DROP** **SEQUENCE** *nome_da_sequence*;  
+
+### 15.2.4 Funções do **SEQUENCE**
+
+-   **nextval**  
+    -   Avança o objeto de sequência para seu próximo valor e retorna
+        esse valor.  
+    -   Mesmo que várias sessões executem nextval simultaneamente, cada
+        uma receberá com segurança um valor de sequência distinto.  
+    -   Se o objeto de sequência foi criado com parâmetros padrão,
+        chamadas nextval sucessivas retornarão valores sucessivos
+        começando com 1.  
+    -   Sintaxe:  
+        **SELECT** **nextval**(‘*nome_da_sequence*’);  
+-   **setval**  
+    -   Define o valor atual do objeto de sequência.  
+    -   Na forma de três parâmetros, é chamado pode ser definido como
+        verdadeiro ou falso.  
+    -   **True** tem o mesmo efeito que a forma de dois parâmetros. O
+        próximo **nextval** avançará a sequência antes de retornar um
+        valor.  
+    -   Se for definido como **False**, o próximo **nextval** retornará
+        exatamente o valor especificado e o avanço da sequência começará
+        com o nextval seguinte.  
+    -   Sintaxe comentada:  
+        **SELECT** **setval**(‘*nome_da_sequence*’, 42); \[O próximo
+        **nextval** retornará 43\]  
+        **SELECT** **setval**(‘*nome_da_sequence*’, 42, **true**); \[faz
+        o mesmo que o comando acima\]  
+        **SELECT** **setval**(‘*nome_da_sequence*’, 42, **false**); \[O
+        próximo **nextval** retornará 42\]  
+-   **currval**  
+    -   Retorna o valor obtido mais recentemente por **nextval** para
+        esta sequência na sessão atual.  
+    -   Um erro é relatado se **nextval** nunca foi chamado para esta
+        seqüência, nesta sessão.  
+    -   Sintaxe:  
+        **SELECT** **currval**(‘*nome_da_sequence*’);  
+-   **lastval**  
+    -   Retorna o valor retornado mais recentemente por **nextval** na
+        sessão atual.  
+    -   Essa função é idêntica a **currval**, exceto que, em vez de usar
+        o nome da **SEQUENCE** como argumento, ela se refere a qualquer
+        sequência à qual **nextval** foi aplicado mais recentemente na
+        sessão atual.  
+    -   É um erro chamar lastval se nextval ainda não tiver sido chamado
+        na sessão atual.  
+        -Sintaxe:  
+        **SELECT** **lastval**();  
+
+### 15.2.5 Diferença entre **SEQUENCE** e **IDENTITY** (do SQL Server)
+
+A propriedade **Identity**, no **SQL Server**, é uma propriedade de
+coluna, o que significa que está vinculada à tabela, enquanto a
+**SEQUENCE** é um objeto de banco de dados definido pelo usuário e não
+está vinculada a nenhuma tabela específica, o que significa que seu
+valor pode ser compartilhado por várias tabelas.  
+
+### 15.2.6 Uso de **SEQUENCE** no **INSERT** da dados em uma tabela
+
+-   **SEQUENCE** é um objeto do banco de dados, definido pelo usuário e
     não está vinculada a nenhuma tabela específica, o que significa que
     seu valor pode ser compartilhado por várias tabelas.  
 
-## 15.3 Verificando e comparando registros das tabelas originais e nova tabela colunar
+-   Passa um número, de uma sequência (do objeto **SEQUENCE**), como
+    parametro para o registro inserido.  
+
+-   Sintaxe:  
+    **CREATE SEQUENCE** *nome_da_sequence* **START** *valor_inicial*;  
+    **INSERT INTO** *tabela*  
+    **VALUES**  
+    (**nextval**(‘*nome_da_sequence*’), \[outros valores a inserir nos
+    próximos campos\]);  
+
+## 15.3 Verificando e comparando registros das tabelas originais com a nova tabela colunar
 
 # 16 Observações
 
