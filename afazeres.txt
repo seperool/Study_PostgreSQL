@@ -8,5 +8,5 @@ Estudar:
 	- Modulo 30 - AULA 135 - Entendendo a estrutura e organização
 afazeres:
 	- AULA 135 - Entendendo a estrutura e organização
-		- Readme.* (revisar, comentar e continuar)
-		- Programar script
+		- Readme.*
+		- Programar script 13 (revisar, comentar e continuar)
