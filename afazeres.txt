@@ -1,6 +1,6 @@
-ESCRITO EM 23/10/22
+ESCRITO EM 24/10/22
 ---
-PARA 24/10/22
+PARA 25/10/22
 ---
 Subir github:
 
@@ -8,5 +8,5 @@ Estudar:
 	- Modulo 30 - AULA 135 - Entendendo a estrutura e organização
 afazeres:
 	- AULA 135 - Entendendo a estrutura e organização
-		- Readme.*
+		- Readme.* (revisar, comentar e continuar)
 		- Programar script
