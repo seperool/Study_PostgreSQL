@@ -1890,7 +1890,11 @@ valor pode ser compartilhado por várias tabelas.
     (**nextval**(‘*nome_da_sequence*’), \[outros valores a inserir nos
     próximos campos\]);  
 
-## 15.3 Verificando e comparando registros das tabelas originais com a nova tabela colunar
+## 15.3 Verificando e comparando registros das tabelas originais com a nova tabela colunar (Relatório)
+
+### 15.3.1 Retornar número máximo de registros
+
+### 15.3.2 Retornar diferença entre os registros das duas tabelas (**flag** *id*)
 
 # 16 Observações
 

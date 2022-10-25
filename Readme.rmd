@@ -4,21 +4,21 @@ subtitle: "Readme.rmd"
 author: "Sergio Pedro R Oliveira"
 date: "`r Sys.Date()`"
 output:
-  pdf_document:
-    number_sections: true
-    toc: TRUE
   md_document:
     number_sections: true
     variant: markdown_github
   word_document:
     toc: TRUE
     number_sections: true
+  pdf_document:
+    number_sections: true
+    toc: TRUE
   github_document: default
+  odt_document:
+    number_sections: true
   html_document:
     number_sections: true
     df_print: paged
-  odt_document:
-    number_sections: true
 ---
 
 \newpage
@@ -1494,7 +1494,11 @@ $\bar{X}$ é a **Média Populacional**.\
 
 \newpage
 
-## Verificando e comparando registros das tabelas originais com a nova tabela colunar
+## Verificando e comparando registros das tabelas originais com a nova tabela colunar (Relatório)
+
+### Retornar número máximo de registros
+
+### Retornar diferença entre os registros das duas tabelas (**flag** *id*)
 
 \newpage
 
