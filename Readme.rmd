@@ -4,21 +4,21 @@ subtitle: "Readme.rmd"
 author: "Sergio Pedro R Oliveira"
 date: "`r Sys.Date()`"
 output:
-  md_document:
-    number_sections: true
-    variant: markdown_github
-  word_document:
-    toc: TRUE
-    number_sections: true
   pdf_document:
     number_sections: true
     toc: TRUE
-  github_document: default
-  odt_document:
-    number_sections: true
   html_document:
     number_sections: true
     df_print: paged
+  md_document:
+    number_sections: true
+    variant: markdown_github
+  github_document: default
+  word_document:
+    toc: TRUE
+    number_sections: true
+  odt_document:
+    number_sections: true
 ---
 
 \newpage
@@ -1496,9 +1496,23 @@ $\bar{X}$ é a **Média Populacional**.\
 
 ## Verificando e comparando registros das tabelas originais com a nova tabela colunar (Relatório)
 
-### Retornar número máximo de registros
+### Retornar número máximo de registros de varias tabelas
+
+- Uma estrategia interessante para manter o arquivo atualizado é ter um controle sobre os registros das tabelas de origem com a tabela colunar (do relatório).\
+- Para tanto, uma opção é comparar o número de registros nas tabelas de origem com o número de registros da tabela colunar.\
+- Caso apresentar diferença entre as tabelas, é um indício que a tabela colunar, do relatório, esta desatualizado. Por consequência, o arquivo com os dados também estarão desatualizados.\
+- Uma técnica que pode ser útil nesses casos, é o uso de **Subquery**:\
+  - Onde podemos fazer uma *projeção* (**SELECT**) de uma tabela dentro de uma *projeção* (**SELECT**) de outra tabela.\
+  - Uma maneira simples de fazer uma **subquery**, é colocar entre parenteses uma query (**SELECT**), no lugar onde estaria uma colunar na query principal.\
+  - Logo, é possivel tratar a **subquery** como uma coluna da *projeção* principal, assim podemos adicionar um **alias** à **subquery**.\
+- Sintaxe:\
+**SELECT**\
+**MAX**(*IDLOCACAO*) **AS** RELATORIO,\
+(**SELECT** **MAX**(*IDLOCACAO*) **FROM** *tabela*) **AS** LOCACAO\
+**FROM** *tabela_relatorio*;\
 
 ### Retornar diferença entre os registros das duas tabelas (**flag** *id*)
+
 
 \newpage
 

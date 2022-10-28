@@ -1892,7 +1892,31 @@ valor pode ser compartilhado por várias tabelas.
 
 ## 15.3 Verificando e comparando registros das tabelas originais com a nova tabela colunar (Relatório)
 
-### 15.3.1 Retornar número máximo de registros
+### 15.3.1 Retornar número máximo de registros de varias tabelas
+
+-   Uma estrategia interessante para manter o arquivo atualizado é ter
+    um controle sobre os registros das tabelas de origem com a tabela
+    colunar (do relatório).  
+-   Para tanto, uma opção é comparar o número de registros nas tabelas
+    de origem com o número de registros da tabela colunar.  
+-   Caso apresentar diferença entre as tabelas, é um indício que a
+    tabela colunar, do relatório, esta desatualizado. Por consequência,
+    o arquivo com os dados também estarão desatualizados.  
+-   Uma técnica que pode ser útil nesses casos, é o uso de
+    **Subquery**:  
+    -   Onde podemos fazer uma *projeção* (**SELECT**) de uma tabela
+        dentro de uma *projeção* (**SELECT**) de outra tabela.  
+    -   Uma maneira simples de fazer uma **subquery**, é colocar entre
+        parenteses uma query (**SELECT**), no lugar onde estaria uma
+        colunar na query principal.  
+    -   Logo, é possivel tratar a **subquery** como uma coluna da
+        *projeção* principal, assim podemos adicionar um **alias** à
+        **subquery**.  
+-   Sintaxe:  
+    **SELECT**  
+    **MAX**(*IDLOCACAO*) **AS** RELATORIO,  
+    (**SELECT** **MAX**(*IDLOCACAO*) **FROM** *tabela*) **AS** LOCACAO  
+    **FROM** *tabela_relatorio*;  
 
 ### 15.3.2 Retornar diferença entre os registros das duas tabelas (**flag** *id*)
 
