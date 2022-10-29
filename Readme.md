@@ -1738,7 +1738,7 @@ ser dependentes exclusivamente da **chave primária** da tabela.”
         exportação, caso necessário escolher.  
         <img src="./Imagens/Export_data_4.png" style="height:10cm" />  
 
-# 15 Aulas 134 e 135 - Sincronizar tabelas com relatórios
+# 15 Aulas 134 a 136 - Sincronizar tabelas com relatórios
 
 ## 15.1 Arquitetura do Ambiente
 
@@ -1920,6 +1920,44 @@ valor pode ser compartilhado por várias tabelas.
 
 ### 15.3.2 Retornar diferença entre os registros das duas tabelas (**flag** *id*)
 
+-   Uma metodo para analisar se a tabela colunar (relatório) esta com os
+    dados sincronizados com as tabelas de origem, é verificar por meio
+    das **flag**’s (*id*) a diferença entre os registros.  
+-   Caso haja diferença, mais id’s nas tabelas de origem, a tabela
+    colunar esta desatualizada (dessincronizada).  
+-   Para retorna a diferença entre as tabelas:  
+    -   É possivel fazer uma *query* de uma *projeção* (**SELECT**)
+        acompanhado de uma *junção* (**INNER JOIN**) das tabelas de
+        interesse, adicionando uma *seleção* (**WHERE**), onde por meio
+        de filtro de lista (**IN**), atraves da negação (**NOT**),
+        podemos retornar a diferença entre os registros das tabelas.  
+    -   Para comparar as listas de registros das tabelas (por meio das
+        **flag**’s *id*), usamos uma **subquery** para obter a lista dos
+        registros da tabela colunar (relatório).  
+    -   Como resultado obtemos, a diferença entre a lista de registros
+        das tabelas de origem e a lista de registro da tabela colunar.  
+-   Sintaxe exemplo:  
+    **SELECT**  
+    **L**.IDLOCACAO,  
+    **F**.NOME **AS** FILME,  
+    **G**.NOME **AS** GENERO,  
+    **L**.DATA **AS** DATA,  
+    **L**.DIAS **AS** DIAS,  
+    **L**.MIDIA **AS** MIDIA  
+    **FROM** GENERO **G**  
+    **INNER JOIN** FILME **F**  
+    **ON** **G**.IDGENERO = **F**.ID_GENERO  
+    **INNER JOIN** LOCACAO **L**  
+    **ON** **L**.ID_FILME = **F**.IDFILME  
+    **WHERE** IDLOCACAO **NOT** **IN** (**SELECT** IDLOCACAO **FROM**
+    *RELATORIO_LOCADORA*);  
+
+## 15.4 Atualizar tabela colunar (relatório) e arquivo
+
+### 15.4.1 Atualização manual através de **INSERT**
+
+### 15.4.2 Atualização automática através de **TRIGGER**
+
 # 16 Observações
 
 ## 16.1 Wiki para pesquisar funcionalidades do **PostgreSQL**
@@ -1956,4 +1994,4 @@ valor pode ser compartilhado por várias tabelas.
 
 ## 17.1 Assunto em andamento
 
-Atualmente estou estudando Módulo 30 - AULA 135.  
+Atualmente estou estudando Módulo 30 - AULA 136.  
