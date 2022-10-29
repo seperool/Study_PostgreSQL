@@ -1,19 +1,16 @@
-ESCRITO EM 28/10/22
+ESCRITO EM 29/10/22
 ---
-PARA 29/10/22
+PARA 30/10/22
 ---
 Subir github:
-	- AULA 135 - Entendendo a estrutura e organização
-		- Readme.*
-			- Retornar diferença entre os registros das duas tabelas (flag id)
+
 Estudar:
 	- Modulo 30 - AULA 136 - Programando a sincronização
 afazeres:
 	- AULA 135 - Entendendo a estrutura e organização
 		- Readme.*
-			- Atualização manual atraves de INSERT 
-		- Programar script 13 (revisar, comentar e continuar)
+			- Atualização manual atraves de INSERT
 	- AULA 136 - Programando a sincronização
 		- Readme.*
 			- Atualização automática atraves de TRIGGER
-		- Programar script 13 (continuar)
+		- Programar script 13 (revisar, continuar)
