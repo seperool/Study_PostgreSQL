@@ -1,15 +1,12 @@
-ESCRITO EM 30/10/22
+ESCRITO EM 31/10/22
 ---
-PARA 31/10/22
+PARA 01/11/22
 ---
 Subir github:
 
 Estudar:
 	- Modulo 30 - AULA 136 - Programando a sincronização
 afazeres:
-	- AULA 135 - Entendendo a estrutura e organização
-		- Readme.*
-			- Atualização manual atraves de INSERT
 	- AULA 136 - Programando a sincronização
 		- Readme.*
 			- Atualização automática atraves de TRIGGER
