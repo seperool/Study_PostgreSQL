@@ -1956,7 +1956,48 @@ valor pode ser compartilhado por várias tabelas.
 
 ### 15.4.1 Atualização manual através de **INSERT**
 
+-   A forma mais simples e manual de atualizar (sincronizar) os dados
+    das tabelas originais com os registros da tabela colunar
+    (relatório):  
+    -   O uso do comando **INSERT INTO** baseado numa **query**, ou
+        seja, uma *projeção* (**SELECT**), onde por meio de *junção*
+        (**INNER JOIN**) reúna todos os dados que serão passados para a
+        tabela colunar.  
+    -   O comando mais importante é de *seleção*/filtro (**WHERE**),
+        onde por meio de **NOT IN** e de uma **subquery**, podemos
+        definir e retornar apenas os registros que não estão
+        sincronizados com a tabela colunar, por consequência inserindo
+        eles na tabela colunar.  
+-   Casos de retorno da **query** continda na **INSERT INTO**:  
+    -   Caso a **query** não retorne nenhum valor (registro), significa
+        que os registros da tabela colunar já estão sincronizados com os
+        dados das tabelas originais, logo nada é inserido na tabela
+        colunar.  
+    -   Caso a **query** retorne registros, significa que os registros
+        da tabela colunar não estão sincronizados com os dados das
+        tabelas originais, logo estes são inseridos na tabela colunar.  
+-   Sintaxe:  
+    **INSERT INTO** *tabela_colunar*  
+    **SELECT**  
+    **L**.IDLOCACAO,  
+    **F**.NOME **AS** FILME,  
+    **G**.NOME **AS** GENERO,  
+    **L**.DATA **AS** DATA,  
+    **L**.DIAS **AS** DIAS,  
+    **L**.MIDIA **AS** MIDIA  
+    **FROM** *GENERO* **G**  
+    **INNER JOIN** *FILME* **F**  
+    **ON** **G**.IDGENERO = **F**.ID_GENERO  
+    **INNER JOIN** *LOCACAO* **L**  
+    **ON** **L**.ID_FILME = **F**.IDFILME  
+    **WHERE** IDLOCACAO **NOT IN** (**SELECT** IDLOCACAO **FROM**
+    *tabela_colunar*);  
+
 ### 15.4.2 Atualização automática através de **TRIGGER**
+
+#### 15.4.2.1 **FUNCTION**
+
+#### 15.4.2.2 **TRIGGER**
 
 # 16 Observações
 
