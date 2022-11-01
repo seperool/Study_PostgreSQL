@@ -1954,7 +1954,7 @@ valor pode ser compartilhado por várias tabelas.
 
 ## 15.4 Atualizar tabela colunar (relatório) e arquivo
 
-### 15.4.1 Atualização manual através de **INSERT**
+### 15.4.1 Atualização manual através de **INSERT INTO**
 
 -   A forma mais simples e manual de atualizar (sincronizar) os dados
     das tabelas originais com os registros da tabela colunar

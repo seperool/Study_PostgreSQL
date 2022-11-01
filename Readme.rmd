@@ -7,17 +7,17 @@ output:
   md_document:
     number_sections: true
     variant: markdown_github
-  pdf_document:
-    number_sections: true
-    toc: TRUE
   html_document:
     number_sections: true
     df_print: paged
+  odt_document:
+    number_sections: true
   github_document: default
+  pdf_document:
+    number_sections: true
+    toc: TRUE
   word_document:
     toc: TRUE
-    number_sections: true
-  odt_document:
     number_sections: true
 ---
 
@@ -1540,7 +1540,7 @@ $\bar{X}$ é a **Média Populacional**.\
 
 ## Atualizar tabela colunar (relatório) e arquivo
 
-### Atualização manual através de **INSERT**
+### Atualização manual através de **INSERT INTO**
 
 - A forma mais simples e manual de atualizar (sincronizar) os dados das tabelas originais com os registros da tabela colunar (relatório):\
   - O uso do comando **INSERT INTO** baseado numa **query**, ou seja, uma *projeção* (**SELECT**), onde por meio de *junção* (**INNER JOIN**) reúna todos os dados que serão passados para a tabela colunar.\
