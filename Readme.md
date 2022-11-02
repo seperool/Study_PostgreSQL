@@ -1999,6 +1999,23 @@ valor pode ser compartilhado por várias tabelas.
 
 #### 15.4.2.2 **TRIGGER**
 
+-   No **postgreSQL**, a **TRIGGER** tem um funcionamento diferente da
+    **TRIGGER** em outros bancos de dados:  
+    -   Em outros bancos de dados, a **TRIGGER** é um gatilho, que
+        quando acionado, executa uma ação.  
+    -   A **TRIGGER** no **postgreSQL**, é um gatilho de determinada
+        ação, porém a **TRIGGER** chama uma função (**FUNCTION**), que
+        executa ações. Ou seja, a **TRIGGER** por si só não é programada
+        para executar a ação.  
+-   Sintaxe, com comentários entre colchetes:  
+    **CREATE TRIGGER** *nome_trigger*  
+    **BEFORE**/**AFTER** **INSERT**/**DELETE**/**UPDATE** **ON**
+    *tabela_observada*  
+    **FOR** **EACH** **ROW** \[Para cada linha (registro)\]  
+    **EXECUTE** **PROCEDURE** *nome_procedure*(); \[Chama a função\]  
+
+#### 15.4.2.3 Atualização automática através de **TRIGGER**
+
 # 16 Observações
 
 ## 16.1 Wiki para pesquisar funcionalidades do **PostgreSQL**

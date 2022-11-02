@@ -7,18 +7,18 @@ output:
   md_document:
     number_sections: true
     variant: markdown_github
-  html_document:
-    number_sections: true
-    df_print: paged
   odt_document:
     number_sections: true
-  github_document: default
-  pdf_document:
-    number_sections: true
-    toc: TRUE
   word_document:
     toc: TRUE
     number_sections: true
+  github_document: default
+  html_document:
+    number_sections: true
+    df_print: paged
+  pdf_document:
+    number_sections: true
+    toc: TRUE
 ---
 
 \newpage
@@ -1564,11 +1564,24 @@ $\bar{X}$ é a **Média Populacional**.\
 **ON** **L**.ID_FILME = **F**.IDFILME\
 **WHERE** IDLOCACAO **NOT IN** (**SELECT** IDLOCACAO **FROM** *tabela_colunar*);\
 
+\newpage
+
 ### Atualização automática através de **TRIGGER**
 
 #### **FUNCTION**
 
 #### **TRIGGER**
+
+- No **postgreSQL**, a **TRIGGER** tem um funcionamento diferente da **TRIGGER** em outros bancos de dados:\
+  - Em outros bancos de dados, a **TRIGGER** é um gatilho, que quando acionado, executa uma ação.\
+  - A **TRIGGER** no **postgreSQL**, é um gatilho de determinada ação, porém a **TRIGGER** chama uma função (**FUNCTION**), que executa ações. Ou seja, a **TRIGGER** por si só não é programada para executar a ação.\
+- Sintaxe, com comentários entre colchetes:\
+**CREATE TRIGGER** *nome_trigger*\
+**BEFORE**/**AFTER** **INSERT**/**DELETE**/**UPDATE** **ON** *tabela_observada*\
+**FOR** **EACH** **ROW** [Para cada linha (registro)]\
+**EXECUTE** **PROCEDURE** *nome_procedure*(); [Chama a função]\
+
+#### Atualização automática através de **TRIGGER**
 
 \newpage
 
