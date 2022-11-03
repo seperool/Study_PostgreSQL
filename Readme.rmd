@@ -7,18 +7,18 @@ output:
   md_document:
     number_sections: true
     variant: markdown_github
-  odt_document:
-    number_sections: true
-  word_document:
-    toc: TRUE
-    number_sections: true
-  github_document: default
   html_document:
     number_sections: true
     df_print: paged
+  odt_document:
+    number_sections: true
+  github_document: default
   pdf_document:
     number_sections: true
     toc: TRUE
+  word_document:
+    toc: TRUE
+    number_sections: true
 ---
 
 \newpage
@@ -1401,7 +1401,7 @@ $\bar{X}$ é a **Média Populacional**.\
   
 \newpage
 
-# Aulas 134 a 136 - Sincronizar tabelas com relatórios
+# Aulas 134 a 136 - Sincronizar tabelas com relatórios - Teoria
 
 ## Arquitetura do Ambiente
 
@@ -1538,9 +1538,7 @@ $\bar{X}$ é a **Média Populacional**.\
 
 \newpage
 
-## Atualizar tabela colunar (relatório) e arquivo
-
-### Atualização manual através de **INSERT INTO**
+# Aulas 136 - Sincronizar tabelas com relatórios - Atualização manual através de **INSERT INTO**
 
 - A forma mais simples e manual de atualizar (sincronizar) os dados das tabelas originais com os registros da tabela colunar (relatório):\
   - O uso do comando **INSERT INTO** baseado numa **query**, ou seja, uma *projeção* (**SELECT**), onde por meio de *junção* (**INNER JOIN**) reúna todos os dados que serão passados para a tabela colunar.\
@@ -1566,22 +1564,64 @@ $\bar{X}$ é a **Média Populacional**.\
 
 \newpage
 
-### Atualização automática através de **TRIGGER**
+# **PROCEDURES**
 
-#### **FUNCTION**
+## Teoria
 
-#### **TRIGGER**
+## Criando uma **PROCEDURE**
+
+## Deletando uma **PROCEDURE**
+
+## Chamando uma **PROCEDURE**
+
+## Diferença entre **FUNCTIONS** e **PROCEDURES**
+
+- No **Postgres**, a principal diferença funcional entre uma função (**FUNCTION**) e um procedimento armazenado (**STORED PROCEDURE**) é que uma função retorna um resultado, enquanto um procedimento armazenado não.\
+- Isso ocorre porque a intenção por trás de um procedimento armazenado (**PROCEDURE**) é realizar algum tipo de atividade e depois terminar, o que retornaria o controle ao chamador.\
+- Antes do **PostgreSQL** *versão* 11, os procedimentos armazenados (**PROCEDURES**) eram efetivamente funções que não retornavam dados. Mas agora existe uma maneira de declarar explicitamente os procedimentos armazenados, que também tem a vantagem de poder abrir uma nova transação, e agora eles também são chamados de forma diferente.\
+
+\newpage
+
+# **FUNCTIONS**
+
+## Teoria
+
+## Criando uma **FUNCTION**
+
+## Deletar uma **FUNCTION**
+
+## Executando uma **FUNCTION**
+
+## Diferença entre **FUNCTIONS** e **PROCEDURES**
+
+- No **Postgres**, a principal diferença funcional entre uma função (**FUNCTION**) e um procedimento armazenado (**STORED PROCEDURE**) é que uma função retorna um resultado, enquanto um procedimento armazenado não.\
+- Isso ocorre porque a intenção por trás de um procedimento armazenado (**PROCEDURE**) é realizar algum tipo de atividade e depois terminar, o que retornaria o controle ao chamador.\
+
+\newpage
+
+# **TRIGGERS**
+
+## Teoria
 
 - No **postgreSQL**, a **TRIGGER** tem um funcionamento diferente da **TRIGGER** em outros bancos de dados:\
   - Em outros bancos de dados, a **TRIGGER** é um gatilho, que quando acionado, executa uma ação.\
   - A **TRIGGER** no **postgreSQL**, é um gatilho de determinada ação, porém a **TRIGGER** chama uma função (**FUNCTION**), que executa ações. Ou seja, a **TRIGGER** por si só não é programada para executar a ação.\
+
+## Criando uma **TRIGGER**
+
 - Sintaxe, com comentários entre colchetes:\
 **CREATE TRIGGER** *nome_trigger*\
 **BEFORE**/**AFTER** **INSERT**/**DELETE**/**UPDATE** **ON** *tabela_observada*\
 **FOR** **EACH** **ROW** [Para cada linha (registro)]\
 **EXECUTE** **PROCEDURE** *nome_procedure*(); [Chama a função]\
 
-#### Atualização automática através de **TRIGGER**
+## Deletando uma **TRIGGER**
+
+\newpage
+
+# Aulas 137 - Sincronizar tabelas com relatórios - Atualização automática através de **TRIGGER**
+
+## Atualização automática através de **TRIGGER**
 
 \newpage
 
@@ -1613,4 +1653,4 @@ $\bar{X}$ é a **Média Populacional**.\
 
 ## Assunto em andamento
 
-Atualmente estou estudando Módulo 30 - AULA 136.\
+Atualmente estou estudando Módulo 30 - AULA 137.\

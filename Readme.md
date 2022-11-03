@@ -1738,7 +1738,7 @@ ser dependentes exclusivamente da **chave primária** da tabela.”
         exportação, caso necessário escolher.  
         <img src="./Imagens/Export_data_4.png" style="height:10cm" />  
 
-# 15 Aulas 134 a 136 - Sincronizar tabelas com relatórios
+# 15 Aulas 134 a 136 - Sincronizar tabelas com relatórios - Teoria
 
 ## 15.1 Arquitetura do Ambiente
 
@@ -1952,9 +1952,7 @@ valor pode ser compartilhado por várias tabelas.
     **WHERE** IDLOCACAO **NOT** **IN** (**SELECT** IDLOCACAO **FROM**
     *RELATORIO_LOCADORA*);  
 
-## 15.4 Atualizar tabela colunar (relatório) e arquivo
-
-### 15.4.1 Atualização manual através de **INSERT INTO**
+# 16 Aulas 136 - Sincronizar tabelas com relatórios - Atualização manual através de **INSERT INTO**
 
 -   A forma mais simples e manual de atualizar (sincronizar) os dados
     das tabelas originais com os registros da tabela colunar
@@ -1993,11 +1991,55 @@ valor pode ser compartilhado por várias tabelas.
     **WHERE** IDLOCACAO **NOT IN** (**SELECT** IDLOCACAO **FROM**
     *tabela_colunar*);  
 
-### 15.4.2 Atualização automática através de **TRIGGER**
+# 17 **PROCEDURES**
 
-#### 15.4.2.1 **FUNCTION**
+## 17.1 Teoria
 
-#### 15.4.2.2 **TRIGGER**
+## 17.2 Criando uma **PROCEDURE**
+
+## 17.3 Deletando uma **PROCEDURE**
+
+## 17.4 Chamando uma **PROCEDURE**
+
+## 17.5 Diferença entre **FUNCTIONS** e **PROCEDURES**
+
+-   No **Postgres**, a principal diferença funcional entre uma função
+    (**FUNCTION**) e um procedimento armazenado (**STORED PROCEDURE**) é
+    que uma função retorna um resultado, enquanto um procedimento
+    armazenado não.  
+-   Isso ocorre porque a intenção por trás de um procedimento armazenado
+    (**PROCEDURE**) é realizar algum tipo de atividade e depois
+    terminar, o que retornaria o controle ao chamador.  
+-   Antes do **PostgreSQL** *versão* 11, os procedimentos armazenados
+    (**PROCEDURES**) eram efetivamente funções que não retornavam dados.
+    Mas agora existe uma maneira de declarar explicitamente os
+    procedimentos armazenados, que também tem a vantagem de poder abrir
+    uma nova transação, e agora eles também são chamados de forma
+    diferente.  
+
+# 18 **FUNCTIONS**
+
+## 18.1 Teoria
+
+## 18.2 Criando uma **FUNCTION**
+
+## 18.3 Deletar uma **FUNCTION**
+
+## 18.4 Executando uma **FUNCTION**
+
+## 18.5 Diferença entre **FUNCTIONS** e **PROCEDURES**
+
+-   No **Postgres**, a principal diferença funcional entre uma função
+    (**FUNCTION**) e um procedimento armazenado (**STORED PROCEDURE**) é
+    que uma função retorna um resultado, enquanto um procedimento
+    armazenado não.  
+-   Isso ocorre porque a intenção por trás de um procedimento armazenado
+    (**PROCEDURE**) é realizar algum tipo de atividade e depois
+    terminar, o que retornaria o controle ao chamador.  
+
+# 19 **TRIGGERS**
+
+## 19.1 Teoria
 
 -   No **postgreSQL**, a **TRIGGER** tem um funcionamento diferente da
     **TRIGGER** em outros bancos de dados:  
@@ -2007,6 +2049,9 @@ valor pode ser compartilhado por várias tabelas.
         ação, porém a **TRIGGER** chama uma função (**FUNCTION**), que
         executa ações. Ou seja, a **TRIGGER** por si só não é programada
         para executar a ação.  
+
+## 19.2 Criando uma **TRIGGER**
+
 -   Sintaxe, com comentários entre colchetes:  
     **CREATE TRIGGER** *nome_trigger*  
     **BEFORE**/**AFTER** **INSERT**/**DELETE**/**UPDATE** **ON**
@@ -2014,15 +2059,19 @@ valor pode ser compartilhado por várias tabelas.
     **FOR** **EACH** **ROW** \[Para cada linha (registro)\]  
     **EXECUTE** **PROCEDURE** *nome_procedure*(); \[Chama a função\]  
 
-#### 15.4.2.3 Atualização automática através de **TRIGGER**
+## 19.3 Deletando uma **TRIGGER**
 
-# 16 Observações
+# 20 Aulas 137 - Sincronizar tabelas com relatórios - Atualização automática através de **TRIGGER**
 
-## 16.1 Wiki para pesquisar funcionalidades do **PostgreSQL**
+## 20.1 Atualização automática através de **TRIGGER**
+
+# 21 Observações
+
+## 21.1 Wiki para pesquisar funcionalidades do **PostgreSQL**
 
 <https://wiki.postgresql.org/wiki/Main_Page/pt>  
 
-## 16.2 Exportação de dados
+## 21.2 Exportação de dados
 
 -   Uma das maneiras mais facil de exportar dados é atraves da extensão
     “.csv”.  
@@ -2041,15 +2090,15 @@ valor pode ser compartilhado por várias tabelas.
     -   Ao clickar no ícone “*Save results to file*”, é oferecido a
         opção de salvar a consulta como “.csv”.  
 
-## 16.3 Breve explicação de Business Intelligence e Data Science
+## 21.3 Breve explicação de Business Intelligence e Data Science
 
 -   Business Intelligence (BI):  
     -   Esta preocupado com entender o que aconteceu no passado.  
 -   Data Science:  
     -   Através dos dados, tentar prever tendências futuras.  
 
-# 17 Andamento dos Estudos
+# 22 Andamento dos Estudos
 
-## 17.1 Assunto em andamento
+## 22.1 Assunto em andamento
 
-Atualmente estou estudando Módulo 30 - AULA 136.  
+Atualmente estou estudando Módulo 30 - AULA 137.  
