@@ -1,13 +1,27 @@
-ESCRITO EM 02/11/22
+ESCRITO EM 03/11/22
 ---
-PARA 03/11/22
+PARA 04/11/22
 ---
 Subir github:
 
 Estudar:
 	- Modulo 30 - AULA 136 - Programando a sincronização
-afazeres:
-	- AULA 136 - Programando a sincronização
+afazeres: 
+	- AULA 137 - Programando a sincronização
 		- Readme.*
+			- PROCEDURE
+				- Teoria
+				- Criando uma PROCEDURE
+				- Deletando uma PROCEDURE
+				- Chamando uma PROCEDURE
+			- FUCTION
+				- Teoria
+				- Criando uma FUNCTION
+				- Deletando uma PROCEDURE
+				- Chamando uma PROCEDURE
+			- TRIGGER
+				- Teoria
+				- Criando uma TRIGGER
+				- Deletando uma TRIGGER
 			- Atualização automática atraves de TRIGGER
 		- Programar script 13 (revisar, continuar)
