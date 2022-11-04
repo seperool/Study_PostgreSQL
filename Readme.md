@@ -1995,11 +1995,95 @@ valor pode ser compartilhado por várias tabelas.
 
 ## 17.1 Teoria
 
+-   Um dos recursos mais utilizados pelos desenvolvedores em Banco de
+    dados é a **Stored Procedure**, pois mantém concentrada a lógica
+    necessária para determinadas funções, tendo assim uma maior
+    agilidade no retorno de informações importantes.  
+-   Trabalhar com a criação destes pequenos trechos de código é, de
+    certa forma, uma boa prática, pois podemos deixar códigos bastante
+    complexos atuando do lado do servidor que poderão ser utilizados por
+    várias aplicações, evitando assim a necessidade de replicá-los em
+    cada uma dessas aplicações.  
+
 ## 17.2 Criando uma **PROCEDURE**
+
+-   **CREATE PROCEDURE** define um novo procedimento.  
+-   **CREATE OR REPLACE PROCEDURE** criará um novo procedimento ou
+    substituirá uma definição existente.  
+-   Para poder definir um procedimento, o usuário deve ter o privilégio
+    **USAGE** no idioma.  
+-   Se um nome de esquema (**SCHEMA**) for incluído, a **PROCEDURE**
+    será criado no esquema especificado. Caso contrário, ele será criado
+    no esquema atual.  
+-   Para substituir a definição atual de uma **PROCEDURE** existente,
+    use **CREATE OR REPLACE PROCEDURE**. Não é possível alterar o nome
+    ou os tipos de argumento de um procedimento dessa maneira (se você
+    tentasse, na verdade estaria criando um procedimento novo e
+    distinto).  
+-   Na estrutura do **CREATE PROCEDURE**, o comando “$$” serve para
+    mudar o delimitador, ate que apareça outro comando “$$”, que retorna
+    o delimitado para “;”. Possibilitando assim, programar em SQL dentro
+    do *bloco de programação* do **CREATE PROCEDURE**, sem finalizar o
+    comando.  
+-   Há também o parâmetro **OUT**, que pode ser usado junto dos
+    argumentos, que é uma forma de produzir uma saída que retorna esses
+    campos no resultado.  
+-   Linguagens aceitas na **PROCEDURE**:  
+    -   *plpgsql*  
+        PostgreSQL.  
+    -   *pltcl*  
+        TCL.  
+    -   *plperl*  
+        Perl.  
+    -   *plpython3u*  
+        Python versão 3.  
+    -   *plr*  
+        R.  
+    -   *pljava*  
+        Java.  
+    -   *plphp*  
+        PHP.  
+    -   *plruby*  
+        Ruby.  
+    -   *pllua-ng*  
+        LUA.  
+    -   *plsh*  
+        Shell.  
+    -   *plv8*  
+        JavaScript
+    -   *C*  
+-   Sintaxe:  
+    **CREATE PROCEDURE** *insert_data*(a integer, b integer)  
+    **LANGUAGE** *SQL*  
+    **AS**  
+    $$  
+    **BEGIN**  
+    **INSERT INTO** *tbl* **VALUES** (*a*);  
+    **INSERT INTO** *tbl* **VALUES** (*b*);  
+    **END**  
+    $$;  
 
 ## 17.3 Deletando uma **PROCEDURE**
 
+-   O comando **DROP PROCEDURE** deleta uma **PROCEDURE**.  
+-   **DROP PROCEDURE** remove a definição de um ou mais procedimentos
+    existentes.  
+-   Para executar este comando o usuário deve ser o proprietário do(s)
+    **PROCEDURE**(S).  
+-   Os tipos de argumento para o(s) procedimento(s) geralmente devem ser
+    especificados, pois vários procedimentos diferentes podem existir
+    com o mesmo nome e diferentes listas de argumentos.  
+-   Sintaxe:  
+    **DROP PROCEDURE** \[**IF EXISTS**\]
+    *nome_procedure*\[(*argumento_1* *tipo*, *argumento_2* *tipo*,
+    …)\];  
+
 ## 17.4 Chamando uma **PROCEDURE**
+
+-   Use **CALL** para executar um **PROCEDURE**.  
+
+-   Sintaxe:  
+    **CALL** *nome_procedure*(*argumento_1*, *argumento_2*, …);  
 
 ## 17.5 Diferença entre **FUNCTIONS** e **PROCEDURES**
 
