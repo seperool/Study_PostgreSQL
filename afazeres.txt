@@ -1,6 +1,6 @@
-ESCRITO EM 03/11/22
+ESCRITO EM 04/11/22
 ---
-PARA 04/11/22
+PARA 05/11/22
 ---
 Subir github:
 
@@ -9,11 +9,6 @@ Estudar:
 afazeres: 
 	- AULA 137 - Programando a sincronização
 		- Readme.*
-			- PROCEDURE
-				- Teoria
-				- Criando uma PROCEDURE
-				- Deletando uma PROCEDURE
-				- Chamando uma PROCEDURE
 			- FUCTION
 				- Teoria
 				- Criando uma FUNCTION
