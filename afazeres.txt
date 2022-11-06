@@ -3,7 +3,7 @@ ESCRITO EM 06/11/22
 PARA 07/11/22
 ---
 Subir github:
-
+	- - Programar script 13 (revisado)
 Estudar:
 	- Modulo 30 - AULA 136 - Programando a sincronização
 afazeres: 
