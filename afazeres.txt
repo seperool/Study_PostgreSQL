@@ -1,6 +1,6 @@
-ESCRITO EM 05/11/22
+ESCRITO EM 06/11/22
 ---
-PARA 06/11/22
+PARA 07/11/22
 ---
 Subir github:
 
@@ -11,9 +11,7 @@ afazeres:
 		- Readme.*
 			- FUCTION
 				- Teoria
-				- Criando uma FUNCTION
-				- Deletando uma PROCEDURE
-				- Chamando uma PROCEDURE
+				- Chamando uma FUNCTION
 			- TRIGGER
 				- Teoria
 				- Criando uma TRIGGER
