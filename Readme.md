@@ -2029,6 +2029,7 @@ valor pode ser compartilhado por várias tabelas.
     argumentos, que é uma forma de produzir uma saída que retorna esses
     campos no resultado.  
 -   Linguagens aceitas na **PROCEDURE**:  
+    -   *SQL*  
     -   *plpgsql*  
         PostgreSQL.  
     -   *pltcl*  
@@ -2050,7 +2051,7 @@ valor pode ser compartilhado por várias tabelas.
     -   *plsh*  
         Shell.  
     -   *plv8*  
-        JavaScript
+        JavaScript  
     -   *C*  
 -   Sintaxe:  
     **CREATE PROCEDURE** *insert_data*(a integer, b integer)  
@@ -2107,7 +2108,109 @@ valor pode ser compartilhado por várias tabelas.
 
 ## 18.2 Criando uma **FUNCTION**
 
+-   A instrução **CREATE FUNCTION** define uma nova função, enquanto a
+    instrução **CREATE OR REPLACE FUNCTION** criar uma nova função ou
+    substitui uma função já existente. Além disso, temos a definição do
+    nome do esquema, onde caso este seja incluído, a função será criada
+    no esquema que foi especificado.  
+
+    -   Devemos tomar cuidado na hora de atribuir o nome da nossa
+        função, pois ela não deve corresponder a nenhuma função já
+        existente com os mesmos tipos de argumentos de entrada presentes
+        no mesmo esquema.
+    -   O que difere as funções são os argumentos de tipos diferentes,
+        pois estes podem compartilhar um mesmo nome, o que o torna uma
+        função de sobrecarga.  
+    -   Para substituir a definição atual de uma **FUNCTION** existente,
+        use **CREATE OR REPLACE FUNCTION**. Não é possível alterar o
+        nome ou os tipos de argumento de um procedimento dessa maneira
+        (se você tentasse, na verdade estaria criando um procedimento
+        novo e distinto).  
+
+-   Na estrutura do **CREATE FUNCTION**, o comando “$$” serve para mudar
+    o delimitador, ate que apareça outro comando “$$”, que retorna o
+    delimitado para “;”. Possibilitando assim, programar em SQL dentro
+    do *bloco de programação* do **CREATE FUNCTION**, sem finalizar o
+    comando.  
+
+-   Como *bloco de programação* é comum utilizar o **TSQL** (**BEGIN** e
+    **END**) para que um grupo de instruções possa ser executado,
+    linguagem de controle de fluxo. O *bloco de instruções*, por boas
+    práticas, deve ser indentado dentro do **BEGIN** e **END**.  
+
+-   Em **RETURNS**:  
+
+    -   O tipo de dados de retorno (**RETURNS**) (opcionalmente
+        qualificado pelo esquema). O tipo de retorno faz referência ao
+        tipo de uma coluna da tabela. Se a função não deve retornar um
+        valor, especifique **VOID** como o tipo de retorno.  
+    -   Quando temos especificado um parâmetro **OUT** ou **INOUT**, a
+        cláusula **RETURNS** pode ser omitida.  
+    -   Caso seja uma função para uma **TRIGGER**, dever ser
+        especificado como “**RETURNS TRIGGER**”.  
+
+-   Em **RETURN**:
+
+    -   O comando **RETURN** serve para retornar o valor de uma
+        operção.  
+    -   Argumento temporal como **OLD** ou **NEW** também são aceitos
+        dependendo do tipo de instrução **DML** (**SELECT**, **INSERT**,
+        **DELETE** e **UPDATE**).  
+    -   Não confundir **RETURN** com **RETURNS**.  
+
+-   No **PostgreSQL** podemos informar para qual linguagem estamos
+    escrevendo nossas funções. Linguagens aceitas na **FUNCTION**:  
+
+    -   *SQL*  
+    -   *plpgsql*  
+        PostgreSQL.  
+    -   *pltcl*  
+        TCL.  
+    -   *plperl*  
+        Perl.  
+    -   *plpython3u*  
+        Python versão 3.  
+    -   *plr*  
+        R.  
+    -   *pljava*  
+        Java.  
+    -   *plphp*  
+        PHP.  
+    -   *plruby*  
+        Ruby.  
+    -   *pllua-ng*  
+        LUA.  
+    -   *plsh*  
+        Shell.  
+    -   *plv8*  
+        JavaScript  
+    -   *C*  
+
+-   Sintaxe:  
+    **CREATE OR REPLACE FUNCTION** *nome_function*(*variavel* *tipo*,
+    …)  
+    **RETURNS** *tipo*  
+    **AS**  
+    $$  
+    **BEGIN**  
+    \[Blocode programação\] **RETURN** *valor*;  
+    **END**;  
+    $$  
+    **LANGUAGE** *plpgsql*;  
+
 ## 18.3 Deletar uma **FUNCTION**
+
+-   O comando **DROP FUNCTION** deleta uma **FUNCTION**.  
+-   **DROP FUNCTION** remove a definição de uma, ou mais, funções
+    existentes.  
+-   Para executar este comando o usuário deve ser o proprietário da(s)
+    **FUNCTION**(S).  
+-   Os tipos de argumento para a função geralmente devem ser
+    especificados, pois várias funções diferentes podem existir com o
+    mesmo nome e diferentes listas de argumentos.  
+-   Sintaxe:  
+    **DROP FUNCTION** \[**IF EXISTS**\] *nome_function*\[(*argumento_1*
+    *tipo*, *argumento_2* *tipo*, …)\];  
 
 ## 18.4 Executando uma **FUNCTION**
 
