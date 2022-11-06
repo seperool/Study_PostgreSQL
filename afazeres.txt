@@ -1,6 +1,6 @@
-ESCRITO EM 06/11/22
+ESCRITO EM 05/11/22
 ---
-PARA 07/11/22
+PARA 06/11/22
 ---
 Subir github:
 	- - Programar script 13 (revisado)
@@ -11,7 +11,9 @@ afazeres:
 		- Readme.*
 			- FUCTION
 				- Teoria
-				- Chamando uma FUNCTION
+				- Criando uma FUNCTION
+				- Deletando uma PROCEDURE
+				- Chamando uma PROCEDURE
 			- TRIGGER
 				- Teoria
 				- Criando uma TRIGGER
