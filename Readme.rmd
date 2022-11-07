@@ -7,18 +7,18 @@ output:
   md_document:
     number_sections: true
     variant: markdown_github
-  word_document:
-    toc: TRUE
-    number_sections: true
-  pdf_document:
-    number_sections: true
-    toc: TRUE
-  github_document: default
-  odt_document:
-    number_sections: true
   html_document:
     number_sections: true
     df_print: paged
+  odt_document:
+    number_sections: true
+  github_document: default
+  pdf_document:
+    number_sections: true
+    toc: TRUE
+  word_document:
+    toc: TRUE
+    number_sections: true
 ---
 
 \newpage
@@ -1713,6 +1713,14 @@ $\bar{X}$ é a **Média Populacional**.\
 **DROP FUNCTION** [**IF EXISTS**] *nome_function*[(*argumento_1* *tipo*, *argumento_2* *tipo*, ...)];\
 
 ## Executando uma **FUNCTION**
+- Para executar uma **FUNCTION**, basta chamar ela pelo **SELECT**.\
+- No caso da **FUNCTION** ser executada dentro de uma **TRIGGER**, podemos usar o comando **EXECUTE FUNCTION**, ou **EXECUTE PROCEDURE**, somado ao nome da **FUNCTION** e seus respectivos parâmetros.\
+- Sintaxe:\
+**SELECT** *nome_function*(*valor_1*, *valor_2*, ...);\
+ou,\
+**CREATE TRIGGER** ...\
+...\
+**EXECUTE PROCEDURE** *nome_function*();\
 
 ## Diferença entre **FUNCTIONS** e **PROCEDURES**
 

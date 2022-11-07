@@ -2214,6 +2214,18 @@ valor pode ser compartilhado por várias tabelas.
 
 ## 18.4 Executando uma **FUNCTION**
 
+-   Para executar uma **FUNCTION**, basta chamar ela pelo **SELECT**.  
+-   No caso da **FUNCTION** ser executada dentro de uma **TRIGGER**,
+    podemos usar o comando **EXECUTE FUNCTION**, ou **EXECUTE
+    PROCEDURE**, somado ao nome da **FUNCTION** e seus respectivos
+    parâmetros.  
+-   Sintaxe:  
+    **SELECT** *nome_function*(*valor_1*, *valor_2*, …);  
+    ou,  
+    **CREATE TRIGGER** …  
+    …  
+    **EXECUTE PROCEDURE** *nome_function*();  
+
 ## 18.5 Diferença entre **FUNCTIONS** e **PROCEDURES**
 
 -   No **Postgres**, a principal diferença funcional entre uma função
