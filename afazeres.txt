@@ -1,6 +1,6 @@
-ESCRITO EM 07/11/22
+ESCRITO EM 08/11/22
 ---
-PARA 08/11/22
+PARA 09/11/22
 ---
 Subir github:
 	- script 13 (revisado)
@@ -9,8 +9,6 @@ Estudar:
 afazeres: 
 	- AULA 137 - Programando a sincronização
 		- Readme.*
-			- FUCTION
-				- Teoria
 			- TRIGGER
 				- Teoria
 				- Criando uma TRIGGER
