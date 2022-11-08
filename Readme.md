@@ -2106,6 +2106,13 @@ valor pode ser compartilhado por várias tabelas.
 
 ## 18.1 Teoria
 
+-   Uma série de instruções sendo apresentada como **FUNCTIONS**.  
+-   Estas funções adicionam a capacidade de controlar a execução das
+    instruções **SQL** através da utilização de uma *linguagem
+    procedural* (**PL**).  
+-   No PostgreSQL podemos informar para qual linguagem estamos
+    escrevendo nossas funções.  
+
 ## 18.2 Criando uma **FUNCTION**
 
 -   A instrução **CREATE FUNCTION** define uma nova função, enquanto a

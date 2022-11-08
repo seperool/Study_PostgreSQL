@@ -7,18 +7,18 @@ output:
   md_document:
     number_sections: true
     variant: markdown_github
-  html_document:
-    number_sections: true
-    df_print: paged
-  odt_document:
-    number_sections: true
-  github_document: default
-  pdf_document:
-    number_sections: true
-    toc: TRUE
   word_document:
     toc: TRUE
     number_sections: true
+  pdf_document:
+    number_sections: true
+    toc: TRUE
+  github_document: default
+  odt_document:
+    number_sections: true
+  html_document:
+    number_sections: true
+    df_print: paged
 ---
 
 \newpage
@@ -1643,6 +1643,10 @@ $\bar{X}$ é a **Média Populacional**.\
 # **FUNCTIONS**
 
 ## Teoria
+
+- Uma série de instruções sendo apresentada como **FUNCTIONS**.\
+- Estas funções adicionam a capacidade de controlar a execução das instruções **SQL** através da utilização de uma *linguagem procedural* (**PL**).\
+- No PostgreSQL podemos informar para qual linguagem estamos escrevendo nossas funções.\
 
 ## Criando uma **FUNCTION**
 
