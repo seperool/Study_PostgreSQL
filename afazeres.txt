@@ -3,7 +3,9 @@ ESCRITO EM 10/11/22
 PARA 11/11/22
 ---
 Subir github:
-	
+	- AULA 137 - Programando a sincronização
+		- Readme.*
+			- Deletando uma TRIGGER
 Estudar:
 	- Modulo 30 - AULA 136 - Programando a sincronização
 afazeres: 
@@ -11,6 +13,5 @@ afazeres:
 		- Readme.*
 			- TRIGGER
 				- Teoria
-				- Deletando uma TRIGGER
 			- Atualização automática atraves de TRIGGER
 		- Programar script 13 (revisar, continuar)
