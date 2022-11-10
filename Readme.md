@@ -2231,7 +2231,7 @@ valor pode ser compartilhado por várias tabelas.
     ou,  
     **CREATE TRIGGER** …  
     …  
-    **EXECUTE PROCEDURE** *nome_function*();  
+    **EXECUTE** {**PROCEDURE** \| **FUNCTION**} *nome_function*();  
 
 ## 18.5 Diferença entre **FUNCTIONS** e **PROCEDURES**
 
@@ -2258,12 +2258,72 @@ valor pode ser compartilhado por várias tabelas.
 
 ## 19.2 Criando uma **TRIGGER**
 
+-   O comando **CREATE TRIGGER** cria uma nova **TRIGGER**, o comando
+    vem acompanhado do nome da nova **TRIGGER** (*nome_trigger*).  
+
+-   **CREATE OR REPLACE TRIGGER** cria uma nova **TRIGGER**, ou
+    substitui uma **TRIGGER** existente.  
+
+-   **BEFORE** e **AFTER**:  
+
+    -   Quando usado o comando **BEFORE** (antes) em conjunto com o
+        **INSERT**, o **TRIGGER** pega o dado antes de ir para a
+        tabela.  
+    -   **AFTER** pega os dados depois da ação *DML* ter sido executada.
+        Pega os valores novos.  
+    -   Para pegar o valor com *autoincrement* (**SERIAL** no
+        **PostgreSQL**) no **INSERT**, pelo **TRIGGER**, basta usar o
+        **AFTER** (depois), para pegar o novo valor. Pois os dados só
+        são pegos pelo **TRIGGER** depois de os dados do **INSERT**
+        terem entrado na tabela.  
+    -   Os gatilhos **BEFORE** e **AFTER** em uma exibição devem ser
+        marcados como **FOR EACH STATEMENT**.  
+
+-   Gatilhos *DML* disparadores de **TRIGGER**:  
+
+    -   **INSERT**  
+    -   **DELETE**  
+    -   **UPDATE**  
+
+-   O comando **ON** define o **SCHEMA** e a tabela observada pela
+    **TRIGGER**.  
+
+-   **FOR EACH**:  
+
+    -   O comando **FOR EACH ROW** aplica o gatilho para cada linha da
+        tabela observada, separadamente. Um gatilho para cada linha
+        modificada.  
+    -   O comando **FOR EACH STATEMENT** é executado apenas uma vez para
+        qualquer operação, independentemente de quantas linhas ele
+        modifica (em particular, uma operação que modifica zero linhas
+        ainda resultará na execução de qualquer gatilho **FOR EACH
+        STATEMENT** aplicável).  
+
+-   O comando **WHEN** cria uma condição para o gatilho.  
+
+-   Conceito de **OLD** e **NEW**:  
+
+    -   **OLD**  
+        Pega o valor antigo da coluna, ou tabela, indicada.  
+        Ex.: **OLD**.*coluna_1*  
+    -   **NEW**  
+        Pega o novo valor da coluna, ou tabela, indicada.  
+        Ex.: **NEW**.*coluna_1*  
+
+-   No **PostgreSQL** a **TRIGGER**, chama uma função (**PROCEDURE** ou
+    **FUNCTION**), previamente criada, que executa uma serie de comando
+    sobre a tabela observada. O comando usado para chama a função é
+    **EXECUTE PROCEDURE** ou **EXECUTE FUNCTION**.  
+
 -   Sintaxe, com comentários entre colchetes:  
     **CREATE TRIGGER** *nome_trigger*  
-    **BEFORE**/**AFTER** **INSERT**/**DELETE**/**UPDATE** **ON**
+    {**BEFORE**\|**AFTER**} {**INSERT**\|**DELETE**\|**UPDATE**} **ON**
     *tabela_observada*  
     **FOR** **EACH** **ROW** \[Para cada linha (registro)\]  
-    **EXECUTE** **PROCEDURE** *nome_procedure*(); \[Chama a função\]  
+    **WHEN** (**OLD**.*tabela_obs* **IS** **DISTINCT** **FROM**
+    **NEW**.*tabela_obs*) \[Condição\]  
+    **EXECUTE** {**PROCEDURE** \| **FUNCTION**} *nome_procedure*();
+    \[Chama a função\]  
 
 ## 19.3 Deletando uma **TRIGGER**
 
