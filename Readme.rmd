@@ -7,17 +7,17 @@ output:
   md_document:
     number_sections: true
     variant: markdown_github
-  pdf_document:
-    number_sections: true
-    toc: TRUE
   html_document:
     number_sections: true
     df_print: paged
+  odt_document:
+    number_sections: true
   github_document: default
+  pdf_document:
+    number_sections: true
+    toc: TRUE
   word_document:
     toc: TRUE
-    number_sections: true
-  odt_document:
     number_sections: true
 ---
 
@@ -1783,6 +1783,11 @@ ou,\
 **EXECUTE** {**PROCEDURE** | **FUNCTION**} *nome_procedure*(); [Chama a função]\
 
 ## Deletando uma **TRIGGER**
+- O comando **DROP TRIGGER**, deleta uma **TRIGGER**, especificada pelo nome e tabela a qual faz parte.\
+- O comando **IF EXISTE** pode ser usado, deletando assim apenas se a **TRIGGER** existir.\
+
+- Sintaxe:\
+**DROP TRIGGER** [ **IF EXISTS** ] *nome_trigger* **ON** *nome_tabela*;\
 
 \newpage
 

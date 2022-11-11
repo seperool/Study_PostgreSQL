@@ -2327,6 +2327,16 @@ valor pode ser compartilhado por várias tabelas.
 
 ## 19.3 Deletando uma **TRIGGER**
 
+-   O comando **DROP TRIGGER**, deleta uma **TRIGGER**, especificada
+    pelo nome e tabela a qual faz parte.  
+
+-   O comando **IF EXISTE** pode ser usado, deletando assim apenas se a
+    **TRIGGER** existir.  
+
+-   Sintaxe:  
+    **DROP TRIGGER** \[ **IF EXISTS** \] *nome_trigger* **ON**
+    *nome_tabela*;  
+
 # 20 Aulas 137 - Sincronizar tabelas com relatórios - Atualização automática através de **TRIGGER**
 
 ## 20.1 Atualização automática através de **TRIGGER**
