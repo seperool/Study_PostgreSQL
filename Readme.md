@@ -2329,10 +2329,8 @@ valor pode ser compartilhado por várias tabelas.
 
 -   O comando **DROP TRIGGER**, deleta uma **TRIGGER**, especificada
     pelo nome e tabela a qual faz parte.  
-
 -   O comando **IF EXISTE** pode ser usado, deletando assim apenas se a
     **TRIGGER** existir.  
-
 -   Sintaxe:  
     **DROP TRIGGER** \[ **IF EXISTS** \] *nome_trigger* **ON**
     *nome_tabela*;  
@@ -2340,6 +2338,74 @@ valor pode ser compartilhado por várias tabelas.
 # 20 Aulas 137 - Sincronizar tabelas com relatórios - Atualização automática através de **TRIGGER**
 
 ## 20.1 Atualização automática através de **TRIGGER**
+
+-   Usando a técnica apresentada anteriormente para *retornar* e
+    *inserir* (atualizar) a diferença entre os registros de duas, ou
+    mais, tabelas (usando a **flag** *id*).  
+-   Podemos construir uma **FUNCTION** de **TRIGGER**, para automatizar
+    o processo de inserir a diferença entre as tabelas e tabela
+    relatório, assim atualizando a tabela relatório.  
+-   Na mesma **FUNCTION** da **TRIGGER**, programar que a **FUNCTION**
+    atualize o arquivo gerado pela tabela relatório.  
+-   Por fim, criar uma **TRIGGER** que gere um gatilho para monitorar as
+    mudanças nas tabelas, chamando a **FUNCTION** criada
+    anteriormente.  
+-   O objetivo é atualizar na tabela relatório as mudanças nas outras
+    tabelas e também atualizar o arquivo gerado a partir da tabela
+    relatório.  
+
+## 20.2 Exemplo de código - Atualização automática através de **TRIGGER**
+
+-   Segue um exemplo de código, aplicando a técnica de “atualização
+    autómatica através de **TRIGGER**”.  
+-   Exemplo de código, com comentarios entre colchetes:  
+
+\[Criação da **FUNCTION**\]  
+\[Cabeçalho\]  
+**CREATE OR REPLACE FUNCTION** *ATUALIZA_REL*() \[Cria uma função, ou
+sobreescreve se a função já existir\]  
+**RETURNS TRIGGER AS** \[É uma função para uma **TRIGGER**. Retorno
+(**RETURNS**) de uma **TRIGGER**\]  
+$$ \[Altera o delimitador para poder usar o “;” dentro do bloco de
+programação\]  
+
+**BEGIN** \[Inicia o bloco de programação\]  
+
+\[Técnica para inserir diferença entre tabelas na tabela relatório.
+Atualiza tabela relatório\]  
+**INSERT INTO** *RELATORIO_LOCADORA*  
+**SELECT**  
+**L**.*IDLOCACAO*,  
+**F**.*NOME* **AS** FILME,  
+**G**.*NOME* **AS** GENERO,  
+**L**.*DATA* **AS** DATA,  
+**L**.*DIAS* **AS** DIAS,  
+**L**.*MIDIA* **AS** MIDIA  
+**FROM** GENERO **G**  
+**INNER JOIN** FILME **F**  
+**ON** **G**.*IDGENERO* = **F**.*ID_GENERO*  
+**INNER JOIN** LOCACAO **L**  
+**ON** **L**.*ID_FILME* = **F**.*IDFILME*  
+**WHERE** *IDLOCACAO* **NOT IN** (**SELECT** *IDLOCACAO* **FROM**
+*RELATORIO_LOCADORA*); \[Subquery e retorna diferença entre tabelas\]  
+
+\[Sobreescreve o arquivo criado anteriormente, se existir\]  
+**COPY** *RELATORIO_LOCADORA* **TO**  
+‘/home/…/RELATORIO_LOCADORA.csv’ \[Caminho onde o arquvio é salvo\]  
+**DELIMITER** ‘;’  
+**CSV HEADER**;  
+
+**RETURN** *NEW*; \[Argumento temporal (*NEW*, *OLD*)\]  
+**END**; \[Encerra o bloco de programação\]  
+$$ \[Finaliza a mudança do delimitador\]  
+**LANGUAGE** *PLPGSQL*; \[Define a linguagem que foi usada no bloco de
+programação\]  
+
+\[Criação de **TRIGGER**\]  
+**CREATE TRIGGER** *TG_RELATORIO*  
+**AFTER** **INSERT** **ON** *LOCACAO*  
+**FOR EACH ROW** \[Para cada linha (registro)\]  
+**EXECUTE** **PROCEDURE** *ATUALIZA_REL*(); \[Chama a função\]  
 
 # 21 Observações
 
