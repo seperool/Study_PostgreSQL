@@ -1,6 +1,6 @@
-ESCRITO EM 12/11/22
+ESCRITO EM 14/11/22
 ---
-PARA 13/11/22
+PARA 15/11/22
 ---
 Subir github:
 
@@ -12,6 +12,3 @@ afazeres:
 			- TRIGGER
 				- Teoria
 		- Programar script 13 (revisar, continuar)
-			- COPY (não esta funcionando)
-			- fazer funcionar a FUNCTION e a TRIGGER
-			- testar inserindo novos registros
