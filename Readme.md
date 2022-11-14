@@ -1281,7 +1281,22 @@ ser dependentes exclusivamente da **chave primária** da tabela.”
         -   “.csv”  
         -   outros arquivos relacionais.  
 
-## 12.2 Sobre Exportar Arquivos
+## 12.2 Importar dados com privilégio de superusuário
+
+-   O comando **COPY** é exclusivo para privilégio de superusuário.  
+
+-   Para liberar o uso do comando **COPY**, é necessario mudar e liberar
+    a permissão da pasta e arquivo, na maquina. Esta mudança pode ser
+    feita usando o comando **chmod** pelo terminal.  
+
+    ``` console
+    sudo chmod -R 777 ~/.../pasta/arquivo.csv
+    ```
+
+-   O comando **COPY** copia e grava os dados de um arquivo numa
+    determinada tabela do banco de dados.  
+
+## 12.3 Sobre Exportar Arquivos
 
 -   Um aspecto importante ao exportar um arquivo, devemos passar do
     “modelo relacional” para o “modelo colunar”, facilitando assim o
@@ -1294,7 +1309,7 @@ ser dependentes exclusivamente da **chave primária** da tabela.”
     por exemplo, funções de agregação: max, min, avg, …), e então
     exportar o resultado desta **Query** (consulta).  
 
-## 12.3 Importar Arquivos
+## 12.4 Importar Arquivos
 
 -   O principal formato de arquivo para importação é o “.csv”.  
 -   O passo a passo:  
@@ -1648,6 +1663,14 @@ ser dependentes exclusivamente da **chave primária** da tabela.”
 ## 14.2 Exportando dados com privilégio de superusuário
 
 -   O comando **COPY** é exclusivo para privilégio de superusuário.  
+
+-   Para liberar o uso do comando **COPY**, é necessario mudar e liberar
+    a permissão da pasta e arquivo, na maquina. Esta mudança pode ser
+    feita usando o comando **chmod** pelo terminal.  
+
+    ``` console
+    sudo chmod -R 777 ~/.../pasta/arquivo.csv
+    ```
 
 -   O comando **COPY** copia e grava os dados em um arquivo.  
 

@@ -7,14 +7,14 @@ output:
   md_document:
     number_sections: true
     variant: markdown_github
-  word_document:
-    toc: TRUE
-    number_sections: true
   pdf_document:
     number_sections: true
     toc: TRUE
-  github_document: default
   odt_document:
+    number_sections: true
+  github_document: default
+  word_document:
+    toc: TRUE
     number_sections: true
   html_document:
     number_sections: true
@@ -1020,6 +1020,16 @@ A **Adventure Works** classifica *produtos* por *categoria* e *subcategoria*. Os
     - ".csv"\
     - outros arquivos relacionais.\
 
+## Importar dados com privilégio de superusuário
+
+- O comando **COPY** é exclusivo para privilégio de superusuário.\
+
+- Para liberar o uso do comando **COPY**, é necessario mudar e liberar a permissão da pasta e arquivo, na maquina. Esta mudança pode ser feita usando o comando **chmod** pelo terminal.\
+  ```console
+  sudo chmod -R 777 ~/.../pasta/arquivo.csv
+  ```
+- O comando **COPY** copia e grava os dados de um arquivo numa determinada tabela do banco de dados.\
+
 ## Sobre Exportar Arquivos
 - Um aspecto importante ao exportar um arquivo, devemos passar do "modelo relacional" para o "modelo colunar", facilitando assim o trabalho desse arquivo com linguagens de programação (R, Python, ...).\
 - No processo de passar do "modelo relacional" para o "modelo colunar", antes de exportarmos os dados, devemos fazer uma **Query** (consulta) que junte numa única tabela as informações a serem exportadas, podendo adicionar informações de resumo dos dados (como por exemplo, funções de agregação: max, min, avg, ...), e então exportar o resultado desta **Query** (consulta).\
@@ -1327,6 +1337,11 @@ $\bar{X}$ é a **Média Populacional**.\
 ## Exportando dados com privilégio de superusuário
 
 - O comando **COPY** é exclusivo para privilégio de superusuário.\
+
+- Para liberar o uso do comando **COPY**, é necessario mudar e liberar a permissão da pasta e arquivo, na maquina. Esta mudança pode ser feita usando o comando **chmod** pelo terminal.\
+  ```console
+  sudo chmod -R 777 ~/.../pasta/arquivo.csv
+  ```
 
 - O comando **COPY** copia e grava os dados em um arquivo.\
 
