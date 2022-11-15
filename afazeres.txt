@@ -1,14 +1,13 @@
-ESCRITO EM 14/11/22
+ESCRITO EM 15/11/22
 ---
-PARA 15/11/22
+PARA 16/11/22
 ---
 Subir github:
 
 Estudar:
-	- Modulo 30 - AULA 136 - Programando a sincronização
+	- Modulo 30 - AULA 138 - Sincronizar registros deletados
 afazeres: 
-	- AULA 137 - Programando a sincronização
+	- AULA 138 - Sincronizar registros deletados
+		- Assistir
+		- Programar
 		- Readme.*
-			- TRIGGER
-				- Teoria
-		- Programar script 13 (revisar, continuar)
