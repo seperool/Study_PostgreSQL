@@ -1752,9 +1752,20 @@ ou,\
 
 ## Teoria
 
+- A **TRIGGER** é um gatilho de programação, que dispara toda vez que algo predeterminado acontecer.\
+
+- Exemplos de gatilhos disparadores de uma **TRIGGER** são:\
+  - **INSERT**\
+  - **UPDATE**\
+  - **DELETE**\
+
+- Após o gatilho (**TRIGGER**) ser disparado, é chamado uma função da **TRIGGER** (**FUNCTION** | **PROCEDURE**) que executa um bloco de programação, previamente programado.\
+
 - No **postgreSQL**, a **TRIGGER** tem um funcionamento diferente da **TRIGGER** em outros bancos de dados:\
   - Em outros bancos de dados, a **TRIGGER** é um gatilho, que quando acionado, executa uma ação.\
   - A **TRIGGER** no **postgreSQL**, é um gatilho de determinada ação, porém a **TRIGGER** chama uma função (**FUNCTION**), que executa ações. Ou seja, a **TRIGGER** por si só não é programada para executar a ação.\
+
+- É uso comum do **TRIGGER** salvar modificação de dados (**INSERT**, **UPDATE** e **DELETE**) em uma tabela que sirva de backup dos dados, e/ou uma tabela que sirva para auditoria das modificações desses dados. Logo, se faz necessario preparar, antes da criação da **TRIGGER** (**CREATE TRIGGER**), a tabela para receber os dados enviados pelo **TRIGGER** (**CREATE TABLE**).\
 
 ## Criando uma **TRIGGER**
 - O comando **CREATE TRIGGER** cria uma nova **TRIGGER**, o comando vem acompanhado do nome da nova **TRIGGER** (*nome_trigger*).\
@@ -1805,7 +1816,7 @@ ou,\
 
 \newpage
 
-# Aulas 137 - Sincronizar tabelas com relatórios - Atualização automática através de **TRIGGER**
+# Aula 137 - Sincronizar tabelas com relatório - Atualização automática através de **TRIGGER**
 
 ## Atualização automática através de **TRIGGER**
 
@@ -1856,11 +1867,15 @@ ou,\
 \$\$ [Finaliza a mudança do delimitador]\
 **LANGUAGE** *PLPGSQL*; [Define a linguagem que foi usada no bloco de programação]\
 
-[Criação de **TRIGGER**]\
+[Criação da **TRIGGER**]\
 **CREATE TRIGGER** *TG_RELATORIO*\
 **AFTER** **INSERT** **ON** *LOCACAO*\
 **FOR EACH ROW** [Para cada linha (registro)]\
 **EXECUTE** **PROCEDURE** *ATUALIZA_REL*(); [Chama a função]\
+
+\newpage
+
+# Aula 138 - Sincronizar registros deletados
 
 \newpage
 
@@ -1892,4 +1907,4 @@ ou,\
 
 ## Assunto em andamento
 
-Atualmente estou estudando Módulo 30 - AULA 137.\
+Atualmente estou estudando Módulo 30 - AULA 138.\

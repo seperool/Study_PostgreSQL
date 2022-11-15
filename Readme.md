@@ -2270,14 +2270,35 @@ valor pode ser compartilhado por várias tabelas.
 
 ## 19.1 Teoria
 
+-   A **TRIGGER** é um gatilho de programação, que dispara toda vez que
+    algo predeterminado acontecer.  
+
+-   Exemplos de gatilhos disparadores de uma **TRIGGER** são:  
+
+    -   **INSERT**  
+    -   **UPDATE**  
+    -   **DELETE**  
+
+-   Após o gatilho (**TRIGGER**) ser disparado, é chamado uma função da
+    **TRIGGER** (**FUNCTION** \| **PROCEDURE**) que executa um bloco de
+    programação, previamente programado.  
+
 -   No **postgreSQL**, a **TRIGGER** tem um funcionamento diferente da
     **TRIGGER** em outros bancos de dados:  
+
     -   Em outros bancos de dados, a **TRIGGER** é um gatilho, que
         quando acionado, executa uma ação.  
     -   A **TRIGGER** no **postgreSQL**, é um gatilho de determinada
         ação, porém a **TRIGGER** chama uma função (**FUNCTION**), que
         executa ações. Ou seja, a **TRIGGER** por si só não é programada
         para executar a ação.  
+
+-   É uso comum do **TRIGGER** salvar modificação de dados (**INSERT**,
+    **UPDATE** e **DELETE**) em uma tabela que sirva de backup dos
+    dados, e/ou uma tabela que sirva para auditoria das modificações
+    desses dados. Logo, se faz necessario preparar, antes da criação da
+    **TRIGGER** (**CREATE TRIGGER**), a tabela para receber os dados
+    enviados pelo **TRIGGER** (**CREATE TABLE**).  
 
 ## 19.2 Criando uma **TRIGGER**
 
@@ -2358,7 +2379,7 @@ valor pode ser compartilhado por várias tabelas.
     **DROP TRIGGER** \[ **IF EXISTS** \] *nome_trigger* **ON**
     *nome_tabela*;  
 
-# 20 Aulas 137 - Sincronizar tabelas com relatórios - Atualização automática através de **TRIGGER**
+# 20 Aula 137 - Sincronizar tabelas com relatório - Atualização automática através de **TRIGGER**
 
 ## 20.1 Atualização automática através de **TRIGGER**
 
@@ -2424,19 +2445,21 @@ $$ \[Finaliza a mudança do delimitador\]
 **LANGUAGE** *PLPGSQL*; \[Define a linguagem que foi usada no bloco de
 programação\]  
 
-\[Criação de **TRIGGER**\]  
+\[Criação da **TRIGGER**\]  
 **CREATE TRIGGER** *TG_RELATORIO*  
 **AFTER** **INSERT** **ON** *LOCACAO*  
 **FOR EACH ROW** \[Para cada linha (registro)\]  
 **EXECUTE** **PROCEDURE** *ATUALIZA_REL*(); \[Chama a função\]  
 
-# 21 Observações
+# 21 Aula 138 - Sincronizar registros deletados
 
-## 21.1 Wiki para pesquisar funcionalidades do **PostgreSQL**
+# 22 Observações
+
+## 22.1 Wiki para pesquisar funcionalidades do **PostgreSQL**
 
 <https://wiki.postgresql.org/wiki/Main_Page/pt>  
 
-## 21.2 Exportação de dados
+## 22.2 Exportação de dados
 
 -   Uma das maneiras mais facil de exportar dados é atraves da extensão
     “.csv”.  
@@ -2455,15 +2478,15 @@ programação\]
     -   Ao clickar no ícone “*Save results to file*”, é oferecido a
         opção de salvar a consulta como “.csv”.  
 
-## 21.3 Breve explicação de Business Intelligence e Data Science
+## 22.3 Breve explicação de Business Intelligence e Data Science
 
 -   Business Intelligence (BI):  
     -   Esta preocupado com entender o que aconteceu no passado.  
 -   Data Science:  
     -   Através dos dados, tentar prever tendências futuras.  
 
-# 22 Andamento dos Estudos
+# 23 Andamento dos Estudos
 
-## 22.1 Assunto em andamento
+## 23.1 Assunto em andamento
 
-Atualmente estou estudando Módulo 30 - AULA 137.  
+Atualmente estou estudando Módulo 30 - AULA 138.  
