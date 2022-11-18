@@ -1,6 +1,6 @@
-ESCRITO EM 17/11/22
+ESCRITO EM 18/11/22
 ---
-PARA 18/11/22
+PARA 19/11/22
 ---
 Subir github:
 
@@ -8,7 +8,4 @@ Estudar:
 	- Modulo 30 - AULA 138 - Sincronizar registros deletados
 afazeres: 
 	- AULA 138 - Sincronizar registros deletados
-		- Assistir
-		- Programar
-			- Sincronizar registros deletados (testar)
 		- Readme.*
