@@ -2464,6 +2464,18 @@ programação\]
 
 ### 21.1.1 Teoria
 
+-   De maneira semelhante a técnica de “sincronizar tabelas com
+    relatório”, automaticamente através de **TRIGGER**, a técnica de
+    “sincronizar registros deletados” segue a mesma lógica.  
+-   Procedimentos:  
+    -   Programar uma **FUNCTION** que pegue o número dos id’s dos
+        registros deletados das tabelas de origem e com base neles
+        delete os registros correspondentes na tabela relatório.  
+    -   Sincronizar a tabela relatório com o arquivo **CSV**.  
+    -   Preparar um gatilho (**TRIGGER**) para disparar essa
+        **FUNCTION** sempre que um registro for deletado, automatizando
+        assim o processo.  
+
 ### 21.1.2 Parâmetros
 
 ## 21.2 Exemplo de código - Atualização automática de dados deletados através de **TRIGGER**
