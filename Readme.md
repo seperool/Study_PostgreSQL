@@ -1891,11 +1891,18 @@ ser dependentes exclusivamente da **chave primária** da tabela.”
 
 ### 15.2.5 Diferença entre **SEQUENCE** e **IDENTITY** (do SQL Server)
 
-A propriedade **Identity**, no **SQL Server**, é uma propriedade de
-coluna, o que significa que está vinculada à tabela, enquanto a
-**SEQUENCE** é um objeto de banco de dados definido pelo usuário e não
-está vinculada a nenhuma tabela específica, o que significa que seu
-valor pode ser compartilhado por várias tabelas.  
+-   A propriedade **IDENTITY**, no **SQL Server**, é uma propriedade de
+    coluna, o que significa que está vinculada à tabela, enquanto a
+    **SEQUENCE** é um objeto de banco de dados definido pelo usuário e
+    não está vinculada a nenhuma tabela específica, o que significa que
+    seu valor pode ser compartilhado por várias tabelas.  
+-   No **PostgreSQL** o equivalente ao comando **IDENTITY**, no **SQL
+    Server**, é o comando **SERIAL**.  
+    -   Sintaxe:  
+        **CREATE TABLE** *tabela* (  
+        IDCOLUNA **SERIAL** **PRIMARY KEY**,  
+        …  
+        );  
 
 ### 15.2.6 Uso de **SEQUENCE** no **INSERT** da dados em uma tabela
 
@@ -2452,6 +2459,48 @@ programação\]
 **EXECUTE** **PROCEDURE** *ATUALIZA_REL*(); \[Chama a função\]  
 
 # 21 Aula 138 - Sincronizar registros deletados
+
+## 21.1 Atualização automática de dados deletados através de **TRIGGER**
+
+### 21.1.1 Teoria
+
+### 21.1.2 Parâmetros
+
+## 21.2 Exemplo de código - Atualização automática de dados deletados através de **TRIGGER**
+
+-   Segue um exemplo de código, aplicando a técnica de “atualização
+    autómatica de dados deletados através de **TRIGGER**”.  
+-   Exemplo de código, com comentarios entre colchetes:  
+
+\[Criação da **FUNCTION**, para sincronizar registros deletados\]  
+**CREATE OR REPLACE** **FUNCTION** DELETE_LOCACAO()  
+**RETURNS TRIGGER** \[**FUNCTION** para uma **TRIGGER**\]  
+**AS**  
+$$ \[Altera o delimitador\]  
+**BEGIN** \[Inicia o bloco de programação\]  
+\[Deleta o mesmo registro das tabelas de origem na registro na tabela
+relatório\]  
+**DELETE** **FROM** RELATORIO_LOCADORA  
+**WHERE** IDLOCACAO = **OLD**.IDLOCACAO; \[Pega o número do id deletado
+na tabela de origem\]  
+\[Atualiza o arquivo com base na tabela relatório\]  
+**COPY** RELATORIO_LOCADORA **TO**  
+‘/home/serigo/DB/PostgreSQL/Export_dados/RELATORIO_LOCADORA.csv’  
+**DELIMITER** ‘;’  
+**CSV HEADER**;  
+**RETURN** **OLD**;\[Retorna o valor id deletado\]  
+**END**; \[Encerra o bloco de programação\]  
+$$ \[Retorna o delimitador para “;”\]  
+**LANGUAGE** **PLPGSQL**; \[Linguagem usada no bloco de programação\]  
+
+\[**TRIGGER** para registros deletados\]  
+**CREATE TRIGGER** DELETE_REG  
+**BEFORE** **DELETE** **ON** LOCACAO  
+\[**BEFORE** é importante, para conseguir pegar o id antes de deletar o
+registro\]  
+**FOR EACH ROW** \[O gatilho é disparado para cada linha deletada\]  
+**EXECUTE PROCEDURE** DELETE_LOCACAO(); \[Executa/chama a
+**FUNCTION**\]  
 
 # 22 Observações
 
