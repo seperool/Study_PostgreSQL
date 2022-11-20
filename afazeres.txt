@@ -1,6 +1,6 @@
-ESCRITO EM 19/11/22
+ESCRITO EM 20/11/22
 ---
-PARA 20/11/22
+PARA 21/11/22
 ---
 Subir github:
 
@@ -10,5 +10,4 @@ afazeres:
 	- AULA 138 - Sincronizar registros deletados
 		- Readme.*
 			- Atualização automática de dados deletados através de TRIGGER
-			(explicar teoria)
 			(explicar parametros)
