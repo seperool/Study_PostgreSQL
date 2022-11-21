@@ -2465,11 +2465,11 @@ programação\]
 ### 21.1.1 Teoria
 
 -   De maneira semelhante a técnica de “sincronizar tabelas com
-    relatório”, automaticamente através de **TRIGGER**, a técnica de
-    “sincronizar registros deletados” segue a mesma lógica.  
+    relatório” de maneira automática através de **TRIGGER**. A técnica
+    de “sincronizar registros deletados” segue a mesma lógica.  
 -   Procedimentos:  
-    -   Programar uma **FUNCTION** que pegue o número dos id’s dos
-        registros deletados das tabelas de origem e com base neles
+    -   Programar uma **FUNCTION** que pegue o número dos id’s, dos
+        registros deletados, das tabelas de origem, e com base neles,
         delete os registros correspondentes na tabela relatório.  
     -   Sincronizar a tabela relatório com o arquivo **CSV**.  
     -   Preparar um gatilho (**TRIGGER**) para disparar essa
@@ -2477,6 +2477,35 @@ programação\]
         assim o processo.  
 
 ### 21.1.2 Parâmetros
+
+#### 21.1.2.1 **FUCTION**
+
+-   **CREATE OR REPLACE FUNCTION** criará uma nova função ou substituirá
+    uma definição existente.  
+
+-   **RETURNS TRIGGER** define que é um função de uma **TRIGGER**.  
+
+-   **AS** inicia a definição da função, a programação do que ela vai
+    fazer.  
+
+-   “$$” altera o delimitador (inicia e finaliza) para não finalizar a
+    **FUNCTION** ao usar “;” ao final de cada linha de comando no *bloco
+    de programação*.  
+
+-   **BEGIN** e **END**, inicia e encerra o *bloco de programação*.  
+
+-   O comando **DELETE FROM** vai apagar na tabela relatório o mesmo id
+    do registro que foi deletado nas tabelas de origem. Para pegar o
+    número de id, acompanha o comando “**WHERE**
+    coluna_id_tabela_relatório = **OLD**.coluna_id_tabela_origem”. O
+    parametro **OLD** pega o número que acabou de ser apagado.  
+
+-   Comando **COPY TO** para escrever, ou modificar, um arquivo.  
+
+-   **RETURN OLD** para pegar o número antigo (recentemente modificado)
+    guardado na memória.  
+
+#### 21.1.2.2 **TRIGGER**
 
 ## 21.2 Exemplo de código - Atualização automática de dados deletados através de **TRIGGER**
 
