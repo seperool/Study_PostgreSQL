@@ -1,13 +1,13 @@
-ESCRITO EM 21/11/22
+ESCRITO EM 22/11/22
 ---
-PARA 22/11/22
+PARA 23/11/22
 ---
 Subir github:
 
 Estudar:
-	- Modulo 30 - AULA 138 - Sincronizar registros deletados
+	- Modulo 30 - AULA 139 -
 afazeres: 
-	- AULA 138 - Sincronizar registros deletados
+	- AULA 139 -
+		- Assistir
+		- Programar
 		- Readme.*
-			- Atualização automática de dados deletados através de TRIGGER
-			(explicar parametros TRIGGER)
