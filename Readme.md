@@ -2507,7 +2507,17 @@ programação\]
 
 #### 21.1.2.2 **TRIGGER**
 
-## 21.2 Exemplo de código - Atualização automática de dados deletados através de **TRIGGER**
+-   **CREATE TRIGGER** cria uma **TRIGGER**.  
+-   O comando **BEFORE** define que será pego um dado antes que o
+    comando que dispara a **TRIGGER** seja executado, no caso o id
+    apagado pelo comando gatilho **DELETE** na tabela de origem.  
+-   **DELETE** **ON**, define que o gatilho vai ser disparado quando
+    usado o comando **DELETE** na tabela de origem determinada.  
+-   O comando **FOR EACH ROW** define que o gatilho é disparado para
+    cada linha deletada.  
+-   **EXECUTE PROCEDURE** executa/chama a **FUNCTION** da **TRIGGER**.  
+
+## 21.2 Exemplo de código - Atualização automática de registros deletados através de **TRIGGER**
 
 -   Segue um exemplo de código, aplicando a técnica de “atualização
     autómatica de dados deletados através de **TRIGGER**”.  
