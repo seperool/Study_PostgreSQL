@@ -1,13 +1,19 @@
-ESCRITO EM 22/11/22
+ESCRITO EM 23/11/22
 ---
-PARA 23/11/22
+PARA 24/11/22
 ---
 Subir github:
 
 Estudar:
-	- Modulo 30 - AULA 139 -
+	- Modulo 30 - AULA 139 - Exercício - Salários
 afazeres: 
-	- AULA 139 -
-		- Assistir
-		- Programar
-		- Readme.*
+	- AULA 139 - Exercício - Salários
+		- Programar 
+			- script estatística_salarios
+				- Q1
+				- Q2
+				- Q3
+				- Q4
+				- Q5
+				- Q6
+				- Q7
