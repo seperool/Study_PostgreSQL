@@ -4,11 +4,28 @@
 /* Exercicios */
 
 -- verificando tabela
-SELECT * FROM funcionarios;
+SELECT salario FROM funcionarios;
 
 /* 1 - Qual a moda dos salários? A moda dos salários diz algo de relevante? */
 
+SELECT
+salario,
+COUNT(salario) AS MODA
+FROM funcionarios
+GROUP BY 1
+ORDER BY 2 DESC
+LIMIT 10;
+-- NÃO, POUCA REPETIÇÃO, NÃO FORMA UM PADRÃO RELEVANTE (INDICATIVO DE ALGO).
+
 /* 2 - Qual a moda departamental? (Qual o departamento que mais emprega?) */
+
+SELECT
+Departamento,
+COUNT(idfuncionario) AS MODA
+FROM funcionarios
+GROUP BY 1
+ORDER BY 2 DESC;
+-- "BELEZA" E "ROUPAS" CADA UM 53 FUNCIONARIOS.
 
 /* 3 - Qual o desvio-padrão de cada departamento? */
 
