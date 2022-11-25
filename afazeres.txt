@@ -1,18 +1,17 @@
-ESCRITO EM 24/11/22
+ESCRITO EM 25/11/22
 ---
-PARA 25/11/22
+PARA 26/11/22
 ---
 Subir github:
 	- AULA 139 - Exercício - Salários
 		- script estatística_salarios
+			
 Estudar:
 	- Modulo 30 - AULA 139 - Exercício - Salários
 afazeres: 
 	- AULA 139 - Exercício - Salários
 		- Programar 
 			- script estatística_salarios
-				- Q3
 				- Q4
-				- Q5
 				- Q6
 				- Q7
