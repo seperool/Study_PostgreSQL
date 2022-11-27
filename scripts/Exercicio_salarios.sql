@@ -15,7 +15,7 @@ FROM funcionarios
 GROUP BY 1
 ORDER BY 2 DESC
 LIMIT 10;
--- NÃO, POUCA REPETIÇÃO, NÃO FORMA UM PADRÃO RELEVANTE (INDICATIVO DE ALGO).
+-- Não, pouca repetição, não forma um padrão relevante (não apresenta um indicativo de algo).
 
 /* 2 - Qual a moda departamental? (Qual o departamento que mais emprega?) */
 
@@ -25,7 +25,7 @@ COUNT(idfuncionario) AS MODA
 FROM funcionarios
 GROUP BY 1
 ORDER BY 2 DESC;
--- "BELEZA" E "ROUPAS" CADA UM 53 FUNCIONARIOS.
+-- "BELEZA" e "ROUPAS" cada um 53 funcionarios.
 
 /* 3 - Qual o desvio-padrão de cada departamento? */
 
@@ -67,7 +67,7 @@ ORDER BY 2 DESC;
 SELECT
 ROUND(MEDIAN(salario),2) AS MEDIANA_SALARIOS
 FROM funcionarios;
--- VALOR DA MEDIANA DOS SALARIOS = 96278,50
+-- Valor da mediana dos salarios = 96278,50
 
 SELECT
 departamento,
@@ -75,7 +75,7 @@ ROUND(MEDIAN(salario),2) AS MEDIANA_SALARIOS
 FROM funcionarios
 GROUP BY departamento
 ORDER BY 2 DESC;
--- VALOR DA MEDIANA POR DEPARTAMENTO:
+-- Valor da mediana por departamento:
 /*
 "Outdoors"	114977.50
 "Beleza"	113893.00
@@ -112,16 +112,16 @@ FROM funcionarios;
 
 /* 6 - Cálcule as principais medidas estatísticas por departamento. */
 
--- MEDIDAS DE POSIÇÃO:
+-- Medidas de posição:
 	-- MODA
 	-- MEDIANA
 	-- MEDIA
--- MEDIDAS DE DISPERSÃO:
-	-- MAXIMO
-	-- MINIMO
+-- Medidas de dispersão:
+	-- MÁXIMO
+	-- MÍNIMO
 	-- AMPLITUDE TOTAL
-	-- VARIANCIA
-	-- DESVIO PADRÃO
+	-- VARIÂNCIA
+	-- DESVIO-PADRÃO
 	-- COEFICIENTE DE VARIAÇÃO
 
 SELECT
@@ -164,7 +164,8 @@ ORDER BY 1;
 "Saúde"	46	103703.00	98975.65	145962	43431	102531.00	1216304238.79	34875.55	35.24
 */
 
-/* 7 - Qual departamento te dá maior oportunidade de ganhar mais? --Outdoor*/
+/* 7 - Qual departamento te dá maior oportunidade de ganhar mais? */
+-- Resposta: OUTDOOR, por que?
 
 SELECT
 departamento,
@@ -193,5 +194,8 @@ ROUND((STDDEV_POP(salario)/AVG(salario))*100,2) AS COEF_VAR
 FROM funcionarios
 GROUP BY departamento
 ORDER BY 2 DESC;
--- É O DEPARTAMENTO DE OUTDOOR, POIS APRESENTA O MAIOR SALARIO EM QUESTÃO DE MEDIANA (VALORES CENTRAIS)
--- E UM MENOR COEFICIENTE DE VARIAÇÃO NO SALARIO.
+-- É o departamento de "OUTDOOR", pois apresenta o maior salario em questão de mediana
+-- (valores centrais)
+-- Mediana = 114977.50
+-- e o menor coeficiente de variação do salario.
+-- Coef. Variação = 24.37
