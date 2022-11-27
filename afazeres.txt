@@ -1,13 +1,13 @@
-ESCRITO EM 26/11/22
+ESCRITO EM 27/11/22
 ---
-PARA 27/11/22
+PARA 28/11/22
 ---
 Subir github:
 	
 Estudar:
-	- Modulo 30 - AULA 139 - Exercício - Salários
-afazeres: 
-	- AULA 139 - Exercício - Salários
-		- Programar 
-			- script estatística_salarios
-				- Revisar
+	- Modulo 30 - AULA 140 - Machine Learning - Colunas Dummy
+Afazeres: 
+	- AULA 140 - Machine Learning - Colunas Dummy
+		- Assistir
+		- Programar
+		- Escrever Readme
