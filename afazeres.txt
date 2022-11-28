@@ -3,13 +3,14 @@ ESCRITO EM 28/11/22
 PARA 29/11/22
 ---
 Subir github:
-	
+	- AULA 140 - Machine Learning - Colunas Dummy
+		- script 14 - Dummy e CASE
 Estudar:
 	- Modulo 30 - AULA 140 - Machine Learning - Colunas Dummy
 Afazeres: 
 	- AULA 140 - Machine Learning - Colunas Dummy
 		- Assistir
-		- Programar
+		- script 14 - Dummy e CASE (Revisar)
 		- Escrever Readme
 			- CASE e ELSE
 			- Booleanos
