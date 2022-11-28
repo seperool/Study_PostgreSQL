@@ -7,18 +7,18 @@ output:
   pdf_document:
     number_sections: true
     toc: TRUE
+  word_document:
+    toc: TRUE
+    number_sections: true
+  md_document:
+    number_sections: true
+    variant: markdown_github
+  github_document: default
   odt_document:
     number_sections: true
   html_document:
     number_sections: true
     df_print: paged
-  github_document: default
-  md_document:
-    number_sections: true
-    variant: markdown_github
-  word_document:
-    toc: TRUE
-    number_sections: true
 ---
 
 \newpage
@@ -1955,6 +1955,22 @@ ou,\
 
 \newpage
 
+# **CASE**
+
+\newpage
+
+# Projeção de **Booleanos**
+
+\newpage
+
+# Aula 140 - Machine Learning e Dummy
+
+## Machine Learning
+
+## Colunas Dummy
+
+\newpage
+
 # Observações
 
 ## Wiki para pesquisar funcionalidades do **PostgreSQL**
@@ -1983,4 +1999,4 @@ ou,\
 
 ## Assunto em andamento
 
-Atualmente estou estudando Módulo 30 - AULA 138.\
+Atualmente estou estudando Módulo 30 - AULA 140.\
