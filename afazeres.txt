@@ -1,6 +1,6 @@
-ESCRITO EM 27/11/22
+ESCRITO EM 28/11/22
 ---
-PARA 28/11/22
+PARA 29/11/22
 ---
 Subir github:
 	
@@ -11,3 +11,7 @@ Afazeres:
 		- Assistir
 		- Programar
 		- Escrever Readme
+			- CASE e ELSE
+			- Booleanos
+			- Machine learning
+			- Colunas Dummy - variavel Dummy
