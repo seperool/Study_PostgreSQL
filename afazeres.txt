@@ -1,10 +1,10 @@
-ESCRITO EM 28/11/22
+ESCRITO EM 29/11/22
 ---
-PARA 29/11/22
+PARA 30/11/22
 ---
 Subir github:
 	- AULA 140 - Machine Learning - Colunas Dummy
-		- script 14 - Dummy e CASE
+		- Colunas Dummy - variavel Dummy
 Estudar:
 	- Modulo 30 - AULA 140 - Machine Learning - Colunas Dummy
 Afazeres: 
@@ -15,4 +15,4 @@ Afazeres:
 			- CASE e ELSE
 			- Booleanos
 			- Machine learning
-			- Colunas Dummy - variavel Dummy
+			- Colunas Dummy - variavel Dummy (revisar)
