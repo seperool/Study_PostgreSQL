@@ -1,13 +1,12 @@
-ESCRITO EM 29/11/22
+ESCRITO EM 30/11/22
 ---
-PARA 30/11/22
+PARA 01/12/22
 ---
 Subir github:
 	- AULA 140 - Machine Learning - Colunas Dummy
 		- Readme
 			- Colunas Dummy - variavel Dummy		
 			- Variáveis Dummy e Machine Learning
-		- script 14 - Dummy e CASE (comentado e revisado)
 Estudar:
 	- Modulo 30 - AULA 140 - Machine Learning - Colunas Dummy
 Afazeres: 
