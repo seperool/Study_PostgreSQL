@@ -1,17 +1,20 @@
-ESCRITO EM 30/11/22
+ESCRITO EM 01/11/22
 ---
-PARA 01/12/22
+PARA 02/12/22
 ---
 Subir github:
-	- AULA 140 - Machine Learning - Colunas Dummy
-		- Readme
-			- Colunas Dummy - variavel Dummy		
-			- Variáveis Dummy e Machine Learning
+
 Estudar:
 	- Modulo 30 - AULA 140 - Machine Learning - Colunas Dummy
 Afazeres: 
 	- AULA 140 - Machine Learning - Colunas Dummy
 		- Escrever Readme
-			- CASE (WHEN, THEN e ELSE)
+			- Condicionais
+				- IF
+				- CASE (WHEN, THEN e ELSE)
+			- LOOP's
+				- LOOP
+				- WHILE
+				- FOR
 			- Booleanos
 			
