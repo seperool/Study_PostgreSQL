@@ -2553,23 +2553,104 @@ registro\]
 **EXECUTE PROCEDURE** DELETE_LOCACAO(); \[Executa/chama a
 **FUNCTION**\]  
 
-# 22 **CASE**
+# 22 Condicionais - **IF** e **CASE**
 
-# 23 Projeção de **Booleanos**
+## 22.1 Condicionais
 
-# 24 Aula 140 - Machine Learning e Dummy
+## 22.2 **IF**
 
-## 24.1 Machine Learning
+### 22.2.1 **IF** **THEN**
 
-## 24.2 Colunas Dummy
+### 22.2.2 **IF** **THEN** **ELSE**
 
-# 25 Observações
+### 22.2.3 **IF** **THEN** **ELSIF**
 
-## 25.1 Wiki para pesquisar funcionalidades do **PostgreSQL**
+## 22.3 **CASE**
+
+# 23 Laços - **LOOP**, **WHILE** e **FOR**
+
+## 23.1 Laços
+
+## 23.2 **LOOP**
+
+## 23.3 **WHILE**
+
+## 23.4 **FOR**
+
+# 24 Projeção de **Booleanos**
+
+# 25 Aula 140 - Colunas **Dummy** (Variável **Dummy**) e Machine Learning
+
+## 25.1 Colunas **Dummy**
+
+### 25.1.1 Teoria variáveis **Dummy**
+
+-   As variáveis *dummies* ou variáveis indicadoras são formas de
+    agregar informações qualitativas em modelos estatísticos.  
+-   Transforma variável qualitativa em variável quantitativa.  
+-   Ela atribui 1 se o elemento possui determinada característica, ou 0
+    caso ele não possua.  
+-   Esse tipo de tansformação é importante para modelos de regressão
+    pois ela torna possível trabalhar com variáveis qualitativas.  
+-   Facilita o processamento em **Machine Learning** dos dados, quando
+    eles estão em formato **Booleanos**.  
+-   Pega uma coluna e destrincha ela em novas colunas, com dados em
+    formato **Booleano**.  
+
+### 25.1.2 Técnica para fazer colunas **Dummy**
+
+-   No **postgreSQL**, assim como em outros bancos de dados, uma forma
+    de gerar colunas **DUMMY** é a combinação do comando **CASE** e
+    Projeção de **Booleanos**.  
+
+-   Utilizar o comando **CASE** para gerar novas colunas, com base numa
+    pré-existente, que atraves da definição de condições gere novos
+    valores.  
+
+-   Com o uso de projeção de **Booleanos**, aplicado dentro do comando
+    **CASE**, podemos extrair se uma condição é **true** ou **false**, e
+    com base nisso transformar ele em 1 ou 0.  
+    **WHEN** (coluna_x = ‘*valor_x*’) = **true** **THEN** 1  
+    **ELSE** 0  
+
+-   Nomeando cada **CASE** como uma nova coluna, criamos assim colunas
+    **DUMMY**.  
+    **CASE**  
+    …  
+    **END** **AS** ‘*nome_coluna*’  
+
+-   Sintaxe:  
+    **SELECT**  
+    Coluna01,  
+    Coluna02,  
+    Coluna03,  
+    **CASE**  
+    **WHEN** (coluna03 = ‘*valor1*’) = **TRUE** **THEN** 1  
+    **ELSE** 0  
+    **END** **AS** DUMMY01,  
+    **CASE**  
+    **WHEN** (coluna03 = ‘*valor2*’) = **TRUE** **THEN** 1  
+    **ELSE** 0  
+    **END** **AS** DUMMY02  
+    **FROM** *tabela*;  
+
+## 25.2 Variáveis **Dummy** e *Machine Learning*
+
+-   Como variáveis **Dummy** transformam variáveis qualitativas em
+    variaveis quantitativa (Booleana), torna mais fácil o processamento
+    dos dados, facilitando o processo de aprendizagem de maquina.  
+-   Trabalhar com dados *Booleanos* é mais simples, para o computador,
+    que dados qualitativos.  
+-   As variáveis **Dummy** possibilitam aplicação de técnicas
+    estatísticas sobre os dados qualitativos.  
+
+# 26 Observações
+
+## 26.1 Wiki para pesquisar funcionalidades do **PostgreSQL**
 
 <https://wiki.postgresql.org/wiki/Main_Page/pt>  
 
-## 25.2 Exportação de dados
+## 26.2 Exportação de dados
 
 -   Uma das maneiras mais facil de exportar dados é atraves da extensão
     “.csv”.  
@@ -2588,15 +2669,15 @@ registro\]
     -   Ao clickar no ícone “*Save results to file*”, é oferecido a
         opção de salvar a consulta como “.csv”.  
 
-## 25.3 Breve explicação de Business Intelligence e Data Science
+## 26.3 Breve explicação de Business Intelligence e Data Science
 
 -   Business Intelligence (BI):  
     -   Esta preocupado com entender o que aconteceu no passado.  
 -   Data Science:  
     -   Através dos dados, tentar prever tendências futuras.  
 
-# 26 Andamento dos Estudos
+# 27 Andamento dos Estudos
 
-## 26.1 Assunto em andamento
+## 27.1 Assunto em andamento
 
 Atualmente estou estudando Módulo 30 - AULA 140.  

@@ -4,21 +4,21 @@ subtitle: "Readme.rmd"
 author: "Sergio Pedro R Oliveira"
 date: "`r Sys.Date()`"
 output:
-  pdf_document:
-    number_sections: true
-    toc: TRUE
-  word_document:
-    toc: TRUE
-    number_sections: true
   md_document:
     number_sections: true
     variant: markdown_github
-  github_document: default
-  odt_document:
-    number_sections: true
   html_document:
     number_sections: true
     df_print: paged
+  word_document:
+    toc: TRUE
+    number_sections: true
+  github_document: default
+  pdf_document:
+    number_sections: true
+    toc: TRUE
+  odt_document:
+    number_sections: true
 ---
 
 \newpage
@@ -1954,8 +1954,23 @@ ou,\
 **EXECUTE PROCEDURE** DELETE_LOCACAO(); [Executa/chama a **FUNCTION**]\
 
 \newpage
+# Condicionais - **IF** e **CASE**
+## Condicionais
 
-# **CASE**
+## **IF**
+### **IF** **THEN**
+### **IF** **THEN** **ELSE**
+### **IF** **THEN** **ELSIF**
+
+## **CASE**
+
+\newpage
+
+# Laços - **LOOP**, **WHILE** e **FOR**
+## Laços
+## **LOOP**
+## **WHILE**
+## **FOR**
 
 \newpage
 
@@ -1963,11 +1978,54 @@ ou,\
 
 \newpage
 
-# Aula 140 - Machine Learning e Dummy
+# Aula 140 - Colunas **Dummy** (Variável **Dummy**) e Machine Learning
 
-## Machine Learning
+## Colunas **Dummy**
 
-## Colunas Dummy
+### Teoria variáveis **Dummy**
+
+- As variáveis *dummies* ou variáveis indicadoras são formas de agregar informações qualitativas em modelos estatísticos.\
+- Transforma variável qualitativa em variável quantitativa.\
+- Ela atribui 1 se o elemento possui determinada característica, ou 0 caso ele não possua.\
+- Esse tipo de tansformação é importante para modelos de regressão pois ela torna possível trabalhar com variáveis qualitativas.\
+- Facilita o processamento em **Machine Learning** dos dados, quando eles estão em formato **Booleanos**.\
+- Pega uma coluna e destrincha ela em novas colunas, com dados em formato **Booleano**.\
+
+### Técnica para fazer colunas **Dummy**
+
+- No **postgreSQL**, assim como em outros bancos de dados, uma forma de gerar colunas **DUMMY** é a combinação do comando **CASE** e Projeção de **Booleanos**.\
+
+- Utilizar o comando **CASE** para gerar novas colunas, com base numa pré-existente, que atraves da definição de condições gere novos valores.\
+
+- Com o uso de projeção de **Booleanos**, aplicado dentro do comando **CASE**, podemos extrair se uma condição é **true** ou **false**, e com base nisso transformar ele em 1 ou 0.\
+**WHEN** (coluna_x = '*valor_x*') = **true** **THEN** 1\
+**ELSE** 0\
+
+- Nomeando cada **CASE** como uma nova coluna, criamos assim colunas **DUMMY**.\
+**CASE**\
+...\
+**END** **AS** '*nome_coluna*'\
+
+- Sintaxe:\
+**SELECT**\
+Coluna01,\
+Coluna02,\
+Coluna03,\
+**CASE**\
+**WHEN** (coluna03 = '*valor1*') = **TRUE** **THEN** 1\
+**ELSE** 0\
+**END** **AS** DUMMY01,\
+**CASE**\
+**WHEN** (coluna03 = '*valor2*') = **TRUE** **THEN** 1\
+**ELSE** 0\
+**END** **AS** DUMMY02\
+**FROM** *tabela*;\
+
+## Variáveis **Dummy** e *Machine Learning*
+
+- Como variáveis **Dummy** transformam variáveis qualitativas em variaveis quantitativa (Booleana), torna mais fácil o processamento dos dados, facilitando o processo de aprendizagem de maquina.\
+- Trabalhar com dados *Booleanos* é mais simples, para o computador, que dados qualitativos.\
+- As variáveis **Dummy** possibilitam aplicação de técnicas estatísticas sobre os dados qualitativos.\
 
 \newpage
 
