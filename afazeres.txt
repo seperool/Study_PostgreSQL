@@ -1,6 +1,6 @@
-ESCRITO EM 01/11/22
+ESCRITO EM 02/11/22
 ---
-PARA 02/12/22
+PARA 03/12/22
 ---
 Subir github:
 
@@ -9,6 +9,7 @@ Estudar:
 Afazeres: 
 	- AULA 140 - Machine Learning - Colunas Dummy
 		- Escrever Readme
+			- Booleanos
 			- Condicionais
 				- IF
 				- CASE (WHEN, THEN e ELSE)
@@ -16,5 +17,4 @@ Afazeres:
 				- LOOP
 				- WHILE
 				- FOR
-			- Booleanos
 			
