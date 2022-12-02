@@ -2553,31 +2553,90 @@ registro\]
 **EXECUTE PROCEDURE** DELETE_LOCACAO(); \[Executa/chama a
 **FUNCTION**\]  
 
-# 22 Condicionais - **IF** e **CASE**
+# 22 Projeção de **Booleanos**
 
-## 22.1 Condicionais
+# 23 Condicionais - **IF** e **CASE**
 
-## 22.2 **IF**
+## 23.1 Condicionais
 
-### 22.2.1 **IF** **THEN**
+-   As instruções **IF** e **CASE** permitem executar comandos
+    alternativos com base em determinadas condições.  
 
-### 22.2.2 **IF** **THEN** **ELSE**
+-   A lógica condicional em **SQL** ajuda você a realizar muitas tarefas
+    diferentes:  
 
-### 22.2.3 **IF** **THEN** **ELSIF**
+    -   Para realizar o agrupamento.  
+    -   Para implantar diferentes operações matemáticas dependendo do(s)
+        valor(es).  
+    -   Para executar operações booleanas em seus dados.  
+    -   Para designar resultados com base em critérios de texto
+        especificados.  
+    -   Para obter um resultado semelhante ao uso de **WHERE**, mas com
+        código mais claro e/ou conciso.  
+    -   Para usar a lógica condicional sem o efeito de filtragem de
+        **WHERE**, retendo assim todos os registros.  
 
-## 22.3 **CASE**
+-   Existem pelo menos duas instruções condicionais **IF** e **CASE**.  
 
-# 23 Laços - **LOOP**, **WHILE** e **FOR**
+-   A instrução **IF** apresenta 3 formas distintas:  
 
-## 23.1 Laços
+    -   **IF** … **THEN** … **END IF**  
+    -   **IF** … **THEN** … **ELSE** … **END IF**  
+    -   **IF** … **THEN** … **ELSIF** … **END IF**  
 
-## 23.2 **LOOP**
+-   A instrução **CASE** apresenta 2 formas distintas:  
 
-## 23.3 **WHILE**
+    -   **CASE** **WHEN** … **THEN** … **ELSE** … **END CASE**  
+    -   **CASE** … **WHEN** … **THEN** … **ELSE** … **END CASE**  
 
-## 23.4 **FOR**
+-   O parâmetro **END** sempre finaliza o condicional (seja **IF** ou
+    **CASE**).  
 
-# 24 Projeção de **Booleanos**
+-   **END IF** ou **END CASE** pode ser simplifica para apenas
+    **END**.  
+
+-   Quando o condicional esta dentro de uma consulta (*query*), o
+    **END** pode vir acompanhado por um *alias* (**AS** *alias*), pois
+    esta formando uma nova coluna. E virgula, se não for a ultima
+    coluna.  
+    Ex.:  
+    …  
+    **END** **AS** *nome_coluna*  
+
+## 23.2 **IF**
+
+### 23.2.1 1º Forma: **IF** **THEN** **END IF**
+
+-   As instruções **IF**-**THEN** são a forma mais simples de **IF**.  
+-   As instruções entre **THEN** e **END IF** serão executadas se a
+    condição for verdadeira. 
+-   Caso contrário, eles são ignorados.  
+-   Sintaxe:  
+    **SELECT**  
+    **IF** (*expressão_booleana*)  
+    **THEN** *ação*  
+    **END** **AS** *alias*  
+    **FROM** *tabela*;  
+
+### 23.2.2 2º Forma: **IF** **THEN** **ELSE** **END IF**
+
+### 23.2.3 3º Forma: **IF** **THEN** **ELSIF** **END IF**
+
+## 23.3 **CASE**
+
+### 23.3.1 1º Forma: **CASE** **WHEN** … **THEN** … **ELSE** … **END CASE**
+
+### 23.3.2 2º Forma: **CASE** … **WHEN** … **THEN** … **ELSE** … **END CASE**
+
+# 24 Laços - **LOOP**, **WHILE** e **FOR**
+
+## 24.1 Laços
+
+## 24.2 **LOOP**
+
+## 24.3 **WHILE**
+
+## 24.4 **FOR**
 
 # 25 Aula 140 - Colunas **Dummy** (Variável **Dummy**) e Machine Learning
 

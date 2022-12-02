@@ -7,18 +7,18 @@ output:
   md_document:
     number_sections: true
     variant: markdown_github
+  odt_document:
+    number_sections: true
   html_document:
     number_sections: true
     df_print: paged
+  github_document: default
   word_document:
     toc: TRUE
     number_sections: true
-  github_document: default
   pdf_document:
     number_sections: true
     toc: TRUE
-  odt_document:
-    number_sections: true
 ---
 
 \newpage
@@ -1954,15 +1954,67 @@ ou,\
 **EXECUTE PROCEDURE** DELETE_LOCACAO(); [Executa/chama a **FUNCTION**]\
 
 \newpage
+
+# Projeção de **Booleanos**
+
+\newpage
+
 # Condicionais - **IF** e **CASE**
 ## Condicionais
 
+- As instruções **IF** e **CASE** permitem executar comandos alternativos com base em determinadas condições.\
+
+- A lógica condicional em **SQL** ajuda você a realizar muitas tarefas diferentes:\
+  - Para realizar o agrupamento.\
+  - Para implantar diferentes operações matemáticas dependendo do(s) valor(es).\
+  - Para executar operações booleanas em seus dados.\
+  - Para designar resultados com base em critérios de texto especificados.\
+  - Para obter um resultado semelhante ao uso de **WHERE**, mas com código mais claro e/ou conciso.\
+  - Para usar a lógica condicional sem o efeito de filtragem de **WHERE**, retendo assim todos os registros.\
+
+- Existem pelo menos duas instruções condicionais **IF** e **CASE**.\
+- A instrução **IF** apresenta 3 formas distintas:\
+  - **IF** ... **THEN** ... **END IF**\
+  - **IF** ... **THEN** ... **ELSE** ... **END IF**\
+  - **IF** ... **THEN** ... **ELSIF** ... **END IF**\
+
+- A instrução **CASE** apresenta 2 formas distintas:\
+  - **CASE** **WHEN** ... **THEN** ... **ELSE** ... **END CASE**\
+  - **CASE** ... **WHEN** ... **THEN** ... **ELSE** ... **END CASE**\
+
+- O parâmetro **END** sempre finaliza o condicional (seja **IF** ou **CASE**).\
+
+- **END IF** ou **END CASE** pode ser simplifica para apenas **END**.\
+
+- Quando o condicional esta dentro de uma consulta (*query*), o **END** pode vir acompanhado por um *alias* (**AS** *alias*), pois esta formando uma nova coluna. E virgula, se não for a ultima coluna.\
+Ex.:\
+...\
+**END** **AS** *nome_coluna*\
+
+\newpage
+
 ## **IF**
-### **IF** **THEN**
-### **IF** **THEN** **ELSE**
-### **IF** **THEN** **ELSIF**
+### 1º Forma: **IF** **THEN** **END IF**
+
+- As instruções **IF**\-**THEN** são a forma mais simples de **IF**.\
+- As instruções entre **THEN** e **END IF** serão executadas se a condição for verdadeira.\ 
+- Caso contrário, eles são ignorados.\
+- Sintaxe:\
+**SELECT**\
+**IF** (*expressão_booleana*)\
+**THEN** *ação*\
+**END** **AS** *alias*\
+**FROM** *tabela*;\
+
+### 2º Forma: **IF** **THEN** **ELSE** **END IF**
+### 3º Forma: **IF** **THEN** **ELSIF** **END IF**
+
+\newpage
 
 ## **CASE**
+### 1º Forma: **CASE** **WHEN** ... **THEN** ... **ELSE** ... **END CASE**
+### 2º Forma: **CASE** ... **WHEN** ... **THEN** ... **ELSE** ... **END CASE**
+
 
 \newpage
 
@@ -1971,10 +2023,6 @@ ou,\
 ## **LOOP**
 ## **WHILE**
 ## **FOR**
-
-\newpage
-
-# Projeção de **Booleanos**
 
 \newpage
 
