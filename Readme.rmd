@@ -4,21 +4,21 @@ subtitle: "Readme.rmd"
 author: "Sergio Pedro R Oliveira"
 date: "`r Sys.Date()`"
 output:
-  md_document:
-    number_sections: true
-    variant: markdown_github
-  odt_document:
-    number_sections: true
-  html_document:
-    number_sections: true
-    df_print: paged
-  github_document: default
-  word_document:
-    toc: TRUE
-    number_sections: true
   pdf_document:
     number_sections: true
     toc: TRUE
+  word_document:
+    toc: TRUE
+    number_sections: true
+  md_document:
+    number_sections: true
+    variant: markdown_github
+  github_document: default
+  html_document:
+    number_sections: true
+    df_print: paged
+  odt_document:
+    number_sections: true
 ---
 
 \newpage
@@ -1955,7 +1955,34 @@ ou,\
 
 \newpage
 
-# Projeção de **Booleanos**
+# Projeção de coluna em **Booleano**
+
+## Projeção de uma coluna **Booleana**
+- Uma forma de projetar (**SELECT**) uma coluna na forma Booleana (**TRUE** ou **FALSE**), é atraves das seguintes orientações:\
+  - Colocar no lugar de uma coluna, no **SELECT** (projeção), uma expressão de comparação (operação lógica de comparação) envolvendo determinada coluna, entre parenteses.\
+  **SELECT**\
+  (coluna_01 = '*valor*') **AS** 'alias'\
+  **FROM** *tabela*\
+  - Se o *valor* de comparação for uma **string**, deve-se colocar entre aspas simples, caso for **númerico** basta colocar somente o número, sem aspas.\
+  - O retorno/resultado dessa expressão (*operação lógica*) será verdadeiro (**TRUE**) ou falso (**FALSE**), para cada linha dessa coluna (coluna_01).\
+  - Pode-se adicionar um *alias* (**AS** *alias*) para definir o nome dessa nova coluna Booleana.\
+
+- Sintaxe:\
+**SELECT**\
+coluna_01,
+(coluna_02 = '*valor*') **AS** 'alias'\
+**FROM** *tabela*\
+
+## Operadores de comparação
+
+- Principais operadores de comparação:\
+``` {R, echo = FALSE}
+Operador <- c(">", "<", ">=", "<=","=", "!= ou <>", "BETWEEN","NOT BETWEEN", "IN", "NOT IN", "IS NULL", "IS NOT NULL", "IS DISTINCT FROM")
+Descricao <- c("MAIOR", "MENOR", "MAIOR OU IGUAL", "MENOR OU IGUAL", "IGUAL", "DIFERENTE", "ESTA ENTRE", "NÃO ESTA ENTRE", "ESTA DENTRO", "NÃO ESTA DENTRO", "É NULO", "NÃO É NULO", "DIFERENTE")
+dt_op <- data.frame(Operador,Descricao)
+dt_op
+```
+\
 
 \newpage
 

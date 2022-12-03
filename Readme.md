@@ -2553,7 +2553,53 @@ registro\]
 **EXECUTE PROCEDURE** DELETE_LOCACAO(); \[Executa/chama a
 **FUNCTION**\]  
 
-# 22 Projeção de **Booleanos**
+# 22 Projeção de coluna em **Booleano**
+
+## 22.1 Projeção de uma coluna **Booleana**
+
+-   Uma forma de projetar (**SELECT**) uma coluna na forma Booleana
+    (**TRUE** ou **FALSE**), é atraves das seguintes orientações:  
+    -   Colocar no lugar de uma coluna, no **SELECT** (projeção), uma
+        expressão de comparação (operação lógica de comparação)
+        envolvendo determinada coluna, entre parenteses.  
+        **SELECT**  
+        (coluna_01 = ‘*valor*’) **AS** ‘alias’  
+        **FROM** *tabela*  
+    -   Se o *valor* de comparação for uma **string**, deve-se colocar
+        entre aspas simples, caso for **númerico** basta colocar somente
+        o número, sem aspas.  
+    -   O retorno/resultado dessa expressão (*operação lógica*) será
+        verdadeiro (**TRUE**) ou falso (**FALSE**), para cada linha
+        dessa coluna (coluna_01).  
+    -   Pode-se adicionar um *alias* (**AS** *alias*) para definir o
+        nome dessa nova coluna Booleana.  
+-   Sintaxe:  
+    **SELECT**  
+    coluna_01, (coluna_02 = ‘*valor*’) **AS** ‘alias’  
+    **FROM** *tabela*  
+
+## 22.2 Operadores de comparação
+
+-   Principais operadores de comparação:  
+
+<!-- -->
+
+    ##            Operador       Descricao
+    ## 1                 >           MAIOR
+    ## 2                 <           MENOR
+    ## 3                >=  MAIOR OU IGUAL
+    ## 4                <=  MENOR OU IGUAL
+    ## 5                 =           IGUAL
+    ## 6          != ou <>       DIFERENTE
+    ## 7           BETWEEN      ESTA ENTRE
+    ## 8       NOT BETWEEN  NÃO ESTA ENTRE
+    ## 9                IN     ESTA DENTRO
+    ## 10           NOT IN NÃO ESTA DENTRO
+    ## 11          IS NULL          É NULO
+    ## 12      IS NOT NULL      NÃO É NULO
+    ## 13 IS DISTINCT FROM       DIFERENTE
+
+  
 
 # 23 Condicionais - **IF** e **CASE**
 
