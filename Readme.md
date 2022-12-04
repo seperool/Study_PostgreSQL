@@ -2653,20 +2653,57 @@ registro\]
 
 ### 23.2.1 1º Forma: **IF** **THEN** **END IF**
 
--   As instruções **IF**-**THEN** são a forma mais simples de **IF**.  
--   As instruções entre **THEN** e **END IF** serão executadas se a
-    condição for verdadeira. 
--   Caso contrário, eles são ignorados.  
+-   As instruções **IF**-**THEN** são as formas mais simples de
+    **IF**.  
+-   A experssão booleana apresentada no **IF**, é a condição para entrar
+    no **IF**, se for verdadeira (**TRUE**) entra, se for falsa
+    (**FALSE**) não entra.  
+-   As instruções entre **THEN** e **END IF** serão executadas, se a
+    condição for verdadeira, caso contrário, eles são ignorados.  
 -   Sintaxe:  
     **SELECT**  
-    **IF** (*expressão_booleana*)  
-    **THEN** *ação*  
+    **IF** (*expressão_booleana*) **THEN**  
+    *ação*  
     **END** **AS** *alias*  
     **FROM** *tabela*;  
 
 ### 23.2.2 2º Forma: **IF** **THEN** **ELSE** **END IF**
 
+-   As instruções **IF**-**THEN**-**ELSE** é usado para percorrer também
+    os casos de exceção.  
+-   **ELSE** (“senão”) é acionado quando o teste condicional do **IF**
+    falhar.  
+-   **ELSE** é uma ação diferente para todos os demais casos, que a ação
+    do **IF** não abrange.  
+-   Sintaxe:  
+    **SELECT**  
+    **IF** (*expressão_booleana*) **THEN**  
+    *ação_1*  
+    **ELSE**  
+    *ação_2*  
+    **END** **AS** *alias*  
+    **FROM** *tabela*;  
+
 ### 23.2.3 3º Forma: **IF** **THEN** **ELSIF** **END IF**
+
+-   As instruções **IF**-**THEN**-**ELSIF** é usado quando é preciso
+    testar mais de duas situações possiveis.  
+-   Cada teste condicional é executado na sequência, até que um deles
+    passe. O codigo deste teste será executado e os testes restantes
+    serão ignorados.  
+-   Sintaxe:  
+    **SELECT**  
+    **IF** (*expressão_booleana_1*) **THEN**  
+    *ação_1*  
+    **ELSIF** (*expressão_booleana_2*) **THEN**  
+    *ação_2*  
+    **ELSIF** (*expressão_booleana_3*) **THEN**  
+    *ação_3*  
+    …  
+    **ELSE**  
+    *ação_4*  
+    **END** **AS** *alias*  
+    **FROM** *tabela*;  
 
 ## 23.3 **CASE**
 
