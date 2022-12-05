@@ -2709,6 +2709,32 @@ registro\]
 
 ### 23.3.1 1º Forma: **CASE** **WHEN** … **THEN** … **ELSE** … **END CASE**
 
+-   A forma simples de **CASE** fornece execução condicional com base na
+    igualdade de operandos.  
+
+-   A expressão de pesquisa é avaliada (uma vez) e comparada
+    sucessivamente a cada expressão nas cláusulas **WHEN**.  
+
+-   Se uma correspondência for encontrada, as instruções correspondentes
+    serão executadas e o controle passará para a próxima instrução após
+    **END CASE**. (As expressões **WHEN** subseqüentes não são
+    avaliadas.)  
+
+-   Se nenhuma correspondência for encontrada, a instrução **ELSE** será
+    executada, mas se **ELSE** não estiver presente, uma exceção
+    **CASE_NOT_FOUND** será lançada.  
+
+-   Sintaxe:  
+    **SELECT**  
+    **CASE**  
+    **WHEN** *expressão_booleana_1* **THEN** *ação_1*  
+    **WHEN** *expressão_booleana_2* **THEN** *ação_2*  
+    …  
+    **ELSE**  
+    *ação_3*  
+    **END** **AS** *alias*  
+    **FROM** *tabela*;  
+
 ### 23.3.2 2º Forma: **CASE** … **WHEN** … **THEN** … **ELSE** … **END CASE**
 
 # 24 Laços - **LOOP**, **WHILE** e **FOR**
