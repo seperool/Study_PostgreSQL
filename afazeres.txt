@@ -3,14 +3,16 @@ ESCRITO EM 06/11/22
 PARA 07/12/22
 ---
 Subir github:
-
+	- AULA 140 - Machine Learning - Colunas Dummy
+		- script 15 - CASE e IF
+		- Escrever Readme
+			- Condicionais
+				- IF (REVISADO)
 Estudar:
 	- Modulo 30 - AULA 140 - Machine Learning - Colunas Dummy
 Afazeres: 
 	- AULA 140 - Machine Learning - Colunas Dummy
 		- Escrever Readme
-			- Condicionais
-				- IF (REVISAR)
 			- LOOP's
 				- LOOP
 				- WHILE
