@@ -2738,18 +2738,18 @@ registro\]
 -   A forma simples de **CASE** fornece execução condicional com base na
     igualdade de operandos.  
 
--   A *expressão* de pesquisa é avaliada (uma vez) e comparada
-    sucessivamente a cada *expressão Booleana* nas cláusulas **WHEN**.  
+-   A *expressão*/*coluna* de pesquisa é avaliada (uma vez) e comparada
+    sucessivamente a cada *valor* nas cláusulas **WHEN**.  
 
-    -   O **CASE** primeiro avalia a *expressão* e compara o resultado
-        com cada *expressão Booleana* (*expressão_booleana_1*,
-        *expressão_booleana_2*, …) nas cláusulas **WHEN**
-        sequencialmente até encontrar a correspondência.  
+    -   O **CASE** primeiro avalia a *expressão*/*coluna* e compara o
+        resultado com cada *valor* (*valor_1*, *valor_2*, …) nas
+        cláusulas **WHEN** sequencialmente até encontrar a
+        correspondência.  
 
-    -   Assim que o resultado da *expressão* for igual a uma *expressão
-        Booleana* (*expressão_booleana_1*, *expressão_booleana_2*, etc.)
-        em uma cláusula **WHEN**, o **CASE** retorna o resultado
-        correspondente na cláusula **THEN**.  
+    -   Assim que o resultado da *expressão*/*coluna* for igual a um
+        *valor* (*valor_1*, *valor_2*, etc.) em uma cláusula **WHEN**, o
+        **CASE** retorna o resultado correspondente na cláusula
+        **THEN**.  
 
     -   Ou seja, de maneira geral, a *expressão* pode ser usada para
         determinar a coluna que será trabalhada nas cláusulas
@@ -2767,13 +2767,31 @@ registro\]
 -   Sintaxe:  
     **SELECT**  
     **CASE** *expressão*/*coluna*  
-    **WHEN** *expressão_booleana_1* **THEN** *ação_1*  
-    **WHEN** *expressão_booleana_2* **THEN** *ação_2*  
+    **WHEN** *valor_1* **THEN** *ação_1*  
+    **WHEN** *valor_2* **THEN** *ação_2*  
     …  
     **ELSE**  
     *ação_3*  
     **END** **AS** *alias*  
     **FROM** *tabela*;  
+
+-   Exemplo de código, comentarios entre colchetes:  
+    **SELECT**  
+    title,  
+    rating,  
+    **CASE** rating \[definição da coluna a ser analisada\]  
+    **WHEN** ‘G’ **THEN** ‘General Audiences’ \[valor_1 da coluna
+    rating\]  
+    **WHEN** ‘PG’ **THEN** ‘Parental Guidance Suggested’ \[valor_2 da
+    coluna rating\]  
+    **WHEN** ‘PG-13’ **THEN** ‘Parents Strongly Cautioned’ \[valor_3 da
+    coluna rating\]  
+    **WHEN** ‘R’ **THEN** ‘Restricted’ \[valor_4 da coluna rating\]  
+    **WHEN** ‘NC-17’ **THEN** ‘Adults Only’ \[valor_5 da coluna
+    rating\]  
+    **END** **AS** rating_description  
+    **FROM** film  
+    **ORDER BY** title;  
 
 # 24 Laços - **LOOP**, **WHILE** e **FOR**
 
