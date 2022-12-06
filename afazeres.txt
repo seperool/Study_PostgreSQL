@@ -1,6 +1,6 @@
-ESCRITO EM 05/11/22
+ESCRITO EM 06/11/22
 ---
-PARA 06/12/22
+PARA 07/12/22
 ---
 Subir github:
 
@@ -11,8 +11,6 @@ Afazeres:
 		- Escrever Readme
 			- Condicionais
 				- IF (REVISAR)
-				- CASE (WHEN, THEN e ELSE)
-					- 2º CASO
 			- LOOP's
 				- LOOP
 				- WHILE
