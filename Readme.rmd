@@ -7,18 +7,18 @@ output:
   md_document:
     number_sections: true
     variant: markdown_github
-  pdf_document:
-    number_sections: true
-    toc: TRUE
-  word_document:
-    toc: TRUE
-    number_sections: true
-  github_document: default
-  odt_document:
-    number_sections: true
   html_document:
     number_sections: true
     df_print: paged
+  pdf_document:
+    number_sections: true
+    toc: TRUE
+  github_document: default
+  word_document:
+    toc: TRUE
+    number_sections: true
+  odt_document:
+    number_sections: true
 ---
 
 \newpage
@@ -1999,6 +1999,8 @@ dt_op
   - Para obter um resultado semelhante ao uso de **WHERE**, mas com código mais claro e/ou conciso.\
   - Para usar a lógica condicional sem o efeito de filtragem de **WHERE**, retendo assim todos os registros.\
 
+- **IF** é usado como bloco de programação em **TCL**, enquanto para projeções (**SELECT**) é usado o **CASE**.\
+
 - Existem pelo menos duas instruções condicionais **IF** e **CASE**.\
 - A instrução **IF** apresenta 3 formas distintas:\
   - **IF** ... **THEN** ... **END IF**\
@@ -2011,7 +2013,7 @@ dt_op
 
 - O parâmetro **END** sempre finaliza o condicional (seja **IF** ou **CASE**).\
 
-- **END IF** ou **END CASE** pode ser simplifica para apenas **END**.\
+- **END CASE** pode ser simplifica para apenas **END**.\
 
 - Quando o condicional esta dentro de uma consulta (*query*), o **END** pode vir acompanhado por um *alias* (**AS** *alias*), pois esta formando uma nova coluna. E virgula, se não for a ultima coluna.\
 Ex.:\
@@ -2027,11 +2029,15 @@ Ex.:\
 - A experssão booleana apresentada no **IF**, é a condição para entrar no **IF**, se for verdadeira (**TRUE**) entra, se for falsa (**FALSE**) não entra.\
 - As instruções entre **THEN** e **END IF** serão executadas, se a condição for verdadeira, caso contrário, eles são ignorados.\
 - Sintaxe:\
-**SELECT**\
+**DO**\
+\$\$\
+**BEGIN**\
 **IF** (*expressão_booleana*) **THEN**\
-*ação*\
-**END** **AS** *alias*\
-**FROM** *tabela*;\
+*ação*;\
+**END** **IF**;\
+**END**\
+\$\$\
+
 
 ### 2º Forma: **IF** **THEN** **ELSE** **END IF**
 
@@ -2039,20 +2045,25 @@ Ex.:\
 - **ELSE** ("senão") é acionado quando o teste condicional do **IF** falhar.\
 - **ELSE** é uma ação diferente para todos os demais casos, que a ação do **IF** não abrange.\
 - Sintaxe:\
-**SELECT**\
+**DO**\
+\$\$\
+**BEGIN**\
 **IF** (*expressão_booleana*) **THEN**\
 *ação_1*\
 **ELSE**\
 *ação_2*\
-**END** **AS** *alias*\
-**FROM** *tabela*;\
+**END** **IF**;\
+**END**\
+\$\$\
 
 ### 3º Forma: **IF** **THEN** **ELSIF** **END IF**
 
 - As instruções **IF**\-**THEN**\-**ELSIF** é usado quando é preciso testar mais de duas situações possiveis.\
 - Cada teste condicional é executado na sequência, até que um deles passe. O codigo deste teste será executado e os testes restantes serão ignorados.\
 - Sintaxe:\
-**SELECT**\
+**DO**\
+\$\$\
+**BEGIN**\
 **IF** (*expressão_booleana_1*) **THEN**\
 *ação_1*\
 **ELSIF** (*expressão_booleana_2*) **THEN**\
@@ -2062,8 +2073,9 @@ Ex.:\
 ...\
 **ELSE**\
 *ação_4*\
-**END** **AS** *alias*\
-**FROM** *tabela*;\
+**END** **IF**;\
+**END**\
+\$\$\
 
 \newpage
 

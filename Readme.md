@@ -2622,6 +2622,9 @@ registro\]
     -   Para usar a lógica condicional sem o efeito de filtragem de
         **WHERE**, retendo assim todos os registros.  
 
+-   **IF** é usado como bloco de programação em **TCL**, enquanto para
+    projeções (**SELECT**) é usado o **CASE**.  
+
 -   Existem pelo menos duas instruções condicionais **IF** e **CASE**.  
 
 -   A instrução **IF** apresenta 3 formas distintas:  
@@ -2638,8 +2641,7 @@ registro\]
 -   O parâmetro **END** sempre finaliza o condicional (seja **IF** ou
     **CASE**).  
 
--   **END IF** ou **END CASE** pode ser simplifica para apenas
-    **END**.  
+-   **END CASE** pode ser simplifica para apenas **END**.  
 
 -   Quando o condicional esta dentro de uma consulta (*query*), o
     **END** pode vir acompanhado por um *alias* (**AS** *alias*), pois
@@ -2661,11 +2663,14 @@ registro\]
 -   As instruções entre **THEN** e **END IF** serão executadas, se a
     condição for verdadeira, caso contrário, eles são ignorados.  
 -   Sintaxe:  
-    **SELECT**  
+    **DO**  
+    $$  
+    **BEGIN**  
     **IF** (*expressão_booleana*) **THEN**  
-    *ação*  
-    **END** **AS** *alias*  
-    **FROM** *tabela*;  
+    *ação*;  
+    **END** **IF**;  
+    **END**  
+    $$  
 
 ### 23.2.2 2º Forma: **IF** **THEN** **ELSE** **END IF**
 
@@ -2676,13 +2681,16 @@ registro\]
 -   **ELSE** é uma ação diferente para todos os demais casos, que a ação
     do **IF** não abrange.  
 -   Sintaxe:  
-    **SELECT**  
+    **DO**  
+    $$  
+    **BEGIN**  
     **IF** (*expressão_booleana*) **THEN**  
     *ação_1*  
     **ELSE**  
     *ação_2*  
-    **END** **AS** *alias*  
-    **FROM** *tabela*;  
+    **END** **IF**;  
+    **END**  
+    $$  
 
 ### 23.2.3 3º Forma: **IF** **THEN** **ELSIF** **END IF**
 
@@ -2692,7 +2700,9 @@ registro\]
     passe. O codigo deste teste será executado e os testes restantes
     serão ignorados.  
 -   Sintaxe:  
-    **SELECT**  
+    **DO**  
+    $$  
+    **BEGIN**  
     **IF** (*expressão_booleana_1*) **THEN**  
     *ação_1*  
     **ELSIF** (*expressão_booleana_2*) **THEN**  
@@ -2702,8 +2712,9 @@ registro\]
     …  
     **ELSE**  
     *ação_4*  
-    **END** **AS** *alias*  
-    **FROM** *tabela*;  
+    **END** **IF**;  
+    **END**  
+    $$  
 
 ## 23.3 **CASE**
 
