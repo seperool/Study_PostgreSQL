@@ -10,6 +10,7 @@ Afazeres:
 	- AULA 140 - Machine Learning - Colunas Dummy
 		- script 16 - LOOP_WHILE_e_FOR
 		- Escrever Readme
+			- RAISE (consertar bug)
 			- LOOP's
 				- LOOP
 				- WHILE
