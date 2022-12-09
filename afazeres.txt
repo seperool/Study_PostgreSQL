@@ -1,6 +1,6 @@
-ESCRITO EM 08/11/22
+ESCRITO EM 09/11/22
 ---
-PARA 09/12/22
+PARA 10/12/22
 ---
 Subir github:
 		
@@ -8,7 +8,7 @@ Estudar:
 	- Modulo 30 - AULA 140 - Machine Learning - Colunas Dummy
 Afazeres: 
 	- AULA 140 - Machine Learning - Colunas Dummy
-		- script 15 - CASE e IF (Revisar e comentar)
+		- script 16 - LOOP_WHILE_e_FOR
 		- Escrever Readme
 			- LOOP's
 				- LOOP
