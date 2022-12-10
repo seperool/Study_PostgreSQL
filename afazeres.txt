@@ -1,6 +1,6 @@
-ESCRITO EM 09/11/22
+ESCRITO EM 10/12/22
 ---
-PARA 10/12/22
+PARA 11/12/22
 ---
 Subir github:
 		
@@ -10,7 +10,6 @@ Afazeres:
 	- AULA 140 - Machine Learning - Colunas Dummy
 		- script 16 - LOOP_WHILE_e_FOR
 		- Escrever Readme
-			- RAISE (consertar bug)
 			- LOOP's
 				- LOOP
 				- WHILE
