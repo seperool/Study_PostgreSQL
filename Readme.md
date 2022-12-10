@@ -2804,21 +2804,48 @@ registro\]
     **FROM** film  
     **ORDER BY** title;  
 
-# 24 Laços - **LOOP**, **WHILE** e **FOR**
+# 24 Imprimir mensagem na tela - **RAISE**
 
-## 24.1 Laços
+-   Use a intrução **RAISE** para relatar mensagens e gerar erros.  
+-   Os níveis possíveis são **DEBUG**, **LOG**, **INFO**, **NOTICE**,
+    **WARNING** e **EXCEPTION**.  
+-   O mais comum para imprimir mensagens de tela ao usuário é o
+    **NOTICE**.  
+-   **EXCEPTION** gera um erro (que normalmente aborta a transação
+    atual).  
+-   Os outros níveis geram apenas mensagens de diferentes níveis de
+    prioridade.  
+-   Dentro da string de formato, % é substituído pela representação de
+    string do próximo argumento opcional.  
+-   Escreve %% para emitir um % literal.  
+-   Os argumentos podem ser variáveis ou expressões simples, mas o
+    formato deve ser uma string literal simples.  
+-   Exemplos **RAISE**:  
+    -   Exemplo **RAISE NOTICE**, com comentário entre colchetes:  
+        **RAISE NOTICE** ‘Calling cs_create_job(%)’, *v_job_id*;  
+        \[Neste exemplo, o valor de *v_job_id* substituirá o % na
+        string\]  
+        \[*v_job_id* é uma variável\]  
+    -   Exemplo **RAISE EXCEPTION**, com comentário entre colchetes:  
+        **RAISE EXCEPTION** ‘Nonexistent ID --\> %’,*user_id*;  
+        \[Neste exemplo abortará a transação com a mensagem de erro
+        fornecida\]  
 
-## 24.2 **LOOP**
+# 25 Laços - **LOOP**, **WHILE** e **FOR**
 
-## 24.3 **WHILE**
+## 25.1 Laços
 
-## 24.4 **FOR**
+## 25.2 **LOOP**
 
-# 25 Aula 140 - Colunas **Dummy** (Variável **Dummy**) e Machine Learning
+## 25.3 **WHILE**
 
-## 25.1 Colunas **Dummy**
+## 25.4 **FOR**
 
-### 25.1.1 Teoria variáveis **Dummy**
+# 26 Aula 140 - Colunas **Dummy** (Variável **Dummy**) e Machine Learning
+
+## 26.1 Colunas **Dummy**
+
+### 26.1.1 Teoria variáveis **Dummy**
 
 -   As variáveis *dummies* ou variáveis indicadoras são formas de
     agregar informações qualitativas em modelos estatísticos.  
@@ -2832,7 +2859,7 @@ registro\]
 -   Pega uma coluna e destrincha ela em novas colunas, com dados em
     formato **Booleano**.  
 
-### 25.1.2 Técnica para fazer colunas **Dummy**
+### 26.1.2 Técnica para fazer colunas **Dummy**
 
 -   No **postgreSQL**, assim como em outros bancos de dados, uma forma
     de gerar colunas **DUMMY** é a combinação do comando **CASE** e
@@ -2869,7 +2896,7 @@ registro\]
     **END** **AS** DUMMY02  
     **FROM** *tabela*;  
 
-## 25.2 Variáveis **Dummy** e *Machine Learning*
+## 26.2 Variáveis **Dummy** e *Machine Learning*
 
 -   Como variáveis **Dummy** transformam variáveis qualitativas em
     variaveis quantitativa (Booleana), torna mais fácil o processamento
@@ -2879,13 +2906,13 @@ registro\]
 -   As variáveis **Dummy** possibilitam aplicação de técnicas
     estatísticas sobre os dados qualitativos.  
 
-# 26 Observações
+# 27 Observações
 
-## 26.1 Wiki para pesquisar funcionalidades do **PostgreSQL**
+## 27.1 Wiki para pesquisar funcionalidades do **PostgreSQL**
 
 <https://wiki.postgresql.org/wiki/Main_Page/pt>  
 
-## 26.2 Exportação de dados
+## 27.2 Exportação de dados
 
 -   Uma das maneiras mais facil de exportar dados é atraves da extensão
     “.csv”.  
@@ -2904,15 +2931,15 @@ registro\]
     -   Ao clickar no ícone “*Save results to file*”, é oferecido a
         opção de salvar a consulta como “.csv”.  
 
-## 26.3 Breve explicação de Business Intelligence e Data Science
+## 27.3 Breve explicação de Business Intelligence e Data Science
 
 -   Business Intelligence (BI):  
     -   Esta preocupado com entender o que aconteceu no passado.  
 -   Data Science:  
     -   Através dos dados, tentar prever tendências futuras.  
 
-# 27 Andamento dos Estudos
+# 28 Andamento dos Estudos
 
-## 27.1 Assunto em andamento
+## 28.1 Assunto em andamento
 
 Atualmente estou estudando Módulo 30 - AULA 140.  

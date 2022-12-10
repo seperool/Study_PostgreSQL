@@ -2137,6 +2137,27 @@ rating,\
 
 \newpage
 
+# Imprimir mensagem na tela - **RAISE**
+
+- Use a intrução **RAISE** para relatar mensagens e gerar erros.\
+- Os níveis possíveis são **DEBUG**, **LOG**, **INFO**, **NOTICE**, **WARNING** e **EXCEPTION**.\
+- O mais comum para imprimir mensagens de tela ao usuário é o **NOTICE**.\
+- **EXCEPTION** gera um erro (que normalmente aborta a transação atual).\
+- Os outros níveis geram apenas mensagens de diferentes níveis de prioridade.\
+- Dentro da string de formato, \% é substituído pela representação de string do próximo argumento opcional.\
+- Escreve \%\% para emitir um \% literal.\
+- Os argumentos podem ser variáveis ou expressões simples, mas o formato deve ser uma string literal simples.\
+- Exemplos **RAISE**:\
+  - Exemplo **RAISE NOTICE**, com comentário entre colchetes:\
+  **RAISE NOTICE** 'Calling cs_create_job(%)', *v_job_id*;\
+  [Neste exemplo, o valor de *v_job_id* substituirá o \% na string]\
+  [*v_job_id* é uma variável]\
+  - Exemplo **RAISE EXCEPTION**, com comentário entre colchetes:\
+  **RAISE EXCEPTION** 'Nonexistent ID \-\-> %',*user_id*;\
+  [Neste exemplo abortará a transação com a mensagem de erro fornecida]\
+
+\newpage
+
 # Laços - **LOOP**, **WHILE** e **FOR**
 ## Laços
 ## **LOOP**
