@@ -1,6 +1,6 @@
-ESCRITO EM 10/12/22
+ESCRITO EM 11/12/22
 ---
-PARA 11/12/22
+PARA 12/12/22
 ---
 Subir github:
 		
@@ -11,7 +11,9 @@ Afazeres:
 		- script 16 - LOOP_WHILE_e_FOR
 		- Escrever Readme
 			- LOOP's
-				- LOOP
+				- CONTINUE e EXIT (escrevendo)
+				- LOOP (escrevendo e revisando)
 				- WHILE
 				- FOR
+				- FOREACH
 			
