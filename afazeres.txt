@@ -11,6 +11,7 @@ Afazeres:
 		- script 16 - LOOPS
 			- CONTINUE
 			- FOREACH
+			- comentários e revisão
 		- Escrever Readme
 			- LOOP's
 				- CONTINUE e EXIT (escrevendo)
