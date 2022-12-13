@@ -1,6 +1,6 @@
-ESCRITO EM 12/12/22
+ESCRITO EM 13/12/22
 ---
-PARA 13/12/22
+PARA 14/12/22
 ---
 Subir github:
 		
@@ -9,10 +9,7 @@ Estudar:
 Afazeres: 
 	- AULA 140 - Machine Learning - Colunas Dummy
 		- script 16 - LOOPS
-			- LOOP
-				- IF EXIT
-				- LABEL
-			- FOR
+			- CONTINUE
 			- FOREACH
 		- Escrever Readme
 			- LOOP's
