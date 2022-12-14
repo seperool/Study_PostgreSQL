@@ -8,25 +8,10 @@
 -- FOREACH
 
 /* LOOP */
-
+-- IF EXIT
 -- EXIT WHEN
-CREATE PROCEDURE contador_loop_exit_when()
-LANGUAGE plpgsql
-AS
-$$
-DECLARE counter INTEGER=0;
-BEGIN
-	LOOP
-		EXIT WHEN counter = 5;
-		counter = counter + 1;
-		RAISE NOTICE 'Counter %', counter;
-	END LOOP;
-END;
-$$
-
-CALL contador_loop_exit_when();
-
-DROP PROCEDURE contador_loop_exit_when();
+-- IF CONTINUE
+-- CONTINUE WHEN
 
 -- IF EXIT
 CREATE PROCEDURE contador_loop_if_exit()
@@ -49,6 +34,7 @@ CALL contador_loop_if_exit();
 
 DROP PROCEDURE contador_loop_if_exit();
 
+-- Ou, sem criar uma função (PROCEDURE)
 DO
 $$
 DECLARE CONTADOR INTEGER = 0;
@@ -59,6 +45,61 @@ BEGIN
 		END IF;
 		RAISE NOTICE 'CONTADOR É %', CONTADOR;
 		CONTADOR = CONTADOR + 1;
+	END LOOP;
+END;
+$$
+
+-- EXIT WHEN
+CREATE PROCEDURE contador_loop_exit_when()
+LANGUAGE plpgsql
+AS
+$$
+DECLARE counter INTEGER=0;
+BEGIN
+	LOOP
+		EXIT WHEN counter = 5;
+		counter = counter + 1;
+		RAISE NOTICE 'Counter %', counter;
+	END LOOP;
+END;
+$$
+
+CALL contador_loop_exit_when();
+
+DROP PROCEDURE contador_loop_exit_when();
+
+-- CONTINUE (IF CONTINUE)
+-- PULA PARA A PROXIMA ITERAÇÃO
+DO
+$$
+DECLARE CONTADOR INTEGER = 0;
+BEGIN
+	LOOP
+		CONTADOR = CONTADOR + 1;
+		IF (CONTADOR = 5) THEN
+			CONTINUE;
+		END IF;
+		IF (CONTADOR > 10) THEN
+			EXIT;
+		END IF;
+		RAISE NOTICE 'CONTADOR = %', CONTADOR;
+	END LOOP;
+END;
+$$
+
+
+-- CONTINUE WHEN
+-- DEFINE UMA EXPRESSÃO, QUANDO CUMPRIDA DESENCADEIA O CONTINUE
+-- OU SEJA, PULA PARA A PROXIMA ITERAÇÃO
+DO
+$$
+DECLARE CONTADOR INTEGER = 0;
+BEGIN
+	LOOP
+		CONTADOR = CONTADOR + 1;
+		CONTINUE WHEN (CONTADOR = 5);
+		EXIT WHEN (CONTADOR > 10);
+		RAISE NOTICE 'CONTADOR = %', CONTADOR;
 	END LOOP;
 END;
 $$
