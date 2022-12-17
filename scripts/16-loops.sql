@@ -1,12 +1,8 @@
 -- DATABASE: data_science
 -- TABLE: funcionarios
 
+-- Verificar tabela que será utilizada
 SELECT * FROM FUNCIONARIOS;
-
-SELECT
-COUNT(SEXO)
-FROM FUNCIONARIOS
-WHERE SEXO = 'Masculino';
 
 /* Loops */
 -- LOOP
@@ -131,6 +127,8 @@ CALL contador_while();
 DROP PROCEDURE contador_while;
 
 /* FOR */
+-- PERCORRE LISTA E ARRAY
+-- FOR IN QUERY, PERCORRE QUERY, LINHA POR LINHA
 
 -- LAÇO QUE PECORRE UMA LISTA PRÉDETERMINADA
 CREATE PROCEDURE contador_for()
