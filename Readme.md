@@ -2835,11 +2835,36 @@ registro\]
 
 ## 25.1 Laços
 
-## 25.2 **LOOP**
+-   Com as instruções **LOOP**, **WHILE**, **FOR**, **FOREACH**,
+    **EXIT** e **CONTINUE** podemos fazer com que sua função PL/pgSQL
+    repita uma série de comandos.  
 
-## 25.3 **WHILE**
+## 25.2 Instruções **EXIT** e **CONTINUE**
 
-## 25.4 **FOR**
+## 25.3 **LOOP**
+
+-   O **LOOP** define um loop incondicional que é repedito
+    indefinidamente até ser encerrado por uma instrução **EXIT** ou
+    RETURN.  
+
+-   O rótulo opcional (*label*) pode ser usado pelas instruções **EXIT**
+    e **CONTINUE** dentro de loops aninhados para especificar a qual
+    loop essas instruções se referem.  
+
+-   Sintaxe:  
+    \[*label*\]  
+    **LOOP**  
+    \[bloco de programação\]  
+    **IF** *expressão* **THEN** **EXIT**; \[Mecanismo de saída do
+    **LOOP**\]  
+    **END IF**  
+    **END LOOP** \[*label*\]  
+
+## 25.4 **WHILE**
+
+## 25.5 **FOR**
+
+## 25.6 **FOREACH**
 
 # 26 Aula 140 - Colunas **Dummy** (Variável **Dummy**) e Machine Learning
 
