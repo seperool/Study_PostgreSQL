@@ -2835,30 +2835,98 @@ registro\]
 
 ## 25.1 Laços
 
--   Com as instruções **LOOP**, **WHILE**, **FOR**, **FOREACH**,
-    **EXIT** e **CONTINUE** podemos fazer com que sua função PL/pgSQL
-    repita uma série de comandos.  
+-   Com as instruções de laço **LOOP**, **WHILE**, **FOR** e **FOREACH**
+    podemos fazer com que uma função, ou script, **PL**/**pgSQL** repita
+    uma série de comandos.  
+
+-   Os comandos **EXIT** e **CONTINUE** servem para controlar as
+    iterações do laço.  
 
 ## 25.2 Instruções **EXIT** e **CONTINUE**
+
+### 25.2.1 **EXIT**
+
+-   **EXIT** é uma instrução que encerra o loop, quando executada.  
+
+-   A instrução **EXIT** apresenta duas formas:  
+
+    -   **EXIT**  
+        Esta é a forma mais simples, normalmente esta associada a um
+        **IF**, que serve como condição para aplicação do **EXIT**.  
+    -   **EXIT WHEN** \[*critério*\]  
+        Nesta forma, o **WHEN** indica o *critério* que deve ser
+        obedecido para execução do **EXIT**.  
+
+-   Exemplos:  
+    -   **IF** **EXIT**:  
+        **DO**  
+        $$  
+        **DECLARE** CONTADOR **INTEGER** = 0;  
+        **BEGIN**  
+        **LOOP**  
+        **IF** CONTADOR \> 5 **THEN**  
+        **EXIT**;  
+        **END IF**;  
+        **RAISE NOTICE** ‘CONTADOR É %’, CONTADOR;  
+        CONTADOR = CONTADOR + 1;  
+        **END LOOP**;  
+        **END**;  
+        $$  
+
+    -   **EXIT WHEN**:  
+        **CREATE PROCEDURE** contador_loop_exit_when()  
+        **LANGUAGE** plpgsql  
+        **AS**  
+        $$  
+        **DECLARE** counter **INTEGER** = 0;  
+        **BEGIN**  
+        **LOOP**  
+        **EXIT WHEN** counter = 5;  
+        counter = counter + 1;  
+        **RAISE NOTICE** ‘Counter %’, counter;  
+        **END LOOP**;  
+        **END**;  
+        $$  
+-   Observações:  
+    -   A declaração de variáveis (**DECLARE**) vem antes do
+        **BEGIN**.  
+    -   Ao declarar as variáveis é necessario tipificar elas
+        (**INTEGER**, **CHAR**, **VARCHAR**, …).  
+    -   Lembrar de fechar os condiciais (**IF**) com **END IF**.  
+    -   Lembrar de fechar os loops com **END LOOP**.  
+    -   Tudo depois do modificador de delimitador ($$) pode ser fechado
+        com “;”.  
+
+### 25.2.2 **CONTINUE**
+
+-   **CONTINUE** é uma instrução que faz o loop encerrar a iteração e ir
+    para a proxima iteração do laço.  
+
+-   A instrução **CONTINUE** apresenta duas formas:  
+
+    -   **CONTINUE**  
+        Esta forma mais simples normalmente esta associada a um **IF**
+        que serve como condição para aplicação do **CONTINUE**.  
+    -   **CONTINUE WHEN** \[critério\]  
+        Nesta forma após o **WHEN** segue o *critério* que deve ser
+        cumprido para execução do **CONTINUE**.  
 
 ## 25.3 **LOOP**
 
 -   O **LOOP** define um loop incondicional que é repedito
     indefinidamente até ser encerrado por uma instrução **EXIT** ou
-    RETURN.  
+    **RETURN**.  
 
--   O rótulo opcional (*label*) pode ser usado pelas instruções **EXIT**
-    e **CONTINUE** dentro de loops aninhados para especificar a qual
-    loop essas instruções se referem.  
+-   As instruções **EXIT** e **CONTINUE** dentro de loops aninhados para
+    especificar a qual loop essas instruções se referem.  
 
 -   Sintaxe:  
-    \[*label*\]  
     **LOOP**  
     \[bloco de programação\]  
     **IF** *expressão* **THEN** **EXIT**; \[Mecanismo de saída do
     **LOOP**\]  
     **END IF**  
-    **END LOOP** \[*label*\]  
+    **END LOOP**  
 
 ## 25.4 **WHILE**
 
