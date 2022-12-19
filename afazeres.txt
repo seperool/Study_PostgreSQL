@@ -1,6 +1,6 @@
-ESCRITO EM 18/12/22
+ESCRITO EM 19/12/22
 ---
-PARA 19/12/22
+PARA 20/12/22
 ---
 Subir github:
 		
@@ -13,7 +13,7 @@ Afazeres:
 			- comentários e revisão
 		- Escrever Readme
 			- LOOP's
-				- CONTINUE e EXIT (escrevendo)
+				- CONTINUE (escrevendo)
 				- LOOP (escrevendo e revisando)
 				- WHILE
 				- FOR
