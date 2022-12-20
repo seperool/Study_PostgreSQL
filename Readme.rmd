@@ -7,18 +7,18 @@ output:
   md_document:
     number_sections: true
     variant: markdown_github
-  odt_document:
-    number_sections: true
-  html_document:
-    number_sections: true
-    df_print: paged
-  github_document: default
   pdf_document:
     number_sections: true
     toc: TRUE
   word_document:
     toc: TRUE
     number_sections: true
+  github_document: default
+  odt_document:
+    number_sections: true
+  html_document:
+    number_sections: true
+    df_print: paged
 ---
 
 \newpage
@@ -2221,13 +2221,57 @@ rating,\
 
 ### **CONTINUE**
 
-- **CONTINUE** é uma instrução que faz o loop encerrar a iteração e ir para a proxima iteração do laço.\
+- **CONTINUE** é o comando que faz o loop encerrar a iteração (atual) e pule para a próxima iteração, ainda dentro laço.\
 
 - A instrução **CONTINUE** apresenta duas formas:\
   - **CONTINUE**\
-  Esta forma mais simples normalmente esta associada a um **IF** que serve como condição para aplicação do **CONTINUE**.\
+  Esta é a forma mais simples, normalmente esta associada a um **IF**, que serve como condição para aplicação do **CONTINUE**.\
   - **CONTINUE WHEN** [critério]\
-  Nesta forma após o **WHEN** segue o *critério* que deve ser cumprido para execução do **CONTINUE**.\
+  Nesta forma, o **WHEN** indica o *critério* que deve ser obedecido para execução do **CONTINUE**.\
+
+\newpage
+
+- Exemplos:\
+  - **IF CONTINUE**\
+  **DO**\
+  \$\$\
+  **DECLARE** CONTADOR **INTEGER** = 0;\
+  **BEGIN**\
+	**LOOP**\
+	CONTADOR = CONTADOR + 1;\
+	**IF** (CONTADOR = 5) **THEN**\
+	**CONTINUE**;\
+	**END IF**;\
+	**IF** (CONTADOR > 10) **THEN**\
+	**EXIT**;\
+	**END IF**;\
+	**RAISE NOTICE** 'CONTADOR = %', CONTADOR;\
+	**END LOOP**;\
+  **END**;\
+  \$\$\
+
+  - **CONTINUE WHEN**\
+  **DO**\
+  \$\$\
+  **DECLARE** CONTADOR **INTEGER** = 0;\
+  **BEGIN**\
+	**LOOP**\
+	CONTADOR = CONTADOR + 1;\
+	**CONTINUE WHEN** (CONTADOR = 5);\
+	**EXIT WHEN** (CONTADOR > 10);\
+	**RAISE NOTICE** 'CONTADOR = %', CONTADOR;\
+	**END LOOP**;\
+  **END**;\
+  \$\$\
+
+- Observações:\
+  - A declaração de variáveis (**DECLARE**) vem antes do **BEGIN**.\
+  - Ao declarar as variáveis é necessario tipificar elas (**INTEGER**, **CHAR**, **VARCHAR**, ...).\
+  - Lembrar de fechar os condiciais (**IF**) com **END IF**.\
+  - Lembrar de fechar os loops com **END LOOP**.\
+  - Tudo depois do modificador de delimitador (\$\$) pode ser fechado com ";".\
+
+\newpage
 
 ## **LOOP**
 
