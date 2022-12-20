@@ -1,9 +1,9 @@
-ESCRITO EM 19/12/22
+ESCRITO EM 20/12/22
 ---
-PARA 20/12/22
+PARA 21/12/22
 ---
 Subir github:
-		
+
 Estudar:
 	- Modulo 30 - AULA 140 - Machine Learning - Colunas Dummy
 Afazeres: 
@@ -11,9 +11,8 @@ Afazeres:
 		- script 16 - LOOPS
 			- FOREACH
 			- comentários e revisão
-		- Escrever Readme
+		- Readme
 			- LOOP's
-				- CONTINUE (escrevendo)
 				- LOOP (escrevendo e revisando)
 				- WHILE
 				- FOR
