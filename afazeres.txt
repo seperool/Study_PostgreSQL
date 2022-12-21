@@ -1,12 +1,9 @@
-ESCRITO EM 20/12/22
+ESCRITO EM 21/12/22
 ---
-PARA 21/12/22
+PARA 22/12/22
 ---
 Subir github:
-	- Readme
-		- LOOP's
-			- LOOP (revisão)
-			- WHILE
+
 Estudar:
 	- Modulo 30 - AULA 140 - Machine Learning - Colunas Dummy
 Afazeres: 
@@ -18,4 +15,5 @@ Afazeres:
 			- LOOP's
 				- FOR
 				- FOREACH
+				- ARRAY
 			
