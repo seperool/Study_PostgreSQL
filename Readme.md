@@ -2956,12 +2956,13 @@ registro\]
 
 ## 25.3 **LOOP**
 
--   O **LOOP** define um loop incondicional que é repedito
-    indefinidamente até ser encerrado por uma instrução **EXIT** ou
+-   O **LOOP** define um laço incondicional que é repedito
+    indefinidamente, até ser encerrado por uma instrução **EXIT** ou
     **RETURN**.  
 
--   As instruções **EXIT** e **CONTINUE** dentro de loops aninhados para
-    especificar a qual loop essas instruções se referem.  
+-   A indentação das instruções **EXIT** e **CONTINUE**, dentro de
+    laços, ajuda a especificar a qual laço essas instruções se
+    referem.  
 
 -   Sintaxe:  
     **LOOP**  
@@ -2971,7 +2972,53 @@ registro\]
     **END IF**  
     **END LOOP**  
 
+-   Exemplo:  
+    **DO**  
+    $$  
+    **DECLARE** CONTADOR **INTEGER** = 0;  
+    **BEGIN**  
+    **LOOP**  
+    **IF** CONTADOR \> 5 **THEN**  
+    **EXIT**;  
+    **END IF**;  
+    **RAISE NOTICE** ‘CONTADOR É %’, CONTADOR;  
+    CONTADOR = CONTADOR + 1;  
+    **END LOOP**;  
+    **END**;  
+    $$  
+
 ## 25.4 **WHILE**
+
+-   O laço **WHILE** executa um loop enquanto determina *expressão* for
+    verdadeira.  
+
+-   A expressão é apresentada entre parênteses “()”, pois assim é
+    valiada de forma booleana.  
+
+-   Lembrar de finalizar o **WHILE** com **END LOOP**.  
+
+-   Os comandos **EXIT** e **CONTINUE** são válidos.  
+
+-   Sintaxe:  
+    **WHILE** (*expressão*) **LOOP**  
+    \[Bloco de programação\];  
+    **END LOOP**;  
+
+-   Exemplo:  
+    **CREATE PROCEDURE** contador_while()  
+    **LANGUAGE** *plpgsql*  
+    **AS**  
+    $$  
+    **DECLARE** counter **INTEGER** = 0;  
+    **BEGIN**  
+    **WHILE** (counter \< 5) **LOOP**  
+    counter = counter + 1;  
+    **RAISE NOTICE** ‘Counter %’, counter;  
+    **END LOOP**;  
+    **END**;  
+    $$  
+    **CALL** contador_while();  
+    **DROP PROCEDURE** contador_while;  
 
 ## 25.5 **FOR**
 
