@@ -3022,6 +3022,69 @@ registro\]
 
 ## 25.5 **FOR**
 
+### 25.5.1 **FOR** variante inteira
+
+-   O loop **FOR** itera dentro de um intervalo pré-determinado
+    devalores inteiros.  
+
+-   O intervalo de iteração pode ser descrito da seguinte forma:  
+
+    -   1..10  
+        Limite inferior até (..) limite superior.  
+    -   10..1  
+        No caso **REVERSE**, limite superior até (..) limite inferior.  
+
+-   O intervalo é avaliado ao entrar no loop e a cada iteração. Se o
+    intervalo estiver invertido (como no formato **REVERSE**) de maneira
+    equivocada, sem a cláusula **REVERSE**, após a primeira iteração o
+    programa sai do **FOR**, sem acusar nenhum **ERROR**.  
+
+-   A variável *contador* que o laço **FOR** usa, é definido no loop e
+    existe somente dentro do loop. Caso exista variável de mesmo nome
+    fora do loop, ela é ignorada, pelo o loop.  
+
+-   Por default a variável *contador* é inicializada como tipo
+    **INTEGER** (inteiro).  
+
+-   A cada iteração a variável *contador* recebe o passo 1, ou seja, é
+    adicionado o valor 1 (+1).  
+
+-   Caso especifido a cláusula **REVERSE**, ao inves de receber o passo
+    1, a variável *contador* recebe o passo menos 1 (-1), a cada
+    iteração.  
+
+-   A cláusula **BY** dita o passo utilizado pelo loop **FOR**.  
+
+-   Se a cláusula **BY** não for especificada o passo é 1, caso
+    contrário é o valor especificado na cláusula **BY**.  
+
+-   Sintaxe **FOR**:  
+    **FOR** *contador* **IN** 1..10 **LOOP**  
+    \[Bloco de programação\]  
+    **END LOOP**;  
+
+-   Sintaxe **FOR**, usando cláusula **REVERSE**:  
+    **FOR** *contador* **IN** **REVERSE** 10..1 **LOOP**  
+    \[Bloco de programação\]  
+    **END LOOP**;  
+
+-   Sintaxe **FOR**, usando cláusula **BY**:  
+    **FOR** *contador* **IN** 1..10 **BY** 2 **LOOP**  
+    \[Bloco de programação\]  
+    **END LOOP**;  
+
+-   Exemplo:  
+    **DO**  
+    $$  
+    **BEGIN**  
+    **FOR** *i* **IN** **REVERSE** 10..1 **BY** 2 **LOOP**  
+    **RAISE NOTICE** ‘Contador igual a %’, *i* ;  
+    **END LOOP**;  
+    **END**;  
+    $$  
+
+### 25.5.2 **FOR** **IN** query
+
 ## 25.6 **FOREACH**
 
 # 26 Aula 140 - Colunas **Dummy** (Variável **Dummy**) e Machine Learning
