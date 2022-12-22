@@ -1,6 +1,6 @@
-ESCRITO EM 21/12/22
+ESCRITO EM 22/12/22
 ---
-PARA 22/12/22
+PARA 23/12/22
 ---
 Subir github:
 
@@ -13,7 +13,11 @@ Afazeres:
 			- comentários e revisão
 		- Readme
 			- LOOP's
-				- FOR
+				- FOR (escrevendo)
+					- FOR IN query
+						- Teoria
+						- Sintaxe
+						- Exemplos
 				- FOREACH
 				- ARRAY
 			
