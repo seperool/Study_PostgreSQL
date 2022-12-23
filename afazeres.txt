@@ -3,7 +3,7 @@ ESCRITO EM 23/12/22
 PARA 24/12/22
 ---
 Subir github:
-
+	- script 17 - ARRAY
 Estudar:
 	- Modulo 30 - AULA 140 - Machine Learning - Colunas Dummy
 Afazeres: 
