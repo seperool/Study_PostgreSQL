@@ -3083,7 +3083,60 @@ registro\]
     **END**;  
     $$  
 
-### 25.5.2 **FOR** **IN** query
+### 25.5.2 **FOR** **IN** *query*
+
+-   Usando um tipo diferente de **FOR**, podemos iterar pelo resultado
+    de uma consulta (*query*) e manipular esses dados.  
+
+-   O **FOR** itera a quantidade de registros/linhas da *query*.  
+
+-   Uma *variável* salva, a cada iteração, o resultado da coluna/campo
+    da *query*, do registro/linha da iteração da vez.  
+
+-   Podem haver mais de uma *variável*, cada uma delas salva o resultado
+    de uma coluna/campo na iteração da vez, na ordem em que as colunas
+    aparecem na *query*.  
+    Exemplo:  
+    Primeira *variável* salva o valor da primeira coluna da *query*.  
+    Segunda *variável* salva o valor da segunda coluna da *query*.  
+    …  
+
+-   É necessário declarar as *variáveis* (**DECLARE**).  
+
+-   Se o **FOR** for encerrado por um **EXIT**, o último valor na
+    *variável* ainda é acessivel após o **FOR**.  
+
+-   A *query* é uma consulta comum (**SELECT**), mas também pode ser
+    **INSERT**, **UPDATE** ou **DELETE**.  
+
+-   Não usar o delimitador “;” ao finalizar a *query*, ela nesse caso
+    finaliza com **LOOP**.  
+
+-   Sintaxe:  
+    **DECLARE**  
+    *variavel* **tipo** = *valor*;  
+    **FOR** *variavel* **IN** *query* **LOOP**  
+    \[Bloco de programação\]  
+    **END LOOP**;  
+
+-   Exemplo:  
+    **DO**  
+    $$  
+    **DECLARE**  
+    FUNC **VARCHAR**(30);  
+    CONTADOR **INTEGER** = 0;  
+    **BEGIN**  
+    **FOR** CONTADOR, FUNC **IN**  
+    **SELECT**  
+    IDFUNCIONARIO,  
+    NOME  
+    **FROM** FUNCIONARIOS  
+    **LOOP**  
+    **RAISE NOTICE** ‘O nome do funcionario é %, seu ID é %’, FUNC,
+    CONTADOR;  
+    **END LOOP**;  
+    **END**;  
+    $$  
 
 ## 25.6 **FOREACH**
 
