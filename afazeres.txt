@@ -1,6 +1,6 @@
-ESCRITO EM 24/12/22
+ESCRITO EM 25/12/22
 ---
-PARA 25/12/22
+PARA 26/12/22
 ---
 Subir github:
 
@@ -9,8 +9,7 @@ Estudar:
 Afazeres: 
 	- AULA 140 - Machine Learning - Colunas Dummy
 		- script 16 - LOOPS
-			- FOREACH
-			- comentários e revisão
+			- FOREACH (comentários e revisão)
 		- Readme
 			- LOOP's
 				- FOREACH
