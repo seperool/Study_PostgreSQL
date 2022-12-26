@@ -1,6 +1,6 @@
-ESCRITO EM 25/12/22
+ESCRITO EM 26/12/22
 ---
-PARA 26/12/22
+PARA 27/12/22
 ---
 Subir github:
 
@@ -8,10 +8,10 @@ Estudar:
 	- Modulo 30 - AULA 140 - Machine Learning - Colunas Dummy
 Afazeres: 
 	- AULA 140 - Machine Learning - Colunas Dummy
-		- script 16 - LOOPS
-			- FOREACH (comentários e revisão)
 		- Readme
 			- LOOP's
-				- FOREACH
 				- ARRAY
+				- FOREACH
+					- VETOR
+					- MATRIZ
 			
