@@ -1,6 +1,6 @@
-ESCRITO EM 26/12/22
+ESCRITO EM 27/12/22
 ---
-PARA 27/12/22
+PARA 28/12/22
 ---
 Subir github:
 
@@ -10,7 +10,6 @@ Afazeres:
 	- AULA 140 - Machine Learning - Colunas Dummy
 		- Readme
 			- LOOP's
-				- ARRAY
 				- FOREACH
 					- VETOR
 					- MATRIZ
