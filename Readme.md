@@ -2839,6 +2839,9 @@ registro\]
     podemos fazer com que uma função, ou script, **PL**/**pgSQL** repita
     uma série de comandos.  
 
+-   A instrução **DO** executa um bloco anômino de programação, muito
+    útil para rodar laços fora de funções.  
+
 -   Os comandos **EXIT** e **CONTINUE** servem para controlar as
     iterações do laço.  
 
@@ -3139,6 +3142,43 @@ registro\]
     $$  
 
 ## 25.6 **FOREACH**
+
+### 25.6.1 **ARRAY**
+
+-   **ARRAY** é um vetor, ou uma matriz (vetor multidimensional).  
+
+-   Existem três formas distintas que o **PostgreSQL** aceita para
+    declarar uma variável do **ARRAY**, são elas:  
+
+    -   *nome_array* *tipo* \[ \]  
+        Sintaxe exclusiva do **PostgreSQL**.  
+    -   *nome_array* *tipo* **ARRAY** \[*tamanho*\]  
+        Sintaxe **SQL**, onde já é especificado o tamanho maxímo do
+        array.  
+    -   *nome_array* *tipo* **ARRAY**  
+        Sintaxe **SQL**, onde não é especificado o tamanho do array.  
+
+-   Inserindo valores dentro de um **ARRAY** (**INSERT INTO**):  
+
+    -   tipo **STRING**:  
+        ‘{“*valor1*”,“*valor2*”,…}’  
+    -   tipo **INTEGER**:  
+        ‘{*valor1*,*valor2*,…}’  
+    -   **ARRAY** multidimensional:  
+        ‘{{“*valor11*”,“*valor12*”},{“*valor21*”,“*valor22*”}…}’  
+
+-   Acessando um valor especifico do **ARRAY**:  
+    *nome_array* \[*posição*\]  
+    Lembrando que **ARRAY** no **PostgreSQL** começa a contar posição do
+    1, não do 0.  
+
+-   Consulta (**query**), com restrição (**WHERE**), em qualquer posição
+    de um **ARRAY** em determinada coluna:  
+    **SELECT**  
+    …  
+    **WHERE** ‘*valor*’ = **ANY**(*coluna*);  
+
+### 25.6.2 **FOREACH** **IN** **ARRAY**
 
 # 26 Aula 140 - Colunas **Dummy** (Variável **Dummy**) e Machine Learning
 

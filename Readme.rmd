@@ -4,21 +4,21 @@ subtitle: "Readme.rmd"
 author: "Sergio Pedro R Oliveira"
 date: "`r Sys.Date()`"
 output:
-  md_document:
-    number_sections: true
-    variant: markdown_github
-  odt_document:
-    number_sections: true
   pdf_document:
     number_sections: true
     toc: TRUE
-  github_document: default
   word_document:
     toc: TRUE
     number_sections: true
+  md_document:
+    number_sections: true
+    variant: markdown_github
+  github_document: default
   html_document:
     number_sections: true
     df_print: paged
+  odt_document:
+    number_sections: true
 ---
 
 \newpage
@@ -2163,6 +2163,8 @@ rating,\
 
 - Com as instruções de laço **LOOP**, **WHILE**, **FOR** e **FOREACH** podemos fazer com que uma função, ou script, **PL**/**pgSQL** repita uma série de comandos.\
 
+- A instrução **DO** executa um bloco anômino de programação, muito útil para rodar laços fora de funções.\
+
 - Os comandos **EXIT** e **CONTINUE** servem para controlar as iterações do laço.\
 
 ## Instruções **EXIT** e **CONTINUE**
@@ -2443,6 +2445,39 @@ NOME\
 \newpage
 
 ## **FOREACH**
+
+### **ARRAY**
+
+- **ARRAY** é um vetor, ou uma matriz (vetor multidimensional).\
+
+- Existem três formas distintas que o **PostgreSQL** aceita para declarar uma variável do **ARRAY**, são elas:\
+  - *nome_array* *tipo* [ ]\
+  Sintaxe exclusiva do **PostgreSQL**.\
+  - *nome_array* *tipo* **ARRAY** [*tamanho*]\
+  Sintaxe **SQL**, onde já é especificado o tamanho maxímo do array.\
+  - *nome_array* *tipo* **ARRAY**\
+  Sintaxe **SQL**, onde não é especificado o tamanho do array.\
+
+- Inserindo valores dentro de um **ARRAY** (**INSERT INTO**):\
+  - tipo **STRING**:\
+  '{"*valor1*","*valor2*",...}'\
+  - tipo **INTEGER**:\
+  '{*valor1*,*valor2*,...}'\
+  - **ARRAY** multidimensional:\
+  '{{"*valor11*","*valor12*"},{"*valor21*","*valor22*"}...}'\
+
+- Acessando um valor especifico do **ARRAY**:\
+*nome_array* [*posição*]\
+Lembrando que **ARRAY** no **PostgreSQL** começa a contar posição do 1, não do 0.\
+
+- Consulta (**query**), com restrição (**WHERE**), em qualquer posição de um **ARRAY** em determinada coluna:\
+**SELECT**\
+...\
+**WHERE** '*valor*' = **ANY**(*coluna*);\
+
+\newpage
+
+### **FOREACH** **IN** **ARRAY**
 
 \newpage
 
