@@ -4,21 +4,21 @@ subtitle: "Readme.rmd"
 author: "Sergio Pedro R Oliveira"
 date: "`r Sys.Date()`"
 output:
-  pdf_document:
-    number_sections: true
-    toc: TRUE
   word_document:
     toc: TRUE
     number_sections: true
+  html_document:
+    number_sections: true
+    df_print: paged
   md_document:
     number_sections: true
     variant: markdown_github
   github_document: default
-  html_document:
-    number_sections: true
-    df_print: paged
   odt_document:
     number_sections: true
+  pdf_document:
+    number_sections: true
+    toc: TRUE
 ---
 
 \newpage
@@ -2478,6 +2478,19 @@ Lembrando que **ARRAY** no **PostgreSQL** começa a contar posição do 1, não 
 \newpage
 
 ### **FOREACH** **IN** **ARRAY**
+
+- Itera pelos elementos de um vetor (**ARRAY**).\
+
+- É necessario declarar (**DECLARE**) as variáveis **ARRAY** antes de utiliza-las.\
+**DECLARE** *nome_array* *tipo* [] = '{"*valor1*","*valor2*",...}'\
+
+- A declaração de variáveis (**DECLARE**) antecede a instrução **BEGIN**.\
+
+- Durante o laço a variável contador recebe um elemento do vetor a cada iteração.\
+**FOREACH** *contador* **IN** **ARRAY** *vetor* **LOOP**\
+...\
+
+- No cabeçalho do laço **FOREACH** é necessario informar que a variável *vetor* é um **ARRAY**.\
 
 \newpage
 

@@ -3180,6 +3180,23 @@ registro\]
 
 ### 25.6.2 **FOREACH** **IN** **ARRAY**
 
+-   Itera pelos elementos de um vetor (**ARRAY**).  
+
+-   É necessario declarar (**DECLARE**) as variáveis **ARRAY** antes de
+    utiliza-las.  
+    **DECLARE** *nome_array* *tipo* \[\] = ‘{“*valor1*”,“*valor2*”,…}’  
+
+-   A declaração de variáveis (**DECLARE**) antecede a instrução
+    **BEGIN**.  
+
+-   Durante o laço a variável contador recebe um elemento do vetor a
+    cada iteração.  
+    **FOREACH** *contador* **IN** **ARRAY** *vetor* **LOOP**  
+    …  
+
+-   No cabeçalho do laço **FOREACH** é necessario informar que a
+    variável *vetor* é um **ARRAY**.  
+
 # 26 Aula 140 - Colunas **Dummy** (Variável **Dummy**) e Machine Learning
 
 ## 26.1 Colunas **Dummy**
