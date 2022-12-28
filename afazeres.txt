@@ -1,6 +1,6 @@
-ESCRITO EM 27/12/22
+ESCRITO EM 28/12/22
 ---
-PARA 28/12/22
+PARA 29/12/22
 ---
 Subir github:
 
@@ -11,6 +11,7 @@ Afazeres:
 		- Readme
 			- LOOP's
 				- FOREACH
-					- VETOR
 					- MATRIZ
+					- Sintaxe
+					- Exemplo
 			
