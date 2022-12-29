@@ -3180,6 +3180,8 @@ registro\]
 
 ### 25.6.2 **FOREACH** **IN** **ARRAY**
 
+#### 25.6.2.1 **ARRAY** - Vetor
+
 -   Itera pelos elementos de um vetor (**ARRAY**).  
 
 -   É necessario declarar (**DECLARE**) as variáveis **ARRAY** antes de
@@ -3196,6 +3198,52 @@ registro\]
 
 -   No cabeçalho do laço **FOREACH** é necessario informar que a
     variável *vetor* é um **ARRAY**.  
+
+-   Exemplo:  
+    **DO**  
+    $$  
+    **DECLARE**  
+    VEC **INTEGER**\[\] = ‘{1,2,3,4,5,6}’;  
+    i **INTEGER**;  
+    **BEGIN**  
+    **FOREACH** i **IN** **ARRAY** VEC **LOOP**  
+    **RAISE NOTICE** ‘Iteracao %’,i;  
+    **END LOOP**;  
+    **END**;  
+    $$  
+
+#### 25.6.2.2 **ARRAY** - Matriz
+
+-   **ARRAY** matriz é um **ARRAY** multidimensional.  
+    ‘{{“*valor11*”,“*valor12*”},{“*valor21*”,“*valor22*”}…}’  
+
+-   Com um valor **SLICE** positivo, **FOREACH** itera através de fatias
+    da matriz em vez de elementos únicos.  
+
+-   O valor **SLICE** deve ser uma constante inteira não maior que o
+    número de dimensões da matriz.  
+
+-   A variável de destino deve ser uma matriz e recebe fatias sucessivas
+    do valor da matriz, onde cada fatia tem o número de dimensões
+    especificado por **SLICE**.  
+
+-   **SLICE** 0, ou omitido, a variável de destino itera a partir de
+    cada elemento individual do **ARRAY**.  
+
+-   Exemplo:  
+    **DO**  
+    $$  
+    **DECLARE**  
+    Key_Val **VARCHAR**(4)\[\] =
+    ‘{{“*Key1*”,“*Val1*”},{“*Key2*”,“*Val2*”}}’;  
+    Mensagem **VARCHAR**(4)\[\];  
+    **BEGIN**  
+    **FOREACH** Mensagem **SLICE** 1 **IN** **ARRAY** Key_Val **LOOP**  
+    **RAISE NOTICE** ‘Key is % and value is %’,Mensagem\[1\],
+    Mensagem\[2\];  
+    **END LOOP**;  
+    **END**;  
+    $$  
 
 # 26 Aula 140 - Colunas **Dummy** (Variável **Dummy**) e Machine Learning
 
@@ -3262,13 +3310,15 @@ registro\]
 -   As variáveis **Dummy** possibilitam aplicação de técnicas
     estatísticas sobre os dados qualitativos.  
 
-# 27 Observações
+# 27 Aula 141 - Introduções a filtros
 
-## 27.1 Wiki para pesquisar funcionalidades do **PostgreSQL**
+# 28 Observações
+
+## 28.1 Wiki para pesquisar funcionalidades do **PostgreSQL**
 
 <https://wiki.postgresql.org/wiki/Main_Page/pt>  
 
-## 27.2 Exportação de dados
+## 28.2 Exportação de dados
 
 -   Uma das maneiras mais facil de exportar dados é atraves da extensão
     “.csv”.  
@@ -3287,15 +3337,15 @@ registro\]
     -   Ao clickar no ícone “*Save results to file*”, é oferecido a
         opção de salvar a consulta como “.csv”.  
 
-## 27.3 Breve explicação de Business Intelligence e Data Science
+## 28.3 Breve explicação de Business Intelligence e Data Science
 
 -   Business Intelligence (BI):  
     -   Esta preocupado com entender o que aconteceu no passado.  
 -   Data Science:  
     -   Através dos dados, tentar prever tendências futuras.  
 
-# 28 Andamento dos Estudos
+# 29 Andamento dos Estudos
 
-## 28.1 Assunto em andamento
+## 29.1 Assunto em andamento
 
-Atualmente estou estudando Módulo 30 - AULA 140.  
+Atualmente estou estudando Módulo 30 - AULA 141.  
