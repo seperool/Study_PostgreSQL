@@ -1,17 +1,14 @@
-ESCRITO EM 28/12/22
+ESCRITO EM 29/12/22
 ---
-PARA 29/12/22
+PARA 30/12/22
 ---
 Subir github:
 
 Estudar:
-	- Modulo 30 - AULA 140 - Machine Learning - Colunas Dummy
+	- Modulo 30 - AULA 141 - Introduções a filtros
 Afazeres: 
-	- AULA 140 - Machine Learning - Colunas Dummy
+	- AULA 141 - Introduções a filtros
+		- Assistir
+		- Programar
 		- Readme
-			- LOOP's
-				- FOREACH
-					- MATRIZ
-					- Sintaxe
-					- Exemplo
 			
