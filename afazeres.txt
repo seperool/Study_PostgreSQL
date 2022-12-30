@@ -1,6 +1,6 @@
-ESCRITO EM 29/12/22
+ESCRITO EM 30/12/22
 ---
-PARA 30/12/22
+PARA 31/12/22
 ---
 Subir github:
 
@@ -8,7 +8,9 @@ Estudar:
 	- Modulo 30 - AULA 141 - Introduções a filtros
 Afazeres: 
 	- AULA 141 - Introduções a filtros
-		- Assistir
 		- Programar
+			- script 18
 		- Readme
+			- WHERE
+			- HAVING
 			
