@@ -1,6 +1,6 @@
-ESCRITO EM 31/12/22
+ESCRITO EM 01/01/23
 ---
-PARA 01/01/23
+PARA 02/01/23
 ---
 Subir github:
 
@@ -9,6 +9,6 @@ Estudar:
 Afazeres: 
 	- AULA 141 - Introduções a filtros
 		- Readme
-			- WHERE
+			- WHERE (escrevendo)
 			- HAVING
 			
