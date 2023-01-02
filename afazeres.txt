@@ -9,5 +9,10 @@ Estudar:
 Afazeres: 
 	- AULA 141 - Introduções a filtros
 		- Readme
+			- WHERE (comentarios script 18)
+				- Projeção
+				- LIKE
+				- caso 'or' e 'and'
 			- HAVING
+			- Uso do WHERE e HAVING ao mesmo tempo
 			
