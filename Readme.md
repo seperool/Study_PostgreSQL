@@ -3312,6 +3312,75 @@ registro\]
 
 # 27 Aula 141 - Introduções a filtros
 
+## 27.1 **WHERE**
+
+-   A cláusula **WHERE** serve para filtrar os dados, seja de uma
+    consulta (**SELECT**), **UPDATE** e **DELETE**.  
+
+-   A cláusula **WHERE** seve para dados não agrupados, ou seja, que não
+    passaram por algum tratamento de alguma função. Como por exemplo a
+    função **SUM** para somatório.  
+
+-   Casos do **WHERE**:  
+
+    -   No caso de **WHERE** filtrando valores númericos, podemos usar
+        operadores de comparação matemática.  
+
+<!-- -->
+
+    ##   Operadores_de_comparacao Descricao_Op_comp
+    ## 1                        <             Menor
+    ## 2                        >             Maior
+    ## 3                       <=    Menor ou igual
+    ## 4                       >=    Maior ou igual
+    ## 5                        =             Igual
+    ## 6                 <> ou !=         Diferente
+
+-   No caso de **WHERE** procurando por alguma *string*, vale lembrar
+    que a cláusula é *case-sensitive*, ou seja, é sensivel a mudança de
+    caixa do texto (*string*).  
+-   Para usar caractere coringa, no caso da cláusula **WHERE**
+    procurando por *strings*, basta usar o ‘%’, que substitui varios
+    caracteres. Também pode ser usado em conjunto com outros caracteres
+    para afunilar o filtro.  
+    Exemplo:  
+    …  
+    **WHERE** coluna = ‘B%’;  
+    Procura na coluna por *strings* que começam pela letra “B”
+    maiúscula.  
+
+-   Sintaxe:  
+    -   Sintaxe, caso de filtro **WHERE** para valores númericos:  
+        **SELECT**  
+        coluna_1,  
+        coluna_2,  
+        …  
+        **FROM** *tabela*  
+        **WHERE** coluna \> 2000;  
+
+    -   Sintaxe, caso de filtro **WHERE** para *strings*:  
+        **SELECT**  
+        coluna_1,  
+        coluna_2,  
+        …  
+        **FROM** *tabela*  
+        **WHERE** coluna = ‘*string*’;  
+
+    -   Sintaxe, caso de filtro **WHERE** para *strings*, com caractere
+        coringa:  
+        **SELECT**  
+        coluna_1,  
+        coluna_2,  
+        …  
+        **FROM** *tabela*  
+        **WHERE** coluna = ‘*%*’;  
+        ou  
+        **WHERE** coluna = ‘*%string*’;  
+        ou  
+        **WHERE** coluna = ‘*string%*’;  
+
+## 27.2 **HAVING**
+
 # 28 Observações
 
 ## 28.1 Wiki para pesquisar funcionalidades do **PostgreSQL**

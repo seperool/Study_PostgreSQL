@@ -7,18 +7,18 @@ output:
   md_document:
     number_sections: true
     variant: markdown_github
-  html_document:
-    number_sections: true
-    df_print: paged
   word_document:
     toc: TRUE
     number_sections: true
+  odt_document:
+    number_sections: true
   github_document: default
+  html_document:
+    number_sections: true
+    df_print: paged
   pdf_document:
     number_sections: true
     toc: TRUE
-  odt_document:
-    number_sections: true
 ---
 
 \newpage
@@ -2589,6 +2589,61 @@ Coluna03,\
 \newpage
 
 # Aula 141 - Introduções a filtros
+
+## **WHERE**
+- A cláusula **WHERE** serve para filtrar os dados, seja de uma consulta (**SELECT**), **UPDATE** e **DELETE**.\
+
+- A cláusula **WHERE** seve para dados não agrupados, ou seja, que não passaram por algum tratamento de alguma função. Como por exemplo a função **SUM** para somatório.\
+
+- Casos do **WHERE**:\
+  - No caso de **WHERE** filtrando valores númericos, podemos usar operadores de comparação matemática.\
+```{r echo=FALSE}
+Operadores_de_comparacao <- c('<','>','<=','>=','=','<> ou !=')
+Descricao_Op_comp <- c('Menor', 'Maior', 'Menor ou igual', 'Maior ou igual','Igual', 'Diferente')
+tab_op_comp <- data.frame(Operadores_de_comparacao, Descricao_Op_comp)
+tab_op_comp
+```
+  - No caso de **WHERE** procurando por alguma *string*, vale lembrar que a cláusula é *case-sensitive*, ou seja, é sensivel a mudança de caixa do texto (*string*).\
+  - Para usar caractere coringa, no caso da cláusula **WHERE** procurando por *strings*, basta usar o '%', que substitui varios caracteres. Também pode ser usado em conjunto com outros caracteres para afunilar o filtro.\
+  Exemplo:\
+  ...\
+  **WHERE** coluna = 'B%';\
+  Procura na coluna por *strings* que começam pela letra "B" maiúscula.\
+
+\newpage
+
+- Sintaxe:\
+  - Sintaxe, caso de filtro **WHERE** para valores númericos:\
+  **SELECT**\
+  coluna_1,\
+  coluna_2,\
+  ...\
+  **FROM** *tabela*\
+  **WHERE** coluna > 2000;\
+  
+  - Sintaxe, caso de filtro **WHERE** para *strings*:\
+  **SELECT**\
+  coluna_1,\
+  coluna_2,\
+  ...\
+  **FROM** *tabela*\
+  **WHERE** coluna = '*string*';\
+
+  - Sintaxe, caso de filtro **WHERE** para *strings*, com caractere coringa:\
+  **SELECT**\
+  coluna_1,\
+  coluna_2,\
+  ...\
+  **FROM** *tabela*\
+  **WHERE** coluna = '*%*';\
+  ou\
+  **WHERE** coluna = '*%string*';\
+  ou\
+  **WHERE** coluna = '*string%*';\
+  
+\newpage
+
+## **HAVING**
 
 \newpage
 
