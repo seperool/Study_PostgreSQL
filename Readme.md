@@ -3319,7 +3319,7 @@ registro\]
 
 -   A cláusula **WHERE** seve para dados não agrupados, ou seja, que não
     passaram por algum tratamento de alguma função. Como por exemplo a
-    função **SUM** para somatório.  
+    função **SUM**, para somatório.  
 
 -   Casos do **WHERE**:  
 
@@ -3339,15 +3339,26 @@ registro\]
 -   No caso de **WHERE** procurando por alguma *string*, vale lembrar
     que a cláusula é *case-sensitive*, ou seja, é sensivel a mudança de
     caixa do texto (*string*).  
+
 -   Para usar caractere coringa, no caso da cláusula **WHERE**
-    procurando por *strings*, basta usar o ‘%’, que substitui varios
-    caracteres. Também pode ser usado em conjunto com outros caracteres
-    para afunilar o filtro.  
+    procurando por *strings*, podemos usar o comando **LIKE**
+    acompanhado na *string* com o caractere coringa ‘%’, que substitui
+    varios caracteres. Também pode ser usado em conjunto com outros
+    caracteres para afunilar o filtro.  
     Exemplo:  
     …  
-    **WHERE** coluna = ‘B%’;  
+    **WHERE** coluna **LIKE** ‘B%’;  
     Procura na coluna por *strings* que começam pela letra “B”
     maiúscula.  
+
+-   Um detalhe importante. A coluna que serve de filtro na cláusula
+    **WHERE** não necessariamente precisa esta contida na projeção
+    (**SELECT**).  
+
+-   Para usar mais de uma condição no filtro, podemos usar os comandos
+    lógicos **OR**(OU) e **AND**(E), concatenando assim duas, ou mais,
+    condições.  
+    Ver tabela verdade, para entender o uso de **OR** e **AND**.  
 
 -   Sintaxe:  
     -   Sintaxe, caso de filtro **WHERE** para valores númericos:  
@@ -3373,13 +3384,15 @@ registro\]
         coluna_2,  
         …  
         **FROM** *tabela*  
-        **WHERE** coluna = ‘*%*’;  
+        **WHERE** coluna **LIKE** ‘*%*’;  
         ou  
-        **WHERE** coluna = ‘*%string*’;  
+        **WHERE** coluna **LIKE** ‘*%string*’;  
         ou  
-        **WHERE** coluna = ‘*string%*’;  
+        **WHERE** coluna **LIKE** ‘*string%*’;  
 
 ## 27.2 **HAVING**
+
+-   Sintaxe:  
 
 # 28 Observações
 
