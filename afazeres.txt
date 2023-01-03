@@ -1,6 +1,6 @@
-ESCRITO EM 02/01/23
+ESCRITO EM 03/01/23
 ---
-PARA 03/01/23
+PARA 04/01/23
 ---
 Subir github:
 
@@ -9,10 +9,6 @@ Estudar:
 Afazeres: 
 	- AULA 141 - Introduções a filtros
 		- Readme
-			- WHERE (comentarios script 18)
-				- Projeção
-				- LIKE
-				- caso 'or' e 'and'
 			- HAVING
 			- Uso do WHERE e HAVING ao mesmo tempo
 			
