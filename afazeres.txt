@@ -1,14 +1,14 @@
-ESCRITO EM 03/01/23
+ESCRITO EM 04/01/23
 ---
-PARA 04/01/23
+PARA 05/01/23
 ---
 Subir github:
 
 Estudar:
-	- Modulo 30 - AULA 141 - Introduções a filtros
+	- Modulo 30 - AULA 142
 Afazeres: 
-	- AULA 141 - Introduções a filtros
+	- AULA 142
+		- Assistir
+		- Programar
 		- Readme
-			- HAVING
-			- Uso do WHERE e HAVING ao mesmo tempo
 			
