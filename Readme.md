@@ -3367,7 +3367,7 @@ registro\]
         coluna_2,  
         …  
         **FROM** *tabela*  
-        **WHERE** coluna \> 2000;  
+        **WHERE** coluna_1 \> 2000;  
 
     -   Sintaxe, caso de filtro **WHERE** para *strings*:  
         **SELECT**  
@@ -3375,7 +3375,7 @@ registro\]
         coluna_2,  
         …  
         **FROM** *tabela*  
-        **WHERE** coluna = ‘*string*’;  
+        **WHERE** coluna_1 = ‘*string*’;  
 
     -   Sintaxe, caso de filtro **WHERE** para *strings*, com caractere
         coringa:  
@@ -3384,15 +3384,52 @@ registro\]
         coluna_2,  
         …  
         **FROM** *tabela*  
-        **WHERE** coluna **LIKE** ‘*%*’;  
+        **WHERE** coluna_1 **LIKE** ‘*%*’;  
         ou  
-        **WHERE** coluna **LIKE** ‘*%string*’;  
+        **WHERE** coluna_1 **LIKE** ‘*%string*’;  
         ou  
-        **WHERE** coluna **LIKE** ‘*string%*’;  
+        **WHERE** coluna_1 **LIKE** ‘*string%*’;  
 
 ## 27.2 **HAVING**
 
+-   A cláusula **HAVING** é um filtro para colunas agregadas, ou seja,
+    que sofrem algum tratamento de dados através de funções, como
+    **SUM**() para somatórios e etc.  
+
+-   Uma restrição é que **HAVING** deve vir sempre depois de **GROUP
+    BY**, enquanto que **WHERE** não tem essa restrição.  
+
 -   Sintaxe:  
+    **SELECT**  
+    coluna_1,  
+    **SUM**(coluna_2) **AS** total,  
+    …  
+    **FROM** tabela  
+    **GROUP BY** coluna_1  
+    **HAVING** **SUM**(coluna_2) \> 40000;  
+
+## 27.3 **WHERE** e **HAVING** juntos
+
+-   É possivel usar os dois filtros (**WHERE** e **HAVING**) juntos, na
+    mesma projeção.  
+
+-   É necessário lembrar que **HAVING** tem uma restrição. A cláusula
+    **HAVING** deve ser usado sempre após **GROUP BY**.  
+
+-   **WHERE** não tem restrição.  
+
+-   O uso dos dois filtros juntos é para afunilar o resultado de uma
+    pesquisa.  
+
+-   Sintaxe:  
+    **SELECT**  
+    coluna_1,  
+    **SUM**(coluna_2) **AS** total,  
+    …  
+    **FROM** tabela  
+    **WHERE** coluna_1 \> 2000  
+    **GROUP BY** coluna_1  
+    **HAVING** **SUM**(coluna_2) \> 40000;  
 
 # 28 Observações
 
