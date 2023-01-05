@@ -1,14 +1,16 @@
-ESCRITO EM 04/01/23
+ESCRITO EM 05/01/23
 ---
-PARA 05/01/23
+PARA 06/01/23
 ---
 Subir github:
 
 Estudar:
-	- Modulo 30 - AULA 142
+	- Modulo 30 - AULA 142 - Filtros de contadores
 Afazeres: 
-	- AULA 142
-		- Assistir
+	- AULA 142 - Filtros de contadores
 		- Programar
+			- script 19
 		- Readme
+			- subquerys
+			- filtros de contadores (count - filter)
 			
