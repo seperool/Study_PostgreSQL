@@ -2687,6 +2687,10 @@ coluna_1,\
 
 \newpage
 
+# Aula 142 - Filtros de contadores
+
+\newpage
+
 # Observações
 
 ## Wiki para pesquisar funcionalidades do **PostgreSQL**
@@ -2715,4 +2719,4 @@ coluna_1,\
 
 ## Assunto em andamento
 
-Atualmente estou estudando Módulo 30 - AULA 141.\
+Atualmente estou estudando Módulo 30 - AULA 142.\
