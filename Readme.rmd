@@ -7,17 +7,17 @@ output:
   md_document:
     number_sections: true
     variant: markdown_github
+  odt_document:
+    number_sections: true
   html_document:
     number_sections: true
     df_print: paged
+  github_document: default
   pdf_document:
     number_sections: true
     toc: TRUE
-  github_document: default
   word_document:
     toc: TRUE
-    number_sections: true
-  odt_document:
     number_sections: true
 ---
 

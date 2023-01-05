@@ -3431,13 +3431,15 @@ registro\]
     **GROUP BY** coluna_1  
     **HAVING** **SUM**(coluna_2) \> 40000;  
 
-# 28 Observações
+# 28 Aula 142 - Filtros de contadores
 
-## 28.1 Wiki para pesquisar funcionalidades do **PostgreSQL**
+# 29 Observações
+
+## 29.1 Wiki para pesquisar funcionalidades do **PostgreSQL**
 
 <https://wiki.postgresql.org/wiki/Main_Page/pt>  
 
-## 28.2 Exportação de dados
+## 29.2 Exportação de dados
 
 -   Uma das maneiras mais facil de exportar dados é atraves da extensão
     “.csv”.  
@@ -3456,15 +3458,15 @@ registro\]
     -   Ao clickar no ícone “*Save results to file*”, é oferecido a
         opção de salvar a consulta como “.csv”.  
 
-## 28.3 Breve explicação de Business Intelligence e Data Science
+## 29.3 Breve explicação de Business Intelligence e Data Science
 
 -   Business Intelligence (BI):  
     -   Esta preocupado com entender o que aconteceu no passado.  
 -   Data Science:  
     -   Através dos dados, tentar prever tendências futuras.  
 
-# 29 Andamento dos Estudos
+# 30 Andamento dos Estudos
 
-## 29.1 Assunto em andamento
+## 30.1 Assunto em andamento
 
-Atualmente estou estudando Módulo 30 - AULA 141.  
+Atualmente estou estudando Módulo 30 - AULA 142.  
