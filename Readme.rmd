@@ -4,21 +4,21 @@ subtitle: "Readme.rmd"
 author: "Sergio Pedro R Oliveira"
 date: "`r Sys.Date()`"
 output:
-  md_document:
-    number_sections: true
-    variant: markdown_github
-  odt_document:
-    number_sections: true
-  html_document:
-    number_sections: true
-    df_print: paged
-  github_document: default
   pdf_document:
     number_sections: true
     toc: TRUE
   word_document:
     toc: TRUE
     number_sections: true
+  odt_document:
+    number_sections: true
+  github_document: default
+  html_document:
+    number_sections: true
+    df_print: paged
+  md_document:
+    number_sections: true
+    variant: markdown_github
 ---
 
 \newpage
@@ -158,7 +158,7 @@ sudo \-u postgres psql\
 
 - No ubuntu:\
   - Na pasta:\
-  /etc/postgresql/14/main/ \
+  /etc/postgresql/15/main/ \
   - No arquivo "/postgresql.conf", onde ficam guardadas as configurações do PostgreSQL.\
   - Basta abrir com editor de texto (Sublime text, Notepad++, ... ) e procurar por "datestyle".\
   - Para alterar o padrão basta mudar a arrumação das letras e salvar o arquivo.\
@@ -2688,6 +2688,8 @@ coluna_1,\
 \newpage
 
 # Aula 142 - Filtros de contadores
+
+
 
 \newpage
 

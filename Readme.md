@@ -163,7 +163,7 @@ Udemy.
 
 -   No ubuntu:  
     -   Na pasta:  
-        /etc/postgresql/14/main/  
+        /etc/postgresql/15/main/  
     -   No arquivo “/postgresql.conf”, onde ficam guardadas as
         configurações do PostgreSQL.  
     -   Basta abrir com editor de texto (Sublime text, Notepad++, … ) e
