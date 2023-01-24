@@ -1,6 +1,6 @@
-ESCRITO EM 21/01/23
+ESCRITO EM 23/01/23
 ---
-PARA 22/01/23
+PARA 24/01/23
 ---
 Subir github:
 
@@ -10,6 +10,7 @@ Afazeres:
 	- AULA 142 - Filtros de contadores
 		- Programar
 			- script 19
+				- filtros de contadores (count - filter)
 		- Readme
 			- subquerys
 			- filtros de contadores (count - filter)
