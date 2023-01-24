@@ -3431,7 +3431,96 @@ registro\]
     **GROUP BY** coluna_1  
     **HAVING** **SUM**(coluna_2) \> 40000;  
 
-# 28 Aula 142 - Filtros de contadores
+# 28 Aula 142 - Filtros de contadores (multiplos contadores)
+
+## 28.1 Multiplos contadores
+
+-   A ideia é conseguir numa unica consulta (*query*) diversas contagens
+    diferentes (uma em cada coluna), em que cada contagem é
+    independente, ou seja, não tem relação com a outra contagem.  
+    Ex.: Número total de funcionarios, número de funcionarios do sexo
+    masculino, número de funcionarios que trabalham em determinado
+    departamento, número de funcionarios que ganham acima de determinado
+    valor, etc.  
+
+-   Não é possivel numa unica *query*, de maneira corriqueira, conseguir
+    todos os dados, quando eles não estão relacionados.  
+
+-   Porem existe duas saidas para esse problema, de independencia dos
+    dados:  
+
+    -   **SUBQUERY**.  
+    -   **COUNT** - **FILTER**.  
+
+## 28.2 **SUBQUERY**
+
+-   Consiste em fazer uma subconsulta (*subquery*), dentro de uma
+    consulta.  
+
+-   Restrições:  
+
+    -   Deve retorna apenas uma coluna.  
+    -   Não contém **delimitador**(;) dentro da subconsulta
+        (*subquery*).  
+    -   A *subquery* deve residir entre parentêses, neste caso, no lugar
+        de uma coluna.  
+
+-   Vantagens:  
+
+    -   Este método não serve apenas para contagens e projeção, pode ser
+        aplicado a diversas outras situações também (**SELECT**,
+        **INSERT**, **UPDATE**, **DELETE**, **DROP**, **WHERE**, …).  
+    -   Podem ser feitras diversas *subquery’s* dentro de uma *query*.  
+
+-   Desvantagens:  
+
+    -   A escrita de *subquery’s* são longas, podendo “sujar o código”,
+        por consequência dificulta a leitura do código posteriormente.  
+    -   Apesar de muito versátil, exige muito de processamento, pois se
+        trata de outras consultas, e por consequência piora a
+        performance da *query*.  
+
+-   Sintaxe:  
+    **SELECT**  
+    *coluna_1*,  
+    (**SELECT**  
+    **COUNT**(\*)  
+    **FROM** *tabela*  
+    **WHERE** *coluna_2* = ‘valor’  
+    **GROUP BY** *coluna_2*) **AS** “ALIAS”  
+    **FROM** *tabela*;  
+
+## 28.3 **COUNT** - **FILTER**
+
+-   **FILTER** é complemento da função **COUNT** que adiciona uma
+    condição ao que deve ser contado.  
+
+-   Apesar de menos versátil que uma *subquery*, a função **COUNT** -
+    **FILTER** é mais simples de ser escrita e processada, ou seja,
+    apresenta uma melhora de performance em relação a uma *subquery*.  
+
+-   Pontos positivos:  
+
+    -   De fácil escrita.  
+    -   Pode ser usado diversas vezes na mesma pesquisa.  
+    -   Cada COUNT - FILTER é independete do outro, podendo fazer
+        contagens de natureza distintas (númerica, string, …).  
+
+-   Restrição:  
+
+    -   **FILTER** é um complemente exclusivo da função **COUNT**, só
+        funciona em conjunto com ela, sendo assim de uso mais restrito
+        para contagem, não funciona com outras funções (**AVG**, …).  
+
+-   Sintaxe:  
+    **SELECT**  
+    **COUNT**(\*) **FILTER**(**WHERE** *coluna_1* = ‘*string_1*’) **AS**
+    “ALIAS_1”,  
+    **COUNT**(\*) **FILTER**(**WHERE** *coluna_2* = ‘*string_2*’) **AS**
+    “ALIAS_2”,  
+    **COUNT**(\*) **FILTER**(**WHERE** *coluna_3* \> *valor*) **AS**
+    “ALIAS_3”  
+    **FROM** tabela;  
 
 # 29 Observações
 
@@ -3469,4 +3558,4 @@ registro\]
 
 ## 30.1 Assunto em andamento
 
-Atualmente estou estudando Módulo 30 - AULA 142.  
+Atualmente estou estudando Módulo 30 - AULA 143.  
