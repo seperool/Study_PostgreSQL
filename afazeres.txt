@@ -1,12 +1,9 @@
-ESCRITO EM 24/01/23
+ESCRITO EM 25/01/23
 ---
-PARA 25/01/23
+PARA 26/01/23
 ---
 Subir github:
-	- AULA 142 - Filtros de contadores
-		- Programar
-			- script 19
-				- filtros de contadores (count - filter)
+
 Estudar:
 	- Modulo 30 - AULA 143 - Formatando string's (funções de string)
 Afazeres: 
