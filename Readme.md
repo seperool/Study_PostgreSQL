@@ -3522,13 +3522,52 @@ registro\]
     “ALIAS_3”  
     **FROM** tabela;  
 
-# 29 Observações
+# 29 Aula 143 - Formatando string’s (funções de string)
 
-## 29.1 Wiki para pesquisar funcionalidades do **PostgreSQL**
+## 29.1 Formatando string’s
+
+-   São funções que aplicadas a colunas de string, conseguem modificar
+    ou extrair informações das strings.  
+-   São funções muito útieis para editar um banco de dados e limpar os
+    dados.  
+
+## 29.2 Funções de string
+
+-   **DISTINCT**  
+    -   Remove redundâncias, *strings* iguais.  
+    -   Sintaxe:  
+        **SELECT** **DISTINCT** coluna **FROM** tabela;  
+-   **UPPER**  
+    -   Coloca as *strings* de determinada coluna em caixa alta, letra
+        maiúscula.  
+    -   Sintaxe:  
+        **SELECT** **UPPER**(coluna) **FROM** tabela;  
+-   **LOWER**  
+    -   Coloca as *strings* de determinada coluna em caixa baixa, letra
+        minúscula.  
+    -   Sintaxe:  
+        **SELECT** **LOWER**(coluna) **FROM** tabela;  
+-   Concatenando *strings* e colunas  
+    -   Concatena *strings* e/ou colunas.  
+    -   O simbolo usado para concatenação é o pipe duplo (\|\|).  
+    -   Sintaxe:  
+        **SELECT** coluna_1 \|\| ’ - ’ \|\| coluna_2 **FROM** tabela;  
+-   **TRIM**  
+    -   Remove espaços em branco da *string*.  
+    -   Sintaxe:  
+        **SELECT** **TRIM**(’ string’);  
+-   **LENGTH**  
+    -   Conta o número de caracteres de uma *string*.  
+    -   Sintaxe:  
+        **SELECT** **LENGTH**(’ string’);  
+
+# 30 Observações
+
+## 30.1 Wiki para pesquisar funcionalidades do **PostgreSQL**
 
 <https://wiki.postgresql.org/wiki/Main_Page/pt>  
 
-## 29.2 Exportação de dados
+## 30.2 Exportação de dados
 
 -   Uma das maneiras mais facil de exportar dados é atraves da extensão
     “.csv”.  
@@ -3547,15 +3586,15 @@ registro\]
     -   Ao clickar no ícone “*Save results to file*”, é oferecido a
         opção de salvar a consulta como “.csv”.  
 
-## 29.3 Breve explicação de Business Intelligence e Data Science
+## 30.3 Breve explicação de Business Intelligence e Data Science
 
 -   Business Intelligence (BI):  
     -   Esta preocupado com entender o que aconteceu no passado.  
 -   Data Science:  
     -   Através dos dados, tentar prever tendências futuras.  
 
-# 30 Andamento dos Estudos
+# 31 Andamento dos Estudos
 
-## 30.1 Assunto em andamento
+## 31.1 Assunto em andamento
 
-Atualmente estou estudando Módulo 30 - AULA 143.  
+Curso concluído.  

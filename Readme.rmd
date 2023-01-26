@@ -2750,6 +2750,49 @@ Ex.: Número total de funcionarios, número de funcionarios do sexo masculino, n
 
 \newpage
 
+# Aula 143 - Formatando string's (funções de string)
+
+## Formatando string's
+- São funções que aplicadas a colunas de string, conseguem modificar ou extrair informações das strings.\
+- São funções muito útieis para editar um banco de dados e limpar os dados.\
+
+\newpage
+
+## Funções de string
+
+- **DISTINCT**\
+  - Remove redundâncias, *strings* iguais.\
+  - Sintaxe:\
+  **SELECT** **DISTINCT** coluna **FROM** tabela;\
+  
+- **UPPER**\
+  - Coloca as *strings* de determinada coluna em caixa alta, letra maiúscula.\
+  - Sintaxe:\
+  **SELECT** **UPPER**(coluna) **FROM** tabela;\
+  
+- **LOWER**\
+  - Coloca as *strings* de determinada coluna em caixa baixa, letra minúscula.\
+  - Sintaxe:\
+  **SELECT** **LOWER**(coluna) **FROM** tabela;\
+
+- Concatenando *strings* e colunas\
+  - Concatena *strings* e/ou colunas.\
+  - O simbolo usado para concatenação é o pipe duplo (||).\
+  - Sintaxe:\
+  **SELECT** coluna_1 || ' - ' || coluna_2 **FROM** tabela;\
+
+- **TRIM**\
+  - Remove espaços em branco da *string*.\
+  - Sintaxe:\
+  **SELECT** **TRIM**('   string');\
+
+- **LENGTH**\
+  - Conta o número de caracteres de uma *string*.\
+  - Sintaxe:\
+  **SELECT** **LENGTH**('   string');\
+
+\newpage
+
 # Observações
 
 ## Wiki para pesquisar funcionalidades do **PostgreSQL**
@@ -2778,4 +2821,4 @@ Ex.: Número total de funcionarios, número de funcionarios do sexo masculino, n
 
 ## Assunto em andamento
 
-Atualmente estou estudando Módulo 30 - AULA 143.\
+Curso concluído.\
