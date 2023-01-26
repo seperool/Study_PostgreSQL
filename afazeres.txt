@@ -1,14 +1,13 @@
-ESCRITO EM 25/01/23
+ESCRITO EM 26/01/23
 ---
-PARA 26/01/23
+PARA 27/01/23
 ---
 Subir github:
-
-Estudar:
-	- Modulo 30 - AULA 143 - Formatando string's (funções de string)
-Afazeres: 
 	- AULA 143 - Formatando string's (funções de string)
-		- Assistir
-		- script 20
+		- script 20 - Formatando strings e funções de string
+Estudar:
+	- AULA 143 - Formatando string's (funções de string)
+Afazeres:
+	- AULA 143 - Formatando string's (funções de string)
 		- Readme.*
-			
+			- Pesquisar por conjunto de caracteres e strings de colunas
