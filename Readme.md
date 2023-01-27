@@ -3522,7 +3522,7 @@ registro\]
     “ALIAS_3”  
     **FROM** tabela;  
 
-# 29 Aula 143 - Formatando string’s (funções de string)
+# 29 Aula 143 parte 1 - Formatando string’s (funções de string)
 
 ## 29.1 Formatando string’s
 
@@ -3561,13 +3561,85 @@ registro\]
     -   Sintaxe:  
         **SELECT** **LENGTH**(’ string’);  
 
-# 30 Observações
+# 30 Aula 143 parte 2 - Pesquisando por caracteres em coluna de strings
 
-## 30.1 Wiki para pesquisar funcionalidades do **PostgreSQL**
+-   Os métodos empregados servem para pesquisar por uma determinada
+    cadeia de caracteres, contido em strings de uma coluna.  
+
+-   Caso forem identificados esses caracteres, podemos comandar que se
+    faça algo.  
+
+## 30.1 Primeiro método
+
+-   Usar o comando **LIKE**, se utilizando de caracteres coringas (%),
+    para auxiliar na busca.  
+    Ex.: coluna **LIKE** ‘**%***caracteres***%**’  
+
+-   Os caracteres informados devem estar no formato em que vão ser
+    procurados, sendo *case-sensitive* (diferenciar maiúsculas de
+    minúsculas).  
+
+-   Estes comandos devem estar envolto de parênteses, pois assim
+    torna-se uma expressão lógica, onde é avaliada e retorna como
+    verdadeiro (**true**) ou falso (**false**).  
+    Ex.: (coluna **LIKE** ‘**%***caracteres***%**’)  
+
+-   Se esse metodo for aplicado numa projeção (**SELECT**), no lugar de
+    uma coluna, obtemos assim uma nova coluna (Booleana) que identifica
+    se existe aquela cadeia de caracteres, especificada, em toda uma
+    coluna composta por strings.  
+
+-   Sintaxe:  
+    **SELECT**  
+    coluna_2,  
+    coluna_1,  
+    (coluna **LIKE** ‘%Caracteres%’) **AS** “Contem_caracteres?”  
+    **FROM** tabela;  
+
+## 30.2 Segundo método
+
+-   Usar o comando **LIKE**, se utilizando de caracteres coringas (%),
+    para auxiliar na busca.  
+    Ex.: coluna **LIKE** ‘**%***caracteres***%**’  
+
+-   Os caracteres informados devem estar no formato em que vão ser
+    procurados, sendo *case-sensitive* (diferenciar maiúsculas de
+    minúsculas).  
+
+-   Estes comandos devem estar envolto de parênteses, pois assim
+    torna-se uma expressão lógica, onde é avaliada e retorna como
+    verdadeiro (**true**) ou falso (**false**).  
+    Ex.: (coluna **LIKE** ‘**%***caracteres***%**’)  
+
+-   Isto pode ser associado ao uso de **CASE**, onde a expressão lógica,
+    criada anteriormente, pode ser comparada a um verdadeiro (**true**)
+    ou falso (**false**), e caso seja verdadeiro (**true**) retorna 1,
+    caso seja falso (**false**) retorna 0. Ou seja, criar uma coluna
+    **DUMMY**.  
+
+-   Se esse metodo for aplicado numa projeção (**SELECT**), no lugar de
+    uma coluna, obtemos assim uma nova coluna (Booleana) que identifica
+    se existe aquela cadeia de caracteres, especificada, em toda uma
+    coluna composta por strings.  
+
+-   Sintaxe:  
+    **SELECT**  
+    coluna_1,  
+    coluna_2,  
+    **CASE** **WHEN** (coluna_2 **LIKE** ‘**%***caracteres***%**’) =
+    ‘**true**’  
+    **THEN** 1  
+    **ELSE** 0  
+    **END** **AS** “Coluna_DUMMY”  
+    **FROM** tabela;  
+
+# 31 Observações
+
+## 31.1 Wiki para pesquisar funcionalidades do **PostgreSQL**
 
 <https://wiki.postgresql.org/wiki/Main_Page/pt>  
 
-## 30.2 Exportação de dados
+## 31.2 Exportação de dados
 
 -   Uma das maneiras mais facil de exportar dados é atraves da extensão
     “.csv”.  
@@ -3586,15 +3658,15 @@ registro\]
     -   Ao clickar no ícone “*Save results to file*”, é oferecido a
         opção de salvar a consulta como “.csv”.  
 
-## 30.3 Breve explicação de Business Intelligence e Data Science
+## 31.3 Breve explicação de Business Intelligence e Data Science
 
 -   Business Intelligence (BI):  
     -   Esta preocupado com entender o que aconteceu no passado.  
 -   Data Science:  
     -   Através dos dados, tentar prever tendências futuras.  
 
-# 31 Andamento dos Estudos
+# 32 Andamento dos Estudos
 
-## 31.1 Assunto em andamento
+## 32.1 Assunto em andamento
 
 Curso concluído.  
